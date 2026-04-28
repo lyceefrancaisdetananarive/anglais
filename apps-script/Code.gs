@@ -24,9 +24,9 @@ const SENDER_NAME = "Espace Anglais — LFT";
 
 // ID de la feuille Google Sheets qui archive les résultats.
 // Pour le récupérer : ouvrir la feuille, l'URL contient .../d/{ID}/edit
-// Laisser "" pour que le script crée automatiquement une nouvelle feuille
-// dans le Drive de Mme FALIMANANA au premier appel.
-const SHEET_ID = "";
+// Feuille partagée par Mme FALIMANANA :
+// https://docs.google.com/spreadsheets/d/1wlyyG8mOdDCf807Wk6FFJ_Tj4aMWfzzuILsO_R9EfJs/edit
+const SHEET_ID = "1wlyyG8mOdDCf807Wk6FFJ_Tj4aMWfzzuILsO_R9EfJs";
 
 // Nom de l'onglet où s'écrivent les résultats
 const SHEET_TAB = "Résultats quiz";
