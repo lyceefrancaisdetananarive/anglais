@@ -19,6 +19,14 @@
 // E-mail de l'enseignante (destinataire principal de chaque résultat)
 const TEACHER_EMAIL = "salamo.falimanana@egd.mg";
 
+// === MODE DÉVELOPPEMENT ===================================================
+// Tant que le projet est en développement, l'admin (Max RAFALIARISON) reçoit
+// une COPIE (CC) de tous les mails (enseignante + élève) pour vérifier la
+// bonne réception et la mise en page. Mettre DEV_MODE = false en production.
+const DEV_MODE = true;
+const DEV_CC_EMAIL = "max.rafaliarison@egd.mg";
+// ===========================================================================
+
 // Nom de l'expéditeur affiché dans les mails
 const SENDER_NAME = "Espace Anglais — LFT";
 
@@ -147,6 +155,7 @@ function sendTeacherEmail(p) {
 
   MailApp.sendEmail({
     to: TEACHER_EMAIL,
+    cc: DEV_MODE ? DEV_CC_EMAIL : "",
     subject: subject,
     htmlBody: html,
     name: SENDER_NAME,
@@ -170,7 +179,7 @@ function sendStudentEmail(p) {
 
   MailApp.sendEmail({
     to: p.student.email,
-    cc: "",
+    cc: DEV_MODE ? DEV_CC_EMAIL : "",
     subject: subject,
     htmlBody: html,
     name: SENDER_NAME,

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz The Secret of Jatbula Trail — 3e — LFT</title>
+  <meta name="description" content="Quiz interactif sur la lecture cursive The Secret of Jatbula Trail. Niveau 3e (A2/B1) : Australie, peuples autochtones, prétérit, modaux." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/3e.html">Retour au niveau 3<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Jatbula Trail — 3<sup>e</sup></div>
+            <div class="line3">A2/B1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/3e.html">3<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Jatbula</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <h1 style="text-align: center;">The Secret of Jatbula Trail</h1>
+      <p class="text-muted text-center" style="max-width: 640px; margin: 0 auto var(--space-6);">
+        Quiz pour vérifier ta compréhension de la lecture cursive et tes acquis sur
+        l'Australie autochtone, le prétérit et les modaux d'obligation.
+      </p>
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "3e-jatbula-trail",
+      title: "Quiz : The Secret of Jatbula Trail",
+      level: "3e — A2/B1",
+      sequence: "The Secret of Jatbula Trail",
+      duration: "12 minutes",
+      intro: "Quiz sur la lecture cursive et le travail mené en classe sur les peuples autochtones d'Australie. Mobilise le prétérit, les modaux et le lexique de la nature et du voyage.",
+
+      questions: [
+
+        // Q1 — Setting
+        {
+          type: "qcm",
+          prompt: "The Jatbula Trail is located in:",
+          options: [
+            "Western Australia",
+            "South Australia",
+            "Northern Territory",
+            "Tasmania",
+          ],
+          answer: 2,
+          explanation: "Le Jatbula Trail est un sentier de randonnée de 62 km dans le Nitmiluk National Park, dans le Northern Territory (Territoire du Nord) de l'Australie.",
+        },
+
+        // Q2 — Aboriginal people
+        {
+          type: "qcm",
+          prompt: "Quel est le peuple autochtone associé au Jatbula Trail ?",
+          options: [
+            "The Maori",
+            "The Jawoyn",
+            "The Inuit",
+            "The Anangu",
+          ],
+          answer: 1,
+          explanation: "Le sentier est nommé d'après Peter Jatbula, un homme du peuple Jawoyn, propriétaires traditionnels des terres traversées.",
+        },
+
+        // Q3 — Past simple regular
+        {
+          type: "saisie",
+          prompt: "Mets au prétérit : « We ___ (walk) for five days through the bush. »",
+          placeholder: "Exemple : visited",
+          answer: ["walked", "WALKED", "Walked"],
+          explanation: "Verbe régulier : on ajoute -ed. Walk → walked. Attention à la prononciation du -ed : ici /t/ car « walk » se termine par un son sourd /k/.",
+        },
+
+        // Q4 — Past simple irregular
+        {
+          type: "qcm",
+          prompt: "Quelle est la forme correcte du prétérit du verbe « to see » ?",
+          options: [
+            "seed",
+            "seen",
+            "saw",
+            "sawed",
+          ],
+          answer: 2,
+          explanation: "« See » est un verbe irrégulier : see → saw → seen. « Seen » est le participe passé (utilisé avec have/has).",
+        },
+
+        // Q5 — Vocabulary
+        {
+          type: "qcm",
+          prompt: "« A billabong » in Australian English means:",
+          options: [
+            "Un boomerang",
+            "Un point d'eau / mare",
+            "Un kangourou",
+            "Un campement",
+          ],
+          answer: 1,
+          explanation: "« Billabong » est un mot australien d'origine wiradjuri qui désigne un trou d'eau ou un méandre coupé d'une rivière. Très important dans le bush !",
+        },
+
+        // Q6 — Modals — recommendation
+        {
+          type: "qcm",
+          prompt: "« You _____ drink a lot of water on the trail — it's very hot. »",
+          options: [
+            "shouldn't",
+            "should",
+            "must not",
+            "can't",
+          ],
+          answer: 1,
+          explanation: "« Should » donne un conseil. « Should drink water » = tu devrais boire de l'eau. « Must not » serait une interdiction stricte, ce qui n'a pas de sens ici.",
+        },
+
+        // Q7 — Cultural — Dreamtime
+        {
+          type: "vrai-faux",
+          prompt: "« The Dreamtime » est un récit de la création dans les cultures aborigènes d'Australie.",
+          answer: "vrai",
+          explanation: "« The Dreamtime » (ou Dreaming) est l'ensemble des récits sacrés des Premières Nations australiennes qui expliquent la création du monde, les liens à la terre et les ancêtres.",
+        },
+
+        // Q8 — Connectors
+        {
+          type: "qcm",
+          prompt: "Choisis le connecteur d'OPPOSITION : « The trail is hard, _____ the views are amazing. »",
+          options: [
+            "because",
+            "therefore",
+            "however",
+            "moreover",
+          ],
+          answer: 2,
+          explanation: "« However » exprime une opposition (= cependant). « Because » = parce que · « Therefore » = donc · « Moreover » = de plus.",
+        },
+
+        // Q9 — Multi — landscape vocabulary
+        {
+          type: "multi",
+          prompt: "Coche TOUS les éléments typiques du paysage du bush australien :",
+          options: [
+            "Eucalyptus trees",
+            "Glaciers",
+            "Waterfalls",
+            "Ice fields",
+            "Aboriginal rock art",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Le bush du Top End est marqué par les eucalyptus, les chutes d'eau saisonnières et les peintures rupestres aborigènes (certaines vieilles de 50 000 ans). Pas de glaciers ni de glace !",
+        },
+
+        // Q10 — Sacred site
+        {
+          type: "qcm",
+          prompt: "« Uluru » (Ayers Rock) est :",
+          options: [
+            "Une chaîne de montagnes au sud de l'Australie",
+            "Un site sacré pour le peuple Anangu, dans le centre rouge",
+            "Une plage célèbre de Sydney",
+            "Un parc national de Tasmanie",
+          ],
+          answer: 1,
+          explanation: "Uluru, immense monolithe rouge au cœur de l'Australie, est sacré pour le peuple Anangu. Depuis 2019, il est interdit de l'escalader par respect des traditions aborigènes.",
+        },
+      ],
+    });
+  </script>
+
+</body>
+</html>

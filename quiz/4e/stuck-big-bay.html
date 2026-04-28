@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Stuck at Big Bay School — 4e — LFT</title>
+  <meta name="description" content="Quiz interactif sur la lecture cursive Stuck at Big Bay School. Niveau 4e (A1+/A2) : présent, comparatifs, vocabulaire de l'école." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/4e.html">Retour au niveau 4<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Stuck at Big Bay School — 4<sup>e</sup></div>
+            <div class="line3">A1+/A2 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/4e.html">4<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Stuck Big Bay</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <h1 style="text-align: center;">Stuck at Big Bay School</h1>
+      <p class="text-muted text-center" style="max-width: 640px; margin: 0 auto var(--space-6);">
+        Quiz pour vérifier ce que tu as compris de la lecture cursive et des notions
+        travaillées en classe.
+      </p>
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "4e-stuck-big-bay",
+      title: "Quiz : Stuck at Big Bay School",
+      level: "4e — A1+/A2",
+      sequence: "Stuck at Big Bay School",
+      duration: "12 minutes",
+      intro: "Quiz sur la lecture cursive : compréhension, vocabulaire de l'école et points de grammaire (présent simple, présent continu, comparatifs). Bonne chance !",
+
+      questions: [
+
+        // Q1 — Setting
+        {
+          type: "qcm",
+          prompt: "Where is Big Bay School located?",
+          options: [
+            "In Australia",
+            "In New Zealand",
+            "In the United Kingdom",
+            "In Canada",
+          ],
+          answer: 1,
+          explanation: "Big Bay School is set in New Zealand (Aotearoa) — a small coastal community.",
+        },
+
+        // Q2 — Present continuous
+        {
+          type: "qcm",
+          prompt: "Look at the picture! She _____ a book.",
+          options: [
+            "read",
+            "reads",
+            "is reading",
+            "are reading",
+          ],
+          answer: 2,
+          explanation: "« Look! » + action en train de se passer → présent continu : be + V-ing. With « she » → « is reading ».",
+        },
+
+        // Q3 — Comparative
+        {
+          type: "saisie",
+          prompt: "Mets le comparatif : « My school is ___ than yours. » (big)",
+          placeholder: "Exemple : older",
+          answer: ["bigger", "BIGGER", "Bigger"],
+          explanation: "Adjectif court (1 syllabe, terminé par consonne-voyelle-consonne) → on double la consonne et on ajoute -er : big → bigger.",
+        },
+
+        // Q4 — School vocabulary
+        {
+          type: "qcm",
+          prompt: "« Recess » means:",
+          options: [
+            "Le déjeuner",
+            "La récréation",
+            "Le devoir",
+            "L'examen",
+          ],
+          answer: 1,
+          explanation: "« Recess » = la récréation (en anglais américain). En anglais britannique on dit aussi « break time ».",
+        },
+
+        // Q5 — Vrai/Faux culture
+        {
+          type: "vrai-faux",
+          prompt: "In New Zealand, students wear school uniforms.",
+          answer: "vrai",
+          explanation: "Les écoles néo-zélandaises (comme britanniques et australiennes) imposent généralement un uniforme — c'est une grande différence avec la France.",
+        },
+
+        // Q6 — Modal "have to"
+        {
+          type: "qcm",
+          prompt: "« I _____ wear a uniform every day at Big Bay School. »",
+          options: [
+            "have to",
+            "has to",
+            "haves to",
+            "having to",
+          ],
+          answer: 0,
+          explanation: "« I have to + verbe » = je dois (obligation). Avec « he/she/it » on dirait « has to ».",
+        },
+
+        // Q7 — Present simple — 3rd person
+        {
+          type: "saisie",
+          prompt: "Conjugue au présent simple : « Tom ___ (study) English. »",
+          placeholder: "Exemple : plays",
+          answer: ["studies", "STUDIES", "Studies"],
+          explanation: "À la 3<sup>e</sup> personne du singulier, le verbe se termine par -s. Quand le verbe finit par consonne + y, on remplace y par -ies : study → studies.",
+        },
+
+        // Q8 — School subjects
+        {
+          type: "multi",
+          prompt: "Coche TOUTES les matières scolaires (school subjects) :",
+          options: [
+            "Maths",
+            "Library",
+            "P.E. (Physical Education)",
+            "Cafeteria",
+            "History",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Maths, P.E. et History sont des matières. Library = bibliothèque (lieu) et Cafeteria = cantine (lieu).",
+        },
+
+        // Q9 — Adverbs of frequency
+        {
+          type: "qcm",
+          prompt: "Place correctement l'adverbe : « I _____ go to bed at 9 p.m. »",
+          options: [
+            "always go to bed at 9 p.m.",
+            "go always to bed at 9 p.m.",
+            "go to always bed at 9 p.m.",
+            "go to bed always at 9 p.m.",
+          ],
+          answer: 0,
+          explanation: "Les adverbes de fréquence (always, often, sometimes, never) se placent AVANT le verbe principal (sauf avec « to be »).",
+        },
+
+        // Q10 — Cultural fact
+        {
+          type: "qcm",
+          prompt: "« Kia ora! » is a greeting in:",
+          options: [
+            "Aboriginal language",
+            "Hawaiian",
+            "Māori",
+            "Welsh",
+          ],
+          answer: 2,
+          explanation: "« Kia ora » est une salutation en māori, la langue autochtone de la Nouvelle-Zélande, largement utilisée dans la vie quotidienne.",
+        },
+      ],
+    });
+  </script>
+
+</body>
+</html>
