@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide enseignante — Espace Anglais LFT</title>
+  <meta name="description" content="Mode d'emploi de la plateforme Espace Anglais pour Mme FALIMANANA. Comment partager un quiz, voir les résultats, ajouter une séquence." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="preload" href="../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+
+  <style>
+    /* Petits ajustements pour le guide */
+    .toc {
+      background: var(--bf-100);
+      padding: var(--space-5);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-6);
+    }
+    .toc h2 { color: var(--bf-500); margin-top: 0; font-size: var(--font-size-lg); }
+    .toc ol { padding-left: 1.4rem; margin: 0; }
+    .toc li { margin-bottom: var(--space-1); }
+    .toc a { color: var(--bf-500); }
+
+    .step-list {
+      counter-reset: step;
+      padding: 0;
+      list-style: none;
+    }
+    .step-list > li {
+      counter-increment: step;
+      padding: var(--space-4) var(--space-5);
+      margin-bottom: var(--space-3);
+      background: var(--grey-50);
+      border-left: 4px solid var(--lft-magenta);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      position: relative;
+      padding-left: 4rem;
+    }
+    .step-list > li::before {
+      content: counter(step);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, var(--bf-500), var(--lft-magenta));
+      color: white;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    code {
+      background: var(--grey-100);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9em;
+      color: var(--bf-500);
+    }
+
+    pre {
+      background: var(--grey-900);
+      color: var(--grey-100);
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    pre code { background: transparent; color: inherit; padding: 0; }
+
+    .tip {
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      margin: var(--space-4) 0;
+      border-left: 4px solid var(--info-500);
+      background: var(--info-100);
+    }
+    .tip strong { color: var(--info-500); }
+    .warning {
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      margin: var(--space-4) 0;
+      border-left: 4px solid var(--warning-500);
+      background: var(--warning-100);
+    }
+    .warning strong { color: var(--warning-500); }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../index.html">Retour au tableau de bord</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../index.html" class="brand">
+          <img src="../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Guide enseignante — Mode d'emploi</div>
+            <div class="line3">Espace Anglais · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="../index.html">Tableau de bord</a>
+          <a href="../pdf-imprimables/">Bibliothèque PDF</a>
+          <a href="guide-enseignante.html" aria-current="page">Guide</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Guide enseignante</h1>
+        <p class="hero__subtitle">
+          Bienvenue sur votre espace pédagogique en ligne. Ce guide vous explique en quelques
+          minutes comment <strong>partager un quiz</strong>, <strong>imprimer une fiche</strong>,
+          <strong>consulter les résultats</strong>, et plus tard, comment <strong>ajouter de
+          nouveaux contenus</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="toc">
+          <h2>Sommaire</h2>
+          <ol>
+            <li><a href="#vue-ensemble">Vue d'ensemble de la plateforme</a></li>
+            <li><a href="#partager-quiz">Partager un quiz à une classe</a></li>
+            <li><a href="#consulter-resultats">Consulter les résultats des élèves</a></li>
+            <li><a href="#imprimer-fiche">Imprimer une fiche d'activité</a></li>
+            <li><a href="#fin-projet">À la fin du projet : désactiver le mode dev</a></li>
+            <li><a href="#ajouter-quiz">Ajouter un nouveau quiz (avancé)</a></li>
+            <li><a href="#contact">En cas de problème</a></li>
+          </ol>
+        </div>
+
+        <article>
+          <h2 id="vue-ensemble">1. Vue d'ensemble de la plateforme</h2>
+          <p>
+            La plateforme est accessible publiquement à l'adresse :
+            <a href="https://lyceefrancaisdetananarive.github.io/anglais/" target="_blank" rel="noopener">
+              <code>lyceefrancaisdetananarive.github.io/anglais/</code>
+            </a>
+          </p>
+          <p>Elle est organisée en trois grandes parties :</p>
+          <ul style="padding-left: 1.4rem;">
+            <li><strong>Le tableau de bord</strong> : page d'accueil avec les statistiques et les liens vers chaque niveau.</li>
+            <li><strong>Les pages de niveau</strong> : 6<sup>e</sup>, 4<sup>e</sup>, 3<sup>e</sup>, 1<sup>re</sup> euro, Terminale, NON SI, LCE — chacune liste les séquences disponibles.</li>
+            <li><strong>La bibliothèque PDF</strong> : toutes les fiches d'activité prêtes à imprimer (mise en page AEFE-Marque État).</li>
+          </ul>
+
+          <div class="tip">
+            <strong>À retenir :</strong> tous les contenus sont <strong>publics</strong>.
+            N'importe qui peut visiter la plateforme et passer un quiz. C'est volontaire :
+            les élèves n'ont pas besoin de compte ni de mot de passe pour participer.
+          </div>
+        </article>
+
+        <article>
+          <h2 id="partager-quiz">2. Partager un quiz à une classe</h2>
+          <p>
+            Chaque quiz a sa propre URL stable. Il vous suffit de copier-coller cette URL et
+            de la donner à vos élèves (par mail, Pronote, ENT, ou Padlet).
+          </p>
+
+          <ol class="step-list">
+            <li>Ouvrez le quiz que vous voulez partager (par ex. depuis le tableau de bord).</li>
+            <li>Copiez l'URL dans la barre d'adresse de votre navigateur (ex. <code>…/quiz/3e/street-art.html</code>).</li>
+            <li>Envoyez ce lien à vos élèves par le canal habituel (Pronote, mail de classe, etc.).</li>
+            <li>Demandez-leur de saisir leur <strong>prénom</strong>, leur <strong>classe</strong>, et — facultatif — leur adresse mail s'ils veulent recevoir leur correction.</li>
+          </ol>
+
+          <div class="tip">
+            <strong>Astuce :</strong> vous pouvez aussi imprimer un QR code de l'URL (via
+            <a href="https://www.qr-code-generator.com/" target="_blank" rel="noopener">qr-code-generator.com</a>)
+            et le projeter en classe. Les élèves le scannent depuis leur téléphone et accèdent au quiz instantanément.
+          </div>
+        </article>
+
+        <article>
+          <h2 id="consulter-resultats">3. Consulter les résultats des élèves</h2>
+          <p>
+            Chaque fois qu'un élève termine un quiz et clique sur <em>« Envoyer mes résultats »</em>,
+            <strong>deux choses se passent automatiquement</strong> :
+          </p>
+          <ol style="padding-left: 1.4rem;">
+            <li>Une <strong>nouvelle ligne</strong> est ajoutée à la feuille Google Sheets « <em>Plateforme Anglais LFT — Résultats quiz</em> ».</li>
+            <li>Un <strong>e-mail récapitulatif</strong> vous est envoyé sur <code>salamo.falimanana@egd.mg</code> avec la note, le détail des réponses et la correction.</li>
+          </ol>
+
+          <p>
+            <strong>Pour voir tous les résultats d'un coup :</strong> ouvrez la feuille Sheets
+            partagée :<br>
+            <a href="https://docs.google.com/spreadsheets/d/1wlyyG8mOdDCf807Wk6FFJ_Tj4aMWfzzuILsO_R9EfJs/edit" target="_blank" rel="noopener">
+              <code>docs.google.com/spreadsheets/d/1wlyyG8mOdDCf807Wk6FFJ_Tj4aMWfzzuILsO_R9EfJs</code>
+            </a>
+          </p>
+
+          <p>
+            La feuille contient une ligne par soumission, avec : date, prénom, classe, score brut,
+            note /20, et le détail JSON des réponses.
+          </p>
+
+          <div class="tip">
+            <strong>Filtrer par classe :</strong> sur la feuille Sheets, sélectionnez la première
+            ligne, puis <em>Données → Créer un filtre</em>. Vous pourrez ensuite trier les
+            résultats par classe (3M5, 4M7…), date ou note.
+          </div>
+        </article>
+
+        <article>
+          <h2 id="imprimer-fiche">4. Imprimer une fiche d'activité</h2>
+          <p>
+            Toutes les fiches sont au format PDF, en mise en page institutionnelle AEFE
+            (Marque État · décembre 2023). Elles sont prêtes à imprimer en A4 recto-verso.
+          </p>
+
+          <ol class="step-list">
+            <li>Ouvrez la <a href="../pdf-imprimables/">bibliothèque PDF</a>.</li>
+            <li>Cliquez sur <em>« Télécharger la fiche »</em> pour la séquence souhaitée.</li>
+            <li>Le PDF s'ouvre dans un nouvel onglet ou est téléchargé sur votre ordinateur.</li>
+            <li>Utilisez Cmd+P (Mac) ou Ctrl+P (Windows) pour lancer l'impression.</li>
+            <li>Dans les options d'impression, choisissez <strong>« A4 »</strong>, <strong>« Recto-verso »</strong>, et <strong>« 100 % »</strong> (pas de mise à l'échelle).</li>
+          </ol>
+
+          <div class="warning">
+            <strong>Économie de toner :</strong> les fiches utilisent un bandeau bleu marine
+            sur l'en-tête et le pied de page. Si votre imprimante consomme beaucoup d'encre,
+            vous pouvez activer l'option <em>« Économie d'encre »</em> ou <em>« Niveau de gris »</em>
+            pour réduire l'usage de couleur. Le rendu reste très lisible.
+          </div>
+        </article>
+
+        <article>
+          <h2 id="fin-projet">5. À la fin du projet : désactiver le mode développement</h2>
+          <p>
+            Tant que la plateforme est en phase de mise au point, <strong>l'administrateur
+            (Max RAFALIARISON) reçoit en copie</strong> tous les e-mails de résultats. C'est
+            une mesure temporaire pour permettre les tests et vérifications.
+          </p>
+
+          <p>
+            Quand vous validerez que la plateforme est prête à être utilisée en classe avec
+            les élèves, il faudra <strong>désactiver ce mode</strong> pour que seuls vous (et
+            les élèves) receviez les e-mails.
+          </p>
+
+          <ol class="step-list">
+            <li>Connectez-vous à <a href="https://script.google.com/" target="_blank" rel="noopener">script.google.com</a> avec le compte <code>max.rafaliarison@egd.mg</code>.</li>
+            <li>Ouvrez le projet « <em>Plateforme Anglais LFT — Mailer</em> ».</li>
+            <li>Dans l'éditeur, modifiez la ligne <code>const DEV_MODE = true;</code> en <code>const DEV_MODE = false;</code></li>
+            <li>Cliquez sur <em>Enregistrer</em> (Cmd+S).</li>
+            <li>Cliquez sur <em>Déployer → Gérer les déploiements → ✏️ Modifier</em>.</li>
+            <li>Dans le menu Version, choisissez <strong>« Nouvelle version »</strong>.</li>
+            <li>Description : <code>v3 — Désactivation mode DEV (production)</code>.</li>
+            <li>Cliquez sur <em>Déployer</em>. L'URL ne change pas.</li>
+          </ol>
+
+          <div class="tip">
+            <strong>Pas besoin de modifier le code de la plateforme</strong> — l'URL de l'Apps
+            Script reste identique, donc tous les quiz continueront à fonctionner. Seul le
+            comportement d'envoi des mails change.
+          </div>
+        </article>
+
+        <article>
+          <h2 id="ajouter-quiz">6. Ajouter un nouveau quiz (avancé)</h2>
+          <p>
+            Pour ajouter un nouveau quiz à la plateforme, le plus simple est de
+            <strong>dupliquer un quiz existant</strong> et de modifier son contenu.
+            La procédure complète est documentée dans le fichier
+            <a href="https://github.com/lyceefrancaisdetananarive/anglais/blob/main/README.md#6-comment-ajouter-un-nouveau-quiz" target="_blank" rel="noopener"><code>README.md</code></a>
+            du dépôt GitHub.
+          </p>
+
+          <p>En résumé :</p>
+          <ol class="step-list">
+            <li>Dupliquer un quiz existant (par ex. <code>quiz/3e/street-art.html</code>) dans le dossier de niveau souhaité.</li>
+            <li>Renommer le fichier (ex. <code>quiz/3e/frankenstein.html</code>).</li>
+            <li>Modifier le bloc <code>&lt;script&gt;</code> en bas du fichier : changer <code>id</code>, <code>title</code>, <code>level</code>, <code>sequence</code>, et la liste <code>questions</code>.</li>
+            <li>Ajouter un lien vers ce nouveau quiz dans la page de niveau correspondante.</li>
+            <li>Pousser sur GitHub : <code>git add . &amp;&amp; git commit -m "Ajout quiz Frankenstein" &amp;&amp; git push</code>.</li>
+          </ol>
+
+          <p>Le moteur de quiz supporte 4 types de questions :</p>
+          <ul style="padding-left: 1.4rem;">
+            <li><code>qcm</code> : choix multiple (une seule bonne réponse)</li>
+            <li><code>multi</code> : cases à cocher (plusieurs bonnes réponses)</li>
+            <li><code>vrai-faux</code> : Vrai/Faux</li>
+            <li><code>saisie</code> : texte libre (la comparaison ignore casse, accents, ponctuation)</li>
+          </ul>
+
+          <div class="tip">
+            <strong>Si vous n'êtes pas familière avec Git et GitHub</strong>, demandez à
+            Max de pousser les modifications pour vous. Vous pouvez préparer le contenu
+            d'un quiz dans un document texte et le lui transmettre.
+          </div>
+        </article>
+
+        <article>
+          <h2 id="contact">7. En cas de problème</h2>
+          <p>
+            La plateforme est conçue pour être robuste, mais en cas de souci :
+          </p>
+          <ul style="padding-left: 1.4rem;">
+            <li><strong>Un quiz ne s'affiche pas :</strong> rafraîchissez la page (Cmd+R / F5). Si le problème persiste, vérifiez que vous êtes connecté à internet.</li>
+            <li><strong>Un élève me dit qu'il n'a pas reçu son mail :</strong> vérifiez avec lui qu'il a bien saisi son adresse correctement à l'étape d'introduction du quiz. Vérifiez aussi son dossier de spam.</li>
+            <li><strong>Je ne vois pas la nouvelle ligne dans la feuille Sheets :</strong> rechargez la feuille (Cmd+R). Si elle est vide, contactez Max — l'Apps Script peut avoir été désactivé.</li>
+            <li><strong>Erreur 403 ou 500 sur la plateforme :</strong> contactez Max immédiatement.</li>
+          </ul>
+
+          <p>
+            <strong>Contact technique :</strong> Max William RAFALIARISON —
+            <a href="mailto:max.rafaliarison@egd.mg">max.rafaliarison@egd.mg</a>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA · <a href="mailto:salamo.falimanana@egd.mg" style="color: var(--lft-magenta-light);">salamo.falimanana@egd.mg</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
