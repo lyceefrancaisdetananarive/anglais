@@ -18,8 +18,12 @@
 (function (global) {
   "use strict";
 
-  /* ----------- ENDPOINT APPS SCRIPT (à configurer une fois publié) ----------- */
-  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/REMPLACEZ_PAR_VOTRE_ID/exec";
+  /* ----------- ENDPOINT APPS SCRIPT ----------- */
+  // Déployé le 28/04/2026 — projet "Plateforme Anglais LFT — Mailer"
+  // Propriétaire : max.rafaliarison@egd.mg (admin technique)
+  // Pour redéployer après modification du Code.gs :
+  //   Apps Script → Déployer → Gérer les déploiements → ✏️ Modifier → Nouvelle version
+  const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw4OnyOW08yOFGD91dTVcnDxJj4jA6Z5xmFCE-TbPQHDBNxTMv0aFZexj8BvFU-MClxWg/exec";
 
   /* ----------- ÉTAT DU QUIZ ----------- */
   const state = {
