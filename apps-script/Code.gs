@@ -36,8 +36,11 @@ const SENDER_NAME = "Espace Anglais — LFT";
 // https://docs.google.com/spreadsheets/d/1wlyyG8mOdDCf807Wk6FFJ_Tj4aMWfzzuILsO_R9EfJs/edit
 const SHEET_ID = "1wlyyG8mOdDCf807Wk6FFJ_Tj4aMWfzzuILsO_R9EfJs";
 
-// Nom de l'onglet où s'écrivent les résultats
+// Nom de l'onglet où s'écrivent les résultats de quiz
 const SHEET_TAB = "Résultats quiz";
+
+// Nom de l'onglet où s'écrivent les visites de la plateforme
+const VISITS_TAB = "Visites";
 
 
 /* ================================================================
@@ -58,7 +61,13 @@ function doPost(e) {
 
     const payload = JSON.parse(e.postData.contents);
 
-    // Validation minimale
+    // ===== PING DE VISITE (analytics anonyme) =====
+    if (payload.type === "visit") {
+      logVisit(payload);
+      return jsonResponse({ ok: true, kind: "visit" });
+    }
+
+    // ===== SOUMISSION DE QUIZ =====
     if (!payload.quizId || !payload.student || !payload.score) {
       return jsonResponse({ ok: false, error: "invalid-payload" }, 400);
     }
@@ -74,10 +83,9 @@ function doPost(e) {
       sendStudentEmail(payload);
     }
 
-    return jsonResponse({ ok: true });
+    return jsonResponse({ ok: true, kind: "quiz" });
 
   } catch (err) {
-    // Logge dans la console Apps Script pour debug
     Logger.log("Erreur doPost : " + err);
     return jsonResponse({ ok: false, error: String(err) }, 500);
   }
@@ -85,7 +93,65 @@ function doPost(e) {
 
 
 /* ================================================================
-   ARCHIVAGE DANS GOOGLE SHEETS
+   ANALYTICS — feuille "Visites"
+   ================================================================ */
+
+function getVisitsSheet_() {
+  const ss = SHEET_ID
+    ? SpreadsheetApp.openById(SHEET_ID)
+    : (function () {
+        const fname = "Plateforme Anglais LFT — Résultats quiz";
+        const files = DriveApp.getFilesByName(fname);
+        return files.hasNext()
+          ? SpreadsheetApp.open(files.next())
+          : SpreadsheetApp.create(fname);
+      })();
+
+  let sh = ss.getSheetByName(VISITS_TAB);
+  if (!sh) {
+    sh = ss.insertSheet(VISITS_TAB);
+    sh.appendRow([
+      "Date",
+      "Page",
+      "Titre",
+      "Appareil",
+      "Marque / Modèle",
+      "OS",
+      "Navigateur",
+      "Langue",
+      "Fuseau horaire",
+      "Résolution écran",
+      "Provenance",
+    ]);
+    sh.getRange(1, 1, 1, 11)
+      .setFontWeight("bold")
+      .setBackground("#E6007E")  // magenta LFT (vs bleu pour la feuille quiz)
+      .setFontColor("#ffffff");
+    sh.setFrozenRows(1);
+  }
+  return sh;
+}
+
+function logVisit(p) {
+  const sh = getVisitsSheet_();
+  sh.appendRow([
+    new Date(),
+    p.page || "",
+    p.title || "",
+    p.deviceType || "",
+    p.deviceBrand || "",
+    p.osName || "",
+    p.browser || "",
+    p.language || "",
+    p.timezone || "",
+    p.screen || "",
+    p.referrer || "",
+  ]);
+}
+
+
+/* ================================================================
+   ARCHIVAGE DANS GOOGLE SHEETS (Quiz)
    ================================================================ */
 
 function getSheet_() {
