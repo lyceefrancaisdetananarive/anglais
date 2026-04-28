@@ -763,10 +763,106 @@ SPEC_3E = {
 }
 
 
+SPEC_TERMINALE = {
+    "filename": "fiche_terminale_identities_exchanges.pdf",
+    "niveau": "Terminale — B2/C1",
+    "cecrl": "Niveau B2 vers C1 — préparation Bac",
+    "duree": "8 séances × 1 heure",
+    "programme": "Programme Bac LVA — Axe culturel n°1",
+    "titre_anglais": "Identities & Exchanges",
+    "titre_court": "Identities Tle",
+    "sous_titre": "Migration, diaspora et identités plurielles",
+    "tache_finale": "Essai argumenté de 300 mots + oral type Bac (10 min)",
+
+    "presentation": [
+        "Première séquence du programme de Terminale, ancrée dans <b>l'axe culturel "
+        "« Identités et échanges »</b>. Elle explore les phénomènes migratoires "
+        "contemporains à travers le prisme de la <b>diaspora malgache</b> au Royaume-Uni "
+        "(près de 4 000 personnes), en dialogue avec d'autres diasporas anglophones "
+        "(caribéenne, sud-asiatique).",
+
+        "L'objectif est double : (1) consolider les structures complexes attendues au "
+        "niveau B2 (subordonnées relatives, conditionnels mixtes, discours rapporté) ; "
+        "(2) outiller l'élève pour <b>l'épreuve écrite et orale du Bac</b> "
+        "(compréhension de l'écrit, expression argumentée, présentation de dossier).",
+    ],
+
+    "objectifs": [
+        "<b>Linguistiques :</b> subordonnées relatives (who, which, whose, where), conditionnels "
+        "mixtes (past perfect + would), discours rapporté, connecteurs de concession (despite, although, "
+        "even though).",
+        "<b>Lexicaux :</b> migration (push/pull factors, settlement, integration), identité "
+        "(belonging, hybridity, hyphenated identity), expressions imagées (to feel torn, "
+        "salad bowl vs melting pot).",
+        "<b>Culturels :</b> Windrush generation (1948-1971), British-Asian literature "
+        "(Salman Rushdie, Monica Ali, Hanif Kureishi), diaspora malgache à Londres.",
+        "<b>Pragmatiques :</b> argumenter à l'écrit (essai 300 mots), présenter un dossier "
+        "à l'oral, défendre une thèse, reformuler.",
+        "<b>Méthodologiques :</b> préparer un dossier d'oral du Bac, organiser ses notes en "
+        "5 minutes de préparation.",
+    ],
+
+    "liens": [
+        "<b>HGGSP :</b> migrations internationales, frontières, citoyenneté.",
+        "<b>SES :</b> sociologie de l'intégration, capital culturel, mobilité sociale.",
+        "<b>Histoire :</b> empire britannique, décolonisation, Commonwealth.",
+        "<b>Lettres :</b> littérature postcoloniale, écriture du soi, autofiction.",
+    ],
+
+    "citation": "« Multiculturalism is not just a fact, it is also a value. The salad bowl is no longer a metaphor — it is the everyday reality of London, Birmingham, and Manchester. »",
+
+    "session_num": 1,
+    "banner_en": "What does it mean to belong?",
+    "banner_fr": "Séance type — entrée dans l'axe",
+    "banner_duree": "55 min · classe entière",
+
+    "etapes": [
+        ("Anticipation", "Carte interactive : projeter la diaspora malgache au RU (Office for National Statistics).", "10 min", "Classe"),
+        ("Reading", "Lecture de l'incipit de <i>Brick Lane</i> (Monica Ali). Repérage du point de vue.", "15 min", "Individuel"),
+        ("Vocabulary", "Word web autour de <i>identity / belonging</i>. Distinction push/pull factors.", "10 min", "Pairs"),
+        ("Listening", "Podcast BBC <i>The Migration Museum</i> (3 min) — note-taking guidée.", "10 min", "Individuel"),
+        ("Speaking", "Mini-débat : <i>« Is multiculturalism a strength or a challenge? »</i> Argumenter en 2 min.", "10 min", "Pairs → classe"),
+    ],
+
+    "vocab": [
+        ("diaspora",            "/daɪˈæs.pər.ə/",            "diaspora — population dispersée, identité partagée"),
+        ("hyphenated identity", "/ˈhaɪ.fə.neɪ.tɪd/",         "identité hyphénée (ex. British-Malagasy)"),
+        ("settlement",          "/ˈset.əl.mənt/",            "installation (d'une communauté)"),
+        ("to assimilate",       "/əˈsɪm.ɪ.leɪt/",            "s'assimiler (perdre ses spécificités)"),
+        ("to integrate",        "/ˈɪn.tɪ.ɡreɪt/",            "s'intégrer (sans perdre son identité)"),
+        ("to feel torn",        "/tə fiːl tɔːrn/",           "se sentir déchiré, partagé"),
+        ("homeland",            "/ˈhoʊm.lænd/",              "pays d'origine, terre natale"),
+        ("Windrush generation", "/ˈwɪnd.rʌʃ/",               "génération antillaise arrivée au RU 1948-71"),
+        ("salad bowl",          "/ˈsæl.əd boʊl/",            "métaphore : cultures coexistant sans se fondre"),
+        ("melting pot",         "/ˈmel.tɪŋ pɒt/",            "métaphore : fusion des cultures en une"),
+    ],
+
+    "criteres": [
+        ("CE", "Compréhension de l'écrit — texte 600 mots",
+         "Saisit la thèse, identifie les implicites, repère le point de vue."),
+        ("EE", "Essai argumenté de 300 mots",
+         "Plan en 3 parties, ≥ 4 connecteurs, mobilise au moins 2 références culturelles."),
+        ("EOC", "Présentation orale du dossier (8 min)",
+         "Plan clair, références précises, prononciation soignée, fluidité."),
+        ("EOI", "Entretien (10 min)",
+         "Réponses précises, capacité à reformuler, à nuancer, à défendre une thèse."),
+        ("Langue", "Structures complexes",
+         "Maîtrise des relatives, conditionnels mixtes, discours rapporté."),
+    ],
+
+    "quiz_url": "/quiz/terminale/identities-exchanges.html",
+
+    "note_finale":
+        "<b>Liaison avec d'autres axes :</b> les concepts d'<i>hybridity</i> et de <i>belonging</i> "
+        "introduits ici résonneront dans l'axe « Diversité et inclusion » et dans l'axe « Territoire "
+        "et mémoire ». Penser à les ré-investir au fil de l'année pour densifier le dossier d'oral du Bac.",
+}
+
+
 # ============================================================
 #   ENTRY POINT
 # ============================================================
 if __name__ == "__main__":
-    for spec in [SPEC_6E, SPEC_4E, SPEC_3E]:
+    for spec in [SPEC_6E, SPEC_4E, SPEC_3E, SPEC_TERMINALE]:
         generate(spec)
-    print("\n3 fiches PDF générées dans pdf-imprimables/")
+    print("\n4 fiches PDF générées dans pdf-imprimables/")

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Identities &amp; Exchanges — Terminale — LFT</title>
+  <meta name="description" content="Quiz interactif sur l'axe Bac Identities &amp; Exchanges. Niveau Terminale (B2/C1) : migration, diaspora, échanges culturels." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/terminale.html">Retour au niveau Terminale</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Identities &amp; Exchanges — Terminale</div>
+            <div class="line3">B2/C1 · Préparation Bac · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/terminale.html">Terminale</a>
+          <a href="#" aria-current="page">Quiz Identities</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <h1 style="text-align: center;">Identities &amp; Exchanges</h1>
+      <p class="text-muted text-center" style="max-width: 640px; margin: 0 auto var(--space-6);">
+        Quiz sur l'axe Bac « Identités et échanges ». Vocabulaire de la migration et de
+        l'identité, structures complexes, références culturelles anglophones.
+      </p>
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "terminale-identities-exchanges",
+      title: "Quiz : Identities &amp; Exchanges",
+      level: "Terminale — B2/C1",
+      sequence: "Axe Bac n°1 — Identities and Exchanges",
+      duration: "15 minutes",
+      intro: "This quiz reviews the first thematic axis of the Bac syllabus. It covers vocabulary on migration, identity, and cultural exchange, plus complex grammatical structures (relative clauses, conditional, reported speech) and key cultural references in the English-speaking world.",
+
+      questions: [
+
+        // Q1 — Vocab — migration
+        {
+          type: "qcm",
+          prompt: "Choose the most accurate definition of « diaspora »:",
+          options: [
+            "A short-term tourist movement",
+            "A scattered population sharing a common origin and identity",
+            "A government policy on immigration",
+            "A specific type of refugee camp",
+          ],
+          answer: 1,
+          explanation: "A diaspora is a population dispersed across several countries while maintaining ties to a common ancestral homeland. The Malagasy diaspora in the UK is one example you may have studied.",
+        },
+
+        // Q2 — Vocab — push/pull factors
+        {
+          type: "multi",
+          prompt: "Tick ALL items that are typical <em>push factors</em> for migration:",
+          options: [
+            "Better job opportunities abroad",
+            "Civil war",
+            "Persecution",
+            "World-class universities",
+            "Famine",
+          ],
+          answer: ["1", "2", "4"],
+          explanation: "Push factors drive people AWAY (war, persecution, famine). Pull factors attract them TO a destination (jobs, universities, family). Confondre les deux est une erreur classique.",
+        },
+
+        // Q3 — Relative clause
+        {
+          type: "qcm",
+          prompt: "Choose the correct relative pronoun: « Salman Rushdie, _____ novels often deal with diaspora identity, was born in Bombay. »",
+          options: [
+            "who",
+            "which",
+            "whose",
+            "where",
+          ],
+          answer: 2,
+          explanation: "« Whose » indicates possession (= dont les). The novels belong to Rushdie. « Who » would refer to the person himself; « which » to a thing.",
+        },
+
+        // Q4 — Cultural reference
+        {
+          type: "qcm",
+          prompt: "« Brick Lane » (Monica Ali, 2003) tells the story of:",
+          options: [
+            "An Indian family in California",
+            "A Bangladeshi woman in London's East End",
+            "A Jamaican community in Birmingham",
+            "Pakistani factory workers in Bradford",
+          ],
+          answer: 1,
+          explanation: "« Brick Lane » is set in the heart of London's Bangladeshi community. Nazneen, the protagonist, navigates between tradition and emancipation in a multicultural East End.",
+        },
+
+        // Q5 — Reported speech
+        {
+          type: "saisie",
+          prompt: "Put into reported speech: He said, « I will return to my homeland next year. »<br>He said that he ___ return to his homeland the following year.",
+          placeholder: "Un seul mot",
+          answer: ["would", "WOULD", "Would"],
+          explanation: "Reported speech moves tenses one step back: « will » → « would ». Time markers also shift: « next year » → « the following year ».",
+        },
+
+        // Q6 — Idiom / expression
+        {
+          type: "qcm",
+          prompt: "« To feel torn between two cultures » means:",
+          options: [
+            "To physically suffer from cultural shock",
+            "To experience a deep inner conflict between two cultural identities",
+            "To reject one's culture of origin",
+            "To prefer one's adopted country",
+          ],
+          answer: 1,
+          explanation: "« Torn » (déchiré) here is figurative — it describes the emotional tension of belonging to two cultures simultaneously. Very common theme in diaspora literature.",
+        },
+
+        // Q7 — Vrai/Faux historique
+        {
+          type: "vrai-faux",
+          prompt: "The « Windrush generation » refers to Caribbean migrants who arrived in the UK between 1948 and 1971.",
+          answer: "vrai",
+          explanation: "Named after the ship MV Empire Windrush (1948), this generation came from Jamaica, Trinidad, Barbados etc. to help rebuild post-war Britain. The « Windrush scandal » (2018) revealed many were wrongly threatened with deportation.",
+        },
+
+        // Q8 — Connector
+        {
+          type: "qcm",
+          prompt: "Choose the most precise concession linker: « _____ being highly qualified, many migrants struggle to find skilled jobs. »",
+          options: [
+            "Because of",
+            "Despite",
+            "Owing to",
+            "Thanks to",
+          ],
+          answer: 1,
+          explanation: "« Despite + V-ing/noun » expresses a concession (= bien que, malgré). The other three express causes. « Despite being qualified » = even though they are qualified.",
+        },
+
+        // Q9 — Mixed conditional
+        {
+          type: "qcm",
+          prompt: "« If she ___ stayed in Madagascar, she ___ now living in London. » (mixed conditional, hypothèse passée + résultat présent)",
+          options: [
+            "had / wouldn't be",
+            "would / weren't",
+            "had been / wouldn't be",
+            "stayed / wouldn't",
+          ],
+          answer: 0,
+          explanation: "Mixed conditional combine past unreal (if + past perfect) and present unreal (would + base form). « If she had stayed… she wouldn't be living… » = elle est à Londres parce qu'elle n'est pas restée.",
+        },
+
+        // Q10 — Synthesis
+        {
+          type: "qcm",
+          prompt: "Which statement BEST illustrates the « salad bowl » metaphor (vs. the « melting pot »)?",
+          options: [
+            "Migrants must adopt the host country's customs to integrate",
+            "Cultural identities blend into a single, uniform national identity",
+            "Different cultures coexist while preserving their distinctive features",
+            "Migration always weakens national cohesion",
+          ],
+          answer: 2,
+          explanation: "The « salad bowl » metaphor (often associated with Canada and modern UK policy) emphasises distinct cultural identities co-existing — vs. the « melting pot » (US, traditional view) where differences blend into one. Key concept for the « Diversity and Inclusion » axis too.",
+        },
+      ],
+    });
+  </script>
+
+</body>
+</html>
