@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Build / temp
+node_modules/
+*.log
+dist/
+.cache/
+
+# Secrets (au cas où)
+.env
+.env.local
+config.local.js
+
+# OneDrive metadata
+.tmp.drivedownload
