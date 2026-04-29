@@ -93,6 +93,22 @@
       background: var(--warning-100);
     }
     .warning strong { color: var(--warning-500); }
+
+    /* === Responsive (≤ 768px) === */
+    @media (max-width: 768px) {
+      .toc { padding: var(--space-4); }
+      .step-list > li {
+        padding: var(--space-3) var(--space-4) var(--space-3) 3.2rem;
+      }
+      .step-list > li::before {
+        width: 1.6rem;
+        height: 1.6rem;
+        left: 0.8rem;
+        font-size: var(--font-size-sm);
+      }
+      pre { font-size: 0.8em; padding: var(--space-3); }
+      code { font-size: 0.85em; word-break: break-word; }
+    }
   </style>
 </head>
 <body>
