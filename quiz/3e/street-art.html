@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz Street Art — 3e — Mme FALIMANANA — LFT</title>
-  <meta name="description" content="Quiz interactif sur la séquence Street Art : vocabulaire de l'art urbain, voix passive et expressions d'opinion. Niveau 3e (A2+/B1)." />
+  <meta name="description" content="Quiz interactif sur la séquence Street Art : compréhension orale, vocabulaire, voix passive, association d'œuvres et d'artistes. Niveau 3e (A2+/B1)." />
   <meta name="theme-color" content="#000091" />
-
   <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
   <link rel="stylesheet" href="../../assets/css/style.css" />
-
   <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
 </head>
@@ -21,13 +19,12 @@
     <div class="site-header__top">
       <div class="container site-header__top-inner">
         <span>République française · AEFE · Établissement en gestion directe</span>
-        <a href="../../index.html">Retour à l'accueil</a>
+        <a href="../../niveaux/3e.html">Retour à la 3<sup>e</sup></a>
       </div>
     </div>
-
     <div class="site-header__main">
       <div class="container site-header__main-inner">
-        <a href="../../index.html" class="brand" aria-label="Retour à l'accueil">
+        <a href="../../index.html" class="brand">
           <img src="../../assets/img/logo-lft.png" alt="" />
           <div class="brand-text">
             <div class="line1">Lycée Français de Tananarive</div>
@@ -37,7 +34,7 @@
         </a>
         <nav class="nav-main" aria-label="Fil d'Ariane">
           <a href="../../index.html">Accueil</a>
-          <a href="../../index.html#niveaux">Niveaux</a>
+          <a href="../../niveaux/3e.html">3<sup>e</sup></a>
           <a href="#" aria-current="page">Quiz Street Art</a>
         </nav>
       </div>
@@ -46,15 +43,7 @@
 
   <main id="main-content">
     <div class="container" style="padding-top: var(--space-6);">
-
-      <h1 style="text-align: center;">Street Art: The Voice of the Wall</h1>
-      <p class="text-muted text-center" style="max-width: 640px; margin: 0 auto var(--space-6);">
-        Quiz d'évaluation de la séquence sur le street art. Tu peux passer ce quiz quand tu veux,
-        plusieurs fois si tu en as besoin.
-      </p>
-
       <div id="quiz-root"></div>
-
     </div>
   </main>
 
@@ -70,70 +59,118 @@
   <script src="../../assets/js/quiz-engine.js"></script>
   <script>
     QuizEngine.init({
-      id: "3e-street-art-vocab-passive",
-      title: "Quiz : Street Art — vocabulaire et voix passive",
+      id: "3e-street-art-v2",
+      title: "Street Art: The Voice of the Wall",
       level: "3e — A2+/B1",
-      sequence: "Street Art: The Voice of the Wall",
-      duration: "12 minutes",
-      intro: "Ce quiz évalue ce que tu as appris pendant la séquence Street Art : vocabulaire de l'art urbain, voix passive et expressions d'opinion. Réponds le plus précisément possible. Bonne chance !",
+      sequence: "Séquence 1 — Street Art",
+      duration: "~15 min",
+      heroImage: "../../assets/img/sequences/street-art/banksy-style-mural.jpg",
+      intro: "Bienvenue sur le quiz Street Art ! Tu vas rencontrer plusieurs types d'activités : compréhension orale, image, association, remise en ordre, texte à trous, QCM. Bonne chance !",
 
       questions: [
 
-        // Q1 — Vocabulaire (image)
+        // Q1 — IMAGE-QCM (vocabulaire visuel)
         {
-          type: "qcm",
-          prompt: "Comment appelle-t-on en anglais une œuvre faite avec un pochoir, comme celles de Banksy ?",
+          type: "image-qcm",
+          prompt: "Observe ce mur. Quelle technique l'artiste a-t-il utilisée ?",
+          imageSrc: "../../assets/img/sequences/street-art/banksy-style-mural.jpg",
+          imageAlt: "Mur avec une œuvre de street art",
+          imageCaption: "Photo : Unsplash · usage pédagogique LFT",
           options: [
-            "A graffiti",
-            "A stencil",
-            "A canvas",
-            "A poster",
+            "A tag (a quick signature with spray paint)",
+            "A stencil (a paper template + spray paint)",
+            "A sticker (a printed adhesive)",
+            "A mosaic (small pieces of glass or tile)",
           ],
           answer: 1,
-          explanation: "« A stencil » est le mot anglais pour pochoir. Banksy est célèbre pour cette technique qui permet une exécution rapide.",
+          explanation: "Cette œuvre est créée avec un <b>stencil</b> (pochoir) : un gabarit en papier découpé est plaqué sur le mur, puis l'artiste vaporise de la peinture. C'est la technique signature de Banksy.",
         },
 
-        // Q2 — Vocabulaire (compréhension)
+        // Q2 — AUDIO-QCM (compréhension orale Try n' Fly)
         {
-          type: "qcm",
-          prompt: "Une grande peinture sur un mur entier, dans la rue, s'appelle :",
+          type: "audio-qcm",
+          prompt: "Listen to this audio extract from your manual. What is the main topic?",
+          audioSrc: "../../assets/audio/3e_street_art_eval_co.mp3",
+          audioCaption: "Listening — Try n' Fly 3e — Flight 5",
+          audioHint: "Tu peux écouter deux fois si nécessaire.",
           options: [
-            "A tag",
-            "A sticker",
-            "A mural",
-            "A frame",
-          ],
-          answer: 2,
-          explanation: "« A mural » désigne une peinture murale de grande taille. À ne pas confondre avec un tag (signature) ou un sticker (autocollant).",
-        },
-
-        // Q3 — Voix passive (transformation)
-        {
-          type: "saisie",
-          prompt: "Mets cette phrase à la voix passive : « Banksy painted this mural in 2010. »",
-          placeholder: "This mural...",
-          answer: [
-            "this mural was painted by banksy in 2010",
-            "this mural was painted by banksy in 2010.",
-          ],
-          explanation: "Voix passive au prétérit : sujet (this mural) + was/were + participe passé (painted) + by + agent.",
-        },
-
-        // Q4 — Voix passive (QCM)
-        {
-          type: "qcm",
-          prompt: "Quelle phrase est à la voix passive ?",
-          options: [
-            "The artist creates a new artwork.",
-            "The wall is being repainted by the council.",
-            "The council ordered the cleaning.",
-            "Banksy works at night.",
+            "A famous painter's biography",
+            "Street art and urban culture",
+            "A football match in London",
+            "A weather report",
           ],
           answer: 1,
-          explanation: "« is being repainted » = forme passive au présent continu. Les autres phrases sont à la voix active.",
+          explanation: "L'extrait porte sur le street art (= street art and urban culture). Concentre-toi sur les mots-clés répétés : <i>street art</i>, <i>graffiti</i>, <i>artist</i>, <i>wall</i>...",
         },
 
-        // Q5 — Vocabulaire de l'opinion
+        // Q3 — MATCHING (artiste ↔ œuvre)
+        {
+          type: "matching",
+          prompt: "Match each artist with their famous work.",
+          hint: "Indice : pense aux artistes que tu as étudiés en classe.",
+          pairs: [
+            { left: "Banksy",          right: "Girl with Balloon (London, 2002)" },
+            { left: "Keith Haring",    right: "Crack is Wack (NYC, 1986)" },
+            { left: "Shepard Fairey",  right: "Hope (Obama portrait, 2008)" },
+            { left: "Jean-Michel Basquiat", right: "SAMO© tags (NYC, late 1970s)" },
+          ],
+        },
+
+        // Q4 — CLOZE (voix passive)
+        {
+          type: "cloze",
+          prompt: "Complète ce texte sur Banksy en choisissant la bonne forme verbale.",
+          parts: [
+            { text: "This famous mural " },
+            { gap: ["was painted", "is painting", "paints", "has been paint"], answer: 0 },
+            { text: " by Banksy in 2010. The wall " },
+            { gap: ["is photograph", "was photographed", "photographs", "has photograph"], answer: 1 },
+            { text: " by hundreds of tourists every day. Today, the artwork " },
+            { gap: ["protects", "is protecting", "is protected", "protected"], answer: 2 },
+            { text: " by a sheet of plexiglas." },
+          ],
+        },
+
+        // Q5 — ORDERING (étapes de création)
+        {
+          type: "ordering",
+          prompt: "Mets ces étapes de création d'un pochoir dans le bon ordre.",
+          hint: "Réfléchis au workflow d'un artiste de rue.",
+          items: [
+            "Imagine an image and design it on paper",
+            "Cut the stencil with a sharp knife",
+            "Find a wall and check it's safe",
+            "Hold the stencil firmly against the wall",
+            "Spray paint over the stencil",
+            "Photograph the result before it's covered",
+          ],
+        },
+
+        // Q6 — VRAI/FAUX (culture)
+        {
+          type: "vrai-faux",
+          prompt: "Banksy est un artiste britannique dont la véritable identité a été révélée publiquement.",
+          answer: "faux",
+          explanation: "Banksy est britannique mais son identité reste anonyme à ce jour. C'est l'un des piliers de sa démarche artistique : <i>« Anonymity is part of the work. »</i>",
+        },
+
+        // Q7 — IMAGE-QCM (graffiti vs street art)
+        {
+          type: "image-qcm",
+          prompt: "What can you see in this image?",
+          imageSrc: "../../assets/img/sequences/street-art/graffiti-tag.jpg",
+          imageAlt: "Mur couvert de tags et graffitis",
+          options: [
+            "A planned mural with a clear message",
+            "Tags — quick signatures on a wall",
+            "An advertising poster",
+            "A photograph framed in a museum",
+          ],
+          answer: 1,
+          explanation: "On voit ici des <b>tags</b> : signatures rapides à la bombe, sans recherche figurative. C'est une forme primitive du graffiti, distincte du street art figuratif (Banksy, Keith Haring).",
+        },
+
+        // Q8 — MULTI (vocabulaire)
         {
           type: "multi",
           prompt: "Coche TOUTES les expressions correctes pour donner son avis en anglais :",
@@ -145,55 +182,22 @@
             "According to me...",
           ],
           answer: ["0", "1", "3"],
-          explanation: "« I am agree » est incorrect (pas de « to be » devant agree). « According to me » est un calque français : on dit « In my opinion » ou « To me ».",
+          explanation: "« I am agree » est incorrect (pas de <i>to be</i> devant <i>agree</i>). « According to me » est un calque français : on dit <i>In my opinion</i> ou <i>To me</i>.",
         },
 
-        // Q6 — Vrai/Faux culturel
-        {
-          type: "vrai-faux",
-          prompt: "Banksy est un artiste britannique dont la véritable identité a été révélée publiquement.",
-          answer: "faux",
-          explanation: "Banksy est britannique mais son identité reste anonyme à ce jour. C'est l'un des piliers de sa démarche artistique.",
-        },
-
-        // Q7 — Compréhension (avec image)
-        {
-          type: "qcm",
-          prompt: "Quelle œuvre célèbre de Banksy montre une jeune fille dont un ballon en forme de cœur s'envole ?",
-          options: [
-            "Slave Labour",
-            "Girl with Balloon",
-            "Flower Thrower",
-            "There Is Always Hope",
-          ],
-          answer: 1,
-          explanation: "« Girl with Balloon » (Londres, 2002) est sa fresque la plus reconnaissable. Note : « There Is Always Hope » est parfois utilisé comme sous-titre de la même œuvre.",
-        },
-
-        // Q8 — Saisie phonologique
+        // Q9 — SAISIE (voix passive transformation)
         {
           type: "saisie",
-          prompt: "Comment se prononce la terminaison -ed du verbe « painted » : /t/, /d/ ou /ɪd/ ? (Tape juste la prononciation entre slashs.)",
-          placeholder: "Par exemple : /t/",
-          answer: ["/ɪd/", "/id/"],
-          explanation: "Après /t/ ou /d/ (le -t final de paint), -ed se prononce /ɪd/. Ex. : painted /ˈpeɪntɪd/, decided /dɪˈsaɪdɪd/.",
-        },
-
-        // Q9 — Argumentation
-        {
-          type: "qcm",
-          prompt: "Quel connecteur introduit une OPPOSITION en anglais ?",
-          options: [
-            "Therefore",
-            "Moreover",
-            "However",
-            "Besides",
+          prompt: "Mets cette phrase à la voix passive : « Banksy painted this mural in 2010. »",
+          placeholder: "This mural...",
+          answer: [
+            "this mural was painted by banksy in 2010",
+            "this mural was painted by banksy in 2010.",
           ],
-          answer: 2,
-          explanation: "« However » introduit une opposition (= cependant). Therefore = donc, Moreover/Besides = de plus.",
+          explanation: "Voix passive au prétérit : sujet (this mural) + was/were + participe passé (painted) + by + agent + complément de temps.",
         },
 
-        // Q10 — Synthèse (réponse libre)
+        // Q10 — QCM final (synthèse)
         {
           type: "qcm",
           prompt: "Pourquoi Banksy choisit-il souvent la rue plutôt qu'une galerie pour exposer ?",
@@ -204,7 +208,7 @@
             "Parce que les galeries lui sont interdites",
           ],
           answer: 1,
-          explanation: "Banksy utilise l'espace public pour s'adresser à TOUT le monde et porter un message engagé (anti-guerre, immigration, consommation). C'est l'idée que l'art doit sortir des musées.",
+          explanation: "Banksy utilise l'espace public pour s'adresser à TOUT le monde et porter un message engagé (anti-guerre, immigration, consommation). C'est l'idée que l'art doit sortir des musées pour intervenir dans la cité.",
         },
       ],
     });
