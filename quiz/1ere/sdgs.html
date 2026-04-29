@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Sustainable Development Goals — 1ère euro — LFT</title>
+  <meta name="description" content="Quiz sur les 17 Objectifs de Développement Durable de l'ONU. Niveau 1ère euro (B2) : argumentation, futur, conditional." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/1ere.html">Retour à la 1<sup>re</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz SDGs — 1<sup>re</sup> euro</div>
+            <div class="line3">B2 · APPROF LING · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/1ere.html">1<sup>re</sup></a>
+          <a href="#" aria-current="page">Quiz SDGs</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "1ere-sdgs",
+      title: "Sustainable Development Goals",
+      level: "1re euro — B2",
+      sequence: "Séquence 3 — UN's 17 SDGs",
+      duration: "~15 min",
+      intro: "This quiz explores the United Nations' 2030 Agenda — the 17 Sustainable Development Goals (SDGs) adopted in 2015. Strong scientific vocabulary, conditional structures, and arguments of engagement. Perfect for the European Section!",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "How many Sustainable Development Goals (SDGs) are there?",
+          options: ["10", "15", "17", "20"],
+          answer: 2,
+          explanation: "Il y a <b>17 SDGs</b> adoptés par l'ONU en septembre 2015 — l'<i>Agenda 2030</i>. Couvre poverty, climate, education, gender equality, etc.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each SDG with its theme.",
+          hint: "Indice : les 4 plus discutés en classe.",
+          pairs: [
+            { left: "SDG 1",   right: "No Poverty" },
+            { left: "SDG 5",   right: "Gender Equality" },
+            { left: "SDG 13",  right: "Climate Action" },
+            { left: "SDG 14",  right: "Life Below Water" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Complete: « The SDGs were adopted in _____ . » (one year — 4 digits)",
+          placeholder: "Example: 2015",
+          answer: ["2015"],
+          explanation: "Les SDGs ont été adoptés à New York en <b>septembre 2015</b> par les 193 États membres de l'ONU, lors du sommet « Transforming our World ».",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« If we _____ act now, we _____ achieve the SDGs by 2030. » (mixed conditional, present)",
+          options: [
+            "don't / will not",
+            "didn't / would not",
+            "won't / would not",
+            "haven't / will not",
+          ],
+          answer: 0,
+          explanation: "<b>First conditional</b> : <i>if + present simple</i> + <i>will/won't</i>. C'est une condition réaliste pour le futur. <i>If we don't act now, we will not achieve...</i>",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Madagascar is a member state of the United Nations.",
+          answer: "vrai",
+          explanation: "Madagascar est membre de l'ONU depuis le <b>20 septembre 1960</b>, juste après son indépendance (26 juin 1960). Elle participe aux travaux des SDGs comme tous les autres États.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete this argument paragraph with the right tense.",
+          parts: [
+            { text: "Climate change " },
+            { gap: ["has been described", "is describing", "describes", "described"], answer: 0 },
+            { text: " by the IPCC as the greatest challenge of our century. If governments " },
+            { gap: ["had not signed", "did not sign", "have not signed", "do not sign"], answer: 0 },
+            { text: " the Paris Agreement in 2015, we " },
+            { gap: ["would be", "are being", "had been", "would have been"], answer: 0 },
+            { text: " in an even worse position today." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is the SDGs' iconic colour palette best known for?",
+          options: [
+            "It is monochrome (just blue)",
+            "Each goal has its own bright color, forming a colorful wheel",
+            "The colors represent country flags",
+            "There is no specific color palette",
+          ],
+          answer: 1,
+          explanation: "Chaque SDG a sa <b>couleur emblématique</b> (rouge pour No Poverty, vert pour Climate Action, bleu pour Life Below Water…). Ensemble ils forment la <b>SDG Wheel</b>, un logo très utilisé.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL goals that directly target climate / environment:",
+          options: [
+            "SDG 7 — Affordable and Clean Energy",
+            "SDG 13 — Climate Action",
+            "SDG 14 — Life Below Water",
+            "SDG 4 — Quality Education",
+            "SDG 15 — Life on Land",
+          ],
+          answer: ["0", "1", "2", "4"],
+          explanation: "SDG 7, 13, 14 et 15 ciblent directement l'environnement. SDG 4 (éducation) est essentiel mais transversal — il a un impact indirect sur les enjeux environnementaux.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these UN climate milestones in chronological order.",
+          hint: "From the earliest to the most recent.",
+          items: [
+            "First Earth Summit in Rio (1992)",
+            "Kyoto Protocol signed (1997)",
+            "Millennium Development Goals (2000)",
+            "Sustainable Development Goals (2015)",
+            "Paris Agreement enters into force (Nov 2016)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Why is SDG 17 called « Partnerships for the Goals »?",
+          options: [
+            "Because it is the last goal listed alphabetically",
+            "Because achieving the SDGs requires international cooperation between governments, NGOs and companies",
+            "Because it is optional",
+            "Because it focuses on military partnerships",
+          ],
+          answer: 1,
+          explanation: "Le SDG 17 est le « <b>goal des goals</b> » : il insiste sur la nécessité d'une <b>coopération internationale</b> (États, ONG, secteur privé, société civile) pour atteindre les 16 autres objectifs. Aucun pays ne peut réussir seul.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

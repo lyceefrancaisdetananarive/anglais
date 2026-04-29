@@ -86,7 +86,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Métro de Londres (Tube), Buckingham Palace, Camden Market",
         tache: "Itinéraire commenté d'une journée à Londres (vidéo 3 min)",
         cecrl: "A1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/6e/london-life.html"
       },
       {
         n: 6, periode: "T3 (mai-juin)",
@@ -164,7 +165,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Aborigènes, Uluru, Dreamtime, Sydney",
         tache: "Carnet de voyage illustré (4 pages)",
         cecrl: "A2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/4e/australian-journey.html"
       },
       {
         n: 5, periode: "T3 (avril-mai)",
@@ -487,7 +489,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "ONU, Agenda 2030, Madagascar et les ODD",
         tache: "Présentation TED-style sur un ODD (5 min)",
         cecrl: "B2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/1ere/sdgs.html"
       },
       {
         n: 4, periode: "T2-T3 (mars)",
@@ -577,7 +580,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Cambridge Analytica, Capitol Hill 2021, IA générative",
         tache: "Article d'opinion 350 mots — fake news",
         cecrl: "B2/C1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/terminale/citizenship-virtual.html"
       },
       {
         n: 5, periode: "T3 (mars)",

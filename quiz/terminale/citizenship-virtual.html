@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Citizenship and Virtual Worlds — Terminale — LFT</title>
+  <meta name="description" content="Quiz sur l'axe Bac « Citoyenneté et mondes virtuels ». Niveau Terminale (B2/C1) : fake news, deepfake, Cambridge Analytica." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/terminale.html">Retour à la Terminale</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Citizenship & Virtual Worlds — Terminale</div>
+            <div class="line3">B2/C1 · Préparation Bac · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/terminale.html">Terminale</a>
+          <a href="#" aria-current="page">Quiz Citizenship</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "terminale-citizenship-virtual",
+      title: "Citizenship and Virtual Worlds",
+      level: "Terminale — B2/C1",
+      sequence: "Axe Bac n°4 — Citoyenneté et mondes virtuels",
+      duration: "~15 min",
+      intro: "This quiz examines how virtual worlds reshape democracy and citizenship: fake news, deepfakes, social media, AI-generated content. Test your advanced vocabulary, modal verbs of doubt, and reported speech.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What is « fake news »?",
+          options: [
+            "Old news from the past",
+            "Deliberately false information presented as legitimate news",
+            "Local news in a foreign language",
+            "News about celebrities",
+          ],
+          answer: 1,
+          explanation: "<b>Fake news</b> = informations délibérément fausses présentées comme des nouvelles légitimes pour tromper, manipuler ou désinformer. Terme popularisé par Donald Trump en 2016.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each digital threat with its definition.",
+          hint: "Vocabulaire essentiel pour l'axe « Citoyenneté ».",
+          pairs: [
+            { left: "Deepfake",        right: "AI-generated fake video that looks real" },
+            { left: "Phishing",         right: "Fraudulent emails to steal personal info" },
+            { left: "Cyberbullying",   right: "Online harassment of an individual" },
+            { left: "Echo chamber",    right: "Closed group reinforcing only one opinion" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Put into reported speech: She said, « I will check the source ».<br>She said that she ___ check the source.",
+          placeholder: "One word",
+          answer: ["would", "Would", "WOULD"],
+          explanation: "Reported speech recule les temps d'un cran : <i>will → would</i>. <i>She said that she <b>would</b> check the source</i>.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What was the « Cambridge Analytica scandal » (2018) about?",
+          options: [
+            "A university expelled for cheating",
+            "Personal data of 87 million Facebook users harvested without consent for political ads",
+            "A famous British football team",
+            "A new mobile app launch",
+          ],
+          answer: 1,
+          explanation: "<b>Cambridge Analytica</b> a récolté les données personnelles de 87 millions d'utilisateurs Facebook (sans consentement) pour cibler des publicités politiques (campagne Trump 2016, Brexit). Scandale qui a fait évoluer les régulations.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Deepfakes are AI-generated images, videos or audios that can be used to make someone appear to say or do something they did not do.",
+          answer: "vrai",
+          explanation: "Les <b>deepfakes</b> (combinaison de <i>deep learning</i> + <i>fake</i>) utilisent l'IA pour générer du contenu falsifié. Premières apparitions en 2017. Aujourd'hui ils sont de plus en plus difficiles à détecter.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete this argumentative paragraph on online citizenship.",
+          parts: [
+            { text: "Citizens " },
+            { gap: ["might", "must", "may", "could"], answer: 1 },
+            { text: " be vigilant when consuming online content. They " },
+            { gap: ["should", "shall", "may", "would"], answer: 0 },
+            { text: " always verify sources before sharing. Otherwise, fake news " },
+            { gap: ["spread", "spreads", "is spreading", "are spread"], answer: 1 },
+            { text: " incredibly fast." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What does « to fact-check » mean?",
+          options: [
+            "To create new facts",
+            "To verify the accuracy of a piece of information before publishing or sharing",
+            "To organize a quiz competition",
+            "To build a database",
+          ],
+          answer: 1,
+          explanation: "<b>Fact-checking</b> = vérifier l'exactitude d'une information avant de la publier ou de la partager. Pratique de plus en plus courante dans le journalisme (AFP Factuel, Snopes, BBC Reality Check).",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL critical reflexes when receiving doubtful information online:",
+          options: [
+            "Check the original source",
+            "Share it immediately to your contacts",
+            "Look at the date of publication",
+            "Verify if other reliable sources confirm it",
+            "Trust it because many people liked it",
+          ],
+          answer: ["0", "2", "3"],
+          explanation: "Toujours vérifier la source originale, la date et la cohérence avec d'autres sources fiables. Ne JAMAIS partager sans vérification, et ne pas se fier au nombre de likes (qui peuvent être manipulés).",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these milestones in the history of digital citizenship in chronological order.",
+          hint: "From earliest to most recent.",
+          items: [
+            "World Wide Web invented by Tim Berners-Lee (1989)",
+            "Facebook launched (2004)",
+            "Arab Spring uses social media (2010-2012)",
+            "Cambridge Analytica scandal (2018)",
+            "ChatGPT launched, AI-generated content explodes (2022)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which event highlighted the dangerous role of misinformation in democratic processes?",
+          options: [
+            "The Beijing Olympics",
+            "The 2021 Capitol Hill riots in Washington D.C.",
+            "The 2012 European Cup",
+            "The 2008 Olympic games",
+          ],
+          answer: 1,
+          explanation: "L'attaque du Capitole le 6 janvier 2021 a mis en lumière le rôle de la désinformation et des théories du complot diffusées sur les réseaux sociaux dans la radicalisation politique et l'érosion de la démocratie.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

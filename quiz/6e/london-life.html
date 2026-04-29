@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Everyday Life in London — 6e — LFT</title>
+  <meta name="description" content="Quiz interactif sur la vie quotidienne à Londres. Niveau 6e (A1) : présent simple, prépositions, lieux de la ville." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/6e.html">Retour à la 6<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Everyday Life in London — 6<sup>e</sup></div>
+            <div class="line3">A1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/6e.html">6<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz London</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "6e-london-life",
+      title: "Everyday Life in London",
+      level: "6e — A1",
+      sequence: "Séquence 5 — Une journée à Londres",
+      duration: "~10 min",
+      intro: "Welcome to London! Voici un quiz pour découvrir la capitale britannique et apprendre à parler de sa journée. Présent simple, heures, prépositions de lieu et lieux de la ville !",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What time do British schools usually start?",
+          options: ["7 a.m.", "8.30 a.m.", "10 a.m.", "Noon"],
+          answer: 1,
+          explanation: "Au Royaume-Uni, l'école commence vers 8h30-9h le matin et se termine vers 15h-15h30 — journée plus courte qu'en France ou à Madagascar.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each London landmark with its description.",
+          hint: "Indice : monuments emblématiques de Londres.",
+          pairs: [
+            { left: "Big Ben",            right: "The bell of the clock tower" },
+            { left: "Buckingham Palace",  right: "The King's official residence" },
+            { left: "London Eye",         right: "A giant Ferris wheel on the Thames" },
+            { left: "Tower of London",    right: "Old fortress with the Crown Jewels" },
+          ],
+        },
+
+        {
+          type: "cloze",
+          prompt: "Choisis la bonne préposition de lieu.",
+          parts: [
+            { text: "I live " },
+            { gap: ["in", "on", "at", "to"], answer: 0 },
+            { text: " London. My school is " },
+            { gap: ["in", "on", "at", "to"], answer: 1 },
+            { text: " Baker Street. The bus stops " },
+            { gap: ["in", "on", "at", "to"], answer: 2 },
+            { text: " the corner." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Choisis la phrase correcte pour 14h30 :",
+          options: [
+            "It's two and half p.m.",
+            "It's half past two p.m.",
+            "It's the half of two p.m.",
+            "It's two-half o'clock",
+          ],
+          answer: 1,
+          explanation: "<i>Half past two</i> = 14h30 (deux heures et demie). Pour les heures : <i>quarter past</i> (et quart), <i>half past</i> (et demie), <i>quarter to</i> (moins le quart).",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "The London Underground is also called « the Tube ».",
+          answer: "vrai",
+          explanation: "<b>The Tube</b> est le surnom du métro londonien (à cause de la forme tubulaire des tunnels). Le plus vieux du monde (ouvert en 1863).",
+        },
+
+        {
+          type: "saisie",
+          prompt: "Comment dis-tu : « Je vais à l'école en bus » ? (commence par <em>I</em>)",
+          placeholder: "I go to school...",
+          answer: [
+            "i go to school by bus",
+            "i go to school by bus.",
+            "I go to school by bus",
+            "I go to school by bus.",
+          ],
+          explanation: "<i>By bus / by car / by train / by bike</i> = en bus / voiture / train / vélo. Mais attention : <i>on foot</i> = à pied !",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL places where you can buy something:",
+          options: [
+            "Library",
+            "Supermarket",
+            "Bookshop",
+            "Hospital",
+            "Bakery",
+          ],
+          answer: ["1", "2", "4"],
+          explanation: "Supermarket (supermarché), bookshop (librairie) et bakery (boulangerie) vendent des choses. Library (bibliothèque, pour emprunter !) et hospital ne vendent pas.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« I _____ to school every day. » (présent simple)",
+          options: ["go", "goes", "going", "gone"],
+          answer: 0,
+          explanation: "Avec <i>I/you/we/they</i>, le présent simple = forme de base (go). Avec <i>he/she/it</i>, on ajoute -s (goes).",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Mets ces moments d'une journée à Londres dans l'ordre.",
+          hint: "D'une matinée typique à la fin de journée.",
+          items: [
+            "Wake up at 7 a.m.",
+            "Have breakfast at home",
+            "Take the Tube to school",
+            "Have lunch at school",
+            "Go back home after school",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Quelle est la principale différence entre Londres et Tananarive ?",
+          options: [
+            "London has 9 million people, Tananarive has 1.5 million",
+            "London is on a river (Thames), Tananarive is on hills",
+            "London is in the UK, Tananarive in Madagascar",
+            "All of the above are correct",
+          ],
+          answer: 3,
+          explanation: "Toutes ces affirmations sont correctes ! Londres et Tana sont deux capitales très différentes — démographie, géographie, histoire — mais aussi avec des points communs (cosmopolitisme, vie culturelle riche).",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz An Australian Journey — 4e — LFT</title>
+  <meta name="description" content="Quiz sur l'Australie autochtone. Niveau 4e (A2) : prétérit, peuples premiers, voyage." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/4e.html">Retour à la 4<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz An Australian Journey — 4<sup>e</sup></div>
+            <div class="line3">A2 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/4e.html">4<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Australia</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "4e-australian-journey",
+      title: "An Australian Journey",
+      level: "4e — A2",
+      sequence: "Séquence 4 — Voyage en Australie autochtone",
+      duration: "~12 min",
+      intro: "G'day mate! Voici un quiz sur l'Australie : géographie, peuples autochtones (Aborigènes), faune unique. Mobilise le prétérit (récit), les connecteurs temporels et le lexique du voyage.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What is the capital of Australia?",
+          options: ["Sydney", "Melbourne", "Canberra", "Perth"],
+          answer: 2,
+          explanation: "<b>Canberra</b> est la capitale (depuis 1908). Sydney est la plus grande ville mais pas la capitale — c'est un compromis politique entre Sydney et Melbourne, les deux rivales historiques.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each Australian icon with what it is.",
+          hint: "Indice : la faune et les sites australiens.",
+          pairs: [
+            { left: "Kangaroo",        right: "Marsupial that hops" },
+            { left: "Koala",           right: "Eats only eucalyptus leaves" },
+            { left: "Uluru",           right: "Sacred red rock in the centre" },
+            { left: "Great Barrier Reef", right: "World's largest coral reef" },
+          ],
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complète ce récit de voyage au prétérit.",
+          parts: [
+            { text: "Last summer, my family " },
+            { gap: ["went", "go", "going", "gone"], answer: 0 },
+            { text: " to Australia. We " },
+            { gap: ["see", "saw", "seen", "is seeing"], answer: 1 },
+            { text: " kangaroos in the wild. We " },
+            { gap: ["had", "have", "has", "having"], answer: 0 },
+            { text: " an amazing time at the Great Barrier Reef." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Who are the « First Nations » of Australia?",
+          options: [
+            "British colonists",
+            "Aboriginal and Torres Strait Islander peoples",
+            "European immigrants",
+            "Australian sportspeople",
+          ],
+          answer: 1,
+          explanation: "Les <b>First Nations</b> = Aboriginal Australians and Torres Strait Islanders, premiers habitants du continent depuis plus de 65 000 ans — la plus ancienne culture continue au monde.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Australia is both a continent AND a country.",
+          answer: "vrai",
+          explanation: "Cas unique au monde ! L'Australie est à la fois un <b>pays souverain</b> (Commonwealth d'Australie) et un <b>continent</b>. C'est le plus petit continent et le 6<sup>e</sup> plus grand pays.",
+        },
+
+        {
+          type: "saisie",
+          prompt: "Quelle est la signification de « Dreamtime » dans la culture aborigène ? (1 mot)",
+          placeholder: "Ex : Cooking",
+          answer: ["mythology", "Mythology", "creation", "Creation", "spirituality", "Spirituality"],
+          explanation: "Le <b>Dreamtime</b> (« Temps du rêve ») est la mythologie/cosmogonie aborigène : récits sacrés expliquant la création du monde, les liens à la terre et les ancêtres.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL animals that are unique to Australia:",
+          options: [
+            "Kangaroo",
+            "Lion",
+            "Platypus",
+            "Wombat",
+            "Tiger",
+          ],
+          answer: ["0", "2", "3"],
+          explanation: "Kangaroo, platypus (ornithorynque) et wombat sont endémiques d'Australie. Les lions et tigres ne s'y trouvent pas (sauf en zoo).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« Why _____ Australia called « Down Under »? »",
+          options: ["are", "is", "did", "was"],
+          answer: 1,
+          explanation: "<i>Why <b>is</b> Australia called…</i> — verbe <i>to be</i> à la 3<sup>e</sup> personne du singulier au présent simple. <i>Down Under</i> car l'Australie se situe dans l'hémisphère Sud, « en bas » de la carte.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these moments of an Australian Outback trip in order.",
+          hint: "From the start of the day to the night.",
+          items: [
+            "Wake up at the campsite at dawn",
+            "Walk along the trail in the morning",
+            "Stop for a billabong (waterhole) break at noon",
+            "Watch a stunning sunset over Uluru",
+            "Sleep under the stars at night",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is the name of the long walking trail in Australia's Northern Territory that 3<sup>e</sup> students study (lecture cursive)?",
+          options: [
+            "Kakadu Walk",
+            "Jatbula Trail",
+            "Bondi to Manly",
+            "Great Ocean Road",
+          ],
+          answer: 1,
+          explanation: "Le <b>Jatbula Trail</b> est un sentier de 62 km dans le Nitmiluk National Park, en territoire Jawoyn. C'est l'objet de la lecture cursive en 3<sup>e</sup> — vous y travaillerez l'année prochaine !",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
