@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Diversity and Inclusion — Terminale — LFT</title>
+  <meta name="description" content="Quiz sur l'axe Bac « Diversity and Inclusion ». Niveau Terminale (B2/C1) : représentation, racisme, féminisme, LGBT+." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/terminale.html">Retour à la Terminale</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Diversity & Inclusion — Terminale</div>
+            <div class="line3">B2/C1 · Préparation Bac · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/terminale.html">Terminale</a>
+          <a href="#" aria-current="page">Quiz Diversity</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "terminale-diversity-inclusion",
+      title: "Diversity and Inclusion",
+      level: "Terminale — B2/C1",
+      sequence: "Axe Bac n°7 — Diversité et inclusion",
+      duration: "~15 min",
+      intro: "This quiz explores how Western societies have engaged with diversity and inclusion — from civil rights movements to contemporary debates on representation, identity, and gender. Prepare for advanced vocabulary and complex grammatical structures.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What does the acronym « LGBTQIA+ » stand for? (focus on the « Q »)",
+          options: [
+            "Quiet",
+            "Queer / Questioning",
+            "Quality",
+            "Queen",
+          ],
+          answer: 1,
+          explanation: "Le « Q » dans LGBTQIA+ signifie <b>Queer</b> (terme inclusif et politique réapproprié par la communauté) ou <b>Questioning</b> (en questionnement). L'acronyme englobe Lesbian, Gay, Bisexual, Trans, Queer, Intersex, Asexual, et le « + » désigne d'autres identités.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each movement with its founding moment / figure.",
+          hint: "Indice : grands mouvements pour la diversité.",
+          pairs: [
+            { left: "Civil Rights Movement (USA)", right: "MLK, march on Washington (1963)" },
+            { left: "Black Lives Matter",          right: "Trayvon Martin's death (2013)" },
+            { left: "#MeToo",                       right: "Tarana Burke / Weinstein scandal (2017)" },
+            { left: "Pride / Stonewall",           right: "Stonewall riots, NYC (1969)" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Translate to inclusive English: « Le président de l'école a parlé à tous les élèves. »",
+          placeholder: "The school...",
+          answer: [
+            "the school principal spoke to all students",
+            "the head teacher spoke to all students",
+            "the school principal spoke to all the students",
+            "the school principal spoke to all students.",
+          ],
+          explanation: "<i>Principal</i> ou <i>head teacher</i> (genre-neutre) au lieu de <i>headmaster/headmistress</i>. <i>All students</i> est inclusif (vs <i>all the boys and girls</i>).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is « unconscious bias »?",
+          options: [
+            "A medical condition",
+            "Stereotypes that influence our judgements without us realizing",
+            "A type of optical illusion",
+            "A political ideology",
+          ],
+          answer: 1,
+          explanation: "Le <b>biais inconscient</b> = stéréotypes intériorisés qui influencent nos décisions sans que nous en soyons conscients. Concept clé en matière de recrutement, justice et éducation.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "The first openly transgender Member of Parliament was elected in New Zealand in 1999.",
+          answer: "vrai",
+          explanation: "Georgina Beyer, élue au Parlement néo-zélandais en 1999, fut la première parlementaire ouvertement transgenre au monde. La Nouvelle-Zélande a souvent été pionnière sur les droits civiques (premier pays à donner le vote aux femmes en 1893).",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete with appropriate inclusive / sensitive language.",
+          parts: [
+            { text: "Inclusive workplaces " },
+            { gap: ["should", "must", "may", "might"], answer: 1 },
+            { text: " offer equal pay regardless of gender. Hiring " },
+            { gap: ["should be based on", "should base on", "should based on", "should base"], answer: 0 },
+            { text: " skills, not stereotypes. Companies " },
+            { gap: ["that have diverse teams", "who has diverse teams", "what have diverse teams", "which has diverse teams"], answer: 0 },
+            { text: " often perform better." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is « tokenism »?",
+          options: [
+            "Including a few minority members for appearance only, without real inclusion",
+            "A strict application of the law",
+            "An award given to top diversity advocates",
+            "A type of voting system",
+          ],
+          answer: 0,
+          explanation: "Le <b>tokenism</b> = inclure une ou deux personnes issues de minorités juste pour la façade, sans réelle volonté d'inclusion. Critique courante adressée à certaines entreprises et institutions.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL elements of « cultural appropriation » as critically defined:",
+          options: [
+            "Adopting elements of a culture without context or respect",
+            "Profiting from a culture while its members face discrimination",
+            "Sharing recipes between friends from different countries",
+            "Wearing sacred symbols as costumes",
+            "Learning a foreign language",
+          ],
+          answer: ["0", "1", "3"],
+          explanation: "Cultural appropriation est <b>asymétrique</b> : adoption sans contexte (1), profit pendant que la culture d'origine est marginalisée (2), usage de symboles sacrés en costume (4). Partage culturel mutuel et respectueux n'est PAS de l'appropriation.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these milestones for civil rights in the USA in chronological order.",
+          hint: "From earliest to latest.",
+          items: [
+            "13th Amendment abolishes slavery (1865)",
+            "Brown v. Board of Education ends school segregation (1954)",
+            "Civil Rights Act (1964)",
+            "Loving v. Virginia legalizes interracial marriage (1967)",
+            "Obergefell v. Hodges legalizes same-sex marriage (2015)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which Latin phrase, often quoted in diversity discourse, means « out of many, one »?",
+          options: [
+            "Carpe diem",
+            "E pluribus unum",
+            "Veni vidi vici",
+            "Cogito ergo sum",
+          ],
+          answer: 1,
+          explanation: "<b>E pluribus unum</b> (« Out of many, one ») est la devise traditionnelle des États-Unis, gravée sur le Grand Sceau et les pièces de monnaie. Elle exprime l'unité dans la diversité.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

@@ -73,7 +73,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Petit-déjeuner anglais, fish and chips, food à Madagascar",
         tache: "Menu du jour bilingue à présenter à la cantine",
         cecrl: "A1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/6e/lets-eat.html"
       },
       {
         n: 5, periode: "T3 (avril)",
@@ -150,7 +151,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Greta Thunberg, Fridays for Future, déforestation à Madagascar",
         tache: "Affiche bilingue d'écogestes + débat de 5 min",
         cecrl: "A2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/4e/climate-action.html"
       },
       {
         n: 4, periode: "T2 (mars)",
@@ -368,7 +370,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Malala, Rosa Parks, Marie Curie, Mae Jemison, Ranavalona III",
         tache: "Exposition collaborative <em>Women in History</em> (digital ou papier)",
         cecrl: "B1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/3e/women-in-history.html"
       },
       {
         n: 6, periode: "T3 (juin)",
@@ -610,7 +613,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "BLM, #MeToo, Pride, peuples autochtones",
         tache: "Manifeste de classe (200 mots) + débat",
         cecrl: "B2/C1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/terminale/diversity-inclusion.html"
       },
       {
         n: 8, periode: "T3 (mai-juin)",

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Women Who Changed History — 3e — LFT</title>
+  <meta name="description" content="Quiz interactif sur les femmes qui ont changé l'histoire. Niveau 3e (B1) : present perfect, voix passive, biographies." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/3e.html">Retour à la 3<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Women in History — 3<sup>e</sup></div>
+            <div class="line3">B1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/3e.html">3<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Women</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "3e-women-in-history",
+      title: "Women Who Changed History",
+      level: "3e — B1",
+      sequence: "Séquence 5 — Figures féminines marquantes",
+      duration: "~15 min",
+      intro: "Quiz sur des femmes qui ont marqué l'histoire moderne — anglophones et malgache. Mobilise le present perfect (impact contemporain), la voix passive et le lexique de la biographie engagée.",
+
+      questions: [
+
+        {
+          type: "matching",
+          prompt: "Match each woman with her achievement.",
+          hint: "Indice : grandes figures historiques.",
+          pairs: [
+            { left: "Malala Yousafzai",   right: "Nobel Peace Prize for girls' education (2014)" },
+            { left: "Rosa Parks",         right: "Refused to give up her bus seat (1955)" },
+            { left: "Marie Curie",        right: "First woman to win two Nobel Prizes" },
+            { left: "Mae Jemison",        right: "First Black woman in space (1992)" },
+          ],
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complète avec la bonne forme du present perfect.",
+          parts: [
+            { text: "Malala " },
+            { gap: ["has been", "have been", "is been", "had been"], answer: 0 },
+            { text: " an activist for girls' education since 2008. She " },
+            { gap: ["has wrote", "has written", "writes", "is written"], answer: 1 },
+            { text: " several books. Her work " },
+            { gap: ["was recognized", "is recognize", "recognized", "has been recognized"], answer: 3 },
+            { text: " worldwide." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Why is 1955 a key year for Rosa Parks?",
+          options: [
+            "She was born in 1955",
+            "She refused to give up her bus seat to a white passenger in Montgomery, Alabama",
+            "She was elected to the US Senate",
+            "She published her autobiography",
+          ],
+          answer: 1,
+          explanation: "Le 1<sup>er</sup> décembre 1955, Rosa Parks refuse de céder sa place dans un bus à un passager blanc à Montgomery (Alabama). Cet acte de désobéissance déclenche le boycott des bus de Montgomery, dirigé par MLK, qui dura 381 jours.",
+        },
+
+        {
+          type: "saisie",
+          prompt: "Mets à la voix passive : « Marie Curie discovered radium in 1898. »",
+          placeholder: "Radium was...",
+          answer: [
+            "radium was discovered by marie curie in 1898",
+            "radium was discovered by marie curie in 1898.",
+          ],
+          explanation: "Voix passive au prétérit : <i>was/were + past participle + by + agent</i>. Discover → discovered (régulier).",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Marie Curie was the first person — man or woman — to win the Nobel Prize twice.",
+          answer: "vrai",
+          explanation: "Marie Curie a remporté le Nobel de Physique (1903, avec Pierre Curie et Becquerel) puis de Chimie (1911, seule). Elle reste la seule personne à avoir reçu un Nobel dans deux disciplines scientifiques différentes.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "Who was Ranavalona III?",
+          options: [
+            "A Malagasy queen of the late 19th century, the last queen of Madagascar",
+            "A French colonial governor",
+            "A British missionary",
+            "A pop singer from Madagascar",
+          ],
+          answer: 0,
+          explanation: "<b>Ranavalona III</b> (1861-1917) fut la dernière reine de Madagascar. Elle régna de 1883 à 1897, quand la France annexa le royaume. Exilée en Algérie, elle resta un symbole de la résistance malgache.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL words that describe a champion of women's rights:",
+          options: [
+            "Activist",
+            "Indifferent",
+            "Pioneer",
+            "Fearful",
+            "Trailblazer",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Activist, pioneer (pionnière) et trailblazer (qui ouvre la voie) sont positifs et engagés. Indifferent et fearful (craintive) sont l'opposé.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« _____ Malala spoken at the United Nations? — Yes, in 2013. »",
+          options: ["Did", "Has", "Have", "Was"],
+          answer: 1,
+          explanation: "<i>Has Malala spoken</i> = present perfect, parfait pour parler d'une expérience passée avec impact présent. La réponse (Yes, in 2013) confirme que c'est arrivé.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these key moments for women's rights in chronological order.",
+          hint: "Des plus anciens aux plus récents.",
+          items: [
+            "First Women's Rights Convention in Seneca Falls (1848)",
+            "British women over 30 win the right to vote (1918)",
+            "Malala wins Nobel Peace Prize (2014)",
+            "#MeToo movement (2017)",
+            "Kamala Harris becomes US Vice-President (2021)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is the « glass ceiling »?",
+          options: [
+            "A type of architecture",
+            "An invisible barrier that prevents women from reaching top positions",
+            "A phenomenon in physics",
+            "A modern art installation",
+          ],
+          answer: 1,
+          explanation: "Le <b>glass ceiling</b> (plafond de verre) désigne la barrière invisible qui empêche les femmes (et les minorités) d'accéder aux postes de direction. Concept popularisé dans les années 1980.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

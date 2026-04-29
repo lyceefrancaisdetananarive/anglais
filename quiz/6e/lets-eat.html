@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Let's Eat! — 6e — LFT</title>
+  <meta name="description" content="Quiz interactif sur l'alimentation. Niveau 6e (A1) : food, partitifs, How much/many." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/6e.html">Retour à la 6<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Let's Eat! — 6<sup>e</sup></div>
+            <div class="line3">A1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/6e.html">6<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Let's Eat</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "6e-lets-eat",
+      title: "Let's Eat! — Food & Drinks",
+      level: "6e — A1",
+      sequence: "Séquence 4 — Alimentation",
+      duration: "~10 min",
+      intro: "Yum! Voici un quiz pour parler de la nourriture en anglais. Partitifs (some/any/a lot of), lexique des aliments, et des spécialités british et malgaches !",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What is the typical British breakfast called?",
+          options: ["Continental breakfast", "Full English breakfast", "American pancakes", "French toast"],
+          answer: 1,
+          explanation: "Le « Full English breakfast » comprend bacon, sausages, eggs, baked beans, mushrooms, tomatoes et toast. Très copieux !",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each food with its category.",
+          hint: "Indice : pense au groupe alimentaire.",
+          pairs: [
+            { left: "Banana",    right: "Fruit" },
+            { left: "Carrot",    right: "Vegetable" },
+            { left: "Cheese",    right: "Dairy product" },
+            { left: "Bread",     right: "Cereal / starch" },
+          ],
+        },
+
+        {
+          type: "cloze",
+          prompt: "Choisis le bon partitif.",
+          parts: [
+            { text: "There is " },
+            { gap: ["a", "an", "some", "any"], answer: 2 },
+            { text: " milk in the fridge. There are " },
+            { gap: ["a", "an", "some", "any"], answer: 2 },
+            { text: " apples too. But there isn't " },
+            { gap: ["a", "an", "some", "any"], answer: 3 },
+            { text: " bread." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "« _____ apples do you want? — Three, please. »",
+          options: ["How much", "How many", "How any", "How some"],
+          answer: 1,
+          explanation: "<i>How many</i> + nom dénombrable au pluriel (apples = des pommes, on peut les compter). <i>How much</i> + nom indénombrable (water, milk, sugar).",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "« Fish and chips » is a famous British dish.",
+          answer: "vrai",
+          explanation: "Le fish and chips (poisson frit + frites) est le plat populaire emblématique de Grande-Bretagne, vendu dans les <i>chippies</i> (poissonneries-friteries).",
+        },
+
+        {
+          type: "saisie",
+          prompt: "« I want a glass ___ water. » (1 mot)",
+          placeholder: "Exemple : with",
+          answer: ["of", "Of", "OF"],
+          explanation: "« A glass <b>of</b> water » = un verre d'eau. Comme : a cup of tea, a slice of bread, a piece of cake.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL <em>countable</em> nouns:",
+          options: [
+            "Apple",
+            "Water",
+            "Sugar",
+            "Egg",
+            "Tomato",
+          ],
+          answer: ["0", "3", "4"],
+          explanation: "Apple, egg, tomato sont dénombrables (1 apple, 2 apples). Water et sugar sont indénombrables (on dit <i>some water</i>, pas <i>two waters</i>).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "Quel plat malgache est célèbre dans le monde ?",
+          options: [
+            "Pad thai",
+            "Romazava (a beef and leafy greens stew)",
+            "Couscous",
+            "Burger",
+          ],
+          answer: 1,
+          explanation: "Le <b>romazava</b> est un plat national malgache : ragoût de zébu et de feuilles vertes (anamamy, brèdes mafane). Servi avec du riz, comme la plupart des plats malgaches !",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Mets ces moments du repas dans l'ordre.",
+          hint: "Une journée alimentaire typique.",
+          items: [
+            "Breakfast (early morning)",
+            "Snack at school",
+            "Lunch (around 12)",
+            "Tea time (4 PM, very British)",
+            "Dinner (in the evening)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Compare ces 2 phrases : « I'd like an apple. » vs « I want an apple. ». Quelle est la différence ?",
+          options: [
+            "« I'd like » est plus poli, « I want » est plus direct",
+            "Les 2 sont identiques",
+            "« I want » est faux en anglais",
+            "« I'd like » est négatif",
+          ],
+          answer: 0,
+          explanation: "<b>I'd like (I would like)</b> est plus poli, idéal au restaurant ou pour demander quelque chose. <b>I want</b> est correct mais plus direct, parfois perçu comme un peu brusque selon le contexte.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

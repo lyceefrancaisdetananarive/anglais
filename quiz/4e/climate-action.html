@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Climate Action Now — 4e — LFT</title>
+  <meta name="description" content="Quiz interactif sur l'engagement climatique des jeunes. Niveau 4e (A2) : modaux d'obligation, futur, lexique environnemental." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/4e.html">Retour à la 4<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Climate Action Now — 4<sup>e</sup></div>
+            <div class="line3">A2 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/4e.html">4<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Climate Action</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "4e-climate-action",
+      title: "Climate Action Now — Young Activists",
+      level: "4e — A2",
+      sequence: "Séquence 3 — Engagement environnemental",
+      duration: "~12 min",
+      intro: "Quiz sur les jeunes activistes climat et les écogestes du quotidien. Mobilise les modaux d'obligation (must, should, have to), le futur avec <em>will</em>, et le lexique environnemental.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "Who is Greta Thunberg?",
+          options: [
+            "A Norwegian football player",
+            "A Swedish climate activist who started « Fridays for Future »",
+            "A British scientist who discovered climate change",
+            "An American politician",
+          ],
+          answer: 1,
+          explanation: "Greta Thunberg, jeune Suédoise, a lancé en 2018 sa grève hebdomadaire devant le parlement suédois (« Skolstrejk för klimatet »), qui est devenue le mouvement <b>Fridays for Future</b>.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each environmental term with its translation.",
+          hint: "Vocabulaire essentiel pour parler environnement.",
+          pairs: [
+            { left: "Deforestation", right: "Déforestation" },
+            { left: "Pollution",     right: "Pollution" },
+            { left: "Recycling",     right: "Recyclage" },
+            { left: "Biodiversity",  right: "Biodiversité" },
+          ],
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complète avec le bon modal d'obligation.",
+          parts: [
+            { text: "We " },
+            { gap: ["should", "shouldn't", "must not", "doesn't have to"], answer: 0 },
+            { text: " recycle our plastic bottles. We " },
+            { gap: ["have to", "don't have to", "must not", "shouldn't"], answer: 2 },
+            { text: " throw rubbish in the ocean. Everyone " },
+            { gap: ["should", "shouldn't", "doesn't", "must not"], answer: 0 },
+            { text: " plant a tree." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is the « 3 Rs » rule?",
+          options: [
+            "Read, Run, Relax",
+            "Reduce, Reuse, Recycle",
+            "Right, Reasonable, Responsible",
+            "Rich, Rare, Royal",
+          ],
+          answer: 1,
+          explanation: "Les « 3 Rs » : <b>Reduce</b> (réduire la consommation), <b>Reuse</b> (réutiliser ce qu'on a), <b>Recycle</b> (recycler en dernier recours). Dans cet ordre d'importance.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Madagascar has lost more than 40% of its primary forests since 1953.",
+          answer: "vrai",
+          explanation: "Selon Vieilledent et al. (Nature, 2018), Madagascar a perdu environ 44 % de sa couverture forestière primaire entre 1953 et 2014. C'est un défi majeur pour la biodiversité endémique.",
+        },
+
+        {
+          type: "saisie",
+          prompt: "Quel mouvement Greta Thunberg a-t-elle lancé ? (3 mots)",
+          placeholder: "Fridays...",
+          answer: [
+            "fridays for future",
+            "Fridays For Future",
+            "Fridays for Future",
+            "FRIDAYS FOR FUTURE",
+          ],
+          explanation: "<b>Fridays for Future</b> — la « grève scolaire pour le climat » qui a rassemblé des millions de jeunes dans le monde entier en 2019.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL good « éco-gestes » (eco-friendly actions):",
+          options: [
+            "Take a long hot shower",
+            "Bring your own bag to the supermarket",
+            "Eat less meat",
+            "Use plastic straws",
+            "Take public transport instead of a car",
+          ],
+          answer: ["1", "2", "4"],
+          explanation: "Apporter son sac, manger moins de viande et prendre les transports en commun sont positifs. Long shower (gaspillage d'eau) et plastic straws (déchets) sont à éviter.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« Without action, sea levels _____ rise by up to 1 metre by 2100. » (futur)",
+          options: ["are", "rise", "will rise", "rose"],
+          answer: 2,
+          explanation: "Pour parler d'une prédiction au futur, on utilise <b>will + verbe</b>. <i>Will rise</i> = va monter / montera. C'est la forme du futur en anglais (pas de <i>going to</i> ici).",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these climate events in chronological order.",
+          hint: "From oldest to most recent.",
+          items: [
+            "Industrial Revolution begins (around 1760)",
+            "First IPCC report (1990)",
+            "Kyoto Protocol signed (1997)",
+            "Paris Agreement signed (2015)",
+            "Greta Thunberg's first school strike (2018)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What can YOU do at LFT to help the environment?",
+          options: [
+            "Use a reusable water bottle",
+            "Plant trees with the school's environmental club",
+            "Reduce paper waste by using both sides of the page",
+            "All of the above",
+          ],
+          answer: 3,
+          explanation: "Tous ces gestes sont accessibles. L'engagement environnemental commence par les petits gestes du quotidien — au LFT comme partout.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
