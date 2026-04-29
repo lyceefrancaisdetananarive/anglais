@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Reading Scientific Papers — 1ère euro — LFT</title>
+  <meta name="description" content="Quiz méthodologique sur la lecture d'articles scientifiques. Niveau 1ère euro (B2)." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/1ere.html">Retour à la 1<sup>re</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Reading Scientific Papers — 1<sup>re</sup> euro</div>
+            <div class="line3">B2 · APPROF LING · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/1ere.html">1<sup>re</sup></a>
+          <a href="#" aria-current="page">Quiz Reading Papers</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "1ere-reading-papers",
+      title: "Towards Terminale: Reading Scientific Papers",
+      level: "1re euro — B2",
+      sequence: "Séquence 5 — Méthodologie de lecture experte",
+      duration: "~15 min",
+      intro: "Final 1ère quiz! Méthodologie pour lire un article scientifique en anglais. Mobilise les structures académiques (abstract, introduction, methods, results, discussion), les abréviations courantes et les bonnes pratiques de lecture experte.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "Where do you usually find a brief summary of a scientific paper?",
+          options: [
+            "At the end of the paper",
+            "In the abstract (top of the paper)",
+            "In the references list",
+            "In the figure captions",
+          ],
+          answer: 1,
+          explanation: "L'<b>abstract</b> est un résumé de 150-300 mots placé en haut du papier, juste après le titre et les auteurs. Il résume le contexte, la méthode, les résultats et la conclusion.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each section of a scientific paper with its purpose.",
+          hint: "Structure IMRaD classique.",
+          pairs: [
+            { left: "Introduction", right: "Sets the context and the research question" },
+            { left: "Methods",      right: "Describes how the study was conducted" },
+            { left: "Results",      right: "Presents the data found" },
+            { left: "Discussion",   right: "Interprets results and acknowledges limits" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Quelle abréviation latine signifie « and others » et est utilisée en référence ? (3 lettres + un point)",
+          placeholder: "Exemple : i.e.",
+          answer: ["et al.", "et al", "Et al.", "Et al"],
+          explanation: "<b>et al.</b> (du latin <i>et alii</i>) = « et autres ». Utilisé pour citer un article avec plusieurs auteurs : <i>Smith et al., 2023</i>. Distinguer de <i>e.g.</i> (par exemple) et <i>i.e.</i> (c'est-à-dire).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is « peer review »?",
+          options: [
+            "A review of a paper by friends of the author",
+            "A formal evaluation of a paper by other expert scientists before publication",
+            "A YouTube review of a paper",
+            "A government audit of researchers",
+          ],
+          answer: 1,
+          explanation: "<b>Peer review</b> = évaluation par les pairs. Avant publication, un article scientifique est lu et critiqué par d'autres experts du domaine (anonymes). Garantit la qualité scientifique. Ce processus a inspiré la confiance dans les revues comme <i>Nature</i> et <i>Science</i>.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "« Open Access » means that the public can read scientific papers for free.",
+          answer: "vrai",
+          explanation: "Vrai ! L'<b>Open Access</b> (libre accès) rend les articles gratuitement consultables en ligne. Mouvement croissant depuis 2000, avec des initiatives comme arXiv, PLOS, et le mandat européen Plan S.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete this academic paragraph with the right structures.",
+          parts: [
+            { text: "Recent research " },
+            { gap: ["has shown", "shows", "is showing", "have shown"], answer: 0 },
+            { text: " that climate change " },
+            { gap: ["affects", "is affecting", "has been affecting", "affect"], answer: 2 },
+            { text: " coral reefs more rapidly than previously thought. The data suggest that mitigation efforts " },
+            { gap: ["should be", "must be", "has to be", "may to be"], answer: 0 },
+            { text: " accelerated." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which two are world-leading scientific journals?",
+          options: [
+            "<i>The Sun</i> and <i>The Mirror</i>",
+            "<i>Nature</i> and <i>Science</i>",
+            "<i>National Geographic</i> and <i>Time</i>",
+            "<i>Forbes</i> and <i>The Economist</i>",
+          ],
+          answer: 1,
+          explanation: "<b>Nature</b> (UK, fondée en 1869) et <b>Science</b> (USA, fondée en 1880) sont les deux revues scientifiques généralistes les plus prestigieuses au monde. Y publier un article est très compétitif.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL good practices when reading a scientific paper for the first time:",
+          options: [
+            "Read the abstract first",
+            "Read the conclusion next, then decide whether to dive into methods",
+            "Skip all figures and tables",
+            "Look up unknown terms in a glossary",
+            "Note down questions as you go",
+          ],
+          answer: ["0", "1", "3", "4"],
+          explanation: "Lire l'abstract d'abord, puis la conclusion, chercher les termes inconnus, prendre des notes — toutes ces stratégies sont efficaces. Sauter les figures est une erreur : elles condensent souvent l'essentiel des résultats.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these steps of efficient scientific reading in order.",
+          hint: "From first contact to deep understanding.",
+          items: [
+            "Read the title and authors' affiliations",
+            "Read the abstract carefully",
+            "Look at figures and tables to grasp results",
+            "Read introduction and conclusion",
+            "Dive into methods and discussion if relevant",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What does « DOI » stand for and why is it useful?",
+          options: [
+            "Dictionary of International Acronyms",
+            "Digital Object Identifier — a permanent unique link to a scientific paper",
+            "Department of Internet",
+            "Doctor of Information",
+          ],
+          answer: 1,
+          explanation: "<b>DOI</b> = Digital Object Identifier. C'est un identifiant unique et permanent pour un article scientifique (ex. <i>doi.org/10.1038/s41586-022-...</i>). Il permet de retrouver un papier indépendamment de l'URL de l'éditeur.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

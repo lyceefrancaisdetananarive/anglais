@@ -179,7 +179,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Beatles, Elvis, Bob Marley, Beyoncé, salegy malgache",
         tache: "Présenter un artiste en 3 min (oral)",
         cecrl: "A2+",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/4e/music-decades.html"
       },
       {
         n: 6, periode: "T3 (mai-juin)",
@@ -191,7 +192,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Quartiers de Tana, Antaninarenina, Analakely, marché des fleurs",
         tache: "Visite guidée filmée de son quartier (4 min)",
         cecrl: "A2+",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/4e/my-town-my-story.html"
       }
     ]
   },
@@ -510,7 +512,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Récifs malgaches, Grande Barrière de Corail, plastiques",
         tache: "Article scientifique simplifié pour le journal du lycée",
         cecrl: "B2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/1ere/coral-reefs.html"
       },
       {
         n: 5, periode: "T3 (avril-mai)",
@@ -522,7 +525,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Revues (Nature, Science), peer-review, Open Access",
         tache: "Résumé d'un article authentique (Nature) — 200 mots",
         cecrl: "B2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/1ere/reading-papers.html"
       }
     ]
   },

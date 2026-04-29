@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Music Through the Decades — 4e — LFT</title>
+  <meta name="description" content="Quiz sur l'histoire de la musique anglophone. Niveau 4e (A2+) : present perfect, prétérit, voix passive." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/4e.html">Retour à la 4<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Music Through the Decades — 4<sup>e</sup></div>
+            <div class="line3">A2+ · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/4e.html">4<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Music</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "4e-music-decades",
+      title: "Music Through the Decades",
+      level: "4e — A2+",
+      sequence: "Séquence 5 — Histoire de la musique anglophone",
+      duration: "~12 min",
+      intro: "Voyage à travers l'histoire de la musique anglophone : du rock'n'roll au hip-hop, en passant par la pop et le reggae. Mobilise present perfect (since/for), prétérit et voix passive.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "Where did the Beatles come from?",
+          options: ["London", "Manchester", "Liverpool", "Edinburgh"],
+          answer: 2,
+          explanation: "Les Beatles sont originaires de <b>Liverpool</b>, dans le nord-ouest de l'Angleterre. Le groupe (John Lennon, Paul McCartney, George Harrison, Ringo Starr) s'y est formé en 1960.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each artist with their genre.",
+          hint: "Indice : grandes figures de la musique anglophone.",
+          pairs: [
+            { left: "Elvis Presley", right: "Rock'n'roll (1950s)" },
+            { left: "Bob Marley",    right: "Reggae (Jamaica)" },
+            { left: "Beyoncé",       right: "Pop / R&B" },
+            { left: "Taylor Swift",  right: "Pop / Country" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Mets au present perfect : « The Beatles ___ (release) over 200 songs. »",
+          placeholder: "Exemple : have visited",
+          answer: [
+            "have released",
+            "have releases",
+            "Have released",
+          ],
+          explanation: "<b>Present perfect</b> avec <i>they</i> : <i>have + past participle</i>. <i>Release → released</i> (régulier). <i>The Beatles have released over 200 songs</i>.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« Bob Marley's <em>One Love</em> _____ recorded in 1977. »",
+          options: ["was", "is", "has been", "had been"],
+          answer: 0,
+          explanation: "Voix passive au prétérit : <b>was/were + past participle</b>. <i>Was recorded</i> = a été enregistré (action passée à un moment précis : 1977).",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "« Salegy » is a popular musical genre from Madagascar.",
+          answer: "vrai",
+          explanation: "Le <b>salegy</b> est le genre musical le plus populaire de Madagascar, originaire du nord-ouest de l'île. Très rythmé, avec accordéon et percussions traditionnelles. Artistes : Jaojoby, Mily Clément, Tearano.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete with the right tense.",
+          parts: [
+            { text: "Beyoncé " },
+            { gap: ["has won", "won", "is winning", "wins"], answer: 0 },
+            { text: " more Grammy Awards than any other artist. She " },
+            { gap: ["has been", "is", "was", "have been"], answer: 0 },
+            { text: " active in music since 1997. Her album <i>Lemonade</i> " },
+            { gap: ["was released", "has released", "released", "is releasing"], answer: 0 },
+            { text: " in 2016." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which genre originated in Jamaica in the late 1960s?",
+          options: [
+            "Hip-hop",
+            "Reggae",
+            "Punk rock",
+            "Disco",
+          ],
+          answer: 1,
+          explanation: "Le <b>reggae</b> est né en Jamaïque à la fin des années 1960, héritier du ska et du rocksteady. Bob Marley en est l'ambassadeur mondial. Il porte souvent un message politique (Rastafari, justice sociale).",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL music genres / movements that originated in the USA:",
+          options: [
+            "Jazz",
+            "K-pop",
+            "Hip-hop",
+            "Salegy",
+            "Country",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Jazz (New Orleans, début 20e), Hip-hop (Bronx, années 1970) et Country (Sud des USA) sont américains. K-pop = Corée du Sud. Salegy = Madagascar.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these music genres in chronological order of emergence.",
+          hint: "Du plus ancien au plus récent.",
+          items: [
+            "Jazz (early 20th c., USA)",
+            "Rock'n'roll (1950s, USA)",
+            "Reggae (late 1960s, Jamaica)",
+            "Hip-hop (1970s, NY Bronx)",
+            "K-pop hits global charts (2010s+)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "« I _____ to Beyoncé since I was 10. »",
+          options: [
+            "listen",
+            "listened",
+            "have been listening",
+            "am listening",
+          ],
+          answer: 2,
+          explanation: "<b>Present perfect continuous</b> : <i>have/has been + V-ing</i>, parfait pour exprimer une action commencée dans le passé et qui continue. <i>Since I was 10</i> = depuis que j'ai 10 ans.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

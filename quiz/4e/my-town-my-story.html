@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz My Town, My Story — 4e — LFT</title>
+  <meta name="description" content="Quiz sur la description de son quartier. Niveau 4e (A2+) : present perfect, prépositions, lexique de la ville." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/4e.html">Retour à la 4<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz My Town, My Story — 4<sup>e</sup></div>
+            <div class="line3">A2+ · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/4e.html">4<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz My Town</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "4e-my-town",
+      title: "My Town, My Story",
+      level: "4e — A2+",
+      sequence: "Séquence 6 — Décrire et raconter son quartier",
+      duration: "~12 min",
+      intro: "Final 4e quiz! Quiz pour parler de son quartier en anglais — avec un focus sur Antananarivo. Mobilise present perfect (have been to), <em>there is/are</em>, prépositions de lieu.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "« _____ a beautiful market in Analakely. »",
+          options: ["There are", "There is", "It has", "It is"],
+          answer: 1,
+          explanation: "<b>There is</b> + nom singulier (a beautiful market). <b>There are</b> + nom pluriel. <i>It is</i> = c'est (présentation, pas existence).",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each Tananarivian neighbourhood with what is found there.",
+          hint: "Indice : tu connais sûrement Tana !",
+          pairs: [
+            { left: "Antaninarenina",    right: "City centre, hotel and former offices" },
+            { left: "Analakely",          right: "Famous covered market" },
+            { left: "Andohalo",           right: "Cathedral and historic square" },
+            { left: "Anosy",              right: "Lake with the Independence Monument" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Complète : « I have lived in Tana ___ five years. »",
+          placeholder: "Indice : durée vs date",
+          answer: ["for", "FOR", "For"],
+          explanation: "<b>For + durée</b> (5 years, 2 hours, ages). <b>Since + point de départ</b> (2020, last June, I was born).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« My school _____ to a brand new building last year. »",
+          options: ["moved", "has moved", "is moving", "has been moved"],
+          answer: 0,
+          explanation: "<b>Last year</b> = date précise dans le passé → on utilise le <b>prétérit simple</b> (moved). Le present perfect est exclu en présence d'une date précise.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Antananarivo is built on 12 hills.",
+          answer: "vrai",
+          explanation: "Vrai ! Antananarivo signifie « la ville aux mille » (en référence aux soldats du roi Andrianjaka qui ont conquis le site au XVIIe siècle). Elle est bâtie sur les <b>12 collines sacrées</b> de l'Imerina, dont Ambohimanga (« la colline bleue »), site royal classé à l'UNESCO.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Choisis la bonne préposition.",
+          parts: [
+            { text: "I live " },
+            { gap: ["in", "on", "at", "to"], answer: 0 },
+            { text: " Tananarive. My house is " },
+            { gap: ["in", "on", "at", "to"], answer: 1 },
+            { text: " a hill near a beautiful park. The school is " },
+            { gap: ["in", "on", "at", "to"], answer: 0 },
+            { text: " front of the city stadium." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Quelle est la bonne question pour demander combien de temps quelqu'un vit dans un endroit ?",
+          options: [
+            "How much time you live here?",
+            "How long have you lived here?",
+            "When are you living here?",
+            "Since when you live?",
+          ],
+          answer: 1,
+          explanation: "<b>How long have you lived here?</b> — <i>How long</i> + present perfect pour interroger sur la durée d'une action commencée dans le passé et toujours en cours.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL adjectives suitable to describe Antananarivo:",
+          options: [
+            "Hilly (vallonnée)",
+            "Snowy",
+            "Vibrant",
+            "Cold and Arctic",
+            "Cosmopolitan",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Tana est <i>hilly</i> (12 collines), <i>vibrant</i> (très animée) et <i>cosmopolitan</i> (mélange Merina, Betsileo, Asian, French...). Pas de neige (climat tropical d'altitude) et pas Arctic !",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these moments of a day in your neighbourhood in chronological order.",
+          hint: "Une journée type d'élève à Tana.",
+          items: [
+            "Wake up and have breakfast at home",
+            "Take the bus or walk to school",
+            "Have lunch at the school cafeteria",
+            "Visit a friend in the afternoon",
+            "Watch the sunset from your hill",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Why is « Andafiavaratra » a historically significant place in Tana?",
+          options: [
+            "It is a modern shopping mall",
+            "It is the former Prime Minister's palace from the 19th century kingdom",
+            "It is the airport",
+            "It is a famous restaurant",
+          ],
+          answer: 1,
+          explanation: "<b>Andafiavaratra</b> est le palais du Premier ministre Rainilaiarivony, sous les reines Ranavalona II et III (fin XIXe). Aujourd'hui musée, il abrite des objets du royaume Merina sauvés de l'incendie du Rova (1995).",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
