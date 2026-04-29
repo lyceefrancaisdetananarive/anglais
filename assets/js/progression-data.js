@@ -60,7 +60,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Sports britanniques (cricket, rugby), Harry Potter, K-pop",
         tache: "Mini-podcast sur ses 5 hobbies favoris (2 min)",
         cecrl: "A1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/6e/what-i-love.html"
       },
       {
         n: 4, periode: "T2 (mars)",
@@ -341,7 +342,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Romantisme britannique, Shelley, Frankenstein dans la pop culture",
         tache: "Écrire son histoire de monstre (350 mots)",
         cecrl: "A2+/B1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/3e/frankenstein.html"
       },
       {
         n: 4, periode: "T2 (mars)",
@@ -469,7 +471,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Cyclones Batsirai, Freddy, GIEC, Madagascar vulnérable",
         tache: "Analyse d'un graphique météorologique (200 mots)",
         cecrl: "B1+/B2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/1ere/climate-cyclones.html"
       },
       {
         n: 3, periode: "T2 (janv-fév)",
@@ -545,7 +548,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Phone hacking, Cambridge Analytica, Snowden",
         tache: "Débat type bac sur le droit à l'oubli (oral)",
         cecrl: "B2/C1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/terminale/public-private.html"
       },
       {
         n: 3, periode: "T2 (déc-janv)",

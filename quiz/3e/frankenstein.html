@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Frankenstein — 3e — LFT</title>
+  <meta name="description" content="Quiz interactif sur la séquence Frankenstein de Mary Shelley. Niveau 3e (A2+/B1) : roman gothique, prétérit, voix passive." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/3e.html">Retour à la 3<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Frankenstein — 3<sup>e</sup></div>
+            <div class="line3">A2+/B1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/3e.html">3<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Frankenstein</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "3e-frankenstein",
+      title: "Frankenstein — Mary Shelley",
+      level: "3e — A2+/B1",
+      sequence: "Séquence 4 — Roman gothique et création",
+      duration: "~15 min",
+      intro: "Quiz sur le roman gothique fondateur de Mary Shelley (1818). Mobilise le prétérit simple/continu, la voix passive, le lexique des émotions et des ambiances gothiques.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "When was <em>Frankenstein</em> first published?",
+          options: ["1718", "1818", "1918", "1898"],
+          answer: 1,
+          explanation: "<i>Frankenstein, or The Modern Prometheus</i> a été publié anonymement en 1818, alors que Mary Shelley n'avait que 20 ans. Considéré comme le premier roman de science-fiction.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "Who is the « real » Frankenstein in the novel?",
+          options: [
+            "The monster itself",
+            "The scientist who creates the monster",
+            "A village mayor",
+            "Mary Shelley's husband",
+          ],
+          answer: 1,
+          explanation: "<b>Frankenstein</b> est le nom du <em>scientifique</em> (Victor Frankenstein) — pas du monstre, qui n'a jamais reçu de nom. Erreur très courante dans la pop culture !",
+        },
+
+        {
+          type: "saisie",
+          prompt: "Mets à la voix passive : « Mary Shelley wrote the novel in 1816. »",
+          placeholder: "The novel was...",
+          answer: [
+            "the novel was written by mary shelley in 1816",
+            "the novel was written by mary shelley in 1816.",
+          ],
+          explanation: "Voix passive au prétérit : <i>was/were + past participle + by + agent</i>. Write est irrégulier : write → wrote → written.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each adjective with its meaning to describe a gothic atmosphere.",
+          hint: "Indice : tous décrivent des sensations sombres / inquiétantes.",
+          pairs: [
+            { left: "Eerie",      right: "Étrange et angoissant" },
+            { left: "Gloomy",     right: "Sombre, lugubre" },
+            { left: "Sinister",   right: "Sinistre, malveillant" },
+            { left: "Macabre",    right: "Macabre, lié à la mort" },
+          ],
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "<em>Frankenstein</em> is set entirely in England.",
+          answer: "faux",
+          explanation: "Le roman se déroule dans plusieurs lieux européens : Suisse (Genève), Allemagne (Ingolstadt), Écosse (Orkneys) et Arctique. Mary Shelley a été inspirée par un voyage en Suisse en 1816 (« Year Without Summer »).",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complète avec la bonne forme verbale (prétérit simple ou continu).",
+          parts: [
+            { text: "Victor Frankenstein " },
+            { gap: ["was working", "worked", "had worked", "is working"], answer: 0 },
+            { text: " in his laboratory when the monster " },
+            { gap: ["came", "was coming", "is coming", "had come"], answer: 0 },
+            { text: " alive. He " },
+            { gap: ["had run", "ran", "was running", "runs"], answer: 1 },
+            { text: " away in horror." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is the central moral question of the novel?",
+          options: [
+            "How to become rich quickly?",
+            "What are the responsibilities of a creator towards their creation?",
+            "Is romantic love eternal?",
+            "How to travel cheaply in Europe?",
+          ],
+          answer: 1,
+          explanation: "Le roman pose la question de la <b>responsabilité du créateur</b> envers sa création. Victor abandonne son monstre, déclenchant la tragédie. Question toujours actuelle face à l'IA et aux biotechnologies.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL themes present in <em>Frankenstein</em>:",
+          options: [
+            "The dangers of unchecked science",
+            "Family holidays in Italy",
+            "Loneliness and rejection",
+            "Romantic love and nature",
+            "Football tournaments",
+          ],
+          answer: ["0", "2", "3"],
+          explanation: "Les thèmes majeurs : science sans limites, solitude/rejet, amour romantique et nature sublime. Les holidays en Italie et le football n'y sont pas du tout !",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these key plot events in chronological order.",
+          hint: "Du début à la fin du roman.",
+          items: [
+            "Victor studies natural philosophy at Ingolstadt",
+            "He creates the monster from dead body parts",
+            "The monster comes alive and Victor flees in horror",
+            "The monster kills Victor's brother William",
+            "Victor pursues the monster to the Arctic and dies there",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Why is <em>Frankenstein</em> often called « the first science fiction novel »?",
+          options: [
+            "Because it includes aliens",
+            "Because it imagines the consequences of a scientific discovery (artificial life)",
+            "Because it is set in the future",
+            "Because it features robots",
+          ],
+          answer: 1,
+          explanation: "Le roman extrapole les conséquences morales et sociales d'une découverte scientifique <b>plausible</b> (la création de vie). C'est la marque de fabrique de la SF, qui sera ensuite codifiée par H.G. Wells, Asimov, etc.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
