@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Ireland: A Story of Resilience — 4e LCE — LFT</title>
+  <meta name="description" content="Quiz sur l'Irlande : histoire, culture, mythologie celtique. Niveau 4e LCE (A2+/B1)." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/lce.html">Retour à la LCE</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Ireland — 4<sup>e</sup> LCE</div>
+            <div class="line3">A2+/B1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/lce.html">LCE</a>
+          <a href="#" aria-current="page">Quiz Ireland</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "lce-ireland",
+      title: "Ireland: A Story of Resilience",
+      level: "4e LCE — A2+/B1",
+      sequence: "Module 2 — Histoire et culture irlandaises",
+      duration: "~12 min",
+      intro: "Quiz sur l'île d'émeraude : histoire (Grande Famine, indépendance, Troubles), culture (musique, mythologie celtique), figures emblématiques (Yeats, Joyce, U2). Mobilise le passé et la narration.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What is the official name of Ireland (the independent state)?",
+          options: ["Northern Ireland", "Republic of Ireland (Éire)", "Great Britain", "Celtic Ireland"],
+          answer: 1,
+          explanation: "Le nom officiel est <b>Republic of Ireland</b> (en irlandais : <i>Éire</i> ou <i>Poblacht na hÉireann</i>). À ne pas confondre avec l'Irlande du Nord (<i>Northern Ireland</i>), qui fait partie du Royaume-Uni.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each Irish figure with their domain.",
+          hint: "Indice : auteurs et artistes irlandais célèbres.",
+          pairs: [
+            { left: "W.B. Yeats",   right: "Poetry, Nobel Prize 1923" },
+            { left: "James Joyce",  right: "Modernist novelist (Ulysses)" },
+            { left: "Bono / U2",    right: "Rock band, activist" },
+            { left: "Oscar Wilde",  right: "Witty playwright (The Importance of Being Earnest)" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Comment s'appelle la grande famine qui a frappé l'Irlande au XIXe siècle ? (en anglais, 3 mots)",
+          placeholder: "Exemple : The Black Plague",
+          answer: [
+            "the great famine",
+            "The Great Famine",
+            "the great hunger",
+            "The Great Hunger",
+            "the irish famine",
+            "The Irish Famine",
+          ],
+          explanation: "<b>The Great Famine</b> (ou <i>The Great Hunger</i> / <i>An Gorta Mór</i> en gaélique) a frappé l'Irlande de 1845 à 1849. Causée par le mildiou de la pomme de terre, elle a fait 1 million de morts et provoqué l'émigration de 1 million d'Irlandais (notamment vers les USA).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What are « The Troubles »?",
+          options: [
+            "A famous Irish folk song",
+            "The conflict in Northern Ireland (1968-1998) between Catholics and Protestants",
+            "An economic crisis of 2008",
+            "A British comedy show",
+          ],
+          answer: 1,
+          explanation: "<b>The Troubles</b> = conflit nord-irlandais (1968-1998), entre Catholiques unionistes (qui voulaient l'union avec la République d'Irlande) et Protestants loyalistes (qui voulaient rester britanniques). Plus de 3 500 morts. L'accord du Vendredi Saint (1998) a pacifié la situation.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Saint Patrick's Day is celebrated on March 17th and has become a global celebration of Irish culture.",
+          answer: "vrai",
+          explanation: "<b>St Patrick's Day</b> (17 mars) célèbre le saint patron d'Irlande. C'est devenu une fête mondiale (parades à NY, Sydney, Dublin) avec port du vert, tréfles et bière Guinness.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete this paragraph on Irish independence.",
+          parts: [
+            { text: "Ireland " },
+            { gap: ["was ruled", "ruled", "is ruled", "rules"], answer: 0 },
+            { text: " by the British for centuries. After the 1916 Easter Rising, Ireland " },
+            { gap: ["fight", "fought", "is fighting", "fights"], answer: 1 },
+            { text: " for independence. In 1922, the Irish Free State " },
+            { gap: ["was created", "created", "creates", "is creating"], answer: 0 },
+            { text: ", later becoming the Republic of Ireland in 1949." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is « Bloomsday »?",
+          options: [
+            "A flower festival in Dublin",
+            "An annual celebration of James Joyce's novel <em>Ulysses</em>, on June 16",
+            "An Irish Christmas tradition",
+            "A new political holiday",
+          ],
+          answer: 1,
+          explanation: "<b>Bloomsday</b> (16 juin) commémore la journée du 16 juin 1904, qui est le cadre temporel du roman <i>Ulysses</i> de James Joyce. Les fans suivent l'itinéraire de Leopold Bloom dans Dublin, déguisés en costume edwardien.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL elements of Celtic mythology / Irish folklore:",
+          options: [
+            "Leprechaun (small cobbler fairy)",
+            "Samurai",
+            "Banshee (wailing female spirit)",
+            "Dragon",
+            "Pooka (mischievous shape-shifter)",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Leprechaun, Banshee et Pooka sont irlandais. Samurai = japonais. Dragon = mythologie chinoise/européenne occidentale (en Irlande on parle de <i>wyrm</i> ou <i>serpent</i>).",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these key events in Irish history in chronological order.",
+          hint: "From earliest to most recent.",
+          items: [
+            "Saint Patrick brings Christianity to Ireland (5th century)",
+            "Great Famine (1845-1849)",
+            "Easter Rising in Dublin (1916)",
+            "Republic of Ireland created (1949)",
+            "Good Friday Agreement ends most of the Troubles (1998)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What two languages are official in the Republic of Ireland?",
+          options: [
+            "English and French",
+            "English and Welsh",
+            "Irish (Gaelic) and English",
+            "Irish (Gaelic) only",
+          ],
+          answer: 2,
+          explanation: "L'Irlande a deux langues officielles : <b>l'irlandais (gaélique)</b> et <b>l'anglais</b>. L'irlandais est la première langue officielle dans la Constitution, même si l'anglais est plus parlé au quotidien. Les deux apparaissent sur les panneaux et documents officiels.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

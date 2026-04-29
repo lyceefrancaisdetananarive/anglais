@@ -269,7 +269,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Conquête normande, Tudors, EU, Brexit",
         tache: "Chronologie commentée des grandes étapes",
         cecrl: "A2+",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/lce/britain-europe.html"
       },
       {
         n: 2, periode: "T2 — Module 2",
@@ -281,7 +282,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Grande Famine, Troubles, Yeats, Joyce, U2",
         tache: "Mini-exposé en binôme sur une figure irlandaise",
         cecrl: "A2+",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/lce/ireland.html"
       },
       {
         n: 3, periode: "T3 — Module 3",
@@ -412,7 +414,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Banlieue anglaise, autisme, neurodiversité",
         tache: "Analyse littéraire (450 mots) du point de vue narrateur",
         cecrl: "B1+",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/non-si/curious-incident.html"
       },
       {
         n: 2, periode: "T2",
@@ -424,7 +427,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "MLK, Rosa Parks, Malcolm X, BLM, héritage contemporain",
         tache: "Discours type MLK : 'I have a dream...' (oral 5 min)",
         cecrl: "B2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/non-si/civil-rights.html"
       },
       {
         n: 3, periode: "T3",

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz US Civil Rights Movement — 3e NON SI — LFT</title>
+  <meta name="description" content="Quiz sur le mouvement des droits civiques aux États-Unis. Niveau 3e NON SI (B2)." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/non-si.html">Retour à NON SI</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Civil Rights — 3<sup>e</sup> NON SI</div>
+            <div class="line3">B2 · Section Internationale · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/non-si.html">NON SI</a>
+          <a href="#" aria-current="page">Quiz Civil Rights</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "non-si-civil-rights",
+      title: "US Civil Rights Movement",
+      level: "3e NON SI — B2",
+      sequence: "Histoire des droits civiques aux États-Unis",
+      duration: "~15 min",
+      intro: "Quiz approfondi sur le mouvement des droits civiques aux USA — figures, événements, héritage contemporain (BLM). Mobilise voix passive, structures argumentatives, discours indirect.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "Where and when did Martin Luther King deliver his « I have a dream » speech?",
+          options: [
+            "Selma, 1965",
+            "Washington D.C., 28 August 1963",
+            "Birmingham, 1963",
+            "Atlanta, 1968",
+          ],
+          answer: 1,
+          explanation: "MLK a prononcé son discours emblématique le <b>28 août 1963</b> à Washington D.C., devant le Lincoln Memorial, lors de la <i>March on Washington for Jobs and Freedom</i> (250 000 manifestants).",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each Civil Rights figure with their action.",
+          hint: "Indice : grandes figures du mouvement.",
+          pairs: [
+            { left: "Rosa Parks",         right: "Refused to give up her bus seat (1955)" },
+            { left: "Martin Luther King", right: "Led non-violent civil disobedience" },
+            { left: "Malcolm X",          right: "Advocated black self-defence and pride" },
+            { left: "Ruby Bridges",       right: "First Black child to integrate a Southern white school (1960)" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Mets à la voix passive : « President Johnson signed the Civil Rights Act in 1964. »",
+          placeholder: "The Civil Rights Act was...",
+          answer: [
+            "the civil rights act was signed by president johnson in 1964",
+            "the civil rights act was signed by president johnson in 1964.",
+          ],
+          explanation: "Voix passive au prétérit : <i>was/were + past participle + by + agent</i>. <i>Sign → signed</i> (régulier).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What were « Jim Crow laws »?",
+          options: [
+            "Anti-corruption laws of the 1930s",
+            "State laws enforcing racial segregation in the Southern US (1877-1965)",
+            "Drug enforcement laws",
+            "Immigration restrictions for Asians",
+          ],
+          answer: 1,
+          explanation: "<b>Jim Crow laws</b> = lois ségrégationnistes adoptées dans les États du Sud après la Reconstruction (1877). Elles imposaient la séparation raciale dans les écoles, transports, restaurants, etc. Abolies par les Civil Rights Acts (1964-1965).",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "The Black Lives Matter movement was founded in 2013 after Trayvon Martin's death.",
+          answer: "vrai",
+          explanation: "<b>Black Lives Matter</b> (BLM) a été fondé en 2013 par Alicia Garza, Patrisse Cullors et Opal Tometi après l'acquittement du tueur de Trayvon Martin (jeune noir de 17 ans abattu en Floride en 2012). Mouvement mondialement amplifié en 2020 après la mort de George Floyd.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete this paragraph on the Civil Rights Act of 1964.",
+          parts: [
+            { text: "The Civil Rights Act of 1964 " },
+            { gap: ["was passed", "passed", "is passed", "are passed"], answer: 0 },
+            { text: " by Congress and " },
+            { gap: ["signed", "is signed", "was signed", "had signed"], answer: 2 },
+            { text: " into law by President Johnson. It " },
+            { gap: ["banned", "ban", "is banning", "have banned"], answer: 0 },
+            { text: " discrimination based on race, colour, religion, sex or national origin." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What was the « Montgomery Bus Boycott » (1955-1956)?",
+          options: [
+            "A protest against expensive bus fares",
+            "A 381-day boycott of segregated buses, sparked by Rosa Parks' arrest",
+            "A workers' strike",
+            "A campaign for cleaner buses",
+          ],
+          answer: 1,
+          explanation: "Le <b>Montgomery Bus Boycott</b> a duré 381 jours (5 décembre 1955 — 20 décembre 1956). Déclenché par l'arrestation de Rosa Parks, mené par MLK, il s'est terminé par une victoire : la Cour Suprême a déclaré la ségrégation dans les bus inconstitutionnelle.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL Supreme Court decisions that advanced civil rights in the USA:",
+          options: [
+            "Brown v. Board of Education (1954)",
+            "Plessy v. Ferguson (1896)",
+            "Loving v. Virginia (1967)",
+            "Dred Scott v. Sandford (1857)",
+            "Obergefell v. Hodges (2015)",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Brown (fin de la ségrégation scolaire), Loving (mariages interraciaux), Obergefell (mariage gay) sont des avancées. Plessy (1896) légitimait la ségrégation (« separate but equal »), Dred Scott (1857) niait la citoyenneté aux Noirs. Ces 2 derniers sont des reculs.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these Civil Rights events in chronological order.",
+          hint: "From earliest to most recent.",
+          items: [
+            "13th Amendment abolishes slavery (1865)",
+            "Plessy v. Ferguson legitimizes segregation (1896)",
+            "Brown v. Board of Education (1954)",
+            "Civil Rights Act (1964)",
+            "First Black President elected (Obama, 2008)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Why is the date 19 June (« Juneteenth ») significant?",
+          options: [
+            "It marks Martin Luther King's birthday",
+            "It commemorates the day in 1865 when enslaved people in Texas learned of their freedom",
+            "It is the date of the Civil Rights Act",
+            "It celebrates Obama's inauguration",
+          ],
+          answer: 1,
+          explanation: "<b>Juneteenth</b> (19 juin 1865) commémore le jour où le général Granger annonça l'abolition de l'esclavage aux esclaves du Texas — 2 ans et demi après la Proclamation d'Émancipation de Lincoln (1863). Devenu jour férié fédéral en 2021 sous Biden.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
