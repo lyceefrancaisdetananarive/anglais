@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Short Stories — 3e NON SI — LFT</title>
+  <meta name="description" content="Quiz sur l'art de la nouvelle anglaise (Roald Dahl, Neil Gaiman). Niveau 3e NON SI (B2)." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/non-si.html">Retour à NON SI</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Short Stories — 3<sup>e</sup> NON SI</div>
+            <div class="line3">B2 · Section Internationale · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/non-si.html">NON SI</a>
+          <a href="#" aria-current="page">Quiz Short Stories</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "non-si-short-stories",
+      title: "Short Stories — Roald Dahl & Neil Gaiman",
+      level: "3e NON SI — B2",
+      sequence: "L'art de la nouvelle anglaise",
+      duration: "~15 min",
+      intro: "Quiz sur la tradition anglaise de la <em>short story</em>, de Roald Dahl à Neil Gaiman. Mobilise past perfect, vocabulaire stylistique avancé (twist, narrator, suspense), structures complexes.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What is a « short story » primarily characterized by?",
+          options: [
+            "Length over 200 pages",
+            "A single, focused narrative with limited characters and a tight ending",
+            "Multiple intertwining plotlines over years",
+            "Always a happy ending",
+          ],
+          answer: 1,
+          explanation: "Une <b>short story</b> est une narration courte, focalisée, avec peu de personnages et une <b>fin resserrée</b> — souvent avec une chute (twist) ou un effet final marquant.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each short story master with their domain.",
+          hint: "Indice : tradition anglo-saxonne de la nouvelle.",
+          pairs: [
+            { left: "Roald Dahl",      right: "Twisted dark humour for adults" },
+            { left: "Neil Gaiman",     right: "Modern fantasy and dark fairy tales" },
+            { left: "Edgar Allan Poe", right: "American gothic and horror" },
+            { left: "Saki (H.H. Munro)", right: "Edwardian satirical wit" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Quel mot anglais désigne la chute / retournement final d'une nouvelle ? (1 mot)",
+          placeholder: "Exemple : ending",
+          answer: ["twist", "Twist", "TWIST"],
+          explanation: "Le <b>twist</b> = retournement final inattendu. Marque de fabrique de Roald Dahl, M. Night Shyamalan, ou la série <i>Black Mirror</i>. Synonyme : <i>plot twist</i>.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is an « unreliable narrator »?",
+          options: [
+            "A narrator who arrives late",
+            "A narrator whose perception or honesty cannot be fully trusted",
+            "A narrator who speaks too softly",
+            "A narrator from a foreign country",
+          ],
+          answer: 1,
+          explanation: "L'<b>unreliable narrator</b> (narrateur peu fiable) déforme volontairement ou involontairement la réalité. Christopher dans <i>The Curious Incident</i> en est un exemple. D'autres : Holden Caulfield (<i>The Catcher in the Rye</i>), le narrateur de <i>Fight Club</i>.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Roald Dahl wrote dark short stories for adults, not just children's books.",
+          answer: "vrai",
+          explanation: "Vrai ! Roald Dahl a écrit deux types d'œuvres : les <b>livres pour enfants</b> (<i>Matilda</i>, <i>Charlie</i>, <i>BFG</i>) et les <b>nouvelles pour adultes</b> au humour très noir (<i>Lamb to the Slaughter</i>, <i>Tales of the Unexpected</i>). Adaptées en série TV dans les années 1980.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete this analysis of narrative tension.",
+          parts: [
+            { text: "Suspense " },
+            { gap: ["builds", "is build", "have built", "building"], answer: 0 },
+            { text: " gradually as the reader " },
+            { gap: ["realises", "is realising", "realise", "realised"], answer: 0 },
+            { text: " that something is wrong. The narrator " },
+            { gap: ["had hidden", "have hidden", "hides", "hiding"], answer: 0 },
+            { text: " a key piece of information from us all along." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "In Dahl's « Lamb to the Slaughter » (1953), what is the murder weapon?",
+          options: [
+            "A kitchen knife",
+            "A frozen leg of lamb",
+            "A revolver",
+            "Poison in the tea",
+          ],
+          answer: 1,
+          explanation: "Mary Maloney tue son mari avec un <b>gigot d'agneau congelé</b>. Elle le fait ensuite cuire et le sert aux policiers venus enquêter — qui mangent l'arme du crime sans le savoir. Chute géniale et noire, typique de Dahl.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL elements that contribute to suspense in a short story:",
+          options: [
+            "Foreshadowing (hints about what's coming)",
+            "Long landscape descriptions",
+            "An unreliable narrator",
+            "Withholding key information",
+            "Adding many subplots",
+          ],
+          answer: ["0", "2", "3"],
+          explanation: "Foreshadowing, narrateur peu fiable et rétention d'information créent du suspense. Long descriptions et subplots auraient l'effet inverse — ils diluent la tension dans une nouvelle (qui doit rester courte et focalisée).",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these structural elements of a short story in their typical order.",
+          hint: "Structure narrative classique.",
+          items: [
+            "Exposition (set the scene)",
+            "Rising action (tension builds)",
+            "Climax (turning point)",
+            "Falling action (consequences)",
+            "Resolution / twist ending",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Why are short stories popular in language learning at NON SI level?",
+          options: [
+            "They are very easy to read",
+            "They offer complete narrative experiences while remaining accessible in length",
+            "They have lots of pictures",
+            "They are translated automatically",
+          ],
+          answer: 1,
+          explanation: "La <b>short story</b> est idéale en NON SI : on bénéficie d'une <b>expérience narrative complète</b> (avec arc, personnages, thèmes) en un format <b>court et abordable</b>. Parfait pour aiguiser l'analyse littéraire sans la lourdeur d'un roman.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

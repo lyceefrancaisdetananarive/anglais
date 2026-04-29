@@ -99,7 +99,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Tourisme à Madagascar (Nosy Be, Tana, lémuriens)",
         tache: "Brochure touristique de Madagascar pour des élèves anglais",
         cecrl: "A1+",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/6e/madagascar-holidays.html"
       }
     ]
   },
@@ -295,7 +296,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Huguenots, Jewish refugees, Polish migration, Windrush",
         tache: "Portrait écrit d'un migrant fictif (200 mots)",
         cecrl: "A2+/B1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/lce/migrations.html"
       }
     ]
   },
@@ -387,7 +389,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Méthodologie de l'oral DNB, gestion du stress",
         tache: "Oral blanc DNB (5 min + questions)",
         cecrl: "B1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/3e/dnb-project.html"
       }
     ]
   },
@@ -440,7 +443,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Tradition anglaise de la short story",
         tache: "Écrire sa propre nouvelle avec twist (500 mots)",
         cecrl: "B2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/non-si/short-stories.html"
       }
     ]
   },

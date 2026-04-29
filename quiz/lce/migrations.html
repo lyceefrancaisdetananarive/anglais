@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Migrations & Identities — 4e LCE — LFT</title>
+  <meta name="description" content="Quiz sur les migrations qui ont façonné l'Europe. Niveau 4e LCE (A2+/B1)." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/lce.html">Retour à la LCE</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Migrations &amp; Identities — 4<sup>e</sup> LCE</div>
+            <div class="line3">A2+/B1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/lce.html">LCE</a>
+          <a href="#" aria-current="page">Quiz Migrations</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "lce-migrations",
+      title: "Migrations & Identities",
+      level: "4e LCE — A2+/B1",
+      sequence: "Module 3 — Mouvements de population qui ont façonné l'Europe",
+      duration: "~12 min",
+      intro: "Quiz culturel sur les migrations qui ont façonné l'Europe contemporaine. Mobilise le conditionnel, le vocabulaire de la migration et les références historiques (Huguenots, Windrush, immigration postcoloniale).",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "What was the « Windrush generation »?",
+          options: [
+            "British soldiers in WWII",
+            "Caribbean migrants who came to the UK between 1948 and 1971",
+            "Norwegian immigrants in the 19th century",
+            "Refugees from Eastern Europe",
+          ],
+          answer: 1,
+          explanation: "La <b>Windrush generation</b> (du nom du navire MV Empire Windrush, 1948) désigne les migrants antillais arrivés au Royaume-Uni de 1948 à 1971 pour reconstruire la Grande-Bretagne d'après-guerre.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each migration wave with its origin / period.",
+          hint: "Indice : grandes vagues migratoires en Europe.",
+          pairs: [
+            { left: "Huguenots",       right: "French Protestants fleeing persecution (17th c.)" },
+            { left: "Jewish refugees", right: "Fleeing Nazi persecution (1930s-40s)" },
+            { left: "Polish migration", right: "Workers after EU enlargement (2004+)" },
+            { left: "Windrush",        right: "Caribbean migrants in postwar UK" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Quel concept anglais désigne « les facteurs qui poussent à quitter son pays » ? (2 mots)",
+          placeholder: "Indice : push...",
+          answer: [
+            "push factors",
+            "Push factors",
+            "Push Factors",
+            "PUSH FACTORS",
+          ],
+          explanation: "<b>Push factors</b> = facteurs qui poussent à partir (guerre, pauvreté, persécution). Par opposition à <b>pull factors</b> = facteurs qui attirent (emploi, sécurité, famille).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What does « diaspora » mean?",
+          options: [
+            "A short-term tourist movement",
+            "A scattered population sharing a common origin",
+            "An immigration policy",
+            "A type of refugee camp",
+          ],
+          answer: 1,
+          explanation: "<b>Diaspora</b> = population dispersée à travers plusieurs pays mais qui maintient des liens avec une origine commune. Exemples : diaspora juive, irlandaise, indienne, malgache.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "There is a Malagasy diaspora of about 4,000 people in the United Kingdom.",
+          answer: "vrai",
+          explanation: "Vrai ! Une <b>diaspora malgache</b> d'environ 4 000 personnes vit au Royaume-Uni, principalement à Londres. Elle illustre le rayonnement international de Madagascar.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete with appropriate vocabulary.",
+          parts: [
+            { text: "Throughout history, people " },
+            { gap: ["have migrated", "migrate", "is migrating", "migrating"], answer: 0 },
+            { text: " to escape conflict or seek opportunities. Some are " },
+            { gap: ["refugees", "tourists", "natives", "patients"], answer: 0 },
+            { text: ", others are economic migrants. Together, they " },
+            { gap: ["build", "destroy", "ignore", "consume"], answer: 0 },
+            { text: " new identities in their host countries." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is « cultural hybridity »?",
+          options: [
+            "A scientific cross-breeding of plants",
+            "The blending of different cultural identities in one person or community",
+            "A type of cooking method",
+            "A musical genre",
+          ],
+          answer: 1,
+          explanation: "<b>Cultural hybridity</b> (hybridité culturelle) = mélange d'identités culturelles. Concept clé pour comprendre les diasporas — par exemple les <i>British-Bangladeshi</i> de Brick Lane, ou la diaspora malgache à Londres qui mélange traditions malgaches et culture britannique.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL push factors for migration:",
+          options: [
+            "War and conflict",
+            "Better job opportunities",
+            "Famine",
+            "Beautiful tourist sites",
+            "Persecution",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Push factors = ce qui POUSSE à partir : war, famine, persecution. Pull factors = ce qui ATTIRE vers la destination : job opportunities, tourist sites.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these European migration waves in chronological order.",
+          hint: "From earliest to most recent.",
+          items: [
+            "Huguenots flee France (17th c.)",
+            "Irish migrate to USA after Great Famine (1840s)",
+            "Jewish refugees flee Nazi Germany (1930s-40s)",
+            "Caribbean Windrush generation arrives in UK (1948-1971)",
+            "Polish workers migrate after EU enlargement (2004+)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which UK political crisis exposed the unfair treatment of long-term Caribbean residents in 2018?",
+          options: [
+            "The Brexit referendum",
+            "The Windrush scandal",
+            "The Cambridge Analytica scandal",
+            "The Suez Canal crisis",
+          ],
+          answer: 1,
+          explanation: "Le <b>Windrush scandal</b> (2018) a révélé que des centaines d'Antillais arrivés légalement au Royaume-Uni entre 1948 et 1971 avaient été menacés d'expulsion par le Home Office, faute de pouvoir prouver leur droit de séjour. Crise politique majeure pour le gouvernement May.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
