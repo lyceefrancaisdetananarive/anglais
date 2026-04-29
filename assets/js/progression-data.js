@@ -47,7 +47,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Familles royales britanniques, pets in the UK",
         tache: "Présenter son arbre généalogique en 8 phrases",
         cecrl: "A1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/6e/family-tree.html"
       },
       {
         n: 3, periode: "T2 (janv-fév)",
@@ -135,7 +136,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Serena Williams, Usain Bolt, David Beckham, sport à Madagascar",
         tache: "Mini-biographie d'un sportif (200 mots) + oral 2 min",
         cecrl: "A2",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/4e/sport-heroes.html"
       },
       {
         n: 3, periode: "T2 (janv-fév)",
@@ -313,7 +315,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Indépendance, Civil War, Civil Rights, contemporary",
         tache: "Biographie d'un.e Américain.e marquant.e (250 mots)",
         cecrl: "A2+",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/3e/welcome-to-america.html"
       },
       {
         n: 2, periode: "T1 (nov-déc)",
@@ -554,7 +557,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Banksy (lien 3e), Picasso (Guernica), Kara Walker, Ai Weiwei",
         tache: "Analyse d'œuvre (350 mots) + présentation orale 8 min",
         cecrl: "B2/C1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/terminale/art-and-power.html"
       },
       {
         n: 4, periode: "T2 (fév)",

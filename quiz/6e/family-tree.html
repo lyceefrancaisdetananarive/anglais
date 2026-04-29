@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz My Family Tree — 6e — LFT</title>
+  <meta name="description" content="Quiz interactif sur la séquence My Family Tree. Niveau 6e (A1) : famille, have got, possessifs." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/6e.html">Retour à la 6<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz My Family Tree — 6<sup>e</sup></div>
+            <div class="line3">A1 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/6e.html">6<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Family Tree</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "6e-family-tree",
+      title: "My Family Tree",
+      level: "6e — A1",
+      sequence: "Séquence 2 — La famille",
+      duration: "~10 min",
+      intro: "Hi! Voici un quiz pour réviser la séquence sur la famille. Have got, pronoms possessifs et beaucoup de vocabulaire ! Tu vas faire de l'écoute, de l'association et du texte à trous. Good luck!",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "Comment dit-on « la sœur de mon père » en anglais (1 mot) ?",
+          options: ["My niece", "My aunt", "My cousin", "My grandmother"],
+          answer: 1,
+          explanation: "« My aunt » = ma tante. La sœur de ton père OU de ta mère est ton aunt. Le frère du père/mère = uncle.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each English word with its French translation.",
+          hint: "Indice : la famille proche !",
+          pairs: [
+            { left: "Brother",  right: "Frère" },
+            { left: "Sister",   right: "Sœur" },
+            { left: "Cousin",   right: "Cousin / Cousine" },
+            { left: "Parents",  right: "Parents" },
+          ],
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complète avec la bonne forme de <em>have got</em>.",
+          parts: [
+            { text: "I " },
+            { gap: ["have got", "has got", "got", "have"], answer: 0 },
+            { text: " two sisters. My brother " },
+            { gap: ["have got", "has got", "is", "got"], answer: 1 },
+            { text: " a beautiful dog. We " },
+            { gap: ["have got", "has got", "are got", "has"], answer: 0 },
+            { text: " a big family!" },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Choisis le bon possessif : « This is Tom. _____ mum is a teacher. »",
+          options: ["He", "His", "Her", "Him"],
+          answer: 1,
+          explanation: "Tom est un garçon → on utilise <i>his</i>. <i>Her</i> serait pour une fille. <i>He</i> est un pronom sujet, <i>him</i> un pronom complément.",
+        },
+
+        {
+          type: "image-qcm",
+          prompt: "Look at the picture. What is this family doing?",
+          imageSrc: "../../assets/img/sequences/street-art/banksy-style-mural.jpg",
+          imageAlt: "Famille devant un mur",
+          imageCaption: "Photo : Unsplash",
+          options: [
+            "They are playing football",
+            "They are walking near a wall",
+            "They are eating dinner",
+            "They are sleeping",
+          ],
+          answer: 1,
+          explanation: "On voit une personne qui marche près d'un mur. <i>They are walking</i> = ils/elles marchent (présent continu).",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "« Grandparents » means « grands-parents » in French.",
+          answer: "vrai",
+          explanation: "<i>Grand</i> + <i>parents</i> = grands-parents. <i>Grandfather/grandpa</i> = grand-père. <i>Grandmother/granny/grandma</i> = grand-mère.",
+        },
+
+        {
+          type: "saisie",
+          prompt: "Complète : « My father's father is my ___ . » (1 mot)",
+          placeholder: "Exemple : uncle",
+          answer: ["grandfather", "grandpa", "Grandfather", "Grandpa", "GRANDFATHER"],
+          explanation: "Le père de ton père = ton <i>grandfather</i> (ou <i>grandpa</i> de manière familière).",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL family members on your father's side:",
+          options: ["Mother", "Aunt (paternal)", "Uncle (paternal)", "Sister-in-law", "Father"],
+          answer: ["1", "2", "4"],
+          explanation: "Du côté paternel : <i>aunt</i> (paternal), <i>uncle</i> (paternal), <i>father</i>. <i>Mother</i> est ta mère, <i>sister-in-law</i> est la sœur de ton conjoint.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these family members in the right generation order, from oldest to youngest.",
+          hint: "Du plus âgé au plus jeune.",
+          items: [
+            "Great-grandmother",
+            "Grandmother",
+            "Mother",
+            "Sister",
+            "Niece",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "« I _____ a big family — five brothers and three sisters! »",
+          options: [
+            "have got",
+            "has got",
+            "am",
+            "got",
+          ],
+          answer: 0,
+          explanation: "Avec « I » on utilise <i>have got</i> (pas <i>has got</i>, qui s'utilise avec <i>he/she/it</i>).",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

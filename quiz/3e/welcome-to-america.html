@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Welcome to America — 3e — LFT</title>
+  <meta name="description" content="Quiz interactif sur la séquence Welcome to America. Niveau 3e (A2+) : civilisation US, prétérit, voix passive, biographie." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/3e.html">Retour à la 3<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Welcome to America — 3<sup>e</sup></div>
+            <div class="line3">A2+ · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/3e.html">3<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Welcome to America</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "3e-welcome-america",
+      title: "Welcome to America!",
+      level: "3e — A2+",
+      sequence: "Séquence 1 — Civilisation américaine",
+      duration: "~15 min",
+      intro: "Quiz d'ouverture sur les États-Unis : géographie, histoire, culture pop. Mobilise le prétérit, la voix passive et le lexique de la biographie. Good luck!",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "How many states does the United States of America have?",
+          options: ["48", "49", "50", "52"],
+          answer: 2,
+          explanation: "Les États-Unis comptent <b>50 états</b> depuis l'admission d'Hawaï et de l'Alaska en 1959. Le drapeau américain a 50 étoiles.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each US president with the period or fact.",
+          hint: "Indice : pense aux dates importantes.",
+          pairs: [
+            { left: "Abraham Lincoln",  right: "Civil War (1861-1865)" },
+            { left: "Franklin D. Roosevelt", right: "WWII & New Deal" },
+            { left: "Barack Obama",     right: "First Black President (2009)" },
+            { left: "Joe Biden",        right: "46th President (2021)" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Mets à la voix passive : « Lincoln signed the Emancipation Proclamation in 1863. »",
+          placeholder: "The Emancipation Proclamation...",
+          answer: [
+            "the emancipation proclamation was signed by lincoln in 1863",
+            "the emancipation proclamation was signed by lincoln in 1863.",
+          ],
+          explanation: "Voix passive au prétérit : sujet + was/were + participe passé + by + agent. Sign → signed (verbe régulier).",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« I have a dream… » is a famous quote from:",
+          options: [
+            "John F. Kennedy",
+            "Martin Luther King Jr.",
+            "Malcolm X",
+            "Nelson Mandela",
+          ],
+          answer: 1,
+          explanation: "Martin Luther King Jr. a prononcé ce discours le 28 août 1963 à Washington, lors de la March on Washington pour les droits civiques.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Hawaii is part of the continental United States.",
+          answer: "faux",
+          explanation: "Hawaï est un archipel de l'océan Pacifique — il fait partie des USA mais n'est pas continental. Alaska, état le plus grand, est aussi non continental.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complète cette mini-biographie avec la bonne forme verbale.",
+          parts: [
+            { text: "Barack Obama " },
+            { gap: ["was born", "borned", "is born", "borns"], answer: 0 },
+            { text: " in Honolulu, Hawaii, in 1961. He " },
+            { gap: ["become", "became", "becomes", "is become"], answer: 1 },
+            { text: " the 44th President of the USA in 2009. His autobiography <i>Dreams from My Father</i> " },
+            { gap: ["was published", "published", "is published", "publishing"], answer: 0 },
+            { text: " in 1995." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "« The American Dream » refers to:",
+          options: [
+            "The dream of every American to visit Disneyland",
+            "The belief that anyone can succeed through hard work, regardless of background",
+            "A famous Hollywood movie",
+            "A constitutional right to dream",
+          ],
+          answer: 1,
+          explanation: "Le « rêve américain » est l'idée que par le travail acharné, n'importe qui peut réussir aux USA — quel que soit son milieu d'origine. Mythe fondateur encore débattu aujourd'hui.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL cities located in the USA:",
+          options: [
+            "Toronto",
+            "Boston",
+            "Los Angeles",
+            "Vancouver",
+            "Chicago",
+          ],
+          answer: ["1", "2", "4"],
+          explanation: "Boston, Los Angeles et Chicago sont aux USA. Toronto et Vancouver sont au Canada.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these key events in US history in chronological order.",
+          hint: "Du plus ancien au plus récent.",
+          items: [
+            "Declaration of Independence (1776)",
+            "Civil War (1861-1865)",
+            "World War II (1941-1945)",
+            "Civil Rights Movement peak (1960s)",
+            "First Black President elected (2008)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which document begins with « We the People of the United States… »?",
+          options: [
+            "The Declaration of Independence",
+            "The US Constitution",
+            "The Emancipation Proclamation",
+            "The Star-Spangled Banner",
+          ],
+          answer: 1,
+          explanation: "« We the People » est le préambule de la <b>Constitution des États-Unis</b> (1787). C'est l'une des phrases d'ouverture les plus célèbres au monde.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

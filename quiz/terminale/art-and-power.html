@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Art and Power — Terminale — LFT</title>
+  <meta name="description" content="Quiz sur l'axe Bac « Art and Power ». Niveau Terminale (B2/C1) : Banksy, Picasso, photographie engagée." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/terminale.html">Retour à la Terminale</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Art and Power — Terminale</div>
+            <div class="line3">B2/C1 · Préparation Bac · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/terminale.html">Terminale</a>
+          <a href="#" aria-current="page">Quiz Art and Power</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "terminale-art-and-power",
+      title: "Art and Power",
+      level: "Terminale — B2/C1",
+      sequence: "Axe Bac n°3 — Art et pouvoir",
+      duration: "~15 min",
+      intro: "This quiz explores how art has been used as a tool of contestation, resistance, and political message — from Picasso's <em>Guernica</em> to Banksy. It mobilises advanced vocabulary, the passive voice, and emphatic structures.",
+
+      questions: [
+
+        {
+          type: "image-qcm",
+          prompt: "Banksy is famous for using which technique on walls around the world?",
+          imageSrc: "../../assets/img/sequences/street-art/banksy-style-mural.jpg",
+          imageAlt: "Œuvre Banksy au pochoir",
+          imageCaption: "Photo : Unsplash",
+          options: [
+            "Oil painting on canvas",
+            "Stencil and spray paint",
+            "Marble sculpture",
+            "Digital projection",
+          ],
+          answer: 1,
+          explanation: "Banksy is celebrated for his <b>stencil</b> technique — a paper template combined with spray paint — which allows fast, anonymous execution in public spaces.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each artwork with its political message.",
+          hint: "Recall what you studied in class on art and contestation.",
+          pairs: [
+            { left: "Guernica (Picasso)",        right: "Anti-war, denounces fascism" },
+            { left: "The Flower Thrower (Banksy)", right: "Peaceful protest against violence" },
+            { left: "Migrant Mother (Lange)",    right: "Documents the Great Depression" },
+            { left: "Hope (Shepard Fairey)",     right: "Obama's 2008 campaign icon" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Mets à la voix passive : « Picasso painted <em>Guernica</em> in 1937 to denounce the bombing. »",
+          placeholder: "Guernica was...",
+          answer: [
+            "guernica was painted by picasso in 1937 to denounce the bombing",
+            "guernica was painted by picasso in 1937 to denounce the bombing.",
+          ],
+          explanation: "Passive at past simple: <i>was/were + past participle + by + agent</i>. The agent (Picasso) is kept here because it is informative.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« Art is not what you see, but what you make others see. » Who said this?",
+          options: [
+            "Pablo Picasso",
+            "Banksy",
+            "Edgar Degas",
+            "Andy Warhol",
+          ],
+          answer: 2,
+          explanation: "Cette citation est attribuée à Edgar Degas (1834-1917), peintre impressionniste français. Elle illustre l'idée que l'art transforme le regard du spectateur.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Dorothea Lange's <em>Migrant Mother</em> (1936) became an iconic image of the Great Depression in the USA.",
+          answer: "vrai",
+          explanation: "Dorothea Lange a photographié Florence Owens Thompson en 1936 dans un camp de migrants californien. Cette image est devenue le symbole emblématique de la Grande Dépression américaine.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete this analysis of Banksy's work with appropriate forms.",
+          parts: [
+            { text: "Banksy's identity " },
+            { gap: ["has remained", "is remained", "remains", "are remained"], answer: 0 },
+            { text: " unknown for over two decades. His work " },
+            { gap: ["was sold", "was selling", "sells", "is selling"], answer: 0 },
+            { text: " for millions in 2018, when his <em>Girl with Balloon</em> shredded itself at auction. The piece " },
+            { gap: ["renamed", "was renamed", "rename", "renames"], answer: 1 },
+            { text: " <em>Love is in the Bin</em>." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What does the term « propaganda art » refer to?",
+          options: [
+            "Art that aims to entertain only",
+            "Art used to influence political opinion or beliefs",
+            "Art produced by amateur artists",
+            "Art displayed in private galleries",
+          ],
+          answer: 1,
+          explanation: "Propaganda art = œuvres conçues pour influencer l'opinion publique en faveur d'une idéologie, d'un parti ou d'un régime. Exemples : posters soviétiques, posters de la WWII (« Uncle Sam wants you »).",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL words that describe artworks engaged with political messages:",
+          options: [
+            "Subversive",
+            "Decorative",
+            "Provocative",
+            "Apolitical",
+            "Confrontational",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Subversive (qui renverse l'ordre établi), provocative (qui provoque) et confrontational (qui défie) caractérisent l'art engagé. Decorative et apolitical sont l'opposé.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these forms of political art in approximate chronological order.",
+          hint: "From oldest to most recent.",
+          items: [
+            "Renaissance religious frescoes (15th c.)",
+            "French Revolution propaganda paintings (late 18th c.)",
+            "Soviet propaganda posters (early 20th c.)",
+            "Picasso's <em>Guernica</em> (1937)",
+            "Banksy's street art (late 1990s onwards)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Why does Banksy's anonymity matter for his political message?",
+          options: [
+            "He is afraid of arrest",
+            "It allows the focus to remain on the work, not the artist's celebrity",
+            "He doesn't want to make money",
+            "He is not a single person but a collective",
+          ],
+          answer: 1,
+          explanation: "L'anonymat de Banksy concentre l'attention sur le <b>message</b> de l'œuvre plutôt que sur le culte de l'artiste — un anti-modèle face au star-system. C'est aussi une critique du marché de l'art.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Sport Heroes — 4e — LFT</title>
+  <meta name="description" content="Quiz interactif sur la séquence Sport Heroes. Niveau 4e (A2) : prétérit, modaux can/could, biographies." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/4e.html">Retour à la 4<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Sport Heroes — 4<sup>e</sup></div>
+            <div class="line3">A2 · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/4e.html">4<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz Sport Heroes</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "4e-sport-heroes",
+      title: "Sport Heroes — Stories of Champions",
+      level: "4e — A2",
+      sequence: "Séquence 2 — Sport et figures inspirantes",
+      duration: "~12 min",
+      intro: "Quiz sur les grands sportifs anglophones. Mobilise le prétérit (régulier et irrégulier), les modaux can/could et le vocabulaire de la biographie sportive. Good luck!",
+
+      questions: [
+
+        {
+          type: "matching",
+          prompt: "Match each athlete with their sport.",
+          hint: "Indice : tu connais sûrement plusieurs d'entre eux.",
+          pairs: [
+            { left: "Serena Williams",   right: "Tennis" },
+            { left: "Usain Bolt",        right: "Athletics (sprint)" },
+            { left: "David Beckham",     right: "Football" },
+            { left: "LeBron James",      right: "Basketball" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Mets au prétérit : « Usain Bolt ___ (run) the 100 m in 9.58 seconds in 2009. »",
+          placeholder: "Exemple : walked",
+          answer: ["ran", "Ran", "RAN"],
+          explanation: "<i>Run</i> est un verbe irrégulier : run → ran → run. Le prétérit est <i>ran</i>.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "« When she was young, she _____ swim 50 metres without stopping. »",
+          options: ["can", "could", "couldn't", "cans"],
+          answer: 1,
+          explanation: "Au passé, on utilise <i>could</i> (capacité) ou <i>couldn't</i> (incapacité). Ici la phrase est positive donc <i>could</i>.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Serena Williams won 23 Grand Slam singles titles.",
+          answer: "vrai",
+          explanation: "Serena Williams a gagné 23 titres du Grand Chelem en simple — un record dans l'ère Open chez les femmes.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these moments of a sports champion's career in chronological order.",
+          hint: "Du début à la fin d'une carrière classique.",
+          items: [
+            "She started training when she was a child",
+            "She won her first regional competition",
+            "She joined the national team",
+            "She won an Olympic gold medal",
+            "She retired and became a coach",
+          ],
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complète cette mini-biographie avec la bonne forme du prétérit.",
+          parts: [
+            { text: "David Beckham " },
+            { gap: ["was born", "borned", "is born", "borns"], answer: 0 },
+            { text: " in London in 1975. He " },
+            { gap: ["played", "plays", "is playing", "playing"], answer: 0 },
+            { text: " for Manchester United, then for Real Madrid. He " },
+            { gap: ["retire", "retired", "is retired", "retires"], answer: 1 },
+            { text: " from football in 2013." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is a « rookie » in sport?",
+          options: [
+            "A player who has just retired",
+            "A new player in their first professional season",
+            "An injured player",
+            "The team's coach",
+          ],
+          answer: 1,
+          explanation: "Un <b>rookie</b> est un sportif débutant en pro (= débutant). À ne pas confondre avec <i>veteran</i> (vétéran).",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL adjectives that describe a great athlete:",
+          options: [
+            "Hard-working",
+            "Lazy",
+            "Determined",
+            "Pessimistic",
+            "Talented",
+          ],
+          answer: ["0", "2", "4"],
+          explanation: "Hard-working, determined et talented sont positifs. Lazy (paresseux) et pessimistic (pessimiste) sont négatifs.",
+        },
+
+        {
+          type: "saisie",
+          prompt: "Le contraire de « to win » au prétérit est… ? (1 mot)",
+          placeholder: "Exemple : ran",
+          answer: ["lost", "Lost", "LOST"],
+          explanation: "<i>Win</i> → <i>lose</i> (perdre). Au prétérit irrégulier : <i>lose → lost → lost</i>.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which Malagasy event do many international athletes attend?",
+          options: [
+            "The Marathon de Madagascar",
+            "The Ranomafana Trail",
+            "Both A and B (and many others)",
+            "There are no sporting events in Madagascar",
+          ],
+          answer: 2,
+          explanation: "Madagascar accueille plusieurs événements sportifs internationaux : trail dans les parcs nationaux (Ranomafana, Andasibe), marathon de Tana, et bien d'autres. Le sport est aussi un vecteur de tourisme.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
