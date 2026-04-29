@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progression annuelle 2025-2026 — Espace Anglais — LFT</title>
+  <meta name="description" content="Progression annuelle complète d'anglais pour tous les niveaux du Lycée Français de Tananarive : 6e, 4e, 3e, 1ère euro, Terminale, NON SI, LCE. Conforme au programme officiel BO Eduscol." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preload" href="assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+
+  <style>
+    /* Tabs de niveau (sticky en haut) */
+    .level-tabs {
+      position: sticky;
+      top: 100px;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: var(--space-3) 0;
+      margin-bottom: var(--space-5);
+      border-bottom: 1px solid var(--grey-200);
+    }
+    .level-tabs__list {
+      display: flex;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .level-tab {
+      background: var(--grey-100);
+      color: var(--grey-700);
+      border: none;
+      padding: var(--space-2) var(--space-4);
+      border-radius: 99px;
+      font-family: inherit;
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--t-fast);
+    }
+    .level-tab:hover {
+      background: var(--bf-100);
+      color: var(--bf-500);
+    }
+    .level-tab.is-active {
+      background: linear-gradient(135deg, var(--bf-500), var(--lft-magenta));
+      color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 145, 0.2);
+    }
+
+    /* Section niveau */
+    .level-section {
+      animation: fadeIn 0.4s ease;
+    }
+    .level-section[hidden] { display: none !important; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero du niveau */
+    .level-hero {
+      background: var(--gradient, linear-gradient(135deg, var(--bf-500), var(--lft-magenta)));
+      color: white;
+      padding: var(--space-6);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-5);
+    }
+    .level-hero h2 {
+      color: white;
+      margin: 0 0 var(--space-2);
+      font-size: var(--font-size-3xl);
+    }
+    .level-hero__meta {
+      display: flex;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      margin-top: var(--space-4);
+    }
+    .level-hero__meta-item {
+      background: rgba(255, 255, 255, 0.15);
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(8px);
+      font-size: var(--font-size-sm);
+    }
+    .level-hero__meta-item strong { display: block; font-size: var(--font-size-md); }
+    .level-hero__intro {
+      margin-top: var(--space-4);
+      font-size: var(--font-size-lg);
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* Tableau synoptique */
+    .progression-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: var(--space-6);
+      background: var(--grey-50);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .progression-table thead {
+      background: var(--bf-500);
+      color: white;
+    }
+    .progression-table th {
+      padding: var(--space-3) var(--space-4);
+      text-align: left;
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    .progression-table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--grey-200);
+      vertical-align: top;
+      font-size: var(--font-size-sm);
+    }
+    .progression-table tr:hover td { background: var(--bf-100); }
+    .progression-table tr:last-child td { border-bottom: none; }
+    .progression-table .seq-num {
+      width: 40px;
+      font-weight: 800;
+      font-size: var(--font-size-lg);
+      color: var(--lft-magenta);
+    }
+    .progression-table .seq-period {
+      font-weight: 600;
+      color: var(--grey-700);
+      white-space: nowrap;
+    }
+    .progression-table .seq-titre {
+      font-weight: 600;
+      color: var(--bf-500);
+    }
+    .progression-table .seq-cecrl {
+      background: var(--bf-100);
+      color: var(--bf-500);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-size: var(--font-size-xs);
+      display: inline-block;
+    }
+    .seq-statut {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+    .seq-statut--live   { background: var(--success-100); color: var(--success-500); }
+    .seq-statut--todo   { background: var(--grey-200); color: var(--grey-700); }
+
+    /* Cartes détaillées */
+    .seq-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: var(--space-4);
+    }
+    .seq-card {
+      background: var(--grey-50);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      border-left: 4px solid var(--lft-magenta);
+      transition: all var(--t-base);
+      position: relative;
+    }
+    .seq-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .seq-card__num {
+      position: absolute;
+      top: -12px;
+      left: var(--space-4);
+      background: linear-gradient(135deg, var(--bf-500), var(--lft-magenta));
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: var(--font-size-lg);
+      box-shadow: 0 4px 12px rgba(230, 0, 126, 0.3);
+    }
+    .seq-card__period {
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--grey-700);
+      margin-top: var(--space-3);
+    }
+    .seq-card__title {
+      font-size: var(--font-size-xl);
+      color: var(--bf-500);
+      margin: var(--space-2) 0;
+      font-weight: 700;
+    }
+    .seq-card__theme {
+      font-style: italic;
+      color: var(--grey-700);
+      margin-bottom: var(--space-3);
+    }
+    .seq-card__details {
+      display: grid;
+      gap: var(--space-2);
+      font-size: var(--font-size-sm);
+    }
+    .seq-card__row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: var(--space-2);
+    }
+    .seq-card__label {
+      font-weight: 700;
+      color: var(--lft-magenta);
+      text-transform: uppercase;
+      font-size: var(--font-size-xs);
+      letter-spacing: 0.5px;
+    }
+    .seq-card__value { color: var(--grey-900); }
+    .seq-card__footer {
+      margin-top: var(--space-4);
+      padding-top: var(--space-3);
+      border-top: 1px solid var(--grey-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    .seq-card__cta {
+      background: linear-gradient(135deg, var(--bf-500), var(--lft-magenta));
+      color: white;
+      padding: 6px 14px;
+      border-radius: 99px;
+      text-decoration: none;
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .progression-table { font-size: var(--font-size-xs); }
+      .progression-table th:nth-child(3),
+      .progression-table td:nth-child(3),
+      .progression-table th:nth-child(5),
+      .progression-table td:nth-child(5) { display: none; }
+      .level-tabs { top: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="https://www.aefe.fr" target="_blank" rel="noopener">aefe.fr</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="index.html" class="brand">
+          <img src="assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Progression annuelle 2025-2026</div>
+            <div class="line3">Programme officiel · BO Eduscol</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="index.html">Tableau de bord</a>
+          <a href="progression-annuelle.html" aria-current="page">Progression</a>
+          <a href="pdf-imprimables/">Bibliothèque PDF</a>
+          <a href="docs/guide-enseignante.html">Guide</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Progression annuelle d'anglais</h1>
+        <p class="hero__subtitle">
+          Programme structuré pour <strong>tous les niveaux</strong> de Mme FALIMANANA :
+          de la 6<sup>e</sup> à la Terminale, en passant par les sections internationales (NON SI)
+          et les Langues et Cultures Européennes (LCE). Construit en conformité avec le
+          <strong>BO Eduscol</strong> et adapté au contexte AEFE / Madagascar.
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav class="level-tabs" aria-label="Sélection du niveau">
+        <div class="level-tabs__list" role="tablist">
+          <button class="level-tab is-active" data-level="6e" role="tab" aria-selected="true">6<sup>e</sup> · A1</button>
+          <button class="level-tab" data-level="4e" role="tab">4<sup>e</sup> LVA · A2</button>
+          <button class="level-tab" data-level="4e-non-si" role="tab">4<sup>e</sup> NON SI · A2/B1</button>
+          <button class="level-tab" data-level="4e-lce" role="tab">4<sup>e</sup> LCE</button>
+          <button class="level-tab" data-level="3e" role="tab">3<sup>e</sup> LVA · A2+/B1</button>
+          <button class="level-tab" data-level="3e-non-si" role="tab">3<sup>e</sup> NON SI · B1/B2</button>
+          <button class="level-tab" data-level="1ere" role="tab">1<sup>re</sup> euro · B1/B2</button>
+          <button class="level-tab" data-level="terminale" role="tab">T<sup>le</sup> · B2/C1</button>
+        </div>
+      </nav>
+
+      <div id="level-content"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA · <a href="mailto:salamo.falimanana@egd.mg" style="color: var(--lft-magenta-light);">salamo.falimanana@egd.mg</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/progression-data.js"></script>
+  <script>
+    /* ----------- RENDU D'UN NIVEAU ----------- */
+    function renderLevel(levelKey) {
+      const data = window.PROGRESSION_ANNUELLE[levelKey];
+      if (!data) return;
+
+      const root = document.getElementById('level-content');
+      const escapeHtml = s => String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+      // Hero du niveau
+      const hero = `
+        <section class="level-section" aria-labelledby="level-${levelKey}-title">
+          <div class="level-hero" style="background: ${data.couleur};">
+            <h2 id="level-${levelKey}-title">${data.label}</h2>
+            <div class="level-hero__meta">
+              <div class="level-hero__meta-item">
+                <strong>${data.cecrl}</strong>
+                <span>Niveau CECRL</span>
+              </div>
+              <div class="level-hero__meta-item">
+                <strong>${data.sequences.length}</strong>
+                <span>séquences / an</span>
+              </div>
+              <div class="level-hero__meta-item">
+                <strong>${data.horaire}</strong>
+                <span>horaire</span>
+              </div>
+              <div class="level-hero__meta-item">
+                <strong>${data.classe}</strong>
+                <span>classe</span>
+              </div>
+            </div>
+            <p class="level-hero__intro">${data.intro}</p>
+          </div>
+      `;
+
+      // Tableau synoptique
+      const tableRows = data.sequences.map((s, i) => `
+        <tr>
+          <td class="seq-num">${s.n}</td>
+          <td class="seq-period">${s.periode}</td>
+          <td class="seq-titre">${escapeHtml(s.titre)}</td>
+          <td><span class="seq-cecrl">${s.cecrl}</span></td>
+          <td><em>${escapeHtml(s.tache)}</em></td>
+          <td>
+            ${s.statut === 'live'
+              ? `<a href="${s.url}" class="seq-statut seq-statut--live">✓ En ligne</a>`
+              : `<span class="seq-statut seq-statut--todo">⏳ À venir</span>`}
+          </td>
+        </tr>
+      `).join('');
+
+      const table = `
+        <h3 class="section-title">Vue synoptique</h3>
+        <table class="progression-table">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Période</th>
+              <th>Séquence</th>
+              <th>CECRL</th>
+              <th>Tâche finale</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody>${tableRows}</tbody>
+        </table>
+      `;
+
+      // Cartes détaillées
+      const cards = data.sequences.map(s => `
+        <article class="seq-card">
+          <div class="seq-card__num">${s.n}</div>
+          <div class="seq-card__period">${s.periode}</div>
+          <h3 class="seq-card__title">${escapeHtml(s.titre)}</h3>
+          <p class="seq-card__theme">${s.theme}</p>
+          <div class="seq-card__details">
+            <div class="seq-card__row"><span class="seq-card__label">Axe</span><span class="seq-card__value">${s.axe}</span></div>
+            <div class="seq-card__row"><span class="seq-card__label">Langue</span><span class="seq-card__value">${s.langue}</span></div>
+            <div class="seq-card__row"><span class="seq-card__label">Lexique</span><span class="seq-card__value">${s.lexique}</span></div>
+            <div class="seq-card__row"><span class="seq-card__label">Culture</span><span class="seq-card__value">${s.culturel}</span></div>
+            <div class="seq-card__row"><span class="seq-card__label">Tâche</span><span class="seq-card__value"><em>${escapeHtml(s.tache)}</em></span></div>
+          </div>
+          <div class="seq-card__footer">
+            <span class="seq-cecrl">CECRL ${s.cecrl}</span>
+            ${s.statut === 'live'
+              ? `<a href="${s.url}" class="seq-card__cta">Lancer le quiz →</a>`
+              : `<span class="seq-statut seq-statut--todo">⏳ À venir</span>`}
+          </div>
+        </article>
+      `).join('');
+
+      const cardsBlock = `
+        <h3 class="section-title" style="margin-top: var(--space-7);">Détail des séquences</h3>
+        <div class="seq-cards">${cards}</div>
+      `;
+
+      root.innerHTML = hero + table + cardsBlock + '</section>';
+      window.scrollTo({ top: document.querySelector('.level-tabs').offsetTop - 20, behavior: 'smooth' });
+    }
+
+    /* ----------- INTERACTIVITÉ TABS ----------- */
+    document.querySelectorAll('.level-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.level-tab').forEach(t => {
+          t.classList.remove('is-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        renderLevel(tab.dataset.level);
+      });
+    });
+
+    /* ----------- DEEP LINK (#niveau) ----------- */
+    const initialLevel = location.hash.replace('#', '') || '6e';
+    const initialTab = document.querySelector(`.level-tab[data-level="${initialLevel}"]`);
+    if (initialTab) {
+      document.querySelectorAll('.level-tab').forEach(t => t.classList.remove('is-active'));
+      initialTab.classList.add('is-active');
+    }
+    renderLevel(initialLevel in window.PROGRESSION_ANNUELLE ? initialLevel : '6e');
+  </script>
+
+  <script src="assets/js/analytics.js" defer></script>
+</body>
+</html>
