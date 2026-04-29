@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz The Giver — 4e NON SI — LFT</title>
+  <meta name="description" content="Quiz sur The Giver de Lois Lowry. Niveau 4e NON SI (B1) : dystopie, voix passive, conditional." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/4e.html">Retour à la 4<sup>e</sup></a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz The Giver — 4<sup>e</sup> NON SI</div>
+            <div class="line3">B1 · NON SI · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/4e.html">4<sup>e</sup></a>
+          <a href="#" aria-current="page">Quiz The Giver</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "4e-non-si-the-giver",
+      title: "The Giver — Lois Lowry (1993)",
+      level: "4e NON SI — B1",
+      sequence: "Séquence 2 — Dystopie, contrôle social, mémoire collective",
+      duration: "~15 min",
+      intro: "Ce quiz explore le roman <i>The Giver</i> de Lois Lowry, classique de la littérature dystopique YA. Mobilise voix passive, conditional et vocabulaire des émotions, du contrôle et de la liberté.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "Who is the main character of <i>The Giver</i>?",
+          options: [
+            "Asher",
+            "Jonas",
+            "Fiona",
+            "Gabriel",
+          ],
+          answer: 1,
+          explanation: "<b>Jonas</b> est le narrateur principal, un garçon de 12 ans qui vit dans <i>The Community</i>. Il devient le « Receiver of Memory » lors de la cérémonie des Twelves.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each character with their role in The Community.",
+          hint: "Personnages clés du roman.",
+          pairs: [
+            { left: "Jonas",       right: "The new Receiver of Memory" },
+            { left: "The Giver",   right: "Holds and transmits memories" },
+            { left: "Gabriel",     right: "Baby threatened with release" },
+            { left: "Fiona",       right: "Caretaker of the Old, Jonas's friend" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Complète au passive : « Memories ___ ___ to Jonas by The Giver. » (2 mots)",
+          placeholder: "Exemple : are given",
+          answer: ["are transmitted", "are given", "Are transmitted", "Are given"],
+          explanation: "Voix passive au présent : <b>are + past participle</b>. <i>Memories are transmitted/given to Jonas</i>. La voix passive met l'accent sur l'objet (memories) plutôt que sur l'agent.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What word does The Community use for « killing the unfit »?",
+          options: [
+            "Murder",
+            "Release",
+            "Sleep",
+            "Departure",
+          ],
+          answer: 1,
+          explanation: "<b>Release</b> est l'euphémisme employé par The Community pour désigner l'euthanasie des bébés faibles, des personnes âgées ou des contrevenants. Le langage masque la violence — un thème central du roman.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "In The Community, citizens see colours and feel strong emotions like in our world.",
+          answer: "faux",
+          explanation: "Faux ! Les habitants de The Community vivent en <b>« Sameness »</b> : pas de couleurs, pas de musique, peu d'émotions. Ils prennent des pilules dès l'adolescence pour supprimer les <i>Stirrings</i> (premiers émois).",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete with the right tense or modal.",
+          parts: [
+            { text: "If Jonas " },
+            { gap: ["had stayed", "stayed", "would stay", "stays"], answer: 0 },
+            { text: " in The Community, Gabriel " },
+            { gap: ["would have been released", "is released", "released", "would released"], answer: 0 },
+            { text: ". Society " },
+            { gap: ["should not control", "should not to control", "shouldn't to control", "not should control"], answer: 0 },
+            { text: " every aspect of citizens' lives." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What does « Sameness » mean in the novel?",
+          options: [
+            "A festival of unity",
+            "The elimination of all differences (colour, climate, music, choice)",
+            "A friendship rule",
+            "A weather forecast",
+          ],
+          answer: 1,
+          explanation: "<b>Sameness</b> = la suppression de toute différence. Pas de couleur (everything is grey), pas de relief, pas de soleil, pas de choix. Le but : éviter les conflits, mais au prix de l'humanité.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL themes addressed in <i>The Giver</i>:",
+          options: [
+            "Memory and forgetting",
+            "Freedom of choice",
+            "Conformity vs individuality",
+            "Football tactics",
+            "Pain and pleasure",
+          ],
+          answer: ["0", "1", "2", "4"],
+          explanation: "Mémoire, liberté, conformisme et la dualité douleur/plaisir sont au cœur du roman. Les tactiques de football n'y figurent pas (les sports sont d'ailleurs très limités dans The Community).",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these events of the novel in chronological order.",
+          hint: "From beginning to end.",
+          items: [
+            "Jonas turns 12 and goes to the Ceremony",
+            "He is selected as the new Receiver of Memory",
+            "The Giver transmits memories of colour, music, war",
+            "Jonas learns the truth about « release »",
+            "He flees The Community with baby Gabriel",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Which other dystopian novels are often compared to <i>The Giver</i>?",
+          options: [
+            "<i>Harry Potter</i> and <i>Twilight</i>",
+            "<i>The Hunger Games</i> (Collins) and <i>Divergent</i> (Roth)",
+            "<i>Pride and Prejudice</i> and <i>Emma</i>",
+            "<i>The Hobbit</i> and <i>Narnia</i>",
+          ],
+          answer: 1,
+          explanation: "<i>The Giver</i> (1993) est souvent considéré comme un précurseur du YA dystopique : <b>The Hunger Games</b> (Collins, 2008) et <b>Divergent</b> (Roth, 2011) reprennent le motif d'une société totalitaire qu'un·e adolescent·e remet en cause.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

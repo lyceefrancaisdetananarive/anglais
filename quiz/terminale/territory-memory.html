@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Territory and Memory — Terminale — LFT</title>
+  <meta name="description" content="Quiz sur l'Axe 8 du Bac : Territoire et mémoire. Niveau Terminale (C1) : colonialisme, mémoires plurielles, Madagascar." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/terminale.html">Retour à la Terminale</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Territory and Memory — Terminale</div>
+            <div class="line3">C1 · LVA · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/terminale.html">Terminale</a>
+          <a href="#" aria-current="page">Quiz Territory & Memory</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "tale-territory-memory",
+      title: "Territory and Memory",
+      level: "Terminale — C1",
+      sequence: "Axe 8 du Bac — Territoire et mémoire",
+      duration: "~18 min",
+      intro: "Quiz final de la plateforme ! Axe 8 du programme : colonialisme, indépendances, mémoires plurielles, héritage. Focus particulier sur Madagascar et l'Empire britannique. Mobilise past perfect et lexique historiographique pour le Grand Oral.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "When did Madagascar gain its independence from France?",
+          options: [
+            "26 June 1960",
+            "14 July 1960",
+            "26 June 1947",
+            "1 January 1959",
+          ],
+          answer: 0,
+          explanation: "Madagascar a obtenu son indépendance le <b>26 juin 1960</b>, jour férié national (<i>Fetin'ny Fahaleovantena</i>). Premier président : Philibert Tsiranana. La <i>Grande Île</i> avait été colonie française depuis 1896. La révolte malgache de 1947 (réprimée violemment) reste un point de mémoire douloureux.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each British Empire territory with its independence year.",
+          hint: "Décolonisation et Commonwealth.",
+          pairs: [
+            { left: "United States",  right: "1776 (Declaration of Independence)" },
+            { left: "India",          right: "1947 (with Partition)" },
+            { left: "Kenya",          right: "1963 (Mau Mau uprising)" },
+            { left: "Hong Kong",      right: "1997 (handover to China)" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Complète au past perfect : « Before 1960, Madagascar ___ ___ a French colony for over 60 years. » (2 mots)",
+          placeholder: "Exemple : had been",
+          answer: ["had been", "Had been"],
+          explanation: "Past perfect = <b>had + past participle</b>. <i>Had been</i> exprime une situation antérieure à 1960 (colonisation depuis 1896, soit 64 ans). Très utile pour structurer un récit historique en anglais.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is « postcolonialism »?",
+          options: [
+            "The period after a country becomes a colony",
+            "A field of study that examines the legacy of colonialism in literature, identity, power",
+            "A type of cuisine",
+            "A modern art movement only",
+          ],
+          answer: 1,
+          explanation: "Le <b>postcolonialisme</b> est un courant critique (Edward Said, <i>Orientalism</i>, 1978 ; Frantz Fanon ; Gayatri Spivak ; Ngũgĩ wa Thiong'o) qui analyse les héritages culturels, économiques et identitaires de la colonisation. Au programme du Bac.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "The Rova of Antananarivo, ancient royal palace, was destroyed by a fire in 1995.",
+          answer: "vrai",
+          explanation: "Vrai ! Le <b>Rova de Manjakamiadana</b>, palais royal merina au sommet de la haute ville de Tana, a brûlé dans la nuit du 6 au 7 novembre 1995. Site UNESCO depuis 2001 (avec Ambohimanga), il a été partiellement reconstruit. Symbole fort de la mémoire malgache.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete with the right tense or vocabulary.",
+          parts: [
+            { text: "Colonial powers " },
+            { gap: ["had imposed", "imposed", "have imposed", "are imposing"], answer: 0 },
+            { text: " their languages and laws long before independence movements " },
+            { gap: ["emerged", "emerges", "have emerged", "had emerged"], answer: 0 },
+            { text: ". Today, postcolonial nations " },
+            { gap: ["are still grappling", "still grapple", "still grappled", "are still grappled"], answer: 0 },
+            { text: " with this complex legacy." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "Who wrote the postcolonial classic <i>Things Fall Apart</i> (1958)?",
+          options: [
+            "Wole Soyinka",
+            "Chinua Achebe (Nigeria)",
+            "Nelson Mandela",
+            "Salman Rushdie",
+          ],
+          answer: 1,
+          explanation: "<b>Chinua Achebe</b> (1930-2013), écrivain nigérian, a publié <i>Things Fall Apart</i> en 1958. Ce roman raconte l'arrivée des colons britanniques chez les Igbo à travers le destin d'Okonkwo. Considéré comme le roman fondateur de la littérature africaine moderne.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL accurate statements about the Commonwealth and colonial memory:",
+          options: [
+            "The Commonwealth has 56 member states (2024)",
+            "Many former British colonies are independent republics today",
+            "All Commonwealth countries still recognise the British monarch as Head of State",
+            "Some countries debate removing colonial-era statues and symbols",
+            "The Commonwealth Games happen every 4 years",
+          ],
+          answer: ["0", "1", "3", "4"],
+          explanation: "Le Commonwealth a 56 membres, beaucoup sont des républiques (Inde, Afrique du Sud), les <i>Commonwealth Games</i> ont lieu tous les 4 ans. Mais NON, seuls 15 pays gardent le monarque britannique comme chef d'État (les <i>Commonwealth realms</i>). Les débats sur les statues (<i>Rhodes Must Fall</i>, statues d'esclavagistes) sont très actifs.",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these milestones of British decolonisation in chronological order.",
+          hint: "From earliest to latest.",
+          items: [
+            "American Independence (1776)",
+            "Irish independence (Partition, 1921)",
+            "Indian independence and Partition (1947)",
+            "African independence wave: Ghana (1957), Kenya (1963), Zimbabwe (1980)",
+            "Hong Kong handover to China (1997)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What does the term « lieux de mémoire » (Pierre Nora) mean in postcolonial studies?",
+          options: [
+            "A list of dates to memorise",
+            "Sites — physical, symbolic, or functional — where collective memory is anchored (museums, monuments, anniversaries)",
+            "A type of map",
+            "A poem genre",
+          ],
+          answer: 1,
+          explanation: "<b>Lieux de mémoire</b> = concept de Pierre Nora (historien français, 1984). Désigne les espaces physiques (monuments, cimetières), symboliques (drapeau, hymne) ou fonctionnels (manuels scolaires, commémorations) où s'ancre la mémoire collective. Concept clé pour analyser les débats postcoloniaux : restitution des artefacts, rebaptisation des rues, reconnaissance des génocides.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>

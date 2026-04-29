@@ -233,7 +233,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Littérature dystopique YA (Lowry, Collins, Roth)",
         tache: "Essai 350 mots : Would you live in The Community?",
         cecrl: "B1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/4e/the-giver.html"
       },
       {
         n: 3, periode: "T3",
@@ -245,7 +246,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Parliament, monarchy, devolution, Brexit, Commonwealth",
         tache: "Présentation orale (8 min) — une institution",
         cecrl: "B1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/4e/british-institutions.html"
       }
     ]
   },
@@ -605,7 +607,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "1984 (Orwell), Brave New World, Black Mirror, Atwood",
         tache: "Réécriture de la fin d'une dystopie (400 mots)",
         cecrl: "B2/C1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/terminale/fictions-realities.html"
       },
       {
         n: 6, periode: "T3 (avril)",
@@ -617,7 +620,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "CRISPR, ChatGPT, transhumanisme, Hippocrate",
         tache: "Mini-conférence type TED (5 min) sur une innovation",
         cecrl: "C1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/terminale/innovation-responsibility.html"
       },
       {
         n: 7, periode: "T3 (mai)",
@@ -642,7 +646,8 @@ window.PROGRESSION_ANNUELLE = {
         culturel: "Empire britannique, indépendance Madagascar 1960, Commonwealth",
         tache: "Synthèse de documents type Bac (400 mots)",
         cecrl: "C1",
-        statut: "todo"
+        statut: "live",
+        url: "../quiz/terminale/territory-memory.html"
       }
     ]
   }

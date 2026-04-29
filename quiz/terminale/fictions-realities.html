@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Fictions and Realities — Terminale — LFT</title>
+  <meta name="description" content="Quiz sur l'Axe 5 du Bac : Fictions et réalités. Niveau Terminale (B2/C1) : utopies, dystopies, narration." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="../../niveaux/terminale.html">Retour à la Terminale</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">Quiz Fictions and Realities — Terminale</div>
+            <div class="line3">B2/C1 · LVA · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Fil d'Ariane">
+          <a href="../../index.html">Accueil</a>
+          <a href="../../niveaux/terminale.html">Terminale</a>
+          <a href="#" aria-current="page">Quiz Fictions</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: var(--space-6);">
+      <div id="quiz-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/quiz-engine.js"></script>
+  <script>
+    QuizEngine.init({
+      id: "tale-fictions-realities",
+      title: "Fictions and Realities",
+      level: "Terminale — B2/C1",
+      sequence: "Axe 5 du Bac — Fictions et réalités",
+      duration: "~18 min",
+      intro: "Quiz sur l'Axe 5 du programme de Terminale LVA : utopies, dystopies, narration. Mobilise past perfect, conditionnels, registres et lexique de la fiction. Préparation directe au Grand Oral et à l'épreuve écrite.",
+
+      questions: [
+
+        {
+          type: "qcm",
+          prompt: "Who wrote <i>1984</i> (1949)?",
+          options: [
+            "Aldous Huxley",
+            "George Orwell",
+            "Margaret Atwood",
+            "Ray Bradbury",
+          ],
+          answer: 1,
+          explanation: "<b>George Orwell</b> (Eric Arthur Blair, 1903-1950) a écrit <i>1984</i>, dystopie totalitaire publiée en 1949. Le roman a forgé des concepts devenus universels : <i>Big Brother</i>, <i>doublethink</i>, <i>Newspeak</i>, <i>thoughtcrime</i>.",
+        },
+
+        {
+          type: "matching",
+          prompt: "Match each dystopian work with its central feature.",
+          hint: "Œuvres clés du programme.",
+          pairs: [
+            { left: "1984 (Orwell)",          right: "Totalitarian surveillance, Big Brother" },
+            { left: "Brave New World (Huxley)", right: "Pleasure, conditioning, soma" },
+            { left: "The Handmaid's Tale (Atwood)", right: "Theocratic patriarchy, fertility crisis" },
+            { left: "Black Mirror (Brooker)",   right: "Anthology, technology gone wrong" },
+          ],
+        },
+
+        {
+          type: "saisie",
+          prompt: "Complète au past perfect : « By 2025, dystopian fiction ___ (become) more popular than ever. » (2 mots)",
+          placeholder: "Exemple : had become",
+          answer: ["had become", "Had become", "had became"],
+          explanation: "Past perfect = <b>had + past participle</b>. <i>Become</i> est irrégulier (become / became / become). Le past perfect exprime une action antérieure à un autre moment dans le passé : <i>By 2025</i>.",
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is a « dystopia »?",
+          options: [
+            "A perfect imaginary society",
+            "An imagined society characterised by oppression and suffering",
+            "A type of poetry",
+            "A genre of comedy",
+          ],
+          answer: 1,
+          explanation: "Une <b>dystopie</b> (du grec <i>dys-topia</i>, « lieu mauvais ») est une société imaginaire oppressive, opposée à l'<b>utopie</b> (<i>eu-topia</i>, « bon lieu »). Le genre interroge nos peurs collectives.",
+        },
+
+        {
+          type: "vrai-faux",
+          prompt: "Margaret Atwood is a Canadian author.",
+          answer: "vrai",
+          explanation: "Vrai ! <b>Margaret Atwood</b> (née en 1939) est une romancière canadienne, lauréate du Booker Prize 2000 et 2019. <i>The Handmaid's Tale</i> (1985) et sa suite <i>The Testaments</i> (2019) sont des classiques du féminisme dystopique.",
+        },
+
+        {
+          type: "cloze",
+          prompt: "Complete with the right structure.",
+          parts: [
+            { text: "If Winston " },
+            { gap: ["had not been caught", "was not caught", "is not caught", "had not catch"], answer: 0 },
+            { text: ", he " },
+            { gap: ["might have escaped", "may escape", "might escape", "might has escaped"], answer: 0 },
+            { text: ". Dystopian narratives " },
+            { gap: ["often warn", "often warns", "warns often", "often is warning"], answer: 0 },
+            { text: " us about contemporary trends." },
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What is « Newspeak » in Orwell's <i>1984</i>?",
+          options: [
+            "A new technology",
+            "A simplified language designed to limit free thought",
+            "A type of journalism",
+            "A song",
+          ],
+          answer: 1,
+          explanation: "<b>Newspeak</b> est la langue officielle d'Oceania, conçue pour réduire le vocabulaire et donc la capacité de penser des idées subversives. <i>« If you control the language, you control the mind »</i> — thèse centrale d'Orwell.",
+        },
+
+        {
+          type: "multi",
+          prompt: "Tick ALL recurring features of dystopian fiction:",
+          options: [
+            "Totalitarian government",
+            "Surveillance and propaganda",
+            "Romantic comedy plot",
+            "Loss of individual freedom",
+            "Environmental collapse",
+          ],
+          answer: ["0", "1", "3", "4"],
+          explanation: "Régime totalitaire, surveillance, perte de liberté et désastre écologique sont des marqueurs majeurs du genre. La comédie romantique en est généralement absente — bien que certaines dystopies intègrent des intrigues amoureuses (Winston & Julia, Offred & Nick).",
+        },
+
+        {
+          type: "ordering",
+          prompt: "Put these dystopian works in chronological order of publication.",
+          hint: "From oldest to most recent.",
+          items: [
+            "Brave New World — Aldous Huxley (1932)",
+            "1984 — George Orwell (1949)",
+            "Fahrenheit 451 — Ray Bradbury (1953)",
+            "The Handmaid's Tale — Margaret Atwood (1985)",
+            "Black Mirror — Charlie Brooker (TV, 2011+)",
+          ],
+        },
+
+        {
+          type: "qcm",
+          prompt: "What does the « unreliable narrator » technique mean?",
+          options: [
+            "A narrator who lies all the time",
+            "A narrator whose credibility is compromised, forcing readers to doubt their account",
+            "A narrator who is sleepy",
+            "A narrator who skips chapters",
+          ],
+          answer: 1,
+          explanation: "Le <b>narrateur peu fiable</b> (<i>unreliable narrator</i>) est un procédé narratif où le lecteur doute de la version racontée. Exemples : le narrateur de <i>Lolita</i> (Nabokov), Offred dans <i>The Handmaid's Tale</i> (mémoires reconstituées). Brouille la frontière fiction/réalité.",
+        },
+
+      ],
+    });
+  </script>
+
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>
