@@ -1430,11 +1430,13 @@ figcaption {
   letter-spacing: 0.5px;
   border: 1px solid rgba(255, 255, 255, 0.35);
 }
+/* Tag CECRL : fond bleu très foncé + texte blanc → max contraste */
 .seq-tag--cecrl {
-  background: white;
-  color: var(--bf-500);
-  border-color: white;
-  font-weight: 700;
+  background: #1A1B5E;       /* bleu DSFR très foncé */
+  color: white;
+  border-color: #1A1B5E;
+  font-weight: 800;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4) inset;
 }
 
 /* Sommaire / table des matières */

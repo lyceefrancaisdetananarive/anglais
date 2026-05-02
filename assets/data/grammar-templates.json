@@ -188,14 +188,91 @@
     "keywords": ["wh-", "questions wh", "interrog", "what", "where", "when", "why", "how"]
   },
 
+  "relative-clauses": {
+    "label": "Les subordonnées relatives",
+    "examples": {
+      "affirmative":   "The book <strong>which / that</strong> I'm reading is fascinating.",
+      "negative":      "She is the only person <strong>who</strong> doesn't agree.",
+      "interrogative": "Is this the woman <strong>whose</strong> daughter won the prize?"
+    },
+    "remark": "<em>Who</em> (personnes), <em>which</em> (choses), <em>that</em> (les deux, défini), <em>whose</em> (possession), <em>where</em> (lieu), <em>when</em> (temps). On peut omettre le pronom relatif quand il est COD.",
+    "keywords": ["relative", "subordonnée", "subordonnees", "subordonnée relative", "who which", "whose", "défini", "qui que dont"]
+  },
+
+  "reported-speech": {
+    "label": "Le discours rapporté",
+    "examples": {
+      "affirmative":   "She said (that) she <strong>was tired</strong>.",
+      "negative":      "He told me (that) he <strong>did not know</strong> the answer.",
+      "interrogative": "She asked me <strong>if I had seen</strong> the film."
+    },
+    "remark": "Recul des temps : présent → prétérit, prétérit → past perfect, will → would. Modifications des marqueurs temporels (now → then, today → that day, tomorrow → the next day).",
+    "keywords": ["discours rapporté", "discours rapporte", "reported speech", "indirect speech", "she said", "he told"]
+  },
+
+  "mixed-conditionals": {
+    "label": "Les conditionnels mixtes",
+    "examples": {
+      "affirmative":   "If I <strong>had studied</strong> harder (passé), I <strong>would be</strong> a doctor now (présent).",
+      "negative":      "If she <strong>were not</strong> so shy, she <strong>would have spoken</strong> at the meeting.",
+      "interrogative": "What <strong>would you do</strong> now if you <strong>had won</strong> the lottery?"
+    },
+    "remark": "Mélange entre conditionnel type 2 (présent irréel) et type 3 (passé irréel) : exprime une conséquence présente d'une condition passée — ou l'inverse. Très utile pour analyser des choix historiques.",
+    "keywords": ["conditionnel mixte", "mixed conditional", "conditionnels mixtes", "if i had", "would have", "would be"]
+  },
+
+  "modals-probability": {
+    "label": "Les modaux de probabilité et de jugement",
+    "examples": {
+      "affirmative":   "She <strong>must have left</strong> early (forte probabilité passée).",
+      "negative":      "He <strong>cannot be</strong> at home — his car isn't here.",
+      "interrogative": "<strong>Could it have been</strong> a misunderstanding?"
+    },
+    "remark": "Probabilité présente : <em>must / may / might / can't + base</em>. Probabilité passée : <em>must / may / might / can't have + V-en</em>. Échelle de certitude : must (sûr) > may > might > could > can't (sûr que non).",
+    "keywords": ["modal probabilité", "modal jugement", "modaux probabilité", "must have", "may have", "might have", "can't have"]
+  },
+
+  "emphatic-structures": {
+    "label": "Les structures emphatiques",
+    "examples": {
+      "affirmative":   "<strong>It is</strong> diversity <strong>that</strong> makes our society strong.",
+      "negative":      "<strong>What I really value</strong> is open dialogue, not silence.",
+      "interrogative": "<strong>Never have I seen</strong> such a powerful speech."
+    },
+    "remark": "Cleft sentences (<em>it is … that</em>, <em>what … is</em>) et inversion après adverbes négatifs (<em>never</em>, <em>rarely</em>, <em>not only</em>) servent à mettre en relief une information.",
+    "keywords": ["emphatique", "emphasis", "structures emphatiques", "cleft", "inversion", "what i", "it is that"]
+  },
+
+  "gerund-infinitive": {
+    "label": "Gérondif et infinitif (V-ing / to + base)",
+    "examples": {
+      "affirmative":   "I enjoy <strong>reading</strong> novels but I want <strong>to write</strong> one.",
+      "negative":      "She decided <strong>not to go</strong>; he avoided <strong>telling</strong> the truth.",
+      "interrogative": "Do you prefer <strong>watching</strong> films or <strong>going</strong> to the theatre?"
+    },
+    "remark": "Verbes + V-ing : <em>enjoy, avoid, mind, finish, suggest</em>. Verbes + to + base : <em>want, decide, hope, refuse, agree</em>. Quelques verbes acceptent les deux avec un sens différent (<em>remember, forget, stop</em>).",
+    "keywords": ["gérondif", "gerondif", "gerund", "infinitif", "infinitive", "v-ing", "to verb", "verbes suivis"]
+  },
+
+  "phrasal-verbs": {
+    "label": "Les phrasal verbs",
+    "examples": {
+      "affirmative":   "She <strong>looked up</strong> the word in the dictionary.",
+      "negative":      "He <strong>did not give up</strong> despite the difficulties.",
+      "interrogative": "<strong>Have</strong> you <strong>found out</strong> the truth?"
+    },
+    "remark": "Verbe + particule (preposition / adverbe) qui modifie le sens : <em>look up</em> (chercher), <em>look after</em> (s'occuper de), <em>give up</em> (abandonner), <em>find out</em> (découvrir). Souvent indissociables du sens littéral.",
+    "keywords": ["phrasal", "phrasal verbs", "look up", "give up", "find out", "particule"]
+  },
+
   "_default": {
     "label": "Faits de langue de la séquence",
     "examples": {
-      "affirmative":   "Phrase affirmative — exemple à construire avec ta classe à partir de la séquence.",
-      "negative":      "Phrase négative — applique la règle à un mot du lexique.",
-      "interrogative": "Phrase interrogative — pose une question en utilisant la structure étudiée."
+      "affirmative":   "<em>Madagascar <strong>is</strong> an island in the Indian Ocean.</em>",
+      "negative":      "<em>Most students <strong>do not have</strong> the same opportunities.</em>",
+      "interrogative": "<em>Why <strong>is</strong> this topic important today?</em>"
     },
-    "remark": "Mobilise la structure grammaticale de la séquence. Cf. fiche d'activité PDF pour les tableaux récapitulatifs.",
+    "remark": "Ces exemples illustrent la mobilisation de la structure de la séquence en contexte. La fiche d'activité PDF contient les tableaux de conjugaison et les exercices d'application détaillés.",
     "keywords": []
   }
 }
