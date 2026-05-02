@@ -19,7 +19,7 @@
     <div class="site-header__top">
       <div class="container site-header__top-inner">
         <span>République française · AEFE · Établissement en gestion directe</span>
-        <a href="../index.html">Retour au tableau de bord</a>
+        <a href="../index.html">Retour à l'accueil</a>
       </div>
     </div>
     <div class="site-header__main">
@@ -33,7 +33,7 @@
           </div>
         </a>
         <nav class="nav-main" aria-label="Navigation principale">
-          <a href="../index.html">Tableau de bord</a>
+          <a href="../index.html">Accueil</a>
           <a href="6e.html" aria-current="page">6<sup>e</sup></a>
           <a href="4e.html">4<sup>e</sup></a>
           <a href="3e.html">3<sup>e</sup></a>
@@ -43,114 +43,26 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <section class="hero">
+  <main id="main-content" data-niveau="6e">
+    <section class="hero hero--compact">
       <div class="container">
-        <h1 class="hero__title">Classe de 6<sup>e</sup></h1>
+        <h1 class="hero__title">Anglais 6<sup>e</sup> — Cycle 3</h1>
         <p class="hero__subtitle">
-          Niveau A1 — découverte de l'anglais. Apprentissage des bases : se présenter,
-          parler de l'école, de la famille, des goûts. Approche ludique, jeux de rôle et
-          chants. Programme officiel cycle 3 — premières étapes vers la maîtrise d'une
-          langue étrangère.
+          Niveau <strong>A1</strong> du CECRL · Découverte de l'anglais ·
+          <strong>1 classe :</strong> 6M4 · 3 h hebdomadaires · 4 séquences sur l'année.
+          Activités langagières prioritaires : compréhension orale (CO),
+          expression orale en continu (EOC), interaction orale (IO).
         </p>
-
-        <div class="stats">
-          <div class="stat glass-card">
-            <div class="stat__value">1</div>
-            <div class="stat__label">Séquence disponible</div>
-          </div>
-          <div class="stat glass-card">
-            <div class="stat__value">1</div>
-            <div class="stat__label">Quiz interactif</div>
-          </div>
-          <div class="stat glass-card">
-            <div class="stat__value">1</div>
-            <div class="stat__label">Fiche imprimable</div>
-          </div>
-          <div class="stat glass-card">
-            <div class="stat__value">1</div>
-            <div class="stat__label">Classe (6M4)</div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section aria-labelledby="sequences-title">
-      <div class="container">
-        <h2 id="sequences-title" class="section-title">Séquences pédagogiques</h2>
-
-        <div class="cards-grid">
-
-          <article class="card glass-card">
-            <span class="card__level card__level--6e">Séquence 1</span>
-            <h3 class="card__title">Welcome to Big Ben Academy!</h3>
-            <p class="card__description">
-              Ta première rentrée dans une école anglaise imaginaire. Se présenter, dire son
-              âge, sa nationalité, parler de son emploi du temps. Verbe <em>to be</em>,
-              alphabet, nombres. Tâche finale : enregistrer une carte de présentation audio.
-            </p>
-            <div class="card__meta">
-              <span><strong>6</strong> séances</span>
-              <span><strong>10</strong> questions</span>
-              <span>A1</span>
-            </div>
-            <a href="../quiz/6e/welcome-big-ben.html" class="card__link">Lancer le quiz</a>
-          </article>
-
-          <article class="card glass-card">
-            <span class="card__level card__level--6e">Séquence 2</span>
-            <h3 class="card__title">My Family Tree</h3>
-            <p class="card__description">
-              La famille, les animaux, les possessions. Pronoms possessifs, <em>have got</em>,
-              questions simples. Quiz interactif avec association et texte à trous.
-            </p>
-            <div class="card__meta">
-              <span><strong>10</strong> questions</span>
-              <span><strong>~10</strong> min</span>
-              <span>A1</span>
-            </div>
-            <a href="../quiz/6e/family-tree.html" class="card__link">Lancer le quiz</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="ressources-title">
-      <div class="container">
-        <h2 id="ressources-title" class="section-title">Ressources 6<sup>e</sup></h2>
-
-        <div class="cards-grid">
-          <article class="glass-card">
-            <h3 class="card__title">Fiches d'activité imprimables</h3>
-            <p class="card__description">
-              Toutes les fiches pédagogiques au format PDF, mise en page institutionnelle AEFE.
-            </p>
-            <a href="../pdf-imprimables/" class="btn btn--secondary">Ouvrir la bibliothèque</a>
-          </article>
-
-          <article class="glass-card">
-            <h3 class="card__title">Manuel Try n' Fly 6<sup>e</sup></h3>
-            <p class="card__description">
-              Manuel de référence pour la 6<sup>e</sup> (édition 2025). Workbook, guide
-              pédagogique, évaluations et audios disponibles dans le dossier de classe.
-            </p>
-            <a href="#" class="btn btn--secondary" aria-disabled="true" style="opacity: 0.5; pointer-events: none;">À venir Sprint 4</a>
-          </article>
-
-          <article class="glass-card glass--colored">
-            <h3 class="card__title">Programme officiel cycle 3</h3>
-            <p class="card__description">
-              Bulletin officiel — programme d'anglais cycle 3 (CM1, CM2, 6<sup>e</sup>).
-              Continuité école-collège.
-            </p>
-            <a href="https://eduscol.education.fr/cid99227/programme-cycle-3.html"
-               target="_blank" rel="noopener" class="btn btn--secondary">Eduscol</a>
-          </article>
-        </div>
-      </div>
-    </section>
+    <div class="container">
+      <div id="niveau-content"></div>
+    </div>
   </main>
+
+  <script src="../assets/js/progression-data.js"></script>
+  <script src="../assets/js/niveau-page.js"></script>
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">

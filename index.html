@@ -50,7 +50,7 @@
         </a>
 
         <nav class="nav-main" aria-label="Navigation principale">
-          <a href="index.html" aria-current="page">Tableau de bord</a>
+          <a href="index.html" aria-current="page">Accueil</a>
           <a href="progression-annuelle.html">Progression 2025-26</a>
           <a href="#niveaux">Niveaux</a>
           <a href="pdf-imprimables/">Bibliothèque PDF</a>
@@ -63,156 +63,157 @@
   <!-- ==================== CONTENU PRINCIPAL ==================== -->
   <main id="main-content">
 
-    <!-- — Hero & statistiques — -->
-    <section class="hero">
+    <!-- — Hero compact — -->
+    <section class="hero hero--compact">
       <div class="container">
-        <h1 class="hero__title">Bienvenue sur votre espace pédagogique</h1>
+        <h1 class="hero__title">Espace Anglais — Lycée Français de Tananarive</h1>
         <p class="hero__subtitle">
-          Plateforme dédiée à l'enseignement de l'anglais au Lycée Français de Tananarive.
-          Quiz interactifs, séquences clé en main, fiches d'activités imprimables et ressources audio
-          adaptées au programme officiel français.
+          Espace pédagogique de <strong>Mme Salamo FALIMANANA</strong>.
+          Sélectionnez un niveau pour accéder aux <strong>séquences pédagogiques</strong>,
+          <strong>fiches d'activité</strong>, <strong>activités interactives en ligne</strong>
+          et <strong>évaluations</strong>.
         </p>
-
-        <div class="stats" aria-label="Statistiques de la plateforme">
-          <div class="stat glass-card">
-            <div class="stat__value">7</div>
-            <div class="stat__label">Niveaux couverts</div>
-          </div>
-          <div class="stat glass-card">
-            <div class="stat__value">40</div>
-            <div class="stat__label">Quiz interactifs</div>
-          </div>
-          <div class="stat glass-card">
-            <div class="stat__value">9</div>
-            <div class="stat__label">Fiches PDF imprimables</div>
-          </div>
-          <div class="stat glass-card">
-            <div class="stat__value">14</div>
-            <div class="stat__label">Audios d'évaluation</div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- — Cartes de niveau — -->
+    <!-- — Mes classes par cycle — -->
     <section id="niveaux" aria-labelledby="niveaux-title">
       <div class="container">
-        <h2 id="niveaux-title" class="section-title">Choisir un niveau</h2>
+        <h2 id="niveaux-title" class="section-title">Mes classes</h2>
 
-        <div class="cards-grid">
-          <!-- 6e -->
-          <article class="card glass-card">
-            <span class="card__level card__level--6e">6<sup>e</sup> · A1</span>
-            <h3 class="card__title">Try n' Fly 6<sup>e</sup></h3>
-            <p class="card__description">
-              Découverte de l'anglais : se présenter, l'école, la famille, les goûts.
-              Séquences <em>Welcome to Big Ben Academy!</em> et <em>My Family Tree</em>
-              disponibles.
+        <!-- ============================ COLLÈGE ============================ -->
+        <div class="cycle-block">
+          <header class="cycle-block__header">
+            <h3 class="cycle-block__title">
+              <span class="cycle-block__icon" aria-hidden="true">🎒</span> Collège
+            </h3>
+            <p class="cycle-block__intro">
+              Cycle 3 (6<sup>e</sup>) et Cycle 4 (5<sup>e</sup>, 4<sup>e</sup>, 3<sup>e</sup>) ·
+              Niveaux <strong>A1 → B1</strong> du CECRL ·
+              Préparation au <abbr title="Diplôme National du Brevet">DNB</abbr>.
             </p>
-            <div class="card__meta">
-              <span><strong>2</strong> quiz</span>
-              <span><strong>2</strong> séquences</span>
-              <span><strong>1</strong> classe (6M4)</span>
-            </div>
-            <a href="niveaux/6e.html" class="card__link">Accéder au niveau</a>
-          </article>
+          </header>
 
-          <!-- 4e -->
-          <article class="card glass-card">
-            <span class="card__level card__level--4e">4<sup>e</sup> · A2</span>
-            <h3 class="card__title">Try n' Fly 4<sup>e</sup></h3>
-            <p class="card__description">
-              Cycle 4. Sections LVA, NON SI et LCE. Lecture cursive
-              <em>Stuck at Big Bay School</em> et séquence <em>Sport Heroes</em>.
-            </p>
-            <div class="card__meta">
-              <span><strong>2</strong> quiz</span>
-              <span><strong>2</strong> séquences</span>
-              <span><strong>3</strong> classes</span>
-            </div>
-            <a href="niveaux/4e.html" class="card__link">Accéder au niveau</a>
-          </article>
+          <div class="cards-grid">
 
-          <!-- 3e — 2 séquences -->
-          <article class="card glass-card">
-            <span class="card__level card__level--3e">3<sup>e</sup> · A2+/B1</span>
-            <h3 class="card__title">Try n' Fly 3<sup>e</sup></h3>
-            <p class="card__description">
-              Préparation au DNB. <em>Welcome to America</em> (civilisation US),
-              <em>Street Art</em> (Banksy) et <em>Jatbula Trail</em> (Australie autochtone).
-            </p>
-            <div class="card__meta">
-              <span><strong>3</strong> quiz</span>
-              <span><strong>3</strong> séquences</span>
-              <span><strong>2</strong> classes</span>
-            </div>
-            <a href="niveaux/3e.html" class="card__link">Accéder au niveau</a>
-          </article>
+            <!-- 6e -->
+            <a href="niveaux/6e.html" class="level-card glass-card level-card--6e" aria-label="Accéder au niveau 6e">
+              <div class="level-card__top">
+                <span class="level-card__niveau">6<sup>e</sup></span>
+                <span class="level-card__cecrl">A1</span>
+              </div>
+              <p class="level-card__cycle">Cycle 3 · LV1 anglais</p>
+              <p class="level-card__classe">
+                <strong>1 classe</strong> · 6M4
+              </p>
+              <p class="level-card__horaire">3 h hebdomadaires · 4 séquences</p>
+              <span class="level-card__cta">Accéder à mes ressources →</span>
+            </a>
 
-          <!-- 1ère euro -->
-          <article class="card glass-card">
-            <span class="card__level" style="background: linear-gradient(135deg, var(--success-500), var(--bf-500));">1<sup>re</sup> euro · B1/B2</span>
-            <h3 class="card__title">Approfondissement linguistique</h3>
-            <p class="card__description">
-              Section européenne. Pont avec la DNL SVT : <em>Madagascar's Biodiversity</em>
-              — endémisme, déforestation, conservation.
-            </p>
-            <div class="card__meta">
-              <span><strong>1</strong> quiz</span>
-              <span><strong>1</strong> séquence</span>
-              <span><strong>1</strong> classe</span>
-            </div>
-            <a href="niveaux/1ere.html" class="card__link">Accéder au niveau</a>
-          </article>
+            <!-- 4e LVA -->
+            <a href="niveaux/4e.html" class="level-card glass-card level-card--4e" aria-label="Accéder au niveau 4e LVA">
+              <div class="level-card__top">
+                <span class="level-card__niveau">4<sup>e</sup> LVA</span>
+                <span class="level-card__cecrl">A2+</span>
+              </div>
+              <p class="level-card__cycle">Cycle 4 · LV1 anglais (tronc commun)</p>
+              <p class="level-card__classe">
+                <strong>3 classes</strong> · 4ANGL L1, L2, L3
+              </p>
+              <p class="level-card__horaire">3 h hebdomadaires · 6 séquences</p>
+              <span class="level-card__cta">Accéder à mes ressources →</span>
+            </a>
 
-          <!-- Terminale -->
-          <article class="card glass-card">
-            <span class="card__level" style="background: linear-gradient(135deg, var(--bf-500), var(--lft-magenta-dark));">T<sup>le</sup> · B2/C1</span>
-            <h3 class="card__title">Terminale LVA</h3>
-            <p class="card__description">
-              Préparation au Baccalauréat. <em>Identities &amp; Exchanges</em> et
-              <em>Art and Power</em> (Banksy, Picasso, Lange — pont avec la 3<sup>e</sup>).
-            </p>
-            <div class="card__meta">
-              <span><strong>2</strong> quiz</span>
-              <span><strong>2</strong> axes Bac</span>
-              <span><strong>1</strong> classe</span>
-            </div>
-            <a href="niveaux/terminale.html" class="card__link">Accéder au niveau</a>
-          </article>
+            <!-- 4e NON SI -->
+            <a href="niveaux/non-si.html" class="level-card glass-card level-card--non-si" aria-label="Accéder à la Section Internationale 4e/3e">
+              <div class="level-card__top">
+                <span class="level-card__niveau">4<sup>e</sup>/3<sup>e</sup> NON&nbsp;SI</span>
+                <span class="level-card__cecrl">B1</span>
+              </div>
+              <p class="level-card__cycle">Cycle 4 · Section Internationale</p>
+              <p class="level-card__classe">
+                <strong>2 classes</strong> · 4SI &amp; 3SI
+              </p>
+              <p class="level-card__horaire">6 h hebdomadaires (renforcé) · lecture suivie d'œuvres</p>
+              <span class="level-card__cta">Accéder à mes ressources →</span>
+            </a>
 
-          <!-- NON SI -->
-          <article class="card glass-card">
-            <span class="card__level" style="background: linear-gradient(135deg, var(--lft-magenta-dark), var(--bf-500));">NON SI · 4<sup>e</sup>+3<sup>e</sup></span>
-            <h3 class="card__title">Section Internationale</h3>
-            <p class="card__description">
-              Programme renforcé OIB (6 h hebdomadaires). Lecture intégrale d'œuvres
-              (Roald Dahl, Mark Haddon), civilisation britannique et américaine.
-            </p>
-            <div class="card__meta">
-              <span><strong>1</strong> quiz</span>
-              <span><strong>2</strong> séquences</span>
-              <span><strong>2</strong> classes</span>
-            </div>
-            <a href="niveaux/non-si.html" class="card__link">Accéder au niveau</a>
-          </article>
+            <!-- 4e LCE -->
+            <a href="niveaux/lce.html" class="level-card glass-card level-card--lce" aria-label="Accéder à l'option LCE 4e">
+              <div class="level-card__top">
+                <span class="level-card__niveau">4<sup>e</sup> LCE</span>
+                <span class="level-card__cecrl">A2+</span>
+              </div>
+              <p class="level-card__cycle">Cycle 4 · Langues et Cultures Européennes</p>
+              <p class="level-card__classe">
+                <strong>1 classe</strong> · 4ANGL L1 (option)
+              </p>
+              <p class="level-card__horaire">2 h hebdomadaires · 3 modules culturels</p>
+              <span class="level-card__cta">Accéder à mes ressources →</span>
+            </a>
 
-          <!-- LCE -->
-          <article class="card glass-card">
-            <span class="card__level" style="background: linear-gradient(135deg, var(--or, #C9A027), var(--lft-magenta));">LCE · 4<sup>e</sup></span>
-            <h3 class="card__title">Langues et Cultures Européennes</h3>
-            <p class="card__description">
-              Option de découverte culturelle (2 h hebdo) : Britain &amp; Europe,
-              Ireland: A Story of Resilience, Migrations &amp; Identities.
-            </p>
-            <div class="card__meta">
-              <span><strong>0</strong> quiz</span>
-              <span><strong>3</strong> modules</span>
-              <span><strong>1</strong> classe</span>
-            </div>
-            <a href="niveaux/lce.html" class="card__link">Accéder au niveau</a>
-          </article>
+            <!-- 3e LVA -->
+            <a href="niveaux/3e.html" class="level-card glass-card level-card--3e" aria-label="Accéder au niveau 3e LVA">
+              <div class="level-card__top">
+                <span class="level-card__niveau">3<sup>e</sup> LVA</span>
+                <span class="level-card__cecrl">A2+ → B1</span>
+              </div>
+              <p class="level-card__cycle">Cycle 4 · LV1 anglais · Préparation DNB</p>
+              <p class="level-card__classe">
+                <strong>2 classes</strong> · 3ANGL L1, L2
+              </p>
+              <p class="level-card__horaire">3 h hebdomadaires · 5 séquences</p>
+              <span class="level-card__cta">Accéder à mes ressources →</span>
+            </a>
+
+          </div>
         </div>
+
+        <!-- ============================ LYCÉE ============================ -->
+        <div class="cycle-block">
+          <header class="cycle-block__header">
+            <h3 class="cycle-block__title">
+              <span class="cycle-block__icon" aria-hidden="true">🎓</span> Lycée
+            </h3>
+            <p class="cycle-block__intro">
+              Voie générale · Section européenne · Niveaux <strong>B1 → C1</strong> du CECRL ·
+              Préparation au <strong>Baccalauréat</strong> et au <strong>Grand Oral</strong>.
+            </p>
+          </header>
+
+          <div class="cards-grid">
+
+            <!-- 1ère euro -->
+            <a href="niveaux/1ere.html" class="level-card glass-card level-card--1ere" aria-label="Accéder au niveau 1re euro">
+              <div class="level-card__top">
+                <span class="level-card__niveau">1<sup>re</sup> euro</span>
+                <span class="level-card__cecrl">B2</span>
+              </div>
+              <p class="level-card__cycle">Section européenne · APPROF LING + DNL SVT</p>
+              <p class="level-card__classe">
+                <strong>1 classe</strong> · 1ANGL euro
+              </p>
+              <p class="level-card__horaire">2 h hebdomadaires · 5 séquences</p>
+              <span class="level-card__cta">Accéder à mes ressources →</span>
+            </a>
+
+            <!-- Terminale LVA -->
+            <a href="niveaux/terminale.html" class="level-card glass-card level-card--tale" aria-label="Accéder au niveau Terminale LVA">
+              <div class="level-card__top">
+                <span class="level-card__niveau">T<sup>le</sup> LVA</span>
+                <span class="level-card__cecrl">B2/C1</span>
+              </div>
+              <p class="level-card__cycle">LV1 anglais · 8 axes culturels du Bac</p>
+              <p class="level-card__classe">
+                <strong>1 classe</strong> · TANGL L1
+              </p>
+              <p class="level-card__horaire">2 h hebdomadaires · 8 axes Bac · Grand Oral</p>
+              <span class="level-card__cta">Accéder à mes ressources →</span>
+            </a>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -282,7 +283,7 @@
         <div>
           <h4>Espace pédagogique</h4>
           <ul>
-            <li><a href="index.html">Tableau de bord</a></li>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="#niveaux">Niveaux</a></li>
             <li><a href="pdf-imprimables/">Bibliothèque PDF</a></li>
           </ul>

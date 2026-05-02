@@ -887,6 +887,303 @@ figcaption {
   text-align: center;
 }
 
+/* ==== 7bis. HERO COMPACT + LEVEL CARDS (page d'accueil) === */
+
+.hero--compact {
+  padding: var(--space-6) 0 var(--space-4);
+}
+
+/* Bloc cycle (Collège, Lycée) */
+.cycle-block {
+  margin-bottom: var(--space-7);
+}
+.cycle-block__header {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--grey-200);
+}
+.cycle-block__title {
+  font-size: var(--font-size-2xl);
+  color: var(--bf-500);
+  margin: 0 0 var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.cycle-block__icon {
+  font-size: var(--font-size-3xl);
+  line-height: 1;
+}
+.cycle-block__intro {
+  margin: 0;
+  color: var(--grey-700);
+  font-size: var(--font-size-md);
+}
+.cycle-block__intro strong { color: var(--bf-500); }
+
+/* Carte de niveau cliquable */
+.level-card {
+  display: block;
+  text-decoration: none;
+  background: var(--grey-50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  border: 2px solid var(--grey-200);
+  transition: all var(--t-base);
+  position: relative;
+  overflow: hidden;
+  color: inherit;
+  min-height: 200px;
+}
+.level-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--bf-500);
+}
+.level-card:focus-visible {
+  outline: 3px solid var(--bf-500);
+  outline-offset: 3px;
+}
+
+/* Bandeau de couleur en haut à gauche */
+.level-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 6px; height: 100%;
+  background: var(--card-accent, var(--bf-500));
+}
+
+.level-card--6e     { --card-accent: var(--lft-magenta); }
+.level-card--4e     { --card-accent: var(--bf-500); }
+.level-card--non-si { --card-accent: var(--lft-magenta-dark, #B8005A); }
+.level-card--lce    { --card-accent: var(--or, #C9A027); }
+.level-card--3e     { --card-accent: var(--success-500); }
+.level-card--1ere   { --card-accent: var(--bf-525, #1212A0); }
+.level-card--tale   { --card-accent: var(--lft-magenta-dark, #B8005A); }
+
+.level-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.level-card__niveau {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--bf-500);
+  line-height: 1.1;
+}
+.level-card__cecrl {
+  background: linear-gradient(135deg, var(--bf-500), var(--lft-magenta));
+  color: white;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.level-card__cycle {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--lft-magenta);
+  font-weight: 700;
+  margin: 0 0 var(--space-3);
+}
+.level-card__classe {
+  font-size: var(--font-size-md);
+  color: var(--grey-900);
+  margin: 0 0 var(--space-2);
+}
+.level-card__classe strong { color: var(--bf-500); }
+.level-card__horaire {
+  font-size: var(--font-size-sm);
+  color: var(--grey-700);
+  margin: 0 0 var(--space-4);
+}
+.level-card__cta {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--bf-500);
+  border-bottom: 2px solid transparent;
+  transition: all var(--t-fast);
+  padding-bottom: 2px;
+}
+.level-card:hover .level-card__cta {
+  color: var(--lft-magenta);
+  border-bottom-color: var(--lft-magenta);
+}
+
+/* ==== 7ter. PAGE NIVEAU (sections génériques) ============ */
+
+/* Notice RGPD / suivi mail */
+.niveau-notice {
+  background: linear-gradient(135deg, var(--info-100, #E5F1F7), white);
+  border-left: 4px solid var(--bf-500);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--grey-900);
+}
+.niveau-notice strong { color: var(--bf-500); }
+.niveau-notice a { color: var(--lft-magenta); font-weight: 600; }
+
+/* Section générique d'une page niveau */
+.niveau-section {
+  margin-bottom: var(--space-7);
+}
+.niveau-section__header {
+  margin-bottom: var(--space-5);
+}
+.niveau-section__header--mt {
+  margin-top: var(--space-6);
+}
+.niveau-section__icon {
+  display: inline-block;
+  margin-right: var(--space-2);
+  font-size: 1.1em;
+  line-height: 1;
+}
+.niveau-section__intro {
+  color: var(--grey-700);
+  font-size: var(--font-size-md);
+  margin: var(--space-2) 0 0;
+  max-width: 820px;
+}
+.niveau-section__intro strong { color: var(--bf-500); }
+
+.section-title--sub {
+  font-size: var(--font-size-xl);
+  margin-top: 0;
+  border-left-color: var(--bf-500);
+}
+
+/* Wrap pour scroll horizontal des tables */
+.niveau-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--grey-50);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Carte activité en ligne (quiz) */
+.activite-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid var(--bf-500);
+}
+.activite-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+.activite-card__num {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--lft-magenta);
+  font-weight: 700;
+}
+.activite-card__cecrl {
+  background: var(--bf-100);
+  color: var(--bf-500);
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: var(--font-size-xs);
+}
+.activite-card__title {
+  font-size: var(--font-size-lg);
+  color: var(--bf-500);
+  margin: 0 0 var(--space-2);
+  font-weight: 700;
+}
+.activite-card__theme {
+  font-style: italic;
+  color: var(--grey-700);
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-sm);
+}
+.activite-card__details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  display: grid;
+  gap: var(--space-1);
+}
+.activite-card__details li {
+  padding: var(--space-1) 0;
+  border-bottom: 1px dashed var(--grey-200);
+}
+.activite-card__details li:last-child { border-bottom: none; }
+.activite-card__details strong { color: var(--lft-magenta); }
+.activite-card__footer {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+.activite-card__footer .btn {
+  flex: 1 1 auto;
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) var(--space-3);
+  min-height: 40px;
+}
+.btn--copy.is-copied {
+  background: var(--success-100);
+  color: var(--success-500);
+  border-color: var(--success-500);
+}
+
+/* Carte fiche PDF */
+.fiche-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid var(--lft-magenta);
+}
+.fiche-card__icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.fiche-card__title {
+  font-size: var(--font-size-lg);
+  color: var(--bf-500);
+  margin: 0 0 var(--space-2);
+  font-weight: 700;
+}
+.fiche-card__desc {
+  color: var(--grey-700);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-3);
+  flex-grow: 1;
+}
+.fiche-card__meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--grey-700);
+  margin-bottom: var(--space-3);
+}
+.fiche-card__meta strong { color: var(--bf-500); }
+
+/* Grille évaluations */
+.evaluation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+
 /* ==== 8. RESPONSIVE — UX/UI multi-écrans ================== */
 
 /* Touch targets : 44px minimum (recommandation WCAG 2.5.5) */
