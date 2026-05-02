@@ -1,0 +1,729 @@
+{
+  "_doc": "Repères culturels enrichis pour chaque séquence — contexte historique/géographique court (~80 mots), faits-clés datés, personnages-clés, lieux-clés. Indexé par titre exact. Structure : { context, key_facts: [{date, fact}], key_figures: [{name, role}], key_places: [{place, info}] }.",
+
+  "Welcome to Big Ben Academy!": {
+    "context": "Le système scolaire britannique est différent du système français : les enfants entrent en \"Year 7\" à 11 ans (équivalent 6ᵉ). Les cours commencent souvent à 8h45 et se terminent vers 15h30. L'uniforme scolaire est obligatoire dans la majorité des écoles publiques.",
+    "key_facts": [
+      {"date": "1859", "fact": "Construction de Big Ben (cloche de la tour Elizabeth) à Londres."},
+      {"date": "1944", "fact": "Education Act établit l'enseignement gratuit en Angleterre."},
+      {"date": "Année scolaire UK", "fact": "Septembre → juillet, 3 trimestres (autumn, spring, summer)."}
+    ],
+    "key_figures": [
+      {"name": "Elizabeth II", "role": "Reine du Royaume-Uni 1952-2022 — la tour Big Ben porte son nom depuis 2012."}
+    ],
+    "key_places": [
+      {"place": "Big Ben (Londres)", "info": "Cloche emblématique du Palais de Westminster — symbole du Royaume-Uni."}
+    ]
+  },
+
+  "My Family Tree": {
+    "context": "À Madagascar, la famille élargie — \"fianakaviambe\" en malgache — joue un rôle central. Plusieurs générations vivent souvent ensemble. Les grands-parents transmettent les contes \"angano\" et les valeurs aux enfants. La parenté symbolique (oncles, tantes \"de cœur\") est aussi importante que la parenté biologique.",
+    "key_facts": [
+      {"date": "Tradition", "fact": "Le \"fihavanana\" est la valeur centrale : solidarité familiale et communautaire."},
+      {"date": "Famadihana", "fact": "Cérémonie du retournement des morts — ancêtres honorés tous les 5-7 ans."}
+    ],
+    "key_figures": [
+      {"name": "Les Raiamandreny", "role": "Anciens de la famille — gardiens des traditions et de la sagesse."}
+    ],
+    "key_places": [
+      {"place": "Le tombeau familial", "info": "Lieu sacré où reposent les ancêtres — souvent visité collectivement."}
+    ]
+  },
+
+  "What I Love": {
+    "context": "Au Royaume-Uni, le sport joue un rôle social important : football, cricket, rugby. Les clubs sportifs sont nombreux dans les écoles. La musique (Beatles, Adele, Ed Sheeran) et la lecture sont aussi des loisirs très répandus chez les adolescents britanniques.",
+    "key_facts": [
+      {"date": "Tradition", "fact": "Le football a été codifié en Angleterre en 1863 (Football Association)."},
+      {"date": "Statistique", "fact": "85% des adolescents UK pratiquent une activité extrascolaire (sport, musique, art)."}
+    ],
+    "key_figures": [
+      {"name": "Marcus Rashford", "role": "Footballeur de Manchester United — engagé pour les repas scolaires gratuits."}
+    ],
+    "key_places": [
+      {"place": "Wembley Stadium", "info": "Stade emblématique du football anglais à Londres (90 000 places)."}
+    ]
+  },
+
+  "Let's Eat!": {
+    "context": "À Madagascar, le riz \"vary\" est l'aliment central — consommé 2 à 3 fois par jour, souvent avec un accompagnement (poulet, poisson, légumes). Le \"romazava\" (bouillon de bœuf et brèdes) est le plat national. L'hospitalité veut que les invités soient toujours nourris.",
+    "key_facts": [
+      {"date": "Quotidien", "fact": "Madagascar est l'un des pays au monde où on mange le plus de riz par habitant."},
+      {"date": "Culture", "fact": "Le \"sosoa\" (riz au lait) est le petit-déjeuner traditionnel."}
+    ],
+    "key_figures": [
+      {"name": "Les vendeurs ambulants", "role": "Servent du \"mofo gasy\" (galettes), des \"kabôba\" (snacks de rue)."}
+    ],
+    "key_places": [
+      {"place": "Le marché de la Digue (Antananarivo)", "info": "Plus grand marché alimentaire de Tana — fruits, légumes, épices."}
+    ]
+  },
+
+  "Everyday Life in London": {
+    "context": "Londres compte ~9 millions d'habitants et est une des villes les plus multiculturelles au monde. Plus de 300 langues y sont parlées. Le Royaume-Uni a quitté l'Union Européenne (Brexit) le 31 janvier 2020, transformant la vie quotidienne des Londoniens.",
+    "key_facts": [
+      {"date": "1863", "fact": "Inauguration du métro de Londres (\"the Tube\") — le plus ancien du monde."},
+      {"date": "1851", "fact": "Première Exposition universelle au Crystal Palace, Hyde Park."},
+      {"date": "31 janvier 2020", "fact": "Sortie effective du Royaume-Uni de l'Union européenne (Brexit)."}
+    ],
+    "key_figures": [
+      {"name": "Sadiq Khan", "role": "Maire de Londres depuis 2016 — premier maire musulman d'une capitale occidentale."}
+    ],
+    "key_places": [
+      {"place": "Tower Bridge", "info": "Pont basculant ouvert en 1894 — symbole de Londres."},
+      {"place": "Buckingham Palace", "info": "Résidence officielle du monarque britannique."},
+      {"place": "Hyde Park", "info": "L'un des plus grands parcs royaux de Londres (140 hectares)."}
+    ]
+  },
+
+  "My Holidays in Madagascar": {
+    "context": "Madagascar, 4ᵉ plus grande île du monde, attire les touristes pour sa biodiversité unique : 90% des espèces sont endémiques. Les sites les plus visités sont Nosy Be (île tropicale), l'Allée des Baobabs (Morondava), et les Tsingy de Bemaraha (UNESCO). La saison sèche (avril-octobre) est la meilleure pour voyager.",
+    "key_facts": [
+      {"date": "165 millions d'années", "fact": "Madagascar s'est séparée du continent africain — créant une biodiversité unique."},
+      {"date": "1990", "fact": "Premier parc national malgache : Andasibe-Mantadia."},
+      {"date": "1990", "fact": "Tsingy de Bemaraha classé patrimoine mondial UNESCO."}
+    ],
+    "key_figures": [
+      {"name": "Patricia C. Wright", "role": "Primatologue américaine — a découvert le lémurien sifaka doré (1986)."}
+    ],
+    "key_places": [
+      {"place": "Nosy Be", "info": "Île volcanique au nord-ouest — surnommée \"l'île aux parfums\" (ylang-ylang)."},
+      {"place": "Allée des Baobabs (Morondava)", "info": "Route bordée de baobabs millénaires — emblème de Madagascar."},
+      {"place": "Antananarivo", "info": "Capitale bâtie sur 12 collines sacrées — 1,4 million d'habitants."}
+    ]
+  },
+
+  "Stuck at Big Bay School": {
+    "context": "La Nouvelle-Zélande (Aotearoa en māori) compte 5 millions d'habitants et 2 langues officielles : l'anglais et le māori. La culture māorie est centrale : la haka, danse cérémonielle, est exécutée par l'équipe nationale de rugby (All Blacks) avant chaque match. Les écoles intègrent l'enseignement de la langue et des traditions māories.",
+    "key_facts": [
+      {"date": "1840", "fact": "Traité de Waitangi entre les Māoris et la Couronne britannique."},
+      {"date": "1987", "fact": "Le māori (te reo) devient langue officielle de Nouvelle-Zélande."},
+      {"date": "2022", "fact": "1,1 million de NZ Māoris recensés — environ 17% de la population."}
+    ],
+    "key_figures": [
+      {"name": "Jacinda Ardern", "role": "Première ministre de Nouvelle-Zélande 2017-2023."},
+      {"name": "Tama Iti", "role": "Activiste māori — œuvre pour la reconnaissance culturelle."}
+    ],
+    "key_places": [
+      {"place": "Wellington", "info": "Capitale de la Nouvelle-Zélande — surnommée \"the windy city\"."},
+      {"place": "Marae", "info": "Lieu de rassemblement traditionnel māori — cœur de la communauté."}
+    ]
+  },
+
+  "Sport Heroes": {
+    "context": "Le sport mondial est dominé par les figures anglo-saxonnes : Serena Williams (tennis), LeBron James (basket), Tom Brady (football US), Cristiano Ronaldo et Lionel Messi (football). Les Jeux Olympiques modernes sont nés en 1896 sous l'impulsion du Français Pierre de Coubertin. Les athlètes deviennent souvent des modèles d'engagement social (BLM, climat, droits des femmes).",
+    "key_facts": [
+      {"date": "1896", "fact": "Premiers Jeux Olympiques modernes à Athènes."},
+      {"date": "1936", "fact": "Jesse Owens remporte 4 médailles d'or aux JO de Berlin face à Hitler."},
+      {"date": "1995", "fact": "Coupe du monde de rugby remportée par l'Afrique du Sud — symbole post-apartheid."}
+    ],
+    "key_figures": [
+      {"name": "Serena Williams", "role": "23 titres du Grand Chelem — record en ère Open."},
+      {"name": "Muhammad Ali", "role": "Boxeur, militant des droits civiques (1942-2016)."},
+      {"name": "Megan Rapinoe", "role": "Footballeuse US — combat pour l'égalité salariale femmes/hommes."}
+    ],
+    "key_places": [
+      {"place": "Wimbledon (Londres)", "info": "Plus ancien tournoi de tennis (depuis 1877) — sur gazon."}
+    ]
+  },
+
+  "Climate Action Now": {
+    "context": "Le changement climatique est l'un des défis majeurs du 21ᵉ siècle. Le GIEC (IPCC) publie des rapports scientifiques sur l'évolution du climat. Madagascar est particulièrement vulnérable (cyclones, sécheresses). Le mouvement \"Fridays for Future\" lancé par Greta Thunberg en 2018 mobilise les jeunes du monde entier.",
+    "key_facts": [
+      {"date": "1992", "fact": "Sommet de la Terre à Rio — naissance de la Convention climat de l'ONU."},
+      {"date": "2015", "fact": "Accord de Paris signé par 196 pays — limiter le réchauffement à +1,5°C."},
+      {"date": "Août 2018", "fact": "Greta Thunberg, 15 ans, commence sa grève de l'école pour le climat."},
+      {"date": "2023", "fact": "Le GIEC alerte : la fenêtre d'action se referme rapidement."}
+    ],
+    "key_figures": [
+      {"name": "Greta Thunberg", "role": "Activiste suédoise pour le climat (née 2003) — Time Person of the Year 2019."},
+      {"name": "David Attenborough", "role": "Naturaliste britannique — voix mondiale pour la biodiversité."},
+      {"name": "Christiana Figueres", "role": "Diplomate costaricaine — architecte de l'Accord de Paris."}
+    ],
+    "key_places": [
+      {"place": "L'Antarctique", "info": "Région la plus touchée — fonte accélérée des glaces depuis 1979."}
+    ]
+  },
+
+  "An Australian Journey": {
+    "context": "L'Australie est un continent-pays de 25 millions d'habitants. Les peuples Aborigènes habitent ce territoire depuis plus de 65 000 ans, en faisant la plus ancienne civilisation continue au monde. Le \"Dreamtime\" (Tjukurrpa) est leur cosmologie spirituelle. La Grande Barrière de Corail, au nord-est, et l'Outback, au centre, sont des sites emblématiques.",
+    "key_facts": [
+      {"date": "65 000 ans", "fact": "Arrivée des premiers Aborigènes en Australie."},
+      {"date": "1770", "fact": "Capitaine James Cook revendique l'Australie pour la Couronne britannique."},
+      {"date": "1992", "fact": "Décision Mabo de la Cour suprême — reconnaissance des droits fonciers aborigènes."},
+      {"date": "26 octobre 2019", "fact": "Interdiction d'escalader Uluru — respect des traditions Anangu."}
+    ],
+    "key_figures": [
+      {"name": "Cathy Freeman", "role": "Athlète aborigène — médaillée d'or 400m aux JO de Sydney 2000."},
+      {"name": "Eddie Mabo", "role": "Activiste qui a obtenu la reconnaissance des droits fonciers (1992)."}
+    ],
+    "key_places": [
+      {"place": "Uluru / Ayers Rock", "info": "Monolithe sacré de 348 m de haut, dans le Territoire du Nord."},
+      {"place": "Sydney Opera House", "info": "Opéra emblématique de 1973 — UNESCO 2007."},
+      {"place": "Great Barrier Reef", "info": "Plus grand récif corallien du monde (2 300 km)."}
+    ]
+  },
+
+  "Music Through the Decades": {
+    "context": "L'histoire de la musique anglophone du XXᵉ siècle reflète les bouleversements sociaux : rock'n'roll des années 50 (libération adolescente), hippies des années 60 (paix), punk des années 70 (révolte), hip-hop des années 80 (voix afro-américaine), pop globale aujourd'hui (streaming, K-pop influence).",
+    "key_facts": [
+      {"date": "1956", "fact": "Heartbreak Hotel d'Elvis — naissance du rock'n'roll mondial."},
+      {"date": "9 février 1964", "fact": "Premier passage des Beatles au Ed Sullivan Show — 73 millions de spectateurs."},
+      {"date": "1981", "fact": "Lancement de MTV — révolution clip vidéo."},
+      {"date": "Aujourd'hui", "fact": "Spotify : 600 millions d'utilisateurs mensuels."}
+    ],
+    "key_figures": [
+      {"name": "Bob Marley", "role": "Roi du reggae jamaïcain (1945-1981) — One Love, No Woman No Cry."},
+      {"name": "Beyoncé", "role": "32 Grammy Awards — record de tous les temps."},
+      {"name": "Jaojoby", "role": "\"Roi du salegy\" malgache — ambassadeur culturel."}
+    ],
+    "key_places": [
+      {"place": "Liverpool", "info": "Ville natale des Beatles (UK) — Cavern Club."},
+      {"place": "Memphis (Tennessee)", "info": "Berceau du blues et du rock'n'roll (Sun Studio, Graceland)."}
+    ]
+  },
+
+  "My Town, My Story": {
+    "context": "Antananarivo (Tana) est la capitale de Madagascar. Bâtie sur 12 collines sacrées par le roi Andrianjaka au XVIIᵉ siècle, son nom signifie \"la ville aux Mille\". La haute ville (Rova) abritait le palais royal. La basse ville (Analakely) est aujourd'hui le centre commerçant. La diversité ethnique (Merina, Betsileo, Vakinankaratra) en fait une ville cosmopolite.",
+    "key_facts": [
+      {"date": "1610", "fact": "Roi Andrianjaka conquiert la colline d'Analamanga avec 1 000 soldats."},
+      {"date": "1828-1861", "fact": "Règne de Ranavalona I — résistance face aux Européens."},
+      {"date": "26 juin 1960", "fact": "Indépendance de Madagascar."},
+      {"date": "6 novembre 1995", "fact": "Incendie du Rova — palais royal partiellement détruit."}
+    ],
+    "key_figures": [
+      {"name": "Roi Andrianjaka", "role": "Fondateur d'Antananarivo (XVIIᵉ siècle)."},
+      {"name": "Reine Ranavalona III", "role": "Dernière reine de Madagascar (1883-1897), exilée par les Français."}
+    ],
+    "key_places": [
+      {"place": "Le Rova de Manjakamiadana", "info": "Palais royal — UNESCO (avec Ambohimanga)."},
+      {"place": "Analakely", "info": "Marché couvert et place centrale d'Antananarivo."},
+      {"place": "Ambohimanga", "info": "Colline sacrée et site royal — UNESCO 2001."}
+    ]
+  },
+
+  "Matilda — Roald Dahl (1988)": {
+    "context": "Roald Dahl (1916-1990) est l'un des auteurs jeunesse britanniques les plus célèbres : Charlie and the Chocolate Factory, James and the Giant Peach, The BFG, Matilda. Son humour noir et ses personnages d'enfants malins face à des adultes cruels ont marqué des générations. Matilda (1988), son dernier roman pour enfants, célèbre la lecture et la révolte intelligente.",
+    "key_facts": [
+      {"date": "13 septembre 1916", "fact": "Naissance de Roald Dahl à Llandaff, Pays de Galles."},
+      {"date": "1961", "fact": "Premier roman jeunesse : James and the Giant Peach."},
+      {"date": "1988", "fact": "Publication de Matilda — vendu à 17 millions d'exemplaires."},
+      {"date": "1996", "fact": "Adaptation cinéma de Matilda par Danny DeVito."}
+    ],
+    "key_figures": [
+      {"name": "Quentin Blake", "role": "Illustrateur attitré des livres de Dahl — son trait fait partie de l'œuvre."}
+    ],
+    "key_places": [
+      {"place": "Great Missenden, UK", "info": "Village où Dahl écrivait dans sa cabane — aujourd'hui musée Dahl."}
+    ]
+  },
+
+  "The Giver — Lois Lowry (1993)": {
+    "context": "Lois Lowry (née 1937) est une autrice américaine. The Giver (1993) est l'un des classiques de la littérature dystopique pour adolescents, précurseur de The Hunger Games (Collins) et Divergent (Roth). Le roman explore une société où tout est contrôlé : émotions, métiers, naissances, mémoires. Lauréat de la Newbery Medal 1994. Adapté au cinéma en 2014.",
+    "key_facts": [
+      {"date": "1993", "fact": "Publication de The Giver — première dystopie YA majeure."},
+      {"date": "1994", "fact": "Newbery Medal — plus haute distinction littéraire jeunesse aux USA."},
+      {"date": "2014", "fact": "Film The Giver avec Jeff Bridges et Meryl Streep."}
+    ],
+    "key_figures": [
+      {"name": "Lois Lowry", "role": "Autrice américaine — autres romans : Number the Stars, Gathering Blue."},
+      {"name": "Jonas", "role": "Protagoniste 12 ans — élu Receiver of Memory."},
+      {"name": "The Giver", "role": "Mentor de Jonas — détenteur des mémoires de l'humanité."}
+    ],
+    "key_places": [
+      {"place": "The Community", "info": "Lieu fictif sans nom — société totalitaire en \"Sameness\"."}
+    ]
+  },
+
+  "British Institutions": {
+    "context": "Le Royaume-Uni est une monarchie constitutionnelle parlementaire. Le souverain (Charles III depuis 2022) règne mais ne gouverne pas. Le pouvoir réel appartient au Premier ministre, élu via la majorité parlementaire. Le Royaume-Uni n'a pas de constitution écrite — il fonctionne par tradition et lois fondatrices (Magna Carta 1215, Bill of Rights 1689).",
+    "key_facts": [
+      {"date": "1215", "fact": "Magna Carta signée par le roi Jean — premier texte limitant le pouvoir royal."},
+      {"date": "1689", "fact": "Bill of Rights — fondement de la démocratie parlementaire."},
+      {"date": "23 juin 2016", "fact": "Référendum Brexit : 52% pour la sortie de l'UE."},
+      {"date": "8 septembre 2022", "fact": "Mort d'Elizabeth II — Charles III lui succède."}
+    ],
+    "key_figures": [
+      {"name": "Charles III", "role": "Roi du Royaume-Uni depuis le 8 sept. 2022."},
+      {"name": "Keir Starmer", "role": "Premier ministre travailliste depuis juillet 2024."}
+    ],
+    "key_places": [
+      {"place": "10 Downing Street", "info": "Résidence du Premier ministre depuis 1735."},
+      {"place": "Palace of Westminster", "info": "Siège du Parlement britannique — UNESCO."},
+      {"place": "Buckingham Palace", "info": "Résidence officielle du monarque."}
+    ]
+  },
+
+  "Britain & Europe": {
+    "context": "L'histoire britannique est indissociable de l'Europe : invasions romaines, Conquête normande, alliances et guerres avec la France et l'Allemagne, puis adhésion à la CEE (1973) et finalement Brexit (2020). Aujourd'hui, le Royaume-Uni cherche un nouvel équilibre entre son insularité et ses liens européens (commerce, tourisme, culture).",
+    "key_facts": [
+      {"date": "43 ap. J.-C.", "fact": "Invasion romaine — début d'une occupation de 400 ans."},
+      {"date": "14 octobre 1066", "fact": "Bataille de Hastings — Guillaume le Conquérant prend l'Angleterre."},
+      {"date": "1803-1815", "fact": "Guerres napoléoniennes — Royaume-Uni contre France."},
+      {"date": "1ᵉʳ janvier 1973", "fact": "Le Royaume-Uni rejoint la CEE (Communauté économique européenne)."},
+      {"date": "31 janvier 2020", "fact": "Brexit officiel — sortie de l'Union européenne."}
+    ],
+    "key_figures": [
+      {"name": "Guillaume le Conquérant", "role": "Duc de Normandie devenu roi d'Angleterre (1066)."},
+      {"name": "Henry VIII", "role": "Crée l'Église anglicane (1534) — rupture avec Rome."},
+      {"name": "Winston Churchill", "role": "Premier ministre britannique pendant la Seconde Guerre mondiale."}
+    ],
+    "key_places": [
+      {"place": "Hadrian's Wall", "info": "Mur romain de 117 km construit en 122 — UNESCO."},
+      {"place": "Calais — Douvres", "info": "Liaison maritime historique entre France et UK (33 km)."}
+    ]
+  },
+
+  "Ireland: A Story of Resilience": {
+    "context": "L'Irlande a été dominée par l'Angleterre pendant 800 ans. Le 20ᵉ siècle a été marqué par la Grande Famine (1845-52) qui a fait perdre la moitié de la population (mort + émigration), puis la lutte pour l'indépendance et les Troubles en Irlande du Nord. Aujourd'hui, l'Irlande est une république prospère et fière de sa culture (Joyce, Yeats, U2).",
+    "key_facts": [
+      {"date": "1845-1852", "fact": "Grande Famine — 1 million de morts, 2 millions d'émigrés."},
+      {"date": "Pâques 1916", "fact": "Insurrection de Pâques à Dublin — symbole nationaliste."},
+      {"date": "6 décembre 1921", "fact": "Traité anglo-irlandais — création de l'Irish Free State."},
+      {"date": "1968-1998", "fact": "Les Troubles en Irlande du Nord — 3 500 morts."},
+      {"date": "10 avril 1998", "fact": "Accord du Vendredi saint — fin des Troubles."}
+    ],
+    "key_figures": [
+      {"name": "Michael Collins", "role": "Leader nationaliste irlandais (1890-1922)."},
+      {"name": "James Joyce", "role": "Écrivain irlandais — Ulysses (1922), Dubliners."},
+      {"name": "Bono (U2)", "role": "Chanteur engagé pour la paix et la lutte contre la pauvreté."}
+    ],
+    "key_places": [
+      {"place": "Dublin", "info": "Capitale de la République d'Irlande — UNESCO ville littéraire."},
+      {"place": "Belfast", "info": "Capitale de l'Irlande du Nord — symbole post-conflit."}
+    ]
+  },
+
+  "Migrations & Identities": {
+    "context": "Les migrations façonnent les identités modernes. Le Royaume-Uni a accueilli des vagues successives : Caraïbéens (Windrush, 1948), Indiens-Pakistanais (1960s), Polonais (post-2004), Ukrainiens (2022). Madagascar a aussi sa diaspora : ~150 000 Malgaches au Royaume-Uni et en France, créant des identités hybrides.",
+    "key_facts": [
+      {"date": "22 juin 1948", "fact": "Le HMT Empire Windrush amène 802 Caraïbéens à Tilbury."},
+      {"date": "1960s-70s", "fact": "Vagues de migration depuis l'Inde, le Pakistan, le Bangladesh."},
+      {"date": "2018", "fact": "Scandale Windrush — déportations injustes révélées."},
+      {"date": "Aujourd'hui", "fact": "13% de la population UK est née à l'étranger."}
+    ],
+    "key_figures": [
+      {"name": "Stuart Hall", "role": "Sociologue jamaïcain-britannique — théoricien des cultural studies."},
+      {"name": "Zadie Smith", "role": "Écrivaine britannique — White Teeth (2000) sur le multiculturalisme."}
+    ],
+    "key_places": [
+      {"place": "Brick Lane (Londres)", "info": "Quartier historique de l'immigration — bangladais aujourd'hui."},
+      {"place": "Notting Hill (Londres)", "info": "Carnaval annuel depuis 1966 — célébration caribéenne."}
+    ]
+  },
+
+  "Welcome to America": {
+    "context": "Les États-Unis comptent 50 États, 330 millions d'habitants, et restent la première puissance mondiale. Fondés en 1776 sur les principes de liberté et d'égalité, ils sont marqués par leur diversité ethnique, leur Constitution (1787), et leur idéal du \"American Dream\". Le pays oscille entre influence mondiale et tensions internes (race, armes à feu, polarisation).",
+    "key_facts": [
+      {"date": "4 juillet 1776", "fact": "Déclaration d'Indépendance — naissance des USA."},
+      {"date": "1787", "fact": "Constitution américaine adoptée à Philadelphie."},
+      {"date": "1865", "fact": "Abolition de l'esclavage (13ᵉ amendement)."},
+      {"date": "1969", "fact": "Premier homme sur la Lune (Neil Armstrong, Apollo 11)."},
+      {"date": "20 janvier 2009", "fact": "Barack Obama, premier président afro-américain."}
+    ],
+    "key_figures": [
+      {"name": "George Washington", "role": "Premier président des USA (1789-1797)."},
+      {"name": "Abraham Lincoln", "role": "Président pendant la guerre de Sécession (1861-1865)."},
+      {"name": "Martin Luther King Jr", "role": "Leader des droits civiques — Prix Nobel paix 1964."}
+    ],
+    "key_places": [
+      {"place": "Washington D.C.", "info": "Capitale fédérale — Maison Blanche, Capitole."},
+      {"place": "New York", "info": "Plus grande ville US — Statue de la Liberté (1886)."},
+      {"place": "Mount Rushmore", "info": "Visages de 4 présidents sculptés (1927-1941)."}
+    ]
+  },
+
+  "Street Art: The Voice of the Wall": {
+    "context": "Le street art est un mouvement artistique urbain né dans les années 1970 à New York (graffitis du métro). Devenu mondial, il porte souvent un message politique : Banksy au Royaume-Uni dénonce la guerre, JR au monde questionne l'identité, Shepard Fairey crée le poster \"Hope\" d'Obama (2008). Aujourd'hui, certains street artists vendent leurs œuvres des millions.",
+    "key_facts": [
+      {"date": "1971", "fact": "Le tag \"Taki 183\" inonde le métro new-yorkais — naissance du graffiti moderne."},
+      {"date": "1980s", "fact": "Keith Haring et Jean-Michel Basquiat élèvent le street art au rang d'art majeur."},
+      {"date": "5 octobre 2018", "fact": "Banksy : \"Girl with Balloon\" s'autodétruit chez Sotheby's pendant l'enchère."},
+      {"date": "2021", "fact": "\"Love is in the Bin\" (Banksy) revendu 22 millions d'euros."}
+    ],
+    "key_figures": [
+      {"name": "Banksy", "role": "Street artist anonyme britannique — œuvres engagées dans le monde entier."},
+      {"name": "JR", "role": "Photo-artiste français — collages géants à grande échelle."},
+      {"name": "Shepard Fairey", "role": "Créateur du poster \"Hope\" pour Obama (2008)."}
+    ],
+    "key_places": [
+      {"place": "Bristol (UK)", "info": "Ville natale de Banksy — capitale britannique du street art."},
+      {"place": "Wynwood (Miami)", "info": "Quartier transformé en galerie à ciel ouvert."},
+      {"place": "Mur de Berlin", "info": "Plus longue galerie de street art — \"East Side Gallery\"."}
+    ]
+  },
+
+  "Frankenstein — Mary Shelley": {
+    "context": "Frankenstein, or The Modern Prometheus (1818) est considéré comme le premier roman de science-fiction. Mary Shelley (18 ans) l'a écrit lors d'un défi entre amis (Byron, Polidori) en 1816 — \"l'année sans été\" causée par l'éruption du Tambora. Le roman pose des questions toujours actuelles : responsabilité du créateur, éthique scientifique, nature humaine.",
+    "key_facts": [
+      {"date": "1816", "fact": "\"Year Without a Summer\" — Mary Shelley imagine Frankenstein lors d'un séjour à Genève."},
+      {"date": "11 mars 1818", "fact": "Publication anonyme de Frankenstein."},
+      {"date": "1831", "fact": "Édition révisée signée Mary Shelley — préface célèbre."},
+      {"date": "1931", "fact": "Adaptation cinéma iconique avec Boris Karloff."}
+    ],
+    "key_figures": [
+      {"name": "Mary Shelley", "role": "Écrivaine anglaise (1797-1851) — fille de Mary Wollstonecraft."},
+      {"name": "Percy B. Shelley", "role": "Poète romantique, époux de Mary."},
+      {"name": "Lord Byron", "role": "Poète romantique — instigateur du défi littéraire de 1816."}
+    ],
+    "key_places": [
+      {"place": "Villa Diodati (Genève)", "info": "Lieu où Mary Shelley imagine son roman."},
+      {"place": "Mont Blanc", "info": "Décor important du roman — sublime romantique."}
+    ]
+  },
+
+  "The Secret of Jatbula Trail": {
+    "context": "Le Jatbula Trail est un sentier de 62 km dans le parc national de Nitmiluk, Territoire du Nord australien. Il traverse les terres des Jawoyn, peuple aborigène qui en gère le territoire depuis 1989. La randonnée se fait sur 5-6 jours en saison sèche (mai-octobre). Le sentier passe par des sites sacrés et des peintures rupestres millénaires.",
+    "key_facts": [
+      {"date": "65 000 ans", "fact": "Premières peintures rupestres aborigènes en Australie."},
+      {"date": "1989", "fact": "Reconnaissance des terres Jawoyn — gestion conjointe avec les rangers."},
+      {"date": "Saison", "fact": "Le trail est ouvert mai-octobre seulement (saison sèche)."}
+    ],
+    "key_figures": [
+      {"name": "Les Jawoyn", "role": "Peuple aborigène propriétaire du territoire de Nitmiluk."}
+    ],
+    "key_places": [
+      {"place": "Nitmiluk National Park", "info": "Parc de 2 920 km² — gorges et cascades spectaculaires."},
+      {"place": "Crystal Falls", "info": "Cascade emblématique du sentier — bassin de baignade."}
+    ]
+  },
+
+  "Women Who Changed History": {
+    "context": "L'histoire moderne a été marquée par des femmes qui ont changé le monde : suffragettes britanniques (1903), Marie Curie (Nobel 1903 et 1911), Rosa Parks (1955), Malala Yousafzai (Nobel paix 2014), Greta Thunberg (climat 2018). Le combat pour l'égalité reste actuel : #MeToo (2017), parité salariale, droits reproductifs.",
+    "key_facts": [
+      {"date": "1903", "fact": "Création des Suffragettes au Royaume-Uni (Emmeline Pankhurst)."},
+      {"date": "1928", "fact": "Le Royaume-Uni accorde le droit de vote à toutes les femmes."},
+      {"date": "1ᵉʳ décembre 1955", "fact": "Rosa Parks refuse de céder sa place dans un bus à Montgomery."},
+      {"date": "10 octobre 2014", "fact": "Malala reçoit le Nobel de la Paix à 17 ans."},
+      {"date": "Octobre 2017", "fact": "Mouvement #MeToo lancé après l'affaire Weinstein."}
+    ],
+    "key_figures": [
+      {"name": "Emmeline Pankhurst", "role": "Leader suffragette UK (1858-1928) — \"Deeds, not words\"."},
+      {"name": "Rosa Parks", "role": "Couturière américaine — \"mother of the civil rights movement\" (1913-2005)."},
+      {"name": "Malala Yousafzai", "role": "Pakistanaise — défense de l'éducation des filles."},
+      {"name": "Ruth Bader Ginsburg", "role": "Juge à la Cour suprême US — icône féministe (1933-2020)."}
+    ],
+    "key_places": [
+      {"place": "Seneca Falls (USA)", "info": "Première convention pour les droits des femmes (1848)."}
+    ]
+  },
+
+  "My DNB Project": {
+    "context": "Le DNB (Diplôme National du Brevet) est l'examen de fin de 3ᵉ. L'oral de 15 minutes porte sur un projet réalisé en EPI ou en parcours (citoyen, avenir, santé, artistique). Au LFT, les élèves préparent souvent des projets bilingues. La réussite repose sur 3 piliers : choix d'un sujet personnel, structure claire (intro/3 parties/conclusion), entraînement à voix haute.",
+    "key_facts": [
+      {"date": "1947", "fact": "Création du Brevet d'Études du Premier Cycle (BEPC) — ancêtre du DNB."},
+      {"date": "2017", "fact": "Réforme : oral de 15 min introduit pour valoriser les compétences."},
+      {"date": "Coefficient", "fact": "Oral coef. 100 sur 800 — soit 12,5% de la note finale."}
+    ],
+    "key_figures": [
+      {"name": "Le jury", "role": "2 enseignants — l'un dans la discipline, l'autre extérieur."}
+    ],
+    "key_places": [
+      {"place": "Le Lycée français de Tananarive (LFT)", "info": "Salles d'oraux dédiées — passage en juin."}
+    ]
+  },
+
+  "The Curious Incident of the Dog in the Night-Time": {
+    "context": "The Curious Incident of the Dog in the Night-Time (Mark Haddon, 2003) raconte l'enquête de Christopher Boone, 15 ans, dont l'esprit fonctionne différemment (autisme implicite). Le roman a été couronné Whitbread Book of the Year 2003 et adapté au théâtre par Simon Stephens (Tony Award 2015). Il a contribué à la visibilité de la neurodiversité.",
+    "key_facts": [
+      {"date": "2003", "fact": "Publication — succès mondial, traduit en 36 langues."},
+      {"date": "2012", "fact": "Adaptation théâtrale au National Theatre de Londres."},
+      {"date": "8 juin 2015", "fact": "Tony Award du meilleur play à Broadway."}
+    ],
+    "key_figures": [
+      {"name": "Mark Haddon", "role": "Écrivain britannique (né 1962) — illustrateur, poète, romancier."},
+      {"name": "Christopher Boone", "role": "Narrateur 15 ans — sur le spectre autistique."},
+      {"name": "Temple Grandin", "role": "Scientifique américaine autiste — référence sur la neurodiversité."}
+    ],
+    "key_places": [
+      {"place": "Swindon (UK)", "info": "Ville natale de Christopher dans le roman."}
+    ]
+  },
+
+  "US Civil Rights Movement": {
+    "context": "Le mouvement des droits civiques (1954-1968) a transformé l'Amérique : abolition de la ségrégation raciale (Jim Crow), droit de vote pour les Afro-Américains, protection contre la discrimination. Mené par Martin Luther King (non-violence) et soutenu par d'autres figures (Malcolm X, Rosa Parks, John Lewis), il a inspiré les mouvements ultérieurs : Black Lives Matter (2013).",
+    "key_facts": [
+      {"date": "17 mai 1954", "fact": "Brown v. Board of Education — fin de la ségrégation scolaire (Cour suprême)."},
+      {"date": "1ᵉʳ décembre 1955", "fact": "Rosa Parks refuse de céder sa place — début du Montgomery Bus Boycott."},
+      {"date": "28 août 1963", "fact": "March on Washington — \"I Have a Dream\" devant 250 000 personnes."},
+      {"date": "2 juillet 1964", "fact": "Civil Rights Act signé par Lyndon B. Johnson."},
+      {"date": "4 avril 1968", "fact": "Assassinat de Martin Luther King à Memphis."},
+      {"date": "13 juillet 2013", "fact": "Naissance du mouvement Black Lives Matter."}
+    ],
+    "key_figures": [
+      {"name": "Martin Luther King Jr", "role": "Pasteur baptiste — Prix Nobel paix 1964."},
+      {"name": "Rosa Parks", "role": "\"The mother of the civil rights movement\"."},
+      {"name": "Malcolm X", "role": "Leader nationaliste noir — assassiné en 1965."},
+      {"name": "John Lewis", "role": "Activiste et membre du Congrès (1940-2020)."}
+    ],
+    "key_places": [
+      {"place": "Selma (Alabama)", "info": "Marches de Selma à Montgomery (1965) pour le droit de vote."},
+      {"place": "Lincoln Memorial (Washington)", "info": "Lieu du discours \"I Have a Dream\"."}
+    ]
+  },
+
+  "Short Stories — Roald Dahl & Neil Gaiman": {
+    "context": "La nouvelle (\"short story\") est un genre majeur en littérature anglophone. Roald Dahl est célèbre pour ses nouvelles à chute (\"twist endings\") destinées aux adultes — recueils Tales of the Unexpected. Neil Gaiman, britannique installé aux USA, mêle fantastique et mythologie — Smoke and Mirrors, Trigger Warning. Tous deux excellent dans la concision et le suspense.",
+    "key_facts": [
+      {"date": "1953", "fact": "Roald Dahl publie \"Lamb to the Slaughter\" — chef-d'œuvre du twist."},
+      {"date": "1979-1988", "fact": "Série TV Tales of the Unexpected basée sur les nouvelles de Dahl."},
+      {"date": "1998", "fact": "Smoke and Mirrors — recueil culte de Neil Gaiman."},
+      {"date": "2017", "fact": "Norse Mythology de Gaiman — best-seller mondial."}
+    ],
+    "key_figures": [
+      {"name": "Roald Dahl", "role": "Écrivain britannique (1916-1990) — humour noir."},
+      {"name": "Neil Gaiman", "role": "Écrivain britannique (né 1960) — fantastique, BD (Sandman)."}
+    ],
+    "key_places": [
+      {"place": "Great Missenden", "info": "Domicile et cabane d'écriture de Dahl — UK."}
+    ]
+  },
+
+  "Madagascar's Biodiversity: A Living Laboratory": {
+    "context": "Madagascar, séparée de l'Afrique il y a 165 millions d'années, abrite une biodiversité exceptionnelle : 90% des espèces y sont endémiques. C'est le 5ᵉ \"hotspot\" de biodiversité au monde selon Conservation International. Mais 80% des forêts primaires ont été détruites par la déforestation et le \"tavy\" (culture sur brûlis). Les ONG (WWF, Conservation International, Madagascar National Parks) luttent pour sa préservation.",
+    "key_facts": [
+      {"date": "165 millions d'années", "fact": "Séparation de Madagascar du continent africain."},
+      {"date": "Aujourd'hui", "fact": "100+ espèces de lémuriens — toutes endémiques."},
+      {"date": "1991", "fact": "Création de Madagascar National Parks (43 parcs aujourd'hui)."},
+      {"date": "Crise", "fact": "80% des forêts primaires détruites."}
+    ],
+    "key_figures": [
+      {"name": "Patricia C. Wright", "role": "Primatologue — découverte du sifaka doré (1986)."},
+      {"name": "Russell Mittermeier", "role": "Conservation International — \"Madagascar = priorité mondiale\"."}
+    ],
+    "key_places": [
+      {"place": "Andasibe-Mantadia", "info": "Premier parc national malgache (1990) — indri-indri."},
+      {"place": "Tsingy de Bemaraha", "info": "Forêt de pierres calcaires — UNESCO 1990."},
+      {"place": "Ranomafana", "info": "Forêt humide — refuge du lémurien sifaka doré."}
+    ]
+  },
+
+  "Climate Change & Tropical Cyclones": {
+    "context": "Madagascar figure parmi les 10 pays les plus vulnérables au changement climatique. Située dans le sud-ouest de l'océan Indien, l'île est frappée chaque année par 3 à 5 cyclones entre novembre et avril. La hausse des températures océaniques (+0,8°C depuis 1980) intensifie ces phénomènes. Les pluies erratiques aggravent aussi la sécheresse dans le Grand Sud.",
+    "key_facts": [
+      {"date": "Saison cyclonique", "fact": "Novembre-avril — 3 à 5 cyclones par an en moyenne."},
+      {"date": "5 février 2022", "fact": "Cyclone Batsirai — 121 morts, 90 000 déplacés."},
+      {"date": "1990", "fact": "Création du GIEC (IPCC) — synthèse scientifique mondiale."},
+      {"date": "2023", "fact": "Sécheresse historique dans le Grand Sud — \"kéré\" (famine)."}
+    ],
+    "key_figures": [
+      {"name": "Hoesung Lee", "role": "Président du GIEC depuis 2023."},
+      {"name": "Christiana Figueres", "role": "Architecte de l'Accord de Paris (2015)."}
+    ],
+    "key_places": [
+      {"place": "Le Grand Sud (Madagascar)", "info": "Région touchée par la sécheresse climatique."},
+      {"place": "Toamasina", "info": "Port régulièrement frappé par les cyclones."}
+    ]
+  },
+
+  "Sustainable Development Goals": {
+    "context": "Adoptés par les 193 États membres de l'ONU en septembre 2015, les 17 Objectifs de Développement Durable (ODD ou SDGs) constituent l'Agenda 2030 — feuille de route pour transformer le monde. Ils sont indissociables : on ne peut pas lutter contre la pauvreté (ODD 1) sans agir sur l'éducation (ODD 4), le climat (ODD 13) ou les inégalités (ODD 10).",
+    "key_facts": [
+      {"date": "25 septembre 2015", "fact": "Adoption de l'Agenda 2030 et des 17 ODD à New York."},
+      {"date": "2000-2015", "fact": "Période des Objectifs du Millénaire — précédent les ODD."},
+      {"date": "Objectif", "fact": "2030 = horizon pour atteindre les 17 ODD."},
+      {"date": "Alerte 2024", "fact": "Seul ~17% des cibles ODD sont sur la bonne trajectoire (ONU)."}
+    ],
+    "key_figures": [
+      {"name": "Ban Ki-moon", "role": "Secrétaire général ONU (2007-2016) — initiateur des ODD."},
+      {"name": "António Guterres", "role": "Secrétaire général ONU depuis 2017."}
+    ],
+    "key_places": [
+      {"place": "Siège de l'ONU (New York)", "info": "Lieu d'adoption de l'Agenda 2030."}
+    ]
+  },
+
+  "Coral Reefs and Ocean Health": {
+    "context": "Les récifs coralliens couvrent 0,2% de la surface des océans mais abritent 25% de la biodiversité marine. Surnommés \"forêts tropicales des océans\", ils sont menacés par le réchauffement climatique (blanchissement), l'acidification (CO₂ absorbé), la pollution plastique et la surpêche. La Grande Barrière de Corail a perdu 50% de ses coraux depuis 1995. Les récifs malgaches (Nosy Be, Toliara) sont aussi en danger.",
+    "key_facts": [
+      {"date": "1981", "fact": "Grande Barrière de Corail classée UNESCO."},
+      {"date": "1998", "fact": "Premier blanchissement mondial massif — perte de 16% des coraux."},
+      {"date": "2016-2017", "fact": "Blanchissement de 50% de la Grande Barrière."},
+      {"date": "Projection", "fact": "GIEC : 90% des coraux pourraient disparaître à +1,5°C."}
+    ],
+    "key_figures": [
+      {"name": "Sylvia Earle", "role": "Océanographe américaine — Mission Blue, protection des océans."},
+      {"name": "Charlie Veron", "role": "Biologiste — \"the godfather of coral\"."}
+    ],
+    "key_places": [
+      {"place": "Great Barrier Reef", "info": "2 300 km, visible depuis l'espace — UNESCO."},
+      {"place": "Nosy Be (Madagascar)", "info": "Récifs malgaches en danger."},
+      {"place": "Belize Barrier Reef", "info": "Deuxième plus grand récif — UNESCO."}
+    ]
+  },
+
+  "Towards Terminale: Reading Scientific Papers": {
+    "context": "Lire un article scientifique en anglais est une compétence-clé pour la Terminale et l'enseignement supérieur. Les revues internationales (Nature, Science, The Lancet) publient en anglais — la lingua franca de la science. La méthodologie IMRaD (Introduction, Methods, Results, Discussion) structure quasiment tous les articles. Le mouvement Open Access (gratuit, libre accès) progresse depuis 2002.",
+    "key_facts": [
+      {"date": "1665", "fact": "Premier journal scientifique : Philosophical Transactions of the Royal Society."},
+      {"date": "1869", "fact": "Création de Nature à Londres."},
+      {"date": "1880", "fact": "Création de Science aux USA."},
+      {"date": "2002", "fact": "Initiative de Budapest — naissance du Open Access."},
+      {"date": "2018", "fact": "Plan S — financements européens exigent Open Access."}
+    ],
+    "key_figures": [
+      {"name": "James D. Watson", "role": "Co-découvreur de la structure de l'ADN (1953, Nature)."},
+      {"name": "Jennifer Doudna", "role": "Prix Nobel chimie 2020 — CRISPR."}
+    ],
+    "key_places": [
+      {"place": "Stockholm", "info": "Cérémonie annuelle des Prix Nobel."}
+    ]
+  },
+
+  "Identities & Exchanges": {
+    "context": "L'axe \"Identités et échanges\" du Bac explore les migrations, les diasporas et l'hybridité culturelle. Le Royaume-Uni est emblématique : depuis le Windrush (1948), il accueille des vagues d'immigration qui ont transformé sa culture. La diaspora malgache compte ~30 000 personnes au RU, principalement à Londres. La littérature britannique post-2000 (Zadie Smith, Monica Ali, Bernardine Evaristo) explore ces identités multiples.",
+    "key_facts": [
+      {"date": "22 juin 1948", "fact": "Windrush amène 802 Caraïbéens au Royaume-Uni."},
+      {"date": "1979-1990", "fact": "Premier ministre Margaret Thatcher — durcissement migratoire."},
+      {"date": "2003", "fact": "Brick Lane (Monica Ali) — roman sur la communauté bangladaise de Londres."},
+      {"date": "2018", "fact": "Scandale Windrush — déportations injustes révélées."},
+      {"date": "31 janvier 2020", "fact": "Brexit — fin de la libre circulation européenne."}
+    ],
+    "key_figures": [
+      {"name": "Stuart Hall", "role": "Sociologue — théoricien des identités hybrides."},
+      {"name": "Zadie Smith", "role": "Écrivaine britannique — White Teeth (2000)."},
+      {"name": "Bernardine Evaristo", "role": "Booker Prize 2019 — Girl, Woman, Other."}
+    ],
+    "key_places": [
+      {"place": "Brick Lane (Londres)", "info": "Quartier de l'immigration bangladaise."},
+      {"place": "Notting Hill", "info": "Carnaval caribéen depuis 1966."},
+      {"place": "Tilbury Docks", "info": "Lieu d'arrivée du Windrush."}
+    ]
+  },
+
+  "Public Space and Private Space": {
+    "context": "Le Royaume-Uni est l'un des pays les plus surveillés au monde : 5 millions de caméras CCTV (1 pour 13 habitants). Cette surveillance massive est défendue au nom de la sécurité (lutte contre le terrorisme, criminalité) mais critiquée pour ses atteintes à la vie privée. Le débat est mondial : Edward Snowden (2013) a révélé l'espionnage de masse de la NSA. La Chine pousse la surveillance encore plus loin avec son \"crédit social\" généralisé.",
+    "key_facts": [
+      {"date": "1992", "fact": "Premier réseau CCTV massif déployé à Londres."},
+      {"date": "Juin 2013", "fact": "Révélations Snowden — surveillance mondiale par la NSA."},
+      {"date": "Mai 2018", "fact": "Entrée en vigueur du RGPD européen — protection des données."},
+      {"date": "2020", "fact": "Le crédit social chinois étendu à toute la population."}
+    ],
+    "key_figures": [
+      {"name": "Edward Snowden", "role": "Lanceur d'alerte américain (2013) — exilé en Russie."},
+      {"name": "Shoshana Zuboff", "role": "Sociologue — \"capitalisme de surveillance\" (2019)."}
+    ],
+    "key_places": [
+      {"place": "Londres", "info": "Ville la plus filmée d'Europe — réseau CCTV."},
+      {"place": "GCHQ (Cheltenham)", "info": "Agence britannique de renseignement électronique."}
+    ]
+  },
+
+  "Art and Power": {
+    "context": "L'art et le pouvoir entretiennent une relation complexe : l'art peut servir le pouvoir (propagande nazie, soviétique) ou le contester (Picasso, Banksy, Ai Weiwei). Au 20ᵉ siècle, les régimes totalitaires ont censuré les avant-gardes (\"art dégénéré\" en Allemagne, réalisme socialiste en URSS). Aujourd'hui, le débat continue : statues coloniales déboulonnées, restitutions d'œuvres, NFT et marché de l'art.",
+    "key_facts": [
+      {"date": "26 avril 1937", "fact": "Bombardement de Guernica par la Luftwaffe — 200 morts."},
+      {"date": "1937", "fact": "Picasso peint Guernica en 35 jours — exposé à Paris."},
+      {"date": "1937", "fact": "Exposition nazie \"Entartete Kunst\" (Art dégénéré) à Munich."},
+      {"date": "5 février 2003", "fact": "La reproduction de Guernica à l'ONU est couverte au moment où Colin Powell annonce la guerre en Irak."},
+      {"date": "Juin 2020", "fact": "Statue d'Edward Colston (négrier) déboulonnée à Bristol — BLM."}
+    ],
+    "key_figures": [
+      {"name": "Pablo Picasso", "role": "Peintre espagnol (1881-1973) — Guernica."},
+      {"name": "Ai Weiwei", "role": "Artiste dissident chinois — œuvres contestataires."},
+      {"name": "Banksy", "role": "Street artist anonyme — critique sociale."}
+    ],
+    "key_places": [
+      {"place": "Musée Reina Sofia (Madrid)", "info": "Abrite Guernica depuis 1992."},
+      {"place": "Tate Modern (Londres)", "info": "Plus grand musée d'art moderne au monde."}
+    ]
+  },
+
+  "Citizenship and Virtual Worlds": {
+    "context": "L'ère numérique transforme la citoyenneté : 5 milliards d'utilisateurs Internet, 4,7 milliards sur les réseaux sociaux. Si les outils numériques (Wikipedia, podcasts, MOOCs) démocratisent l'information, ils créent aussi de nouveaux risques : cyberharcèlement, fake news, deepfakes, polarisation algorithmique. Le \"métavers\" et l'IA générative posent de nouvelles questions éthiques. Être citoyen numérique = être responsable, lucide et bienveillant en ligne.",
+    "key_facts": [
+      {"date": "1991", "fact": "Tim Berners-Lee invente le World Wide Web au CERN."},
+      {"date": "Février 2004", "fact": "Création de Facebook par Mark Zuckerberg."},
+      {"date": "2016", "fact": "Brexit + élection Trump — débat sur le rôle des fake news."},
+      {"date": "Octobre 2021", "fact": "Facebook devient \"Meta\" — pari sur le métavers."},
+      {"date": "Novembre 2022", "fact": "Lancement de ChatGPT — révolution IA grand public."}
+    ],
+    "key_figures": [
+      {"name": "Tim Berners-Lee", "role": "Britannique — inventeur du Web (1991)."},
+      {"name": "Mark Zuckerberg", "role": "Fondateur de Facebook/Meta."},
+      {"name": "Frances Haugen", "role": "Lanceuse d'alerte Facebook (2021) — \"Facebook Files\"."}
+    ],
+    "key_places": [
+      {"place": "Silicon Valley", "info": "Berceau des géants tech (GAFAM) en Californie."}
+    ]
+  },
+
+  "Fictions and Realities": {
+    "context": "Les dystopies du 20ᵉ siècle (1984 d'Orwell, Brave New World d'Huxley, The Handmaid's Tale d'Atwood) sont devenues étrangement contemporaines : surveillance de masse (Snowden), désinformation (Brexit, Trump), contrôle des corps féminins (Roe v. Wade renversé en 2022). La série Black Mirror (Charlie Brooker, 2011) a relancé le genre. La fiction dystopique avertit en imaginant le pire — et nous oblige à choisir le meilleur.",
+    "key_facts": [
+      {"date": "1932", "fact": "Brave New World d'Aldous Huxley — dystopie du plaisir conditionné."},
+      {"date": "1949", "fact": "1984 de George Orwell — \"Big Brother is watching you\"."},
+      {"date": "1985", "fact": "The Handmaid's Tale de Margaret Atwood — dystopie féministe."},
+      {"date": "2011", "fact": "Première saison de Black Mirror sur Channel 4 (UK)."},
+      {"date": "Juin 2022", "fact": "Roe v. Wade renversé aux USA — inquiétudes féministes."}
+    ],
+    "key_figures": [
+      {"name": "George Orwell", "role": "(1903-1950) — 1984, Animal Farm."},
+      {"name": "Margaret Atwood", "role": "Autrice canadienne (née 1939) — Booker Prize 2000 et 2019."},
+      {"name": "Charlie Brooker", "role": "Créateur britannique de Black Mirror."}
+    ],
+    "key_places": [
+      {"place": "L'Oceania (1984)", "info": "Lieu fictif — superétat dystopique d'Orwell."}
+    ]
+  },
+
+  "Scientific Innovation and Responsibility": {
+    "context": "Les innovations scientifiques du 21ᵉ siècle (CRISPR, IA, transhumanisme) bouleversent l'éthique. CRISPR-Cas9 permet de modifier l'ADN avec précision — promesse thérapeutique mais risque de \"bébés sur mesure\". L'IA génère des textes, images, codes — mais aussi des deepfakes et hallucinations. Le serment d'Hippocrate (~400 av. J.-C.) reste une référence : \"Primum non nocere\" — d'abord ne pas nuire.",
+    "key_facts": [
+      {"date": "~400 av. J.-C.", "fact": "Hippocrate formule son serment éthique."},
+      {"date": "Juin 2012", "fact": "Article fondateur sur CRISPR-Cas9 (Doudna & Charpentier)."},
+      {"date": "Novembre 2018", "fact": "Premier bébé CRISPR — He Jiankui condamné en Chine."},
+      {"date": "Octobre 2020", "fact": "Prix Nobel chimie pour Jennifer Doudna et Emmanuelle Charpentier."},
+      {"date": "Mars 2023", "fact": "Lettre ouverte de 1 000 chercheurs sur les risques de l'IA."}
+    ],
+    "key_figures": [
+      {"name": "Jennifer Doudna", "role": "Prix Nobel chimie 2020 — co-découverte de CRISPR."},
+      {"name": "Emmanuelle Charpentier", "role": "Microbiologiste française — Prix Nobel 2020."},
+      {"name": "Stuart Russell", "role": "Pionnier de l'éthique de l'IA — \"Human Compatible\" (2019)."}
+    ],
+    "key_places": [
+      {"place": "Cold Spring Harbor (USA)", "info": "Berceau de la génétique moderne."},
+      {"place": "OpenAI (San Francisco)", "info": "Créateur de ChatGPT (2022)."}
+    ]
+  },
+
+  "Diversity and Inclusion": {
+    "context": "Les mouvements pour la diversité et l'inclusion ont transformé les sociétés anglo-saxonnes : Civil Rights Movement (1954-68), Stonewall Riots (1969), Pride, #MeToo (2017), Black Lives Matter (2013). La diversité concerne aussi l'orientation sexuelle, le handicap, les identités neurodivergentes. Les entreprises et institutions adoptent des politiques DEI (Diversity, Equity, Inclusion) — parfois sincères, parfois \"performatives\".",
+    "key_facts": [
+      {"date": "28 juin 1969", "fact": "Émeutes de Stonewall (NYC) — naissance du mouvement LGBT+."},
+      {"date": "13 juillet 2013", "fact": "Naissance de Black Lives Matter après l'acquittement du tueur de Trayvon Martin."},
+      {"date": "Octobre 2017", "fact": "Affaire Weinstein — explosion mondiale de #MeToo."},
+      {"date": "25 mai 2020", "fact": "Mort de George Floyd — manifestations BLM dans 60+ pays."}
+    ],
+    "key_figures": [
+      {"name": "Marsha P. Johnson", "role": "Activiste trans afro-américaine — figure de Stonewall."},
+      {"name": "Tarana Burke", "role": "Fondatrice du mouvement #MeToo (2006)."},
+      {"name": "Patrisse Cullors", "role": "Co-fondatrice de Black Lives Matter."}
+    ],
+    "key_places": [
+      {"place": "Stonewall Inn (NYC)", "info": "Bar gay — site des émeutes fondatrices de 1969."},
+      {"place": "Minneapolis (USA)", "info": "Lieu de la mort de George Floyd (2020)."}
+    ]
+  },
+
+  "Territory and Memory": {
+    "context": "Le territoire et la mémoire sont des enjeux postcoloniaux majeurs. L'Empire britannique a colonisé un quart du monde — décolonisation entre 1947 (Inde) et 1997 (Hong Kong). À Madagascar, la colonisation française (1896-1960) a laissé une mémoire douloureuse — notamment le massacre de 1947, longtemps tu en France. Aujourd'hui, restitutions d'œuvres, déboulonnage de statues coloniales, débats sur les manuels scolaires : la mémoire est un terrain de lutte.",
+    "key_facts": [
+      {"date": "29 mars 1947", "fact": "Insurrection malgache — réprimée violemment par la France."},
+      {"date": "1947-1949", "fact": "Entre 11 000 et 100 000 Malgaches tués (chiffres débattus)."},
+      {"date": "15 août 1947", "fact": "Indépendance de l'Inde et du Pakistan."},
+      {"date": "26 juin 1960", "fact": "Indépendance de Madagascar."},
+      {"date": "21 juillet 2005", "fact": "Jacques Chirac à Tana qualifie 1947 d'\"inacceptable\"."},
+      {"date": "Mars 2017", "fact": "Emmanuel Macron reconnaît \"la responsabilité\" de la France."}
+    ],
+    "key_figures": [
+      {"name": "Edward Said", "role": "Théoricien postcolonial — Orientalism (1978)."},
+      {"name": "Frantz Fanon", "role": "Psychiatre martiniquais — Les Damnés de la Terre (1961)."},
+      {"name": "Achille Mbembe", "role": "Historien camerounais — \"Décoloniser, c'est aussi se souvenir\"."},
+      {"name": "Pierre Nora", "role": "Historien français — concept de \"lieux de mémoire\" (1984)."}
+    ],
+    "key_places": [
+      {"place": "Le Rova (Antananarivo)", "info": "Ancien palais royal — symbole de mémoire malgache."},
+      {"place": "Le mémorial de Moramanga", "info": "Hommage aux victimes de 1947."}
+    ]
+  }
+}

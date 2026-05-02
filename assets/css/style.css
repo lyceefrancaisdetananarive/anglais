@@ -1801,7 +1801,7 @@ figcaption {
 }
 .trace-grammar__remark strong { color: var(--bf-500); }
 
-/* Repères culturels */
+/* Repères culturels — affichage simple (legacy fallback) */
 .trace-culture__intro {
   font-size: var(--font-size-sm);
   color: var(--grey-900);
@@ -1832,6 +1832,100 @@ figcaption {
   margin: var(--space-2) 0 0;
   font-style: italic;
 }
+
+/* === Repères culturels ENRICHIS (contexte + dates + figures + lieux) === */
+.trace-culture__context {
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+  line-height: 1.6;
+  margin: 0 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px dashed var(--grey-200);
+}
+.trace-culture__block {
+  margin-top: var(--space-3);
+}
+.trace-culture__bh {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--or, #C9A027);
+  margin: 0 0 var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+.trace-culture__bh i {
+  background: var(--or, #C9A027);
+  color: white;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Liste de dates-clés */
+.trace-culture__facts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: grid;
+  gap: 4px;
+}
+.trace-fact {
+  display: grid;
+  grid-template-columns: minmax(70px, 0.9fr) 2.6fr;
+  gap: var(--space-3);
+  padding: 4px 0;
+  font-size: var(--font-size-sm);
+  border-bottom: 1px dotted var(--grey-200);
+}
+.trace-fact:last-child { border-bottom: none; }
+.trace-fact__date {
+  color: var(--bf-500);
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+}
+.trace-fact__text {
+  color: var(--grey-900);
+}
+
+/* Liste de personnages-clés */
+.trace-culture__people {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: grid;
+  gap: 4px;
+}
+.trace-figure {
+  padding: 4px 0;
+  font-size: var(--font-size-sm);
+  border-bottom: 1px dotted var(--grey-200);
+}
+.trace-figure:last-child { border-bottom: none; }
+.trace-figure strong { color: var(--lft-magenta); }
+.trace-figure span { color: var(--grey-900); }
+
+/* Liste de lieux */
+.trace-culture__places {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: grid;
+  gap: 4px;
+}
+.trace-place {
+  padding: 4px 0;
+  font-size: var(--font-size-sm);
+  border-bottom: 1px dotted var(--grey-200);
+}
+.trace-place:last-child { border-bottom: none; }
+.trace-place strong { color: var(--bf-500); }
+.trace-place span { color: var(--grey-700); }
 
 /* Conseil de méthode */
 .trace-tip {

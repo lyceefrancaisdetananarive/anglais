@@ -33,6 +33,12 @@ const DOCUMENTS_SUPPORTS = JSON.parse(fs.readFileSync(
   "utf-8"
 ));
 
+// ---- Repères culturels enrichis (contexte + faits + figures + lieux) ----
+const REPERES_CULTURELS = JSON.parse(fs.readFileSync(
+  path.join(__dirname, "..", "assets", "data", "reperes-culturels.json"),
+  "utf-8"
+));
+
 function getLexiqueFor(seqTitre) {
   const rows = LEXIQUE_SEQUENCES[seqTitre];
   return Array.isArray(rows) ? rows : null;
@@ -41,6 +47,11 @@ function getLexiqueFor(seqTitre) {
 function getSupportFor(seqTitre) {
   const s = DOCUMENTS_SUPPORTS[seqTitre];
   return (s && typeof s === "object" && s.content) ? s : null;
+}
+
+function getReperesFor(seqTitre) {
+  const r = REPERES_CULTURELS[seqTitre];
+  return (r && typeof r === "object" && r.context) ? r : null;
 }
 
 function matchGrammarTemplate(langueRaw) {
@@ -219,30 +230,60 @@ function buildFaitsDeLangue(seq) {
     </div>`;
 }
 
-// Construit la fiche culture — contexte + 3 points-clés
+// Construit la fiche culture enrichie : contexte + dates-clés +
+// figures historiques + lieux. Si données enrichies absentes, fallback
+// sur split du seq.culturel.
 function buildReperesCulturels(seq) {
+  const enriched = getReperesFor(seq.titre);
+  if (enriched) {
+    const facts = (enriched.key_facts || []).map(f =>
+      `<li class="trace-fact">
+        <span class="trace-fact__date">${esc(f.date)}</span>
+        <span class="trace-fact__text">${esc(f.fact)}</span>
+      </li>`).join("");
+    const figures = (enriched.key_figures || []).map(p =>
+      `<li class="trace-figure">
+        <strong>${esc(p.name)}</strong> — <span>${esc(p.role)}</span>
+      </li>`).join("");
+    const places = (enriched.key_places || []).map(l =>
+      `<li class="trace-place">
+        <strong>${esc(l.place)}</strong> — <span>${esc(l.info)}</span>
+      </li>`).join("");
+
+    let html = `<p class="trace-culture__context">${esc(enriched.context)}</p>`;
+    if (facts) {
+      html += `<div class="trace-culture__block">
+        <h4 class="trace-culture__bh"><i class="ph ph-calendar-blank"></i> Dates-clés à retenir</h4>
+        <ul class="trace-culture__facts">${facts}</ul>
+      </div>`;
+    }
+    if (figures) {
+      html += `<div class="trace-culture__block">
+        <h4 class="trace-culture__bh"><i class="ph ph-users"></i> Personnages-clés</h4>
+        <ul class="trace-culture__people">${figures}</ul>
+      </div>`;
+    }
+    if (places) {
+      html += `<div class="trace-culture__block">
+        <h4 class="trace-culture__bh"><i class="ph ph-map-pin"></i> Lieux à connaître</h4>
+        <ul class="trace-culture__places">${places}</ul>
+      </div>`;
+    }
+    return html;
+  }
+
+  // Fallback : si pas de données enrichies, split du seq.culturel
   const culturel = stripHtml(seq.culturel || "");
   if (!culturel) {
     return `<p class="trace-empty">Repères culturels à compléter en classe.</p>`;
   }
-  // Découper en éléments si possible (séparateurs , ;)
   const items = culturel.split(/[,;]/).map(x => x.trim()).filter(Boolean);
   if (items.length <= 1) {
-    return `<p class="trace-culture__intro">${esc(culturel)}.</p>
-      <p class="trace-culture__hint">
-        <em>Détails et illustrations dans la fiche d'activité PDF.</em>
-      </p>`;
+    return `<p class="trace-culture__intro">${esc(culturel)}.</p>`;
   }
   const lis = items.map(it => `<li>${esc(it)}</li>`).join("");
-  return `
-    <p class="trace-culture__intro">
-      Cette séquence aborde les repères culturels suivants :
-    </p>
-    <ul class="trace-culture__list">${lis}</ul>
-    <p class="trace-culture__hint">
-      <em>Détails, dates, lieux et illustrations dans la fiche
-      d'activité PDF et lors des séances 5 et 6.</em>
-    </p>`;
+  return `<p class="trace-culture__intro">Cette séquence aborde :</p>
+    <ul class="trace-culture__list">${lis}</ul>`;
 }
 
 function renderDocumentSupport(seq) {
