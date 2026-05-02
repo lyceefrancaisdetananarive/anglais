@@ -69,7 +69,8 @@
   function renderRgpdNotice() {
     return `
       <aside class="niveau-notice">
-        <strong>📬 Suivi pédagogique automatique :</strong>
+        <i class="ph ph-envelope-simple ph-icon ph-icon--bf" aria-hidden="true"></i>
+        <strong>Suivi pédagogique automatique :</strong>
         à la fin de chaque <strong>activité d'entraînement</strong> en
         ligne, l'élève reçoit un récapitulatif par e-mail et l'enseignante
         <a href="mailto:salamo.falimanana@egd.mg">Mme FALIMANANA</a>
@@ -115,7 +116,7 @@
       <section aria-labelledby="programme-title" class="niveau-section">
         <div class="niveau-section__header">
           <h2 id="programme-title" class="section-title">
-            <span class="niveau-section__icon" aria-hidden="true">📅</span>
+            <i class="ph ph-calendar-blank ph-icon ph-icon--lg niveau-section__icon" aria-hidden="true"></i>
             Au programme cette année
           </h2>
           <p class="niveau-section__intro">
@@ -158,14 +159,14 @@
       data.sequences.forEach(seq => {
         const url = sequenceUrl(key, seq);
         const piliers = [];
-        piliers.push('<span class="seq-pillier">📖 Cours</span>');
-        piliers.push('<span class="seq-pillier">📅 Plan</span>');
-        piliers.push('<span class="seq-pillier">📄 Fiche</span>');
+        piliers.push('<span class="seq-pillier"><i class="ph ph-book-open"></i> Cours</span>');
+        piliers.push('<span class="seq-pillier"><i class="ph ph-list-checks"></i> Plan</span>');
+        piliers.push('<span class="seq-pillier"><i class="ph ph-file-text"></i> Fiche</span>');
         if (seq.statut === "live" && seq.url) {
-          piliers.push('<span class="seq-pillier seq-pillier--active">💻 Activité</span>');
+          piliers.push('<span class="seq-pillier seq-pillier--active"><i class="ph ph-cursor-click"></i> Activité</span>');
         }
-        piliers.push('<span class="seq-pillier">🎯 Tâche</span>');
-        piliers.push('<span class="seq-pillier">📊 Éval</span>');
+        piliers.push('<span class="seq-pillier"><i class="ph ph-target"></i> Tâche</span>');
+        piliers.push('<span class="seq-pillier"><i class="ph ph-chart-bar"></i> Éval</span>');
 
         cards += `
           <a href="${esc(url)}" class="sequence-card glass-card">
@@ -189,7 +190,7 @@
       <section aria-labelledby="seqs-title" class="niveau-section">
         <div class="niveau-section__header">
           <h2 id="seqs-title" class="section-title">
-            <span class="niveau-section__icon" aria-hidden="true">📚</span>
+            <i class="ph ph-books ph-icon ph-icon--lg niveau-section__icon" aria-hidden="true"></i>
             Accès rapide aux séquences
           </h2>
           <p class="niveau-section__intro">
@@ -213,7 +214,7 @@
       <section aria-labelledby="evaluations-title" class="niveau-section">
         <div class="niveau-section__header">
           <h2 id="evaluations-title" class="section-title">
-            <span class="niveau-section__icon" aria-hidden="true">📊</span>
+            <i class="ph ph-chart-bar ph-icon ph-icon--lg niveau-section__icon" aria-hidden="true"></i>
             Évaluations
           </h2>
           <p class="niveau-section__intro">
@@ -226,7 +227,7 @@
         </div>
         <div class="evaluation-grid">
           <article class="glass-card">
-            <h3 class="card__title">📝 Évaluation diagnostique</h3>
+            <h3 class="card__title"><i class="ph ph-clipboard-text ph-icon ph-icon--bf"></i> Évaluation diagnostique</h3>
             <p class="card__description">
               <strong>En début de séquence.</strong> Permet de situer
               les acquis initiaux des élèves sur les <em>activités
@@ -235,7 +236,7 @@
             </p>
           </article>
           <article class="glass-card">
-            <h3 class="card__title">📈 Évaluation formative</h3>
+            <h3 class="card__title"><i class="ph ph-trend-up ph-icon ph-icon--bf"></i> Évaluation formative</h3>
             <p class="card__description">
               <strong>Pendant la séquence.</strong> Les
               <em>activités d'entraînement</em> en ligne (cf. table
@@ -245,7 +246,7 @@
             </p>
           </article>
           <article class="glass-card">
-            <h3 class="card__title">🎯 Évaluation sommative</h3>
+            <h3 class="card__title"><i class="ph ph-target ph-icon ph-icon--accent"></i> Évaluation sommative</h3>
             <p class="card__description">
               <strong>En fin de séquence.</strong> La <em>tâche finale</em>
               (production écrite, expression orale en continu,

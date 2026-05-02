@@ -3,7 +3,7 @@
    Mme FALIMANANA · Système de design : DSFR + thème LFT
    =========================================================
    Sommaire :
-   1. Polices Marianne
+   1. Polices Marianne + Phosphor Icons
    2. Tokens DSFR + LFT (couleurs, espacements, typo)
    3. Reset & base
    4. Mise en page (grid, container)
@@ -12,6 +12,24 @@
    7. Utilitaires & accessibilité
    8. Responsive
    ========================================================= */
+
+/* ==== Phosphor Icons (style régulier, design minimaliste) === */
+@import url("https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css");
+
+/* Style commun aux icônes pédagogiques */
+.ph-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -0.15em;
+  font-size: 1.15em;
+  line-height: 1;
+  color: currentColor;
+}
+.ph-icon--lg { font-size: 1.5em; }
+.ph-icon--xl { font-size: 2em; }
+.ph-icon--accent { color: var(--lft-magenta); }
+.ph-icon--bf { color: var(--bf-500); }
 
 /* ==== 1. POLICES MARIANNE ================================ */
 @font-face {
@@ -1822,6 +1840,112 @@ figcaption {
   font-size: var(--font-size-md);
   color: var(--bf-500);
   font-weight: 700;
+}
+
+
+/* ==== 7quinquies. BIBLIOTHÈQUE PDF (40 fiches) =========== */
+
+.fiche-lib-cycle {
+  margin-bottom: var(--space-7);
+}
+.fiche-lib-niveau {
+  margin-bottom: var(--space-6);
+}
+.fiche-lib-niveau__header {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--grey-200);
+}
+.fiche-lib-niveau__title {
+  font-size: var(--font-size-xl);
+  color: var(--bf-500);
+  margin: 0 0 var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.fiche-lib-niveau__count {
+  font-size: var(--font-size-xs);
+  background: var(--lft-magenta);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-weight: 700;
+  margin-left: auto;
+}
+.fiche-lib-niveau__intro {
+  margin: 0;
+  color: var(--grey-700);
+  font-size: var(--font-size-sm);
+}
+
+/* Carte fiche dans la bibliothèque */
+.fiche-lib-card {
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid var(--lft-magenta);
+}
+.fiche-lib-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+.fiche-lib-card__niveau {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--bf-500);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.fiche-lib-card__cecrl {
+  background: var(--bf-100);
+  color: var(--bf-500);
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: var(--font-size-xs);
+}
+.fiche-lib-card__title {
+  font-size: var(--font-size-md);
+  color: var(--bf-500);
+  margin: 0 0 var(--space-1);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.fiche-lib-card__theme {
+  font-style: italic;
+  color: var(--grey-700);
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-sm);
+  flex-grow: 1;
+}
+.fiche-lib-card__meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--grey-700);
+  margin-bottom: var(--space-3);
+}
+.fiche-lib-card__meta i { color: var(--lft-magenta); margin-right: 2px; }
+.fiche-lib-card__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.fiche-lib-card__actions .btn {
+  flex: 1 1 auto;
+  font-size: var(--font-size-xs);
+  padding: var(--space-2) var(--space-3);
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 
