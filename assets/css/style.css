@@ -1373,8 +1373,20 @@ figcaption {
   margin-bottom: var(--space-3);
   position: relative;
 }
+/* Tous les éléments enfants du hero : forcer blanc pour contraste
+   (h1 hériterait sinon de la règle globale h1{color:bf-500}) */
+.seq-hero,
+.seq-hero h1,
+.seq-hero h2,
+.seq-hero p,
+.seq-hero span,
+.seq-hero a {
+  color: white;
+}
+
 .seq-hero__num {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
   padding: 4px 14px;
   border-radius: 99px;
   font-size: var(--font-size-sm);
@@ -1384,7 +1396,7 @@ figcaption {
 }
 .seq-hero__niveau {
   font-size: var(--font-size-sm);
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.92);
 }
 .seq-hero__title {
   font-size: clamp(1.75rem, 4vw, 2.75rem);
@@ -1392,10 +1404,12 @@ figcaption {
   margin: 0 0 var(--space-2);
   line-height: 1.15;
   position: relative;
+  color: white;          /* override global h1 { color: var(--bf-500) } */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 .seq-hero__theme {
   font-size: var(--font-size-lg);
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.96);
   font-style: italic;
   margin: 0 0 var(--space-3);
   position: relative;
@@ -1407,18 +1421,20 @@ figcaption {
   position: relative;
 }
 .seq-tag {
-  background: rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
   padding: 6px 14px;
   border-radius: 99px;
   font-size: var(--font-size-xs);
   font-weight: 600;
   letter-spacing: 0.5px;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 .seq-tag--cecrl {
   background: white;
   color: var(--bf-500);
   border-color: white;
+  font-weight: 700;
 }
 
 /* Sommaire / table des matières */
@@ -1616,11 +1632,172 @@ figcaption {
   font-weight: 700;
 }
 
-/* Cours / Leçon : grille de cartes */
+/* Cours / Leçon : grille de cartes (legacy) */
 .seq-lesson-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-4);
+}
+
+/* === TRACE ÉCRITE — leçon enrichie (cartes structurées) === */
+.trace-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.trace-card {
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-top: 4px solid var(--bf-500);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+}
+.trace-card--lex  { border-top-color: var(--bf-500); }
+.trace-card--gram { border-top-color: var(--lft-magenta); }
+.trace-card--cult { border-top-color: var(--or, #C9A027); }
+
+.trace-card__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--grey-200);
+}
+.trace-card__title {
+  font-size: var(--font-size-md);
+  color: var(--bf-500);
+  margin: 0;
+  font-weight: 700;
+}
+.trace-card__intro {
+  font-size: var(--font-size-sm);
+  color: var(--grey-700);
+  margin: 0 0 var(--space-2);
+}
+.trace-card__intro strong { color: var(--bf-500); }
+.trace-card__hint {
+  font-size: var(--font-size-xs);
+  color: var(--grey-700);
+  margin: var(--space-3) 0 0;
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--grey-200);
+  font-style: italic;
+}
+.trace-card__hint a { color: var(--lft-magenta); font-weight: 600; }
+
+/* Liste de mémo lexical — colonnes responsive */
+.trace-lex-list {
+  list-style: none;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  columns: 2;
+  column-gap: var(--space-3);
+}
+.trace-lex-list li {
+  padding: 4px 0 4px var(--space-3);
+  position: relative;
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+  break-inside: avoid;
+}
+.trace-lex-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--bf-500);
+  font-weight: 700;
+}
+
+/* Faits de langue — règle + exemples */
+.trace-grammar__rule {
+  background: var(--bf-100);
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--bf-500);
+  border-radius: var(--radius-sm);
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+}
+.trace-grammar__lead {
+  font-size: var(--font-size-xs);
+  color: var(--grey-700);
+  margin: 0 0 var(--space-2);
+  font-style: italic;
+}
+.trace-grammar__examples ul {
+  margin: 0;
+  padding-left: var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+}
+.trace-grammar__examples li {
+  margin-bottom: 4px;
+  padding-left: 2px;
+}
+.trace-grammar__examples em { color: var(--lft-magenta); }
+
+/* Repères culturels */
+.trace-culture__intro {
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+  margin: 0 0 var(--space-2);
+  line-height: 1.5;
+}
+.trace-culture__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+}
+.trace-culture__list li {
+  padding: 4px 0 4px var(--space-3);
+  position: relative;
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+}
+.trace-culture__list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--or, #C9A027);
+  font-weight: 700;
+}
+.trace-culture__hint {
+  font-size: var(--font-size-xs);
+  color: var(--grey-700);
+  margin: var(--space-2) 0 0;
+  font-style: italic;
+}
+
+/* Conseil de méthode */
+.trace-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: linear-gradient(135deg, var(--info-100, #E5F1F7), white);
+  border-left: 4px solid var(--bf-500);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-top: var(--space-3);
+}
+.trace-tip i { font-size: 1.5em; flex-shrink: 0; padding-top: 2px; }
+.trace-tip p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--grey-900);
+}
+.trace-tip strong { color: var(--bf-500); }
+.trace-tip a { color: var(--lft-magenta); font-weight: 600; }
+
+.trace-empty {
+  font-size: var(--font-size-sm);
+  color: var(--grey-700);
+  font-style: italic;
+  margin: 0;
 }
 .seq-lesson-card {
   background: linear-gradient(135deg, white, var(--bf-100));
@@ -1771,7 +1948,7 @@ figcaption {
 .seq-task-card__criteria li { margin-bottom: 4px; }
 .seq-task-card__criteria strong { color: var(--lft-magenta); }
 
-/* Évaluations */
+/* Évaluations (legacy — conservé) */
 .seq-eval-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1794,6 +1971,113 @@ figcaption {
   color: var(--grey-700);
   line-height: 1.5;
 }
+
+/* Cartes des 3 évaluations PDF par séquence */
+.eval-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.eval-card {
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-top: 4px solid var(--bf-500);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+.eval-card--diag    { border-top-color: var(--bf-500); }
+.eval-card--form    { border-top-color: var(--lft-magenta); }
+.eval-card--somm    { border-top-color: var(--error-500, #C8102E); }
+
+.eval-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--grey-200);
+}
+.eval-card__title {
+  font-size: var(--font-size-md);
+  color: var(--bf-500);
+  margin: 0;
+  font-weight: 700;
+}
+.eval-card--form .eval-card__title { color: var(--lft-magenta); }
+.eval-card--somm .eval-card__title { color: var(--error-500, #C8102E); }
+
+.eval-card__duree {
+  font-size: var(--font-size-xs);
+  background: var(--grey-100);
+  color: var(--grey-700);
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.eval-card__moment {
+  font-size: var(--font-size-xs);
+  color: var(--grey-700);
+  margin: 0 0 var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.eval-card__intro {
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+  line-height: 1.5;
+  margin: 0 0 var(--space-3);
+  flex-grow: 1;
+}
+.eval-card__intro strong { color: var(--bf-500); }
+.eval-card--form .eval-card__intro strong { color: var(--lft-magenta); }
+.eval-card--somm .eval-card__intro strong { color: var(--error-500, #C8102E); }
+
+.eval-card__btn {
+  font-size: var(--font-size-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.eval-card--form .eval-card__btn {
+  background: var(--lft-magenta);
+}
+.eval-card--form .eval-card__btn:hover {
+  background: var(--lft-magenta-dark, #B8005A);
+}
+.eval-card--somm .eval-card__btn {
+  background: var(--error-500, #C8102E);
+}
+.eval-card--somm .eval-card__btn:hover {
+  background: var(--error-700, #9B0E22);
+}
+
+/* Astuce d'évaluation */
+.eval-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: linear-gradient(135deg, var(--info-100, #E5F1F7), white);
+  border-left: 4px solid var(--bf-500);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-top: var(--space-2);
+}
+.eval-tip i { font-size: 1.4em; flex-shrink: 0; padding-top: 2px; }
+.eval-tip p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--grey-900);
+}
+.eval-tip strong { color: var(--bf-500); }
+.eval-tip a { color: var(--lft-magenta); font-weight: 600; }
 
 /* Navigation séquence prev/next */
 .seq-nav {

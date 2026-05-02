@@ -57,7 +57,7 @@ BLEU_PALE   = HexColor("#E5F1F7")
 
 # === CHEMINS ============================================================
 ROOT      = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOGO_LFT  = os.path.join(ROOT, "assets", "img", "logo-lft.png")
+LOGO_LFT  = os.path.join(ROOT, "assets", "img", "logo-lft-rond.png")
 LOGO_AEFE = os.path.join(ROOT, "assets", "img", "logo-aefe-egd.png")
 OUT_DIR   = os.path.dirname(__file__)
 
