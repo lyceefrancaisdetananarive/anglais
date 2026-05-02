@@ -887,11 +887,25 @@ import re
 
 PROGRESSION_PATH = os.path.join(ROOT, "assets", "data", "progression.json")
 GRAMMAR_PATH     = os.path.join(ROOT, "assets", "data", "grammar-templates.json")
+LEXIQUE_PATH     = os.path.join(ROOT, "assets", "data", "lexique-sequences.json")
 BASE_URL = "https://lyceefrancaisdetananarive.github.io/anglais"
 
 # Charge les templates grammaticaux (mots-clés → 3 exemples canoniques)
 with open(GRAMMAR_PATH, "r", encoding="utf-8") as _f:
     GRAMMAR_TEMPLATES = json.load(_f)
+
+# Lexique anglais authentique par séquence (titre → liste [en, ipa, fr])
+with open(LEXIQUE_PATH, "r", encoding="utf-8") as _f:
+    LEXIQUE_SEQUENCES = json.load(_f)
+
+
+def get_lexique_for(seq_titre):
+    """Retourne le lexique enrichi (en/ipa/fr) si défini pour le titre,
+    sinon None."""
+    rows = LEXIQUE_SEQUENCES.get(seq_titre)
+    if not rows or not isinstance(rows, list):
+        return None
+    return [tuple(r) for r in rows]
 
 
 def match_grammar_template(langue_raw):
@@ -1081,7 +1095,8 @@ def auto_fill_ctx(niveau_key, seq):
         "nb_seances": "6 à 8 séances",
         "axe_court": axe_court(seq.get("axe", "")),
         "intro_lines": autobuild_intro_lines(seq, info["label"]),
-        "vocab": autobuild_vocab(strip_html(seq.get("lexique", ""))),
+        # Priorité au lexique enrichi (anglais authentique avec phonétique)
+        "vocab": get_lexique_for(seq["titre"]) or autobuild_vocab(strip_html(seq.get("lexique", ""))),
         "doc_titre": f"Discover — {theme_clean[:50] or seq['titre'][:50]}",
         "doc_text": autobuild_doc_text(seq, info, theme_clean),
         "questions": autobuild_questions_specific(seq, theme_clean),

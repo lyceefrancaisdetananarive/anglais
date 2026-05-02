@@ -60,7 +60,21 @@ ROOT      = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOGO_LFT  = os.path.join(ROOT, "assets", "img", "logo-lft-rond.png")
 LOGO_AEFE = os.path.join(ROOT, "assets", "img", "logo-aefe-egd.png")
 PROG_PATH = os.path.join(ROOT, "assets", "data", "progression.json")
+LEX_PATH  = os.path.join(ROOT, "assets", "data", "lexique-sequences.json")
 OUT_DIR   = os.path.dirname(__file__)
+
+# Lexique enrichi (titre → liste [en, ipa, fr])
+with open(LEX_PATH, "r", encoding="utf-8") as _f:
+    LEXIQUE_SEQUENCES = json.load(_f)
+
+
+def get_lex_words(seq_titre, n=8):
+    """Retourne jusqu'à n mots anglais authentiques (sans IPA/FR)
+    pour la séquence donnée. Fallback sur split du seq.lexique."""
+    rows = LEXIQUE_SEQUENCES.get(seq_titre)
+    if isinstance(rows, list) and rows:
+        return [r[0] for r in rows[:n]]
+    return None
 
 
 # ============================================================
@@ -400,7 +414,8 @@ def make_grid_competences(critères):
 # ============================================================
 def build_diagnostique(ctx, seq):
     """5 questions courtes : QCM lexique + V/F culturel + amorce production."""
-    lex = split_lex(seq.get("lexique", ""), 6)
+    # Priorité au lexique enrichi (anglais authentique)
+    lex = get_lex_words(seq["titre"], 6) or split_lex(seq.get("lexique", ""), 6)
     theme = strip_html(seq.get("theme") or seq.get("titre"))
     culturel = strip_html(seq.get("culturel", ""))
 
@@ -457,7 +472,8 @@ def build_diagnostique(ctx, seq):
 
 def build_formative(ctx, seq):
     """Lexique + grammaire + mini-compréhension."""
-    lex = split_lex(seq.get("lexique", ""), 8)
+    # Priorité au lexique enrichi (anglais authentique)
+    lex = get_lex_words(seq["titre"], 8) or split_lex(seq.get("lexique", ""), 8)
     langue = strip_html(seq.get("langue", "structures grammaticales"))
     theme = strip_html(seq.get("theme") or seq.get("titre"))
 

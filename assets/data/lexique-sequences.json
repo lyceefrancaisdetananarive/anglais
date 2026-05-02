@@ -1,0 +1,523 @@
+{
+  "_doc": "Lexique anglais authentique par séquence. Format : [anglais, phonétique IPA, français]. Indexé par titre EXACT de la séquence (champ 'titre' dans progression-data.js). 40 séquences × 8-10 mots = ~320 entrées.",
+
+  "Welcome to Big Ben Academy!": [
+    ["hello / hi",         "/həˈləʊ/, /haɪ/",        "bonjour / salut"],
+    ["my name is…",        "/maɪ ˈneɪm ɪz/",         "je m'appelle…"],
+    ["I'm … years old",    "/aɪm ˈjɪəz əʊld/",       "j'ai … ans"],
+    ["a pupil",            "/ə ˈpjuːpəl/",           "un·e élève"],
+    ["a classroom",        "/ə ˈklɑːsruːm/",         "une salle de classe"],
+    ["a timetable",        "/ə ˈtaɪmˌteɪbəl/",       "un emploi du temps"],
+    ["Monday — Friday",    "/ˈmʌndi/ — /ˈfraɪdi/",   "lundi — vendredi"],
+    ["English",            "/ˈɪŋɡlɪʃ/",              "l'anglais"],
+    ["Maths",              "/mæθs/",                 "les maths"],
+    ["PE (physical ed.)",  "/piː iː/",               "EPS"]
+  ],
+
+  "My Family Tree": [
+    ["a family",           "/ə ˈfæməli/",            "une famille"],
+    ["a brother",          "/ə ˈbrʌðə/",             "un frère"],
+    ["a sister",           "/ə ˈsɪstə/",             "une sœur"],
+    ["a mother / mum",     "/ə ˈmʌðə/, /mʌm/",       "une mère / maman"],
+    ["a father / dad",     "/ə ˈfɑːðə/, /dæd/",      "un père / papa"],
+    ["grandparents",       "/ˈɡrænˌpeərənts/",       "les grands-parents"],
+    ["a cousin",           "/ə ˈkʌzən/",             "un·e cousin·e"],
+    ["a pet",              "/ə pet/",                "un animal de compagnie"],
+    ["I have got",         "/aɪ hæv ɡɒt/",           "j'ai (possession)"],
+    ["my / your / his / her", "/maɪ jɔː hɪz hɜː/",   "mon / ton / son (à lui/elle)"]
+  ],
+
+  "What I Love": [
+    ["I like / I love",    "/aɪ laɪk/, /aɪ lʌv/",    "j'aime / j'adore"],
+    ["I don't like",       "/aɪ dəʊnt laɪk/",        "je n'aime pas"],
+    ["I hate",             "/aɪ heɪt/",              "je déteste"],
+    ["sport",              "/spɔːt/",                "le sport"],
+    ["music",              "/ˈmjuːzɪk/",             "la musique"],
+    ["food",               "/fuːd/",                 "la nourriture"],
+    ["a hobby",            "/ə ˈhɒbi/",              "un passe-temps"],
+    ["because",            "/bɪˈkɒz/",               "parce que"],
+    ["fun",                "/fʌn/",                  "amusant·e"],
+    ["boring",             "/ˈbɔːrɪŋ/",              "ennuyeux·se"]
+  ],
+
+  "Let's Eat!": [
+    ["food",               "/fuːd/",                 "la nourriture"],
+    ["breakfast",          "/ˈbrekfəst/",            "le petit-déjeuner"],
+    ["lunch",              "/lʌntʃ/",                "le déjeuner"],
+    ["dinner",             "/ˈdɪnə/",                "le dîner"],
+    ["a fruit",            "/ə fruːt/",              "un fruit"],
+    ["a vegetable",        "/ə ˈvedʒtəbəl/",         "un légume"],
+    ["bread",              "/bred/",                 "le pain"],
+    ["water",              "/ˈwɔːtə/",               "l'eau"],
+    ["I'm hungry",         "/aɪm ˈhʌŋɡri/",          "j'ai faim"],
+    ["I'm thirsty",        "/aɪm ˈθɜːsti/",          "j'ai soif"]
+  ],
+
+  "Everyday Life in London": [
+    ["a city",             "/ə ˈsɪti/",              "une ville"],
+    ["a tube / underground","/ə tjuːb/",             "un métro"],
+    ["a bus",              "/ə bʌs/",                "un bus"],
+    ["a park",             "/ə pɑːk/",               "un parc"],
+    ["a museum",           "/ə mjuːˈzɪəm/",          "un musée"],
+    ["a market",           "/ə ˈmɑːkɪt/",            "un marché"],
+    ["a tourist",          "/ə ˈtʊərɪst/",           "un·e touriste"],
+    ["a tradition",        "/ə trəˈdɪʃən/",          "une tradition"],
+    ["fish and chips",     "/fɪʃ ən tʃɪps/",         "poisson-frites (plat anglais)"],
+    ["the Thames",         "/ðə temz/",              "la Tamise"]
+  ],
+
+  "My Holidays in Madagascar": [
+    ["holidays",           "/ˈhɒlədeɪz/",            "les vacances"],
+    ["the weather",        "/ðə ˈweðə/",             "le temps (météo)"],
+    ["sunny",              "/ˈsʌni/",                "ensoleillé"],
+    ["rainy",              "/ˈreɪni/",               "pluvieux"],
+    ["a beach",            "/ə biːtʃ/",              "une plage"],
+    ["a lemur",            "/ə ˈliːmə/",             "un lémurien"],
+    ["a baobab",           "/ə ˈbeɪəʊbæb/",          "un baobab"],
+    ["I can swim",         "/aɪ kæn swɪm/",          "je sais / peux nager"],
+    ["I am going to visit", "/aɪ æm ˈɡəʊɪŋ tʊ/",     "je vais visiter (futur)"],
+    ["a mountain",         "/ə ˈmaʊntən/",           "une montagne"]
+  ],
+
+  "Stuck at Big Bay School": [
+    ["a school",           "/ə skuːl/",              "une école"],
+    ["a classmate",        "/ə ˈklɑːsmeɪt/",         "un·e camarade de classe"],
+    ["a uniform",          "/ə ˈjuːnɪfɔːm/",         "un uniforme"],
+    ["bigger than",        "/ˈbɪɡə ðæn/",            "plus grand que"],
+    ["smaller than",       "/ˈsmɔːlə ðæn/",          "plus petit que"],
+    ["a marae (Māori)",    "/ə ˈmɑːraɪ/",            "lieu de rassemblement māori"],
+    ["a haka",             "/ə ˈhɑːkə/",             "danse cérémonielle māorie"],
+    ["kia ora",            "/ˌkiːə ˈɔːrə/",          "bonjour (en māori)"],
+    ["to be stuck",        "/tə biː stʌk/",          "être bloqué·e"],
+    ["a backpack",         "/ə ˈbækpæk/",            "un sac à dos"]
+  ],
+
+  "Sport Heroes": [
+    ["a hero",             "/ə ˈhɪərəʊ/",            "un héros"],
+    ["a champion",         "/ə ˈtʃæmpiən/",          "un·e champion·ne"],
+    ["a record",           "/ə ˈrekɔːd/",            "un record"],
+    ["to train",           "/tə treɪn/",             "s'entraîner"],
+    ["a medal",            "/ə ˈmedəl/",             "une médaille"],
+    ["the Olympics",       "/ði əˈlɪmpɪks/",         "les Jeux Olympiques"],
+    ["talent",             "/ˈtælənt/",              "le talent"],
+    ["determined",         "/dɪˈtɜːmɪnd/",           "déterminé·e"],
+    ["to win / lose",      "/tə wɪn/, /luːz/",       "gagner / perdre"],
+    ["inspiration",        "/ˌɪnspɪˈreɪʃən/",        "l'inspiration"]
+  ],
+
+  "Climate Action Now": [
+    ["climate change",     "/ˈklaɪmət tʃeɪndʒ/",     "le changement climatique"],
+    ["global warming",     "/ˈɡləʊbəl ˈwɔːmɪŋ/",     "le réchauffement climatique"],
+    ["pollution",          "/pəˈluːʃən/",            "la pollution"],
+    ["to recycle",         "/tə riːˈsaɪkəl/",        "recycler"],
+    ["energy",             "/ˈenədʒi/",              "l'énergie"],
+    ["sustainable",        "/səˈsteɪnəbəl/",         "durable"],
+    ["a solution",         "/ə səˈluːʃən/",          "une solution"],
+    ["should + bv",        "/ʃʊd/",                  "devrait + base verbale"],
+    ["must + bv",          "/mʌst/",                 "doit + base verbale (obligation)"],
+    ["a future",           "/ə ˈfjuːtʃə/",           "un avenir"]
+  ],
+
+  "An Australian Journey": [
+    ["a journey",          "/ə ˈdʒɜːni/",            "un voyage"],
+    ["the outback",        "/ði ˈaʊtbæk/",           "l'arrière-pays australien"],
+    ["the Aborigines",     "/ði ˌæbəˈrɪdʒəniːz/",    "les Aborigènes"],
+    ["Uluru",              "/ˌuːləˈruː/",            "Uluru (rocher sacré)"],
+    ["a kangaroo",         "/ə ˌkæŋɡəˈruː/",         "un kangourou"],
+    ["a koala",            "/ə kəʊˈɑːlə/",           "un koala"],
+    ["the Dreamtime",      "/ðə ˈdriːmtaɪm/",        "le Temps du Rêve"],
+    ["Sydney",             "/ˈsɪdni/",               "Sydney"],
+    ["a desert",           "/ə ˈdezət/",             "un désert"],
+    ["amazing",            "/əˈmeɪzɪŋ/",             "incroyable, étonnant·e"]
+  ],
+
+  "Music Through the Decades": [
+    ["a decade",           "/ə ˈdekeɪd/",            "une décennie"],
+    ["a song",             "/ə sɒŋ/",                "une chanson"],
+    ["a band",             "/ə bænd/",               "un groupe (musique)"],
+    ["rock'n'roll",        "/ˌrɒk ən ˈrəʊl/",        "le rock'n'roll"],
+    ["reggae",             "/ˈreɡeɪ/",               "le reggae"],
+    ["hip-hop",            "/ˈhɪp hɒp/",             "le hip-hop"],
+    ["a chart",            "/ə tʃɑːt/",              "un classement"],
+    ["I have listened to", "/aɪ hæv ˈlɪsənd tʊ/",    "j'ai écouté (present perfect)"],
+    ["since / for",        "/sɪns/, /fɔː/",          "depuis (date) / pendant"],
+    ["a salegy (Mada)",    "/ə ˈsalɛɡi/",            "salegy (musique malgache)"]
+  ],
+
+  "My Town, My Story": [
+    ["a town",             "/ə taʊn/",               "une ville"],
+    ["a neighbourhood",    "/ə ˈneɪbəhʊd/",          "un quartier"],
+    ["there is / are",     "/ðeə ɪz/, /ðeə ɑː/",     "il y a (sing. / pl.)"],
+    ["a hill",             "/ə hɪl/",                "une colline"],
+    ["a market",           "/ə ˈmɑːkɪt/",            "un marché"],
+    ["a palace",           "/ə ˈpæləs/",             "un palais"],
+    ["a monument",         "/ə ˈmɒnjəmənt/",         "un monument"],
+    ["I have lived for",   "/aɪ hæv lɪvd fɔː/",      "je vis depuis (durée)"],
+    ["I have lived since", "/aɪ hæv lɪvd sɪns/",     "je vis depuis (date)"],
+    ["a story",            "/ə ˈstɔːri/",            "une histoire"]
+  ],
+
+  "Matilda — Roald Dahl (1988)": [
+    ["a novel",            "/ə ˈnɒvəl/",             "un roman"],
+    ["a chapter",          "/ə ˈtʃæptə/",            "un chapitre"],
+    ["a character",        "/ə ˈkærɪktə/",           "un personnage"],
+    ["clever",             "/ˈklevə/",               "intelligent·e"],
+    ["a bully",            "/ə ˈbʊli/",              "un·e harceleur·se"],
+    ["to read / read / read","/tə riːd/red/red/",    "lire (verbe irrégulier)"],
+    ["a library",          "/ə ˈlaɪbrəri/",          "une bibliothèque"],
+    ["a power",            "/ə ˈpaʊə/",              "un pouvoir"],
+    ["a teacher",          "/ə ˈtiːtʃə/",            "un·e enseignant·e"],
+    ["to bully",           "/tə ˈbʊli/",             "harceler"]
+  ],
+
+  "The Giver — Lois Lowry (1993)": [
+    ["a dystopia",         "/ə dɪsˈtəʊpiə/",         "une dystopie"],
+    ["Sameness",           "/ˈseɪmnəs/",             "uniformité (concept clé)"],
+    ["a release",          "/ə rɪˈliːs/",            "« release » (euphémisme)"],
+    ["a memory",           "/ə ˈmeməri/",            "un souvenir, une mémoire"],
+    ["the Receiver",       "/ðə rɪˈsiːvə/",          "le Receveur (rôle de Jonas)"],
+    ["conformity",         "/kənˈfɔːmɪti/",          "le conformisme"],
+    ["free will",          "/friː wɪl/",             "le libre arbitre"],
+    ["conditioning",       "/kənˈdɪʃənɪŋ/",          "le conditionnement"],
+    ["Stirrings",          "/ˈstɜːrɪŋz/",            "« émois » (pulsions)"],
+    ["rebellion",          "/rɪˈbeljən/",            "rébellion, révolte"]
+  ],
+
+  "British Institutions": [
+    ["the Crown",          "/ðə kraʊn/",             "la Couronne"],
+    ["a monarch",          "/ə ˈmɒnək/",             "un·e monarque"],
+    ["the Parliament",     "/ðə ˈpɑːləmənt/",        "le Parlement"],
+    ["the House of Commons","/ðə haʊs əv ˈkɒmənz/",  "la Chambre des Communes"],
+    ["the House of Lords", "/ðə haʊs əv lɔːdz/",     "la Chambre des Lords"],
+    ["a Prime Minister",   "/ə praɪm ˈmɪnɪstə/",     "un·e Premier·e ministre"],
+    ["Brexit",             "/ˈbreksɪt/",             "le Brexit (sortie de l'UE)"],
+    ["the Commonwealth",   "/ðə ˈkɒmənwelθ/",        "le Commonwealth"],
+    ["a referendum",       "/ə ˌrefəˈrendəm/",       "un référendum"],
+    ["democracy",          "/dɪˈmɒkrəsi/",           "la démocratie"]
+  ],
+
+  "Britain & Europe": [
+    ["an invasion",        "/ən ɪnˈveɪʒən/",         "une invasion"],
+    ["a settlement",       "/ə ˈsetəlmənt/",         "une colonie / implantation"],
+    ["the Crown",          "/ðə kraʊn/",             "la Couronne"],
+    ["the Empire",         "/ði ˈempaɪə/",           "l'Empire"],
+    ["the Reformation",    "/ðə ˌrefəˈmeɪʃən/",      "la Réforme protestante"],
+    ["an alliance",        "/ən əˈlaɪəns/",          "une alliance"],
+    ["a treaty",           "/ə ˈtriːti/",            "un traité"],
+    ["a continent",        "/ə ˈkɒntɪnənt/",         "un continent"],
+    ["Brexit",             "/ˈbreksɪt/",             "le Brexit"],
+    ["a referendum",       "/ə ˌrefəˈrendəm/",       "un référendum"]
+  ],
+
+  "Ireland: A Story of Resilience": [
+    ["Ireland",            "/ˈaɪələnd/",             "l'Irlande"],
+    ["the Irish",          "/ði ˈaɪərɪʃ/",           "les Irlandais"],
+    ["a famine",           "/ə ˈfæmɪn/",             "une famine"],
+    ["emigration",         "/ˌemɪˈɡreɪʃən/",         "l'émigration"],
+    ["independence",       "/ˌɪndɪˈpendəns/",        "l'indépendance"],
+    ["resilience",         "/rɪˈzɪliəns/",           "la résilience"],
+    ["Gaelic",             "/ˈɡeɪlɪk/",              "le gaélique"],
+    ["a tradition",        "/ə trəˈdɪʃən/",          "une tradition"],
+    ["the Troubles",       "/ðə ˈtrʌbəlz/",          "les « Troubles » (NI)"],
+    ["the Republic",       "/ðə rɪˈpʌblɪk/",         "la République"]
+  ],
+
+  "Migrations & Identities": [
+    ["a migration",        "/ə maɪˈɡreɪʃən/",        "une migration"],
+    ["an immigrant",       "/ən ˈɪmɪɡrənt/",         "un·e immigré·e"],
+    ["an emigrant",        "/ən ˈemɪɡrənt/",         "un·e émigré·e"],
+    ["a refugee",          "/ə ˌrefjʊˈdʒiː/",        "un·e réfugié·e"],
+    ["a border",           "/ə ˈbɔːdə/",             "une frontière"],
+    ["identity",           "/aɪˈdentəti/",           "l'identité"],
+    ["a culture",          "/ə ˈkʌltʃə/",            "une culture"],
+    ["a heritage",         "/ə ˈherɪtɪdʒ/",          "un héritage"],
+    ["multicultural",      "/ˌmʌltiˈkʌltʃərəl/",     "multiculturel·le"],
+    ["belonging",          "/bɪˈlɒŋɪŋ/",             "appartenance"]
+  ],
+
+  "Welcome to America": [
+    ["the USA",            "/ði juː es eɪ/",         "les États-Unis"],
+    ["a state",            "/ə steɪt/",              "un État"],
+    ["the President",      "/ðə ˈprezɪdənt/",        "le Président"],
+    ["the White House",    "/ðə waɪt haʊs/",         "la Maison Blanche"],
+    ["the flag",           "/ðə flæɡ/",              "le drapeau"],
+    ["the American Dream", "/ði əˈmerɪkən driːm/",   "le rêve américain"],
+    ["a citizen",          "/ə ˈsɪtɪzən/",           "un·e citoyen·ne"],
+    ["a melting pot",      "/ə ˈmeltɪŋ pɒt/",        "un creuset (mélange)"],
+    ["independence",       "/ˌɪndɪˈpendəns/",        "l'indépendance"],
+    ["a freedom",          "/ə ˈfriːdəm/",           "une liberté"]
+  ],
+
+  "Street Art: The Voice of the Wall": [
+    ["street art",         "/striːt ɑːt/",           "le street art"],
+    ["a wall",             "/ə wɔːl/",               "un mur"],
+    ["a mural",            "/ə ˈmjʊərəl/",           "une fresque murale"],
+    ["graffiti",           "/ɡrəˈfiːti/",            "les graffitis"],
+    ["a stencil",          "/ə ˈstensəl/",           "un pochoir"],
+    ["a tag",              "/ə tæɡ/",                "un tag"],
+    ["a message",          "/ə ˈmesɪdʒ/",            "un message"],
+    ["a protest",          "/ə ˈprəʊtest/",          "une protestation"],
+    ["Banksy",             "/ˈbæŋksi/",              "Banksy (artiste UK)"],
+    ["urban",              "/ˈɜːbən/",               "urbain·e"]
+  ],
+
+  "Frankenstein — Mary Shelley": [
+    ["a creature",         "/ə ˈkriːtʃə/",           "une créature"],
+    ["a monster",          "/ə ˈmɒnstə/",            "un monstre"],
+    ["a scientist",        "/ə ˈsaɪəntɪst/",         "un·e scientifique"],
+    ["a laboratory",       "/ə ləˈbɒrətəri/",        "un laboratoire"],
+    ["an experiment",      "/ən ɪkˈsperɪmənt/",      "une expérience"],
+    ["responsibility",     "/rɪˌspɒnsəˈbɪləti/",     "la responsabilité"],
+    ["a soul",             "/ə səʊl/",               "une âme"],
+    ["loneliness",         "/ˈləʊnlinəs/",           "la solitude"],
+    ["the Gothic",         "/ðə ˈɡɒθɪk/",            "le gothique (genre)"],
+    ["to create",          "/tə kriˈeɪt/",           "créer"]
+  ],
+
+  "The Secret of Jatbula Trail": [
+    ["a trail",            "/ə treɪl/",              "un sentier"],
+    ["a secret",           "/ə ˈsiːkrɪt/",           "un secret"],
+    ["the bush",           "/ðə bʊʃ/",               "la brousse australienne"],
+    ["an ancestor",        "/ən ˈænsestə/",          "un·e ancêtre"],
+    ["a ranger",           "/ə ˈreɪndʒə/",           "un·e ranger"],
+    ["should / must",      "/ʃʊd, mʌst/",            "devoir (conseil / obligation)"],
+    ["yesterday",          "/ˈjestədeɪ/",            "hier"],
+    ["a clue",             "/ə kluː/",               "un indice"],
+    ["a campsite",         "/ə ˈkæmpsaɪt/",          "un camping"],
+    ["wildlife",           "/ˈwaɪldlaɪf/",           "la faune sauvage"]
+  ],
+
+  "Women Who Changed History": [
+    ["a woman",            "/ə ˈwʊmən/",             "une femme"],
+    ["women",              "/ˈwɪmɪn/",               "des femmes"],
+    ["history",            "/ˈhɪstəri/",             "l'histoire"],
+    ["a right",            "/ə raɪt/",               "un droit"],
+    ["equality",           "/ɪˈkwɒləti/",            "l'égalité"],
+    ["to fight",           "/tə faɪt/",              "se battre"],
+    ["a movement",         "/ə ˈmuːvmənt/",          "un mouvement"],
+    ["to change",          "/tə tʃeɪndʒ/",           "changer"],
+    ["a leader",           "/ə ˈliːdə/",             "un·e leader"],
+    ["a Nobel prize",      "/ə nəʊˈbel praɪz/",      "un prix Nobel"]
+  ],
+
+  "My DNB Project": [
+    ["a project",          "/ə ˈprɒdʒekt/",          "un projet"],
+    ["a topic",            "/ə ˈtɒpɪk/",             "un sujet"],
+    ["to introduce",       "/tə ˌɪntrəˈdjuːs/",      "présenter"],
+    ["to develop",         "/tə dɪˈveləp/",          "développer"],
+    ["a conclusion",       "/ə kənˈkluːʒən/",        "une conclusion"],
+    ["a slide",            "/ə slaɪd/",              "une diapositive"],
+    ["an oral",            "/ən ˈɔːrəl/",            "un oral"],
+    ["a question",         "/ə ˈkwestʃən/",          "une question"],
+    ["confident",          "/ˈkɒnfɪdənt/",           "confiant·e"],
+    ["the audience",       "/ði ˈɔːdiəns/",          "le public"]
+  ],
+
+  "The Curious Incident of the Dog in the Night-Time": [
+    ["neurodiversity",     "/ˌnjʊərəʊdaɪˈvɜːsəti/",  "la neurodiversité"],
+    ["autism",             "/ˈɔːtɪzəm/",             "l'autisme"],
+    ["on the spectrum",    "/ɒn ðə ˈspektrəm/",      "sur le spectre autistique"],
+    ["an investigation",   "/ən ɪnˌvestɪˈɡeɪʃən/",   "une enquête"],
+    ["a clue",             "/ə kluː/",               "un indice"],
+    ["a witness",          "/ə ˈwɪtnəs/",            "un·e témoin"],
+    ["first-person",       "/ˌfɜːst ˈpɜːsən/",       "à la première personne"],
+    ["a narrator",         "/ə nəˈreɪtə/",           "un·e narrateur·rice"],
+    ["a perspective",      "/ə pəˈspektɪv/",         "une perspective, point de vue"],
+    ["overwhelmed",        "/ˌəʊvəˈwelmd/",          "submergé·e (par les sens)"]
+  ],
+
+  "US Civil Rights Movement": [
+    ["civil rights",       "/ˈsɪvəl raɪts/",         "les droits civiques"],
+    ["segregation",        "/ˌseɡrɪˈɡeɪʃən/",        "la ségrégation"],
+    ["a march",            "/ə mɑːtʃ/",              "une marche (manifestation)"],
+    ["a boycott",          "/ə ˈbɔɪkɒt/",            "un boycott"],
+    ["a speech",           "/ə spiːtʃ/",             "un discours"],
+    ["Martin Luther King", "/ˈmɑːtɪn ˈluːθə kɪŋ/",   "Martin Luther King"],
+    ["Rosa Parks",         "/ˈrəʊzə pɑːks/",         "Rosa Parks"],
+    ["a dream",            "/ə driːm/",              "un rêve"],
+    ["a struggle",         "/ə ˈstrʌɡəl/",           "une lutte"],
+    ["non-violence",       "/nɒn ˈvaɪələns/",        "la non-violence"]
+  ],
+
+  "Short Stories — Roald Dahl & Neil Gaiman": [
+    ["a short story",      "/ə ʃɔːt ˈstɔːri/",       "une nouvelle"],
+    ["a plot",             "/ə plɒt/",               "une intrigue"],
+    ["a twist",            "/ə twɪst/",              "un retournement"],
+    ["a setting",          "/ə ˈsetɪŋ/",             "un cadre (lieu/époque)"],
+    ["a narrator",         "/ə nəˈreɪtə/",           "un·e narrateur·rice"],
+    ["suspense",           "/səˈspens/",             "le suspense"],
+    ["dark humour",        "/dɑːk ˈhjuːmə/",         "l'humour noir"],
+    ["the supernatural",   "/ðə ˌsuːpəˈnætʃərəl/",   "le surnaturel"],
+    ["a moral",            "/ə ˈmɒrəl/",             "une morale"],
+    ["unexpected",         "/ˌʌnɪkˈspektɪd/",        "inattendu·e"]
+  ],
+
+  "Madagascar's Biodiversity: A Living Laboratory": [
+    ["biodiversity",       "/ˌbaɪəʊdaɪˈvɜːsəti/",    "la biodiversité"],
+    ["endemic",            "/enˈdemɪk/",             "endémique"],
+    ["a species",          "/ə ˈspiːʃiːz/",          "une espèce"],
+    ["a habitat",          "/ə ˈhæbɪtæt/",           "un habitat"],
+    ["deforestation",      "/diːˌfɒrɪˈsteɪʃən/",     "la déforestation"],
+    ["conservation",       "/ˌkɒnsəˈveɪʃən/",        "la conservation"],
+    ["an ecosystem",       "/ən ˈiːkəʊsɪstəm/",      "un écosystème"],
+    ["a lemur",            "/ə ˈliːmə/",             "un lémurien"],
+    ["a baobab",           "/ə ˈbeɪəʊbæb/",          "un baobab"],
+    ["sustainable",        "/səˈsteɪnəbəl/",         "durable"]
+  ],
+
+  "Climate Change & Tropical Cyclones": [
+    ["climate change",     "/ˈklaɪmət tʃeɪndʒ/",     "le changement climatique"],
+    ["a cyclone",          "/ə ˈsaɪkləʊn/",          "un cyclone"],
+    ["greenhouse gas",     "/ˈɡriːnhaʊs ɡæs/",       "gaz à effet de serre"],
+    ["sea level",          "/siː ˈlevəl/",           "le niveau de la mer"],
+    ["to flood",           "/tə flʌd/",              "inonder"],
+    ["a drought",          "/ə draʊt/",              "une sécheresse"],
+    ["resilience",         "/rɪˈzɪliəns/",           "la résilience"],
+    ["mitigation",         "/ˌmɪtɪˈɡeɪʃən/",         "l'atténuation"],
+    ["adaptation",         "/ˌædæpˈteɪʃən/",         "l'adaptation"],
+    ["the IPCC",           "/aɪ piː siː siː/",       "le GIEC"]
+  ],
+
+  "Sustainable Development Goals": [
+    ["the SDGs",           "/es diː dʒiːz/",         "les ODD (objectifs durables)"],
+    ["sustainable",        "/səˈsteɪnəbəl/",         "durable"],
+    ["a goal",             "/ə ɡəʊl/",               "un objectif"],
+    ["poverty",            "/ˈpɒvəti/",              "la pauvreté"],
+    ["inequality",         "/ˌɪnɪˈkwɒləti/",         "l'inégalité"],
+    ["education",          "/ˌedjʊˈkeɪʃən/",         "l'éducation"],
+    ["the UN",             "/ðə juː en/",            "l'ONU"],
+    ["the 2030 Agenda",    "/ðə ˌtwentitiˈθɜːti əˈdʒendə/", "l'Agenda 2030"],
+    ["a stakeholder",      "/ə ˈsteɪkˌhəʊldə/",      "une partie prenante"],
+    ["to commit to",       "/tə kəˈmɪt tʊ/",         "s'engager à"]
+  ],
+
+  "Coral Reefs and Ocean Health": [
+    ["a coral",            "/ə ˈkɒrəl/",             "un corail"],
+    ["a reef",             "/ə riːf/",               "un récif"],
+    ["bleaching",          "/ˈbliːtʃɪŋ/",            "le blanchissement"],
+    ["zooxanthellae",      "/ˌzəʊəzænˈθeliː/",       "les zooxanthelles"],
+    ["acidification",      "/əˌsɪdɪfɪˈkeɪʃən/",      "l'acidification"],
+    ["symbiosis",          "/ˌsɪmbɪˈəʊsɪs/",         "la symbiose"],
+    ["marine life",        "/məˈriːn laɪf/",         "la vie marine"],
+    ["overfishing",        "/ˌəʊvəˈfɪʃɪŋ/",          "la surpêche"],
+    ["a polyp",            "/ə ˈpɒlɪp/",             "un polype"],
+    ["the Great Barrier Reef", "/ðə ɡreɪt ˈbæriə riːf/", "la Grande Barrière de Corail"]
+  ],
+
+  "Towards Terminale: Reading Scientific Papers": [
+    ["a paper",            "/ə ˈpeɪpə/",             "un article (scientifique)"],
+    ["an abstract",        "/ən ˈæbstrækt/",         "un résumé / abstract"],
+    ["peer review",        "/pɪə rɪˈvjuː/",          "évaluation par les pairs"],
+    ["a methodology",      "/ə ˌmeθəˈdɒlədʒi/",      "une méthodologie"],
+    ["a hypothesis",       "/ə haɪˈpɒθəsɪs/",        "une hypothèse"],
+    ["data",               "/ˈdeɪtə/",               "des données"],
+    ["et al.",             "/et ˈæl/",               "et al. (et autres)"],
+    ["DOI",                "/diː əʊ aɪ/",            "DOI (identifiant unique)"],
+    ["Open Access",        "/ˈəʊpən ˈækses/",        "libre accès"],
+    ["a citation",         "/ə saɪˈteɪʃən/",         "une citation"]
+  ],
+
+  "Identities & Exchanges": [
+    ["an identity",        "/ən aɪˈdentəti/",        "une identité"],
+    ["an exchange",        "/ən ɪksˈtʃeɪndʒ/",       "un échange"],
+    ["a diaspora",         "/ə daɪˈæspərə/",         "une diaspora"],
+    ["belonging",          "/bɪˈlɒŋɪŋ/",             "appartenance"],
+    ["a heritage",         "/ə ˈherɪtɪdʒ/",          "un héritage"],
+    ["multiculturalism",   "/ˌmʌltiˈkʌltʃərəlɪzəm/", "le multiculturalisme"],
+    ["a homeland",         "/ə ˈhəʊmlænd/",          "une terre natale"],
+    ["assimilation",       "/əˌsɪmɪˈleɪʃən/",        "l'assimilation"],
+    ["a generation",       "/ə ˌdʒenəˈreɪʃən/",      "une génération"],
+    ["bilingual",          "/baɪˈlɪŋɡwəl/",          "bilingue"]
+  ],
+
+  "Public Space and Private Space": [
+    ["public space",       "/ˈpʌblɪk speɪs/",        "l'espace public"],
+    ["private space",      "/ˈpraɪvət speɪs/",       "l'espace privé"],
+    ["privacy",            "/ˈprɪvəsi/",             "la vie privée"],
+    ["surveillance",       "/səˈveɪləns/",           "la surveillance"],
+    ["a CCTV",             "/siː siː tiː viː/",      "une vidéosurveillance"],
+    ["data protection",    "/ˈdeɪtə prəˈtekʃən/",    "la protection des données"],
+    ["social media",       "/ˈsəʊʃəl ˈmiːdiə/",      "les réseaux sociaux"],
+    ["a public figure",    "/ə ˈpʌblɪk ˈfɪɡə/",      "une personnalité publique"],
+    ["transparency",       "/trænˈspærənsi/",        "la transparence"],
+    ["accountability",     "/əˌkaʊntəˈbɪləti/",      "la responsabilité, redevabilité"]
+  ],
+
+  "Art and Power": [
+    ["art",                "/ɑːt/",                  "l'art"],
+    ["power",              "/ˈpaʊə/",                "le pouvoir"],
+    ["propaganda",         "/ˌprɒpəˈɡændə/",         "la propagande"],
+    ["a portrait",         "/ə ˈpɔːtrɪt/",           "un portrait"],
+    ["a sculpture",        "/ə ˈskʌlptʃə/",          "une sculpture"],
+    ["censorship",         "/ˈsensəʃɪp/",            "la censure"],
+    ["a regime",           "/ə reɪˈʒiːm/",           "un régime (politique)"],
+    ["a critique",         "/ə krɪˈtiːk/",           "une critique"],
+    ["subversive",         "/səbˈvɜːsɪv/",           "subversif·ve"],
+    ["a manifesto",        "/ə ˌmænɪˈfestəʊ/",       "un manifeste"]
+  ],
+
+  "Citizenship and Virtual Worlds": [
+    ["citizenship",        "/ˈsɪtɪzənʃɪp/",          "la citoyenneté"],
+    ["virtual",            "/ˈvɜːtʃʊəl/",            "virtuel·le"],
+    ["the metaverse",      "/ðə ˈmetəvɜːs/",         "le métavers"],
+    ["a digital identity", "/ə ˈdɪdʒɪtəl aɪˈdentəti/", "une identité numérique"],
+    ["a community",        "/ə kəˈmjuːnəti/",        "une communauté"],
+    ["online behaviour",   "/ˈɒnlaɪn bɪˈheɪvjə/",    "le comportement en ligne"],
+    ["fake news",          "/feɪk njuːz/",           "fausses informations"],
+    ["a hate speech",      "/ə heɪt spiːtʃ/",        "un discours de haine"],
+    ["a moderator",        "/ə ˈmɒdəreɪtə/",         "un·e modérateur·rice"],
+    ["digital rights",     "/ˈdɪdʒɪtəl raɪts/",      "les droits numériques"]
+  ],
+
+  "Fictions and Realities": [
+    ["fiction",            "/ˈfɪkʃən/",              "la fiction"],
+    ["a reality",          "/ə riˈæləti/",           "une réalité"],
+    ["a dystopia",         "/ə dɪsˈtəʊpiə/",         "une dystopie"],
+    ["a utopia",           "/ə juːˈtəʊpiə/",         "une utopie"],
+    ["a narrator",         "/ə nəˈreɪtə/",           "un·e narrateur·rice"],
+    ["unreliable",         "/ʌnrɪˈlaɪəbəl/",         "peu fiable"],
+    ["a register",         "/ə ˈredʒɪstə/",          "un registre (langue)"],
+    ["totalitarianism",    "/təʊˌtælɪˈteəriənɪzəm/", "le totalitarisme"],
+    ["surveillance",       "/səˈveɪləns/",           "la surveillance"],
+    ["Newspeak",           "/ˈnjuːzpiːk/",           "le novlangue (Orwell)"]
+  ],
+
+  "Scientific Innovation and Responsibility": [
+    ["an innovation",      "/ən ˌɪnəˈveɪʃən/",       "une innovation"],
+    ["responsibility",     "/rɪˌspɒnsəˈbɪləti/",     "la responsabilité"],
+    ["AI / artificial intelligence", "/eɪ aɪ/",      "l'IA"],
+    ["CRISPR",             "/ˈkrɪspə/",              "CRISPR (édition génomique)"],
+    ["transhumanism",      "/trænzˈhjuːmənɪzəm/",    "le transhumanisme"],
+    ["ethics",             "/ˈeθɪks/",               "l'éthique"],
+    ["bias",               "/ˈbaɪəs/",               "un biais"],
+    ["a hallucination",    "/ə həˌluːsɪˈneɪʃən/",    "une hallucination (IA)"],
+    ["a regulation",       "/ə ˌreɡjʊˈleɪʃən/",      "une régulation"],
+    ["the Hippocratic Oath", "/ðə ˌhɪpəˈkrætɪk əʊθ/", "le Serment d'Hippocrate"]
+  ],
+
+  "Diversity and Inclusion": [
+    ["diversity",          "/daɪˈvɜːsəti/",          "la diversité"],
+    ["inclusion",          "/ɪnˈkluːʒən/",           "l'inclusion"],
+    ["discrimination",     "/dɪsˌkrɪmɪˈneɪʃən/",     "la discrimination"],
+    ["racism",             "/ˈreɪsɪzəm/",            "le racisme"],
+    ["feminism",           "/ˈfemɪnɪzəm/",           "le féminisme"],
+    ["LGBTQ+",             "/el dʒiː biː tiː kjuː/", "LGBTQ+"],
+    ["representation",     "/ˌreprɪzenˈteɪʃən/",     "la représentation"],
+    ["an ally",            "/ən ˈælaɪ/",             "un·e allié·e"],
+    ["a manifesto",        "/ə ˌmænɪˈfestəʊ/",       "un manifeste"],
+    ["belonging",          "/bɪˈlɒŋɪŋ/",             "appartenance"]
+  ],
+
+  "Territory and Memory": [
+    ["a territory",        "/ə ˈterɪtəri/",          "un territoire"],
+    ["a memory",           "/ə ˈmeməri/",            "une mémoire"],
+    ["colonialism",        "/kəˈləʊniəlɪzəm/",       "le colonialisme"],
+    ["independence",       "/ˌɪndɪˈpendəns/",        "l'indépendance"],
+    ["the Empire",         "/ði ˈempaɪə/",           "l'Empire"],
+    ["heritage",           "/ˈherɪtɪdʒ/",            "l'héritage"],
+    ["postcolonial",       "/ˌpəʊstkəˈləʊniəl/",     "postcolonial·e"],
+    ["a settler",          "/ə ˈsetlə/",             "un·e colon"],
+    ["decolonisation",     "/diːˌkɒlənaɪˈzeɪʃən/",   "la décolonisation"],
+    ["a memorial",         "/ə məˈmɔːriəl/",         "un mémorial"]
+  ]
+}

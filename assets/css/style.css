@@ -1689,7 +1689,7 @@ figcaption {
 }
 .trace-card__hint a { color: var(--lft-magenta); font-weight: 600; }
 
-/* Liste de mémo lexical — colonnes responsive */
+/* Liste de mémo lexical — colonnes responsive (legacy fallback) */
 .trace-lex-list {
   list-style: none;
   margin: 0 0 var(--space-2);
@@ -1711,6 +1711,36 @@ figcaption {
   color: var(--bf-500);
   font-weight: 700;
 }
+
+/* Tableau de lexique enrichi (anglais · phonétique · français) */
+.trace-lex-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+.trace-lex-table thead {
+  background: var(--bf-500);
+  color: white;
+}
+.trace-lex-table th {
+  padding: 6px 8px;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.trace-lex-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--grey-200);
+  vertical-align: top;
+}
+.trace-lex-table tbody tr:last-child td { border-bottom: none; }
+.trace-lex-table tbody tr:nth-child(even) { background: var(--grey-100); }
+.trace-lex__en  { color: var(--bf-500); font-weight: 700; }
+.trace-lex__ipa { color: var(--grey-700); font-style: italic; font-size: 0.9em; }
+.trace-lex__fr  { color: var(--grey-900); }
 
 /* Faits de langue — règle + exemples */
 .trace-grammar__rule {

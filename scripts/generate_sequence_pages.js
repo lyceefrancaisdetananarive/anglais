@@ -21,6 +21,17 @@ const GRAMMAR_TEMPLATES = JSON.parse(fs.readFileSync(
   "utf-8"
 ));
 
+// ---- Lexique enrichi par séquence (titre → [en, ipa, fr]) ------
+const LEXIQUE_SEQUENCES = JSON.parse(fs.readFileSync(
+  path.join(__dirname, "..", "assets", "data", "lexique-sequences.json"),
+  "utf-8"
+));
+
+function getLexiqueFor(seqTitre) {
+  const rows = LEXIQUE_SEQUENCES[seqTitre];
+  return Array.isArray(rows) ? rows : null;
+}
+
 function matchGrammarTemplate(langueRaw) {
   const langue = String(langueRaw || "")
     .toLowerCase()
@@ -138,8 +149,30 @@ function splitLexique(str) {
     .filter(Boolean);
 }
 
-// Construit un tableau de mémo lexical (3-4 colonnes selon le nombre de mots)
+// Construit un tableau de mémo lexical.
+// Priorité au lexique enrichi (anglais + phonétique + français) ;
+// fallback sur la liste basique extraite de seq.lexique.
 function buildLexiqueMemo(seq) {
+  const enriched = getLexiqueFor(seq.titre);
+  if (enriched && enriched.length > 0) {
+    const rows = enriched.map(([en, ipa, fr]) => `
+        <tr>
+          <td class="trace-lex__en">${esc(en)}</td>
+          <td class="trace-lex__ipa">${esc(ipa)}</td>
+          <td class="trace-lex__fr">${esc(fr)}</td>
+        </tr>`).join("");
+    return `
+      <table class="trace-lex-table">
+        <thead>
+          <tr>
+            <th>Anglais</th>
+            <th>Phonétique</th>
+            <th>Français</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }
   const items = splitLexique(seq.lexique);
   if (items.length === 0) {
     return `<p class="trace-empty">Lexique à compléter en classe avec l'enseignante.</p>`;
