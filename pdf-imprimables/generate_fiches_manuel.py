@@ -886,7 +886,40 @@ import json
 import re
 
 PROGRESSION_PATH = os.path.join(ROOT, "assets", "data", "progression.json")
+GRAMMAR_PATH     = os.path.join(ROOT, "assets", "data", "grammar-templates.json")
 BASE_URL = "https://lyceefrancaisdetananarive.github.io/anglais"
+
+# Charge les templates grammaticaux (mots-clés → 3 exemples canoniques)
+with open(GRAMMAR_PATH, "r", encoding="utf-8") as _f:
+    GRAMMAR_TEMPLATES = json.load(_f)
+
+
+def match_grammar_template(langue_raw):
+    """Sélectionne le template le plus pertinent selon les mots-clés
+    de seq.langue. Retourne le dict template (label, examples, remark)."""
+    if not langue_raw:
+        return GRAMMAR_TEMPLATES["_default"]
+    langue = re.sub(r"<[^>]+>", " ", langue_raw).lower()
+    best_key, best_score = "_default", 0
+    for key, tpl in GRAMMAR_TEMPLATES.items():
+        if key.startswith("_") or "keywords" not in tpl:
+            continue
+        score = 0
+        for kw in tpl["keywords"]:
+            pat = r"\b" + re.escape(kw.lower()) + r"\b"
+            if re.search(pat, langue):
+                score += len(kw)
+        if score > best_score:
+            best_key, best_score = key, score
+    return GRAMMAR_TEMPLATES[best_key]
+
+
+def html_to_pdf_markup(s):
+    """Convertit <strong>X</strong> en <b>X</b> pour reportlab."""
+    if not s: return ""
+    return (s
+        .replace("<strong>", "<b>").replace("</strong>", "</b>")
+        .replace("<em>", "<i>").replace("</em>", "</i>"))
 
 # Mapping niveauKey → libellé classe + slug du dossier sequences/
 NIVEAU_INFO = {
@@ -944,13 +977,44 @@ def autobuild_vocab(lexique_str):
 
 
 def autobuild_questions(theme):
-    """Questions de compréhension génériques."""
+    """Questions de compréhension génériques (legacy)."""
+    return autobuild_questions_specific({"theme": theme}, theme)
+
+
+def autobuild_questions_specific(seq, theme):
+    """Questions de compréhension contextualisées au thème."""
+    theme_clean = strip_html(theme or seq.get("theme", "the topic"))
     return [
-        f"What is the main topic of this document?",
-        f"Quote two key elements about the theme « {theme} ».",
-        f"What is the author's tone / point of view?",
-        f"What new word(s) did you discover in this text?",
+        f"What is the main idea of this document about <i>{theme_clean}</i>? "
+        f"Write a full sentence in English.",
+        f"Find <b>two key facts</b> mentioned in the text. "
+        f"Quote them and translate them into French.",
+        f"What is the author's <b>tone</b> or <b>point of view</b>? "
+        f"(neutral / enthusiastic / critical / informative…)",
+        f"Pick <b>three new words</b> from the lexique table above and "
+        f"use each one in a short sentence of your own.",
     ]
+
+
+def autobuild_doc_text(seq, info, theme_clean):
+    """Construit un texte support court (3-4 phrases) à partir de
+    la séquence, du niveau et du thème. Texte de référence à utiliser
+    en classe pour la compréhension écrite."""
+    titre = seq.get("titre", "")
+    culturel = strip_html(seq.get("culturel", ""))
+    cecrl = seq.get("cecrl", "")
+    classe = info["label"]
+
+    # Texte fallback pédagogique en anglais — court, niveau adapté
+    return (
+        f"<i>This activity introduces the sequence <b>« {titre} »</b>, "
+        f"which explores <b>{theme_clean}</b>. "
+        f"Throughout this {cecrl} unit, you will discover "
+        f"{('key cultural references such as ' + culturel + '. ') if culturel else ''}"
+        f"You will work on listening, reading, speaking and writing skills, "
+        f"and prepare the final task at the end of the sequence. "
+        f"Read the questions below and answer in full sentences in English.</i>"
+    )
 
 
 def autobuild_intro_lines(seq, niveau_label):
@@ -970,21 +1034,24 @@ def strip_html(s):
 
 
 def autobuild_grammar(seq):
-    langue_clean = strip_html(seq.get("langue", "Faits de langue de la séquence"))
+    langue_raw = seq.get("langue", "")
+    langue_clean = strip_html(langue_raw or "Faits de langue de la séquence")
+    tpl = match_grammar_template(langue_raw)
     return {
-        "titre": langue_clean[:60],
+        "titre": tpl["label"],
         "intro": (
-            "Cette séquence mobilise les structures suivantes : "
-            f"<i>{langue_clean}</i>. "
-            "Manipule-les en contexte ci-dessous."
+            f"Cette séquence mobilise : <i>{langue_clean}</i>. "
+            f"Voici trois exemples canoniques à mémoriser et à manipuler."
         ),
         "examples": [
-            "Exemple à compléter par l'enseignante en classe.",
-            "Trace écrite construite collectivement après les activités.",
+            f"<b>Affirmative</b> — {html_to_pdf_markup(tpl['examples']['affirmative'])}",
+            f"<b>Négative</b> — {html_to_pdf_markup(tpl['examples']['negative'])}",
+            f"<b>Interrogative</b> — {html_to_pdf_markup(tpl['examples']['interrogative'])}",
+            f"<i>Remarque</i> : {html_to_pdf_markup(tpl['remark'])}",
         ],
         "exo": (
-            "<b>À toi !</b> En t'appuyant sur le document support, "
-            "rédige 3 phrases qui mobilisent les structures de la séquence."
+            "<b>À toi !</b> Forme 3 phrases en mobilisant cette structure "
+            "et au moins 4 mots du lexique de la séquence."
         ),
     }
 
@@ -1015,14 +1082,9 @@ def auto_fill_ctx(niveau_key, seq):
         "axe_court": axe_court(seq.get("axe", "")),
         "intro_lines": autobuild_intro_lines(seq, info["label"]),
         "vocab": autobuild_vocab(strip_html(seq.get("lexique", ""))),
-        "doc_titre": f"Read — {theme_clean[:50] or seq['titre'][:50]}",
-        "doc_text": (
-            "<i>(Document support à fournir par l'enseignante. "
-            "Cet emplacement accueillera un texte court, un dialogue, "
-            "un extrait audio transcrit ou une image légendée en "
-            "lien avec le thème de la séquence.)</i>"
-        ),
-        "questions": autobuild_questions(theme_clean),
+        "doc_titre": f"Discover — {theme_clean[:50] or seq['titre'][:50]}",
+        "doc_text": autobuild_doc_text(seq, info, theme_clean),
+        "questions": autobuild_questions_specific(seq, theme_clean),
         "grammar_titre": grammar["titre"],
         "grammar_intro": grammar["intro"],
         "grammar_examples": grammar["examples"],

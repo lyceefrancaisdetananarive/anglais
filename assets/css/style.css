@@ -1729,16 +1729,45 @@ figcaption {
   font-style: italic;
 }
 .trace-grammar__examples ul {
-  margin: 0;
-  padding-left: var(--space-4);
+  margin: 0 0 var(--space-2);
+  padding-left: var(--space-3);
+  list-style: none;
   font-size: var(--font-size-sm);
   color: var(--grey-900);
 }
 .trace-grammar__examples li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   padding-left: 2px;
+  line-height: 1.5;
 }
-.trace-grammar__examples em { color: var(--lft-magenta); }
+.trace-grammar__examples em {
+  color: var(--grey-900);
+  font-style: normal;
+}
+.trace-grammar__examples strong {
+  background: var(--bf-100);
+  color: var(--bf-500);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.trace-grammar__type {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--lft-magenta);
+  font-weight: 700;
+  min-width: 90px;
+}
+.trace-grammar__remark {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-size-xs);
+  color: var(--grey-700);
+  border-top: 1px dashed var(--grey-200);
+  padding-top: var(--space-2);
+}
+.trace-grammar__remark strong { color: var(--bf-500); }
 
 /* Repères culturels */
 .trace-culture__intro {

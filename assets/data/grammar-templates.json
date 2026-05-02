@@ -1,0 +1,201 @@
+{
+  "_doc": "Templates grammaticaux pour générer la trace écrite et les fiches PDF. Chaque entrée contient un libellé, 3 exemples canoniques (affirmative/négative/interrogative), et une remarque pédagogique. La fonction matchTemplate(langue) sélectionne le bon template par mots-clés.",
+
+  "to-be": {
+    "label": "Le verbe TO BE au présent",
+    "examples": {
+      "affirmative":   "I <strong>am</strong> French.",
+      "negative":      "She <strong>is not</strong> tired.",
+      "interrogative": "<strong>Are</strong> you happy?"
+    },
+    "remark": "Formes contractées : I'm, you're, he's, she's, it's, we're, they're.",
+    "keywords": ["to be", "verbe be", "verbe to be", "i am", "she is", "they are"]
+  },
+
+  "have-got": {
+    "label": "HAVE GOT — possession",
+    "examples": {
+      "affirmative":   "I <strong>have got</strong> a brother.",
+      "negative":      "She <strong>has not got</strong> a sister.",
+      "interrogative": "<strong>Have</strong> you <strong>got</strong> a pet?"
+    },
+    "remark": "S'utilise surtout en anglais britannique pour exprimer la possession.",
+    "keywords": ["have got", "possessif", "possession"]
+  },
+
+  "present-simple": {
+    "label": "Le présent simple",
+    "examples": {
+      "affirmative":   "I <strong>play</strong> football every day.",
+      "negative":      "She <strong>does not play</strong> tennis.",
+      "interrogative": "<strong>Do</strong> you <strong>like</strong> music?"
+    },
+    "remark": "On utilise le présent simple pour parler d'habitudes, de vérités générales et de goûts.",
+    "keywords": ["present simple", "présent simple", "habitude", "verbes d'action"]
+  },
+
+  "present-continuous": {
+    "label": "Le présent en BE + V-ing",
+    "examples": {
+      "affirmative":   "I <strong>am playing</strong> football right now.",
+      "negative":      "She <strong>is not watching</strong> TV.",
+      "interrogative": "<strong>Are</strong> you <strong>listening</strong>?"
+    },
+    "remark": "On utilise le présent continu pour une action en train de se dérouler au moment où l'on parle (now, at the moment).",
+    "keywords": ["present continu", "presente continu", "be + ing", "ing", "continuous"]
+  },
+
+  "present-perfect": {
+    "label": "Le present perfect (have/has + V-en)",
+    "examples": {
+      "affirmative":   "I <strong>have lived</strong> here for five years.",
+      "negative":      "She <strong>has not seen</strong> the film yet.",
+      "interrogative": "<strong>Have</strong> you ever <strong>visited</strong> London?"
+    },
+    "remark": "Action commencée dans le passé qui continue au présent (since/for) ou expérience passée non datée (ever, never, already, yet).",
+    "keywords": ["present perfect", "have visited", "since", "for", "ever", "never", "already", "yet"]
+  },
+
+  "past-simple": {
+    "label": "Le prétérit simple",
+    "examples": {
+      "affirmative":   "Yesterday, I <strong>visited</strong> the museum.",
+      "negative":      "She <strong>did not go</strong> to school last Monday.",
+      "interrogative": "<strong>Did</strong> you <strong>watch</strong> the match?"
+    },
+    "remark": "On utilise le prétérit pour les actions terminées datées (yesterday, last week, in 2020, ago).",
+    "keywords": ["prétérit", "preterit", "past simple", "yesterday", "ago", "last"]
+  },
+
+  "past-continuous": {
+    "label": "Le past continuous (was/were + V-ing)",
+    "examples": {
+      "affirmative":   "She <strong>was reading</strong> when I called.",
+      "negative":      "We <strong>were not watching</strong> the news.",
+      "interrogative": "<strong>Were</strong> you <strong>working</strong> at 8 p.m.?"
+    },
+    "remark": "Décrit une action en cours dans le passé, souvent interrompue par une autre (au prétérit).",
+    "keywords": ["past continu", "past continuous", "was reading", "were"]
+  },
+
+  "past-perfect": {
+    "label": "Le past perfect (had + V-en)",
+    "examples": {
+      "affirmative":   "By 2020, she <strong>had finished</strong> her studies.",
+      "negative":      "He <strong>had not arrived</strong> when the meeting started.",
+      "interrogative": "<strong>Had</strong> you ever <strong>been</strong> there before?"
+    },
+    "remark": "Exprime une action antérieure à un autre moment du passé. Très utile en récit (storytelling).",
+    "keywords": ["past perfect", "plus que parfait", "had been", "had visited"]
+  },
+
+  "future-will": {
+    "label": "Le futur en WILL",
+    "examples": {
+      "affirmative":   "Tomorrow, I <strong>will go</strong> to the beach.",
+      "negative":      "She <strong>will not come</strong> tonight.",
+      "interrogative": "<strong>Will</strong> you <strong>help</strong> me?"
+    },
+    "remark": "On utilise will pour des prédictions, promesses, décisions spontanées ou faits futurs.",
+    "keywords": ["will", "future simple", "futur simple"]
+  },
+
+  "future-going-to": {
+    "label": "Le futur proche en BE GOING TO",
+    "examples": {
+      "affirmative":   "I <strong>am going to</strong> visit my grandmother next weekend.",
+      "negative":      "She <strong>is not going to</strong> travel this summer.",
+      "interrogative": "<strong>Are</strong> you <strong>going to</strong> watch the film?"
+    },
+    "remark": "Exprime une intention ou un projet déjà décidé.",
+    "keywords": ["be going to", "going to", "futur proche"]
+  },
+
+  "modals": {
+    "label": "Les modaux : can / could / must / should",
+    "examples": {
+      "affirmative":   "I <strong>can</strong> swim very well.",
+      "negative":      "She <strong>cannot</strong> drive yet.",
+      "interrogative": "<strong>Can</strong> you <strong>speak</strong> Malagasy?"
+    },
+    "remark": "Les modaux expriment la capacité (can), la possibilité (may, might), l'obligation (must), le conseil (should). Toujours suivis de la base verbale.",
+    "keywords": ["modal", "can", "could", "must", "should", "may", "might", "ought to"]
+  },
+
+  "comparatives": {
+    "label": "Les comparatifs",
+    "examples": {
+      "affirmative":   "Madagascar is <strong>bigger than</strong> Iceland.",
+      "negative":      "This book is <strong>not as interesting as</strong> the other one.",
+      "interrogative": "Is the Nile <strong>longer than</strong> the Amazon?"
+    },
+    "remark": "Adj. court : <em>-er than</em>. Adj. long : <em>more … than</em>. Égalité : <em>as … as</em>. Comparatifs irréguliers : good/better, bad/worse, far/further.",
+    "keywords": ["comparat", "than", "as as", "bigger", "more than"]
+  },
+
+  "superlatives": {
+    "label": "Les superlatifs",
+    "examples": {
+      "affirmative":   "Mount Everest is <strong>the highest</strong> mountain in the world.",
+      "negative":      "This is <strong>not the most</strong> exciting book I've read.",
+      "interrogative": "Who is <strong>the best</strong> player on the team?"
+    },
+    "remark": "Adj. court : <em>the -est</em>. Adj. long : <em>the most …</em>. Toujours précédé de <em>the</em>.",
+    "keywords": ["superlat", "the most", "the best", "the biggest"]
+  },
+
+  "passive": {
+    "label": "La voix passive",
+    "examples": {
+      "affirmative":   "This museum <strong>was built</strong> in 1850.",
+      "negative":      "The book <strong>was not written</strong> by Hemingway.",
+      "interrogative": "<strong>Is</strong> English <strong>spoken</strong> in Madagascar?"
+    },
+    "remark": "Structure : sujet + <em>be</em> (au temps voulu) + participe passé. L'agent peut être introduit par <em>by</em>.",
+    "keywords": ["passive", "voix passive", "passif", "was made", "is spoken"]
+  },
+
+  "conditional": {
+    "label": "Le conditionnel (would + base verbale)",
+    "examples": {
+      "affirmative":   "If I had time, I <strong>would travel</strong> the world.",
+      "negative":      "She <strong>would not go</strong> there alone.",
+      "interrogative": "<strong>Would</strong> you <strong>like</strong> a cup of tea?"
+    },
+    "remark": "Structures conditionnelles : type 1 (réel : if + present, will), type 2 (irréel : if + preterit, would), type 3 (passé irréel : if + past perfect, would have).",
+    "keywords": ["conditional", "conditionnel", "would", "if i had", "if i were"]
+  },
+
+  "there-is": {
+    "label": "THERE IS / THERE ARE",
+    "examples": {
+      "affirmative":   "<strong>There is</strong> a beautiful market in Analakely.",
+      "negative":      "<strong>There are not</strong> any clouds in the sky.",
+      "interrogative": "<strong>Is there</strong> a hotel near here?"
+    },
+    "remark": "<em>There is</em> + nom singulier ou indénombrable. <em>There are</em> + nom pluriel.",
+    "keywords": ["there is", "there are", "il y a"]
+  },
+
+  "questions-wh": {
+    "label": "Les mots interrogatifs (Wh- words)",
+    "examples": {
+      "affirmative":   "<strong>What</strong> is your name?",
+      "negative":      "<strong>Where</strong> do you live?",
+      "interrogative": "<strong>How old</strong> are you?"
+    },
+    "remark": "What (quoi), Who (qui), Where (où), When (quand), Why (pourquoi), How (comment), Which (lequel), Whose (à qui).",
+    "keywords": ["wh-", "questions wh", "interrog", "what", "where", "when", "why", "how"]
+  },
+
+  "_default": {
+    "label": "Faits de langue de la séquence",
+    "examples": {
+      "affirmative":   "Phrase affirmative — exemple à construire avec ta classe à partir de la séquence.",
+      "negative":      "Phrase négative — applique la règle à un mot du lexique.",
+      "interrogative": "Phrase interrogative — pose une question en utilisant la structure étudiée."
+    },
+    "remark": "Mobilise la structure grammaticale de la séquence. Cf. fiche d'activité PDF pour les tableaux récapitulatifs.",
+    "keywords": []
+  }
+}

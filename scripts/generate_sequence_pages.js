@@ -15,6 +15,35 @@ const dataCode = fs.readFileSync(dataPath, "utf-8");
 eval(dataCode);
 const PROG = window.PROGRESSION_ANNUELLE;
 
+// ---- Templates grammaticaux (exemples canoniques) -------
+const GRAMMAR_TEMPLATES = JSON.parse(fs.readFileSync(
+  path.join(__dirname, "..", "assets", "data", "grammar-templates.json"),
+  "utf-8"
+));
+
+function matchGrammarTemplate(langueRaw) {
+  const langue = String(langueRaw || "")
+    .toLowerCase()
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[^\p{L}\p{N}\s']/gu, " ");
+  let bestKey = "_default";
+  let bestScore = 0;
+  for (const [key, tpl] of Object.entries(GRAMMAR_TEMPLATES)) {
+    if (!tpl.keywords || key === "_default") continue;
+    let score = 0;
+    for (const kw of tpl.keywords) {
+      // mot-clé entier ou substring case-insensitive
+      const re = new RegExp(`\\b${kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
+      if (re.test(langue)) score += kw.length; // pondère par longueur
+    }
+    if (score > bestScore) {
+      bestScore = score;
+      bestKey = key;
+    }
+  }
+  return GRAMMAR_TEMPLATES[bestKey];
+}
+
 // ---- Mapping niveau → dossier sequences ------------------
 const NIVEAU_TO_DIR = {
   "6e": "6e",
@@ -121,25 +150,27 @@ function buildLexiqueMemo(seq) {
 
 // Construit la "règle" de grammaire avec :
 // - libellé propre (sans HTML brut)
-// - 2-3 exemples canoniques par défaut (peut être surchargé par override)
+// - 3 exemples canoniques tirés de GRAMMAR_TEMPLATES selon seq.langue
 function buildFaitsDeLangue(seq) {
-  const langue = stripHtml(seq.langue || "structures grammaticales clés");
+  const langueClean = stripHtml(seq.langue || "structures grammaticales clés");
+  const tpl = matchGrammarTemplate(seq.langue);
   return `
     <div class="trace-grammar">
       <p class="trace-grammar__rule">
-        <strong>Structures à maîtriser :</strong> ${esc(langue)}.
+        <strong>Structures à maîtriser :</strong> ${esc(langueClean)}.
       </p>
       <div class="trace-grammar__examples">
         <p class="trace-grammar__lead">
-          <em>Exemples à compléter en classe avec l'enseignante</em>
-          (la fiche d'activité contient le détail des règles, des
-          tableaux de conjugaison et des exceptions).
+          <strong>${esc(tpl.label)}</strong> — exemples canoniques :
         </p>
         <ul>
-          <li>Phrase affirmative : <em>(à compléter)</em></li>
-          <li>Phrase négative : <em>(à compléter)</em></li>
-          <li>Phrase interrogative : <em>(à compléter)</em></li>
+          <li><span class="trace-grammar__type">Affirmative :</span> <em>${tpl.examples.affirmative}</em></li>
+          <li><span class="trace-grammar__type">Négative :</span> <em>${tpl.examples.negative}</em></li>
+          <li><span class="trace-grammar__type">Interrogative :</span> <em>${tpl.examples.interrogative}</em></li>
         </ul>
+        <p class="trace-grammar__remark">
+          <strong>Remarque :</strong> ${tpl.remark}
+        </p>
       </div>
     </div>`;
 }
