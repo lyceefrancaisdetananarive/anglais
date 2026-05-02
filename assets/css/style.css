@@ -1860,6 +1860,96 @@ figcaption {
   font-style: italic;
   margin: 0;
 }
+
+/* === DOCUMENT SUPPORT — texte authentique + questions ===== */
+.doc-support {
+  background: linear-gradient(180deg, white, var(--bf-100));
+  border: 1px solid var(--grey-200);
+  border-left: 5px solid var(--bf-500);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-4);
+}
+.doc-support__head {
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px dashed var(--grey-200);
+}
+.doc-support__type {
+  display: inline-block;
+  background: var(--bf-500);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+.doc-support__title {
+  font-size: var(--font-size-lg);
+  color: var(--bf-500);
+  margin: 0;
+  font-weight: 700;
+}
+.doc-support__content {
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+  color: var(--grey-900);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+.doc-support__content b,
+.doc-support__content strong {
+  color: var(--bf-500);
+  font-style: normal;
+}
+
+/* Questions de compréhension */
+.doc-support__questions {
+  background: white;
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+}
+.doc-support__qtitle {
+  font-size: var(--font-size-md);
+  color: var(--lft-magenta);
+  margin: 0 0 var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.doc-support__qlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: q;
+}
+.doc-support__q {
+  padding: var(--space-2) 0 var(--space-2) var(--space-5);
+  border-bottom: 1px dashed var(--grey-200);
+  position: relative;
+  font-size: var(--font-size-sm);
+  color: var(--grey-900);
+  line-height: 1.5;
+}
+.doc-support__q:last-child { border-bottom: none; }
+.doc-support__qnum {
+  position: absolute;
+  left: 0;
+  top: var(--space-2);
+  background: var(--lft-magenta);
+  color: white;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
 .seq-lesson-card {
   background: linear-gradient(135deg, white, var(--bf-100));
   border-left: 4px solid var(--bf-500);

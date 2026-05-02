@@ -1,0 +1,483 @@
+{
+  "_doc": "Documents supports authentiques pour chaque séquence — paragraphe court (80-150 mots) directement utilisable en classe pour la compréhension écrite. Indexé par titre exact. Format : { type, title, content, questions[] }. Type : 'text' | 'dialogue' | 'excerpt' | 'article'.",
+
+  "Welcome to Big Ben Academy!": {
+    "type": "text",
+    "title": "Sarah's first day",
+    "content": "Hi! My name is Sarah and I'm 11 years old. I'm French but my mum is from Madagascar. Today is Monday, my first day at Big Ben Academy in London. My new school is huge — there are five floors! My favourite subjects are English, Maths and Art. I have PE on Wednesday and Friday. My new classmate, Tom, is very friendly. He is 12 and he loves football. After school, we usually play in the park. I'm a bit nervous but I'm also excited. New school, new friends, new life!",
+    "questions": [
+      "How old is Sarah and where is she from?",
+      "What does she like at school? Quote three subjects.",
+      "Who is Tom? Find two pieces of information about him.",
+      "How does Sarah feel about her new school? Justify with two adjectives from the text."
+    ]
+  },
+
+  "My Family Tree": {
+    "type": "text",
+    "title": "My family in Madagascar",
+    "content": "Hello! My name is Lalaina and I'm twelve years old. I live in Antananarivo, Madagascar. I have got a big family — three brothers and two sisters! My father is a doctor and my mother is a teacher. We also live with my grandparents because in Madagascar, family is very important. My grandfather tells us stories every evening. We have got a dog called Bibi and a parrot called Koko. My favourite cousin is Hery — he lives in France but he visits us every summer. I love my family because we are always together.",
+    "questions": [
+      "How many brothers and sisters has Lalaina got?",
+      "What is special about Madagascar's families according to the text?",
+      "Find the names of the family pets.",
+      "Why does Lalaina love her family? Quote the text."
+    ]
+  },
+
+  "What I Love": {
+    "type": "dialogue",
+    "title": "Likes and dislikes",
+    "content": "<b>Tom:</b> Hi Maya! What do you like doing on Saturdays?<br/><b>Maya:</b> I love playing football! It's fun and I have lots of friends in my team. What about you?<br/><b>Tom:</b> I don't like sport very much. I prefer reading and drawing.<br/><b>Maya:</b> Reading? That's boring!<br/><b>Tom:</b> Not at all! I love adventure books. And I really love music too. I play the guitar.<br/><b>Maya:</b> The guitar? That's cool! Can you play a song for me?<br/><b>Tom:</b> Sure, but only if you teach me football first.<br/><b>Maya:</b> Deal!",
+    "questions": [
+      "What does Maya love doing? Why?",
+      "What two activities does Tom love? Find them in the text.",
+      "Who plays an instrument? Which one?",
+      "What is the deal between Tom and Maya?"
+    ]
+  },
+
+  "Let's Eat!": {
+    "type": "text",
+    "title": "A typical day of food",
+    "content": "In Madagascar, food is part of our culture. For breakfast, we usually have rice with milk and sugar — it's called « vary sosoa ». At lunch, our main meal of the day, we eat « vary » (rice) with chicken, beef or fish, and lots of vegetables. Bread is also popular. In the afternoon, we sometimes have a snack: a piece of fruit (mango, banana, lychee) or a small cake. For dinner, we eat lighter — soup or rice again. We always drink water during meals. On Sundays, we cook « romazava », a traditional beef and greens stew. I love food because it brings my family together!",
+    "questions": [
+      "What is « vary sosoa » and when do people eat it?",
+      "Find three vegetables or fruits mentioned in the text.",
+      "What is the most important meal of the day? Justify.",
+      "Why does the narrator love food?"
+    ]
+  },
+
+  "Everyday Life in London": {
+    "type": "text",
+    "title": "A morning in London",
+    "content": "London is a vibrant city full of energy. Every morning, millions of people use the famous red buses or the Tube (the underground) to go to work. Tourists love the iconic landmarks: Big Ben, the Tower of London, Buckingham Palace and Tower Bridge. In the parks, people walk their dogs, jog, or read newspapers. Markets are everywhere — Camden Market for vintage clothes, Borough Market for delicious food. At lunchtime, you can taste fish and chips, a curry or a sandwich. The Thames river crosses the city. London is multicultural — you can hear many languages spoken on the streets. It's a city that never stops moving!",
+    "questions": [
+      "How do Londoners go to work? Name two means of transport.",
+      "Quote three London landmarks.",
+      "What two famous markets are mentioned in the text?",
+      "Why is London described as « multicultural »?"
+    ]
+  },
+
+  "My Holidays in Madagascar": {
+    "type": "text",
+    "title": "An island full of wonders",
+    "content": "Madagascar is a paradise for holidays! The weather is sunny most of the year. In the north, you can visit Nosy Be, a beautiful tropical island with white beaches and turquoise water. There, you can swim, snorkel and see colourful fish. In the centre, the city of Antananarivo is built on twelve hills — it's our capital! In the south, the famous Avenue of the Baobabs is incredible at sunset. And of course, you cannot leave Madagascar without seeing the lemurs — these unique animals only live on our island. I am going to visit Nosy Be next summer with my family. I am so excited!",
+    "questions": [
+      "What is the weather like in Madagascar?",
+      "Find three places mentioned and their location (north / centre / south).",
+      "Why are lemurs special?",
+      "What is the narrator going to do next summer? Quote the text."
+    ]
+  },
+
+  "Stuck at Big Bay School": {
+    "type": "excerpt",
+    "title": "A classroom in New Zealand",
+    "content": "It was Monday morning at Big Bay School in Wellington, New Zealand. The students were all wearing their blue and white uniforms. Lily, the new pupil from Australia, was bigger than most of her classmates and a little nervous. Mr Tane, their teacher, smiled and said: « Kia ora! Welcome to all of you. Today is a special day — we are going to learn the haka. » The haka is a traditional Māori dance. Outside, the bay was windier than yesterday and the sky was the bluest Lily had ever seen. She suddenly realised: this school was different, but she was going to love it.",
+    "questions": [
+      "Where and when does the story take place?",
+      "What does Lily wear and why? Find two details about her.",
+      "What does « kia ora » mean? (Find two comparatives in the text.)",
+      "What is the haka? What does Lily think of her new school?"
+    ]
+  },
+
+  "Sport Heroes": {
+    "type": "text",
+    "title": "The story of a champion",
+    "content": "Serena Williams is one of the greatest tennis players in history. She was born in 1981 in Michigan, USA, and started training when she was only four years old. Her father coached her on public courts in Compton, California. Serena won her first Grand Slam in 1999, at the age of 17. Throughout her career, she has won 23 Grand Slam titles — more than any other player in the Open Era. She is also famous for her courage: she returned to professional tennis just months after giving birth to her daughter Olympia. Serena has inspired millions of young women around the world to follow their dreams and never give up.",
+    "questions": [
+      "When and where was Serena Williams born?",
+      "Who coached her at the beginning of her career?",
+      "How many Grand Slam titles has she won?",
+      "Why is she described as « courageous »? Find another adjective that describes her."
+    ]
+  },
+
+  "Climate Action Now": {
+    "type": "article",
+    "title": "Greta Thunberg's call to action",
+    "content": "In 2018, Greta Thunberg, a 15-year-old Swedish student, started a school strike for the climate in front of her parliament. Her message was simple: politicians should listen to scientists and act now to fight climate change. Within months, millions of young people around the world joined her movement, called « Fridays for Future ». In 2019, Greta sailed across the Atlantic Ocean — by boat, not by plane, to reduce her carbon footprint — to speak at the United Nations in New York. « We are running out of time, » she said. « You must take responsibility. » Today, climate change remains the biggest challenge of our generation. Small actions matter: recycling, saving energy, eating less meat. Together, we can build a sustainable future.",
+    "questions": [
+      "Who is Greta Thunberg and what did she do in 2018?",
+      "Why did she sail to New York instead of taking a plane?",
+      "Quote Greta's message at the UN.",
+      "Find three examples of « small actions » mentioned in the text."
+    ]
+  },
+
+  "An Australian Journey": {
+    "type": "text",
+    "title": "Discovering Uluru",
+    "content": "Uluru, also called Ayers Rock, is the most famous landmark in Australia. It is a giant red sandstone rock in the heart of the Australian Outback, in the Northern Territory. Uluru is 348 metres high — taller than the Eiffel Tower without its antenna! For the Aboriginal people, the Anangu, Uluru is a sacred site. Their ancestors created the Dreamtime stories about it thousands of years ago. The colours of Uluru change throughout the day: bright orange at sunrise, deep red at noon, and purple at sunset. In 2019, climbing Uluru was officially banned to respect Aboriginal traditions. Visitors can now walk around it, listen to stories from local guides, and admire the wildlife — kangaroos, emus and dingoes.",
+    "questions": [
+      "Where is Uluru located in Australia?",
+      "How tall is Uluru? Find a comparison in the text.",
+      "Why is Uluru important for the Anangu people?",
+      "What happened in 2019 and why?"
+    ]
+  },
+
+  "Music Through the Decades": {
+    "type": "article",
+    "title": "From Elvis to Beyoncé",
+    "content": "English-speaking music has changed the world. In the 1950s, Elvis Presley invented rock'n'roll and shocked America with his energy on stage. Then came the Beatles, four young men from Liverpool, who created Beatlemania across the planet between 1962 and 1970. In Jamaica, Bob Marley made reggae a global movement, with messages of peace and unity. In the 1970s, hip-hop was born in the Bronx, New York City. Today, artists like Beyoncé and Taylor Swift have won more Grammy Awards than anyone before them. Music has been a powerful voice for civil rights, women's rights and youth culture. As Bob Marley said, « One good thing about music: when it hits you, you feel no pain. »",
+    "questions": [
+      "Who invented rock'n'roll and when?",
+      "Where did the Beatles come from? When did they exist?",
+      "What is the message of Bob Marley's reggae?",
+      "Quote and translate Bob Marley's famous sentence."
+    ]
+  },
+
+  "My Town, My Story": {
+    "type": "text",
+    "title": "Antananarivo, my city of a thousand",
+    "content": "Antananarivo means « the city of a thousand » in Malagasy. The story says that, in the 17th century, King Andrianjaka conquered the hills with one thousand soldiers. Today, Tana is the capital of Madagascar — a city built on twelve sacred hills. I have lived in Tana for ten years and I love walking through its old streets. In Analakely, there is a famous covered market full of colours and smells. In Andohalo, there is a beautiful cathedral on the highest hill. The Rova palace burnt down in 1995 but it has been partially rebuilt. From my hill, I can see the whole city: red brick houses, green rice fields, and the Anosy lake with its Independence Monument. Tana is more vibrant than ever.",
+    "questions": [
+      "What does « Antananarivo » mean? Why?",
+      "Find two famous places in Tana mentioned in the text.",
+      "What happened to the Rova palace in 1995?",
+      "How long has the narrator lived in Tana? Use a present perfect."
+    ]
+  },
+
+  "Matilda — Roald Dahl (1988)": {
+    "type": "excerpt",
+    "title": "Matilda discovers reading",
+    "content": "Matilda was a tiny but extraordinary girl. By the age of four, she had already read most children's books in the public library. The librarian, Mrs Phelps, was amazed. « What would you like to read next? » she asked. « Could you suggest some really famous adult books? » Matilda replied. Soon, Matilda had read Dickens, Hemingway and the Brontë sisters. Books opened up a magical world for her — a world where her cruel parents and her terrifying headmistress, Miss Trunchbull, could not reach her. At school, however, life was harder. Miss Trunchbull hated children. But Matilda had a secret: when she was angry, strange things began to happen around her…",
+    "questions": [
+      "How old was Matilda when she had read most children's books?",
+      "Find three adult authors that Matilda read.",
+      "Who are the « cruel parents » and « terrifying headmistress »?",
+      "What is Matilda's secret? Use the past continuous in your answer."
+    ]
+  },
+
+  "The Giver — Lois Lowry (1993)": {
+    "type": "excerpt",
+    "title": "Chapter 1 — A different December",
+    "content": "It was almost December, and Jonas was beginning to be frightened. No. Wrong word, Jonas thought. Frightened meant that deep, sickening feeling of something terrible about to happen. Frightened was the way he had felt a year ago when an unidentified aircraft had overflown the community twice. He had seen it both times. Squinting toward the sky, he had seen the sleek jet, almost a blur at its high speed. […] He had waited a long time for this special December. Now that it was almost upon him, he wasn't frightened, but he was… he searched his mind for the right word. Apprehensive, Jonas finally decided. Apprehensive about December. He pushed the thought away.",
+    "questions": [
+      "What word does Jonas reject and why?",
+      "Find one example of free indirect speech in the text.",
+      "What word does Jonas finally choose, and what does it tell us about him?",
+      "Why is « this December » special? (Use chapter clues.)"
+    ]
+  },
+
+  "British Institutions": {
+    "type": "article",
+    "title": "How does the UK work?",
+    "content": "The United Kingdom is a constitutional monarchy: King Charles III is the Head of State (a symbolic role), but real political power belongs to the elected Prime Minister, who lives at 10 Downing Street. The Parliament has two chambers: the House of Commons (650 elected MPs) and the House of Lords (unelected, mostly hereditary or appointed peers). Laws are debated and voted there before being signed by the monarch — the « Royal Assent ». The UK is famous for not having a written constitution: it relies on tradition, precedent and key documents like the Magna Carta (1215) and the Bill of Rights (1689). In 2016, a referendum decided to leave the European Union — Brexit became official on 31 January 2020.",
+    "questions": [
+      "Who is the current Head of State and where does the Prime Minister live?",
+      "How many chambers has the UK Parliament? Name them.",
+      "What is special about the UK constitution?",
+      "What was the Brexit referendum and when did the UK officially leave the EU?"
+    ]
+  },
+
+  "Britain & Europe": {
+    "type": "article",
+    "title": "Britain and Europe — a long history",
+    "content": "Britain's history is deeply linked with Europe. In 43 AD, the Romans invaded Britain and built roads, cities and Hadrian's Wall. In 1066, William the Conqueror came from Normandy (France) and changed the language and the laws of England forever. During the Reformation in the 16th century, Henry VIII broke with the Catholic Church to create the Church of England. In the 19th century, Britain fought Napoleon's France in the Napoleonic Wars (1803-1815). In 1973, the UK joined the European Economic Community — but in 2016, after a referendum, the British voted to leave the European Union. Brexit became official in 2020. Today, the UK and Europe still share many cultural, economic and political links.",
+    "questions": [
+      "When did the Romans invade Britain and what did they build?",
+      "Who came from Normandy in 1066 and why is this important?",
+      "When did the UK join Europe and when did it leave?",
+      "Find two ways the UK and Europe are still « linked » today."
+    ]
+  },
+
+  "Ireland: A Story of Resilience": {
+    "type": "article",
+    "title": "Ireland: from famine to freedom",
+    "content": "Ireland's history is a story of resilience and hope. Between 1845 and 1852, the Great Famine killed over one million Irish people, after a disease destroyed the potato crop. Two million more emigrated, mostly to the United States and Australia, looking for a better life. Throughout the 19th and 20th centuries, the Irish fought for their independence from the British Empire. In 1921, after a long struggle, the Republic of Ireland was finally born — but the island remained divided, with Northern Ireland staying part of the UK. In the 1960s-1990s, « The Troubles » brought decades of conflict between Catholics and Protestants in Northern Ireland. The Good Friday Agreement of 1998 brought peace. Today, Ireland is a vibrant country, proud of its Gaelic language, its music and its literature.",
+    "questions": [
+      "What happened between 1845 and 1852 in Ireland? Quote two figures.",
+      "Where did most Irish emigrants go?",
+      "When was the Republic of Ireland born?",
+      "What were « The Troubles » and how did they end?"
+    ]
+  },
+
+  "Migrations & Identities": {
+    "type": "text",
+    "title": "Two homes, one heart",
+    "content": "My name is Aïna. I was born in Madagascar but I have lived in London since I was eight. My parents moved to the UK to give us a better future. At first, I was a refugee in my own life: I didn't speak English, I missed my grandmother and the smell of jacaranda trees. Today, I am bilingual — I speak Malagasy at home and English at school. I have two cultures, two homelands. I love eating « romazava » with rice on Sundays, but I also love fish and chips on Fridays! Some people ask me: « Where are you really from? » I always answer: « I am from where my heart is — and my heart has two homes. » Identity is not a box; it's a journey.",
+    "questions": [
+      "Where was Aïna born and where does she live now? Why did her parents move?",
+      "Why does Aïna say she was « a refugee in my own life »?",
+      "What two cultures does Aïna belong to? Find examples.",
+      "What is Aïna's answer to « Where are you really from? »"
+    ]
+  },
+
+  "Welcome to America": {
+    "type": "article",
+    "title": "The United States in figures",
+    "content": "The United States of America is the third largest country in the world by population (over 330 million people) and by area (9.8 million km²). It has 50 states — from California in the West to Florida in the East, from Alaska in the North to Hawaii in the Pacific. The capital is Washington D.C., where the President lives in the White House. The American flag, called « Stars and Stripes », has 13 red and white stripes (representing the original 13 colonies) and 50 white stars on a blue square (one star per state). The Statue of Liberty welcomed millions of immigrants to New York between 1886 and 1924. Today, the USA remains a « melting pot »: people from all over the world live there and shape American culture together.",
+    "questions": [
+      "How many people live in the USA? How many states?",
+      "Why are there 13 stripes and 50 stars on the American flag?",
+      "What is the role of the Statue of Liberty in American history?",
+      "Explain the metaphor « melting pot »."
+    ]
+  },
+
+  "Street Art: The Voice of the Wall": {
+    "type": "article",
+    "title": "Banksy — the wall as a stage",
+    "content": "Banksy is the world's most famous street artist — and nobody knows his real name! Born in Bristol, UK, he started painting graffiti on walls in the 1990s. His stencils are everywhere: on the walls of London, on the West Bank barrier in Palestine, on a beach in Calais, France. His art carries powerful political messages: he denounces war, surveillance, capitalism and the migrant crisis. In 2018, his painting « Girl with Balloon » self-destructed during an auction at Sotheby's — a public statement against the art market. Some people call him a vandal; others call him a genius. But everyone agrees: Banksy has transformed street art into a global cultural movement. Walls are no longer just walls — they are voices.",
+    "questions": [
+      "Where does Banksy come from and when did he start?",
+      "Find three places where Banksy has painted.",
+      "What political themes does Banksy denounce?",
+      "What happened to « Girl with Balloon » in 2018? Why?"
+    ]
+  },
+
+  "Frankenstein — Mary Shelley": {
+    "type": "excerpt",
+    "title": "The creator and his creature",
+    "content": "It was on a dreary night of November that I beheld the accomplishment of my toils. With anxiety that almost amounted to agony, I collected the instruments of life around me, that I might infuse a spark of being into the lifeless thing that lay at my feet. […] How can I describe my emotions at this catastrophe, or how delineate the wretch whom with such infinite pains and care I had endeavoured to form? His limbs were in proportion, and I had selected his features as beautiful. Beautiful! — Great God! His yellow skin scarcely covered the work of muscles and arteries beneath; his hair was of a lustrous black, and flowing; his teeth of a pearly whiteness; but these luxuriances only formed a more horrid contrast.",
+    "questions": [
+      "Who is the narrator and what has he just done?",
+      "Find one positive and one negative adjective describing the creature.",
+      "What contrast does Victor describe between expectation and reality?",
+      "What atmosphere does Mary Shelley create? (Find Gothic elements.)"
+    ]
+  },
+
+  "The Secret of Jatbula Trail": {
+    "type": "excerpt",
+    "title": "On the trail",
+    "content": "The Jatbula Trail snakes through the Northern Territory of Australia, deep in the bush. For five days, Mia and her brother Jake had walked across rocky paths, swum in clear waterholes and slept under the stars. Their guide, Uncle William, was a Jawoyn ranger who knew every plant, every bird, every story. « You should respect this land, » he said one evening, around the fire. « It belongs to my ancestors, who painted on these rocks 50,000 years ago. » Suddenly, Mia spotted something strange: a faint mark on a tree, like an arrow pointing east. Jake whispered: « That wasn't there yesterday. » Their hearts started to beat faster. Was someone — or something — following them?",
+    "questions": [
+      "Where and how long is the Jatbula Trail? Who walks it?",
+      "Who is Uncle William and what is his role?",
+      "What did the ancestors leave 50,000 years ago?",
+      "What strange thing does Mia notice and what does Jake think?"
+    ]
+  },
+
+  "Women Who Changed History": {
+    "type": "article",
+    "title": "Malala Yousafzai's voice",
+    "content": "Malala Yousafzai was born in 1997 in Pakistan, in the Swat Valley. From the age of 11, she wrote a blog for the BBC about her life as a girl under the Taliban, who banned female education. In 2012, when she was 15, a Taliban gunman shot her in the head on her school bus. Doctors in the UK saved her life. Two years later, in 2014, Malala became the youngest person ever to receive the Nobel Peace Prize. « One child, one teacher, one book and one pen can change the world, » she said in her famous UN speech. Today, the Malala Fund supports girls' education in over 30 countries. Malala has shown that one young woman's voice can move the world.",
+    "questions": [
+      "Where is Malala from and what was her first activist action?",
+      "What happened to her in 2012?",
+      "Why is 2014 important in Malala's life?",
+      "Quote and translate her famous sentence at the UN."
+    ]
+  },
+
+  "My DNB Project": {
+    "type": "text",
+    "title": "Tips for a great oral",
+    "content": "Hello, everyone! My name is Maya and I'm in Year 9 (3ᵉ). Last year, I gave my « DNB project » oral presentation, and I want to share three tips with you. First, choose a topic you really care about — for me it was climate change. Your passion will make your speech come alive. Second, structure your presentation: introduction, three main parts, conclusion. Use slides, but write only key words on them — never full sentences. Third, practise out loud, in front of a mirror or your family. The day of the oral, breathe, smile, look at the audience. The teachers ask questions to help you, not to trap you. Be confident: you have prepared for this moment. Good luck!",
+    "questions": [
+      "What grade is Maya in and what is her topic?",
+      "What three tips does Maya give? List them.",
+      "What should you write on slides — and what should you avoid?",
+      "Why do teachers ask questions according to Maya?"
+    ]
+  },
+
+  "The Curious Incident of the Dog in the Night-Time": {
+    "type": "excerpt",
+    "title": "Christopher's logical mind",
+    "content": "It was 7 minutes after midnight. The dog was lying on the grass in the middle of the lawn in front of Mrs Shears's house. Its eyes were closed. It looked as if it was running on its side, the way dogs run when they think they are chasing a cat in a dream. But the dog was not running or asleep. The dog was dead. There was a garden fork sticking out of the dog. The points of the fork must have gone all the way through the dog and into the ground because the fork had not fallen over. […] I do not like strangers and I do not like new places, so I was a bit worried.",
+    "questions": [
+      "What time is it and where is the dog?",
+      "How does Christopher describe the dog's posture? Find a simile.",
+      "What is the cause of the dog's death? Quote the text.",
+      "What two things does Christopher dislike? What does this tell us about him?"
+    ]
+  },
+
+  "US Civil Rights Movement": {
+    "type": "excerpt",
+    "title": "Martin Luther King's dream",
+    "content": "On 28 August 1963, Martin Luther King Jr stood in front of 250,000 people at the Lincoln Memorial in Washington D.C. and gave one of the most famous speeches in history: « I Have a Dream. » He said: « I have a dream that my four little children will one day live in a nation where they will not be judged by the colour of their skin but by the content of their character. » At that time, Black Americans in the South were segregated: separate schools, separate buses, separate water fountains. Rosa Parks had refused to give up her seat to a white passenger in 1955, sparking the Montgomery Bus Boycott. The Civil Rights Act was finally signed in 1964, but King was assassinated in 1968. His dream still inspires the world today.",
+    "questions": [
+      "When and where did Martin Luther King give his famous speech?",
+      "Quote the central idea of his « dream ».",
+      "What did Rosa Parks do in 1955 and what did it start?",
+      "When was segregation officially ended? When did King die?"
+    ]
+  },
+
+  "Short Stories — Roald Dahl & Neil Gaiman": {
+    "type": "excerpt",
+    "title": "An unexpected ending",
+    "content": "Lamb to the Slaughter — Roald Dahl. Mary Maloney was waiting for her husband to come home. She was six months pregnant and beautifully dressed. When Patrick walked in, she smiled. But that evening, he announced something terrible: he was leaving her. Mary went to the freezer to get a leg of lamb for dinner. She came back into the living room. Then, without thinking, she lifted the frozen lamb high in the air and brought it down with all her strength on the back of her husband's head. He fell, dead. Mary cooked the lamb. When the police arrived, she invited them to dinner. They ate the murder weapon… and laughed. The perfect crime had a delicious ending.",
+    "questions": [
+      "Who is Mary Maloney and what is her situation?",
+      "What does Patrick announce?",
+      "What does Mary use as a weapon — and what is the « twist »?",
+      "Why is the ending called « delicious »? Explain the dark humour."
+    ]
+  },
+
+  "Madagascar's Biodiversity: A Living Laboratory": {
+    "type": "article",
+    "title": "Madagascar — an island of endemic species",
+    "content": "Madagascar separated from the African continent 165 million years ago, becoming an isolated island. This long isolation has produced extraordinary biodiversity: over 90% of Madagascar's plants and animals are endemic — they are found nowhere else on Earth. The most iconic species are the lemurs, with over 100 different species, all native to Madagascar. The chameleons are also unique: half of the world's chameleon species live here. The giant baobab trees of the Avenue of the Baobabs can live for 2,500 years. Yet this living laboratory is in danger: 80% of the original forests have been destroyed by deforestation, slash-and-burn agriculture and illegal logging. NGOs and the Malagasy government are now creating protected areas to save what remains. Madagascar is a global priority for biodiversity conservation.",
+    "questions": [
+      "When and how did Madagascar become isolated?",
+      "What does « endemic » mean? Quote two endemic species.",
+      "How long can a baobab tree live?",
+      "What are the three main threats to Madagascar's biodiversity?"
+    ]
+  },
+
+  "Climate Change & Tropical Cyclones": {
+    "type": "article",
+    "title": "Madagascar in the eye of the storm",
+    "content": "Tropical cyclones are getting stronger and more frequent because of climate change. Madagascar, located in the southwest Indian Ocean, is one of the most vulnerable countries in the world: every year, between November and April, several cyclones hit the island. In 2022, Cyclone Batsirai killed over 120 people and displaced 90,000 — winds of 160 km/h destroyed houses, schools and farmland. Scientists at the IPCC (Intergovernmental Panel on Climate Change) have shown that warmer oceans give cyclones more energy, while rising sea levels make floods worse. Adaptation strategies include mangrove restoration (which protects coastlines), early warning systems and stronger buildings. Mitigation — reducing greenhouse gases globally — is also urgent. The question is no longer if climate change is real, but how fast we can act.",
+    "questions": [
+      "When is Madagascar's cyclone season? How many cyclones per year?",
+      "What were the consequences of Cyclone Batsirai in 2022?",
+      "How does climate change make cyclones worse? (Find two reasons.)",
+      "What is the difference between « adaptation » and « mitigation »?"
+    ]
+  },
+
+  "Sustainable Development Goals": {
+    "type": "article",
+    "title": "The 17 SDGs and Madagascar",
+    "content": "In 2015, the 193 member states of the United Nations adopted the 2030 Agenda — a global plan with 17 Sustainable Development Goals (SDGs) to transform the world by 2030. The goals cover poverty (SDG 1), hunger (SDG 2), education (SDG 4), gender equality (SDG 5), climate action (SDG 13) and many more. They are universal, integrated and ambitious. For Madagascar, key challenges include reducing extreme poverty (over 75% of the population lives below the poverty line), improving access to clean water (SDG 6), and protecting marine biodiversity (SDG 14). Achieving the SDGs requires governments, businesses, NGOs and citizens to work together. Every individual action — from recycling to volunteering — counts. By 2030, we have a chance to leave a better world to the next generation. Will we take it?",
+    "questions": [
+      "When were the SDGs adopted and by whom? How many goals?",
+      "Quote three of the 17 SDGs.",
+      "What are Madagascar's three main challenges according to the text?",
+      "Who needs to act to achieve the SDGs?"
+    ]
+  },
+
+  "Coral Reefs and Ocean Health": {
+    "type": "article",
+    "title": "When coral reefs turn white",
+    "content": "Coral reefs cover only 0.2% of the ocean floor but host 25% of all marine species — that's why they are called the « rainforests of the sea ». But these fragile ecosystems are dying. When ocean temperatures rise by just 1-2°C, corals expel the colourful zooxanthellae algae that live inside them. The corals turn white — this is called « bleaching ». If the heat continues, they die. Scientists predict that 90% of the world's coral reefs could disappear by 2050 if global warming is not stopped. The Great Barrier Reef, off the coast of Australia, has already lost half of its corals. In Madagascar, the reefs of Nosy Be and Toliara are also at risk. Protecting reefs means fighting climate change, plastic pollution, overfishing and acidification. Without coral reefs, millions of people who depend on fisheries lose their livelihoods.",
+    "questions": [
+      "Why are coral reefs called « rainforests of the sea »?",
+      "What is « bleaching » and what causes it?",
+      "What proportion of corals could disappear by 2050?",
+      "Find four threats to coral reefs in the text."
+    ]
+  },
+
+  "Towards Terminale: Reading Scientific Papers": {
+    "type": "article",
+    "title": "How to read a scientific paper",
+    "content": "Reading a scientific paper for the first time can feel intimidating, but it follows a clear structure called IMRaD: Introduction, Methods, Results, Discussion. The Abstract — a short summary at the top — gives you the essential in 200-300 words. Always start there. Look at figures and tables: they often condense the key findings. Note the publication date and the journal — major journals like Nature and Science are peer-reviewed, meaning other experts have validated the work. Each paper has a unique DOI (Digital Object Identifier) so you can cite it precisely: e.g. doi.org/10.1038/s41586-022-04432. Don't be afraid of unknown words — use a glossary, and read the same paragraph twice if needed. Open Access papers are free to read and grow each year. Reading scientific papers is a skill — and like any skill, it gets easier with practice.",
+    "questions": [
+      "What does « IMRaD » stand for?",
+      "Where should you always start when reading a paper? Why?",
+      "What is « peer review » and why is it important?",
+      "What is a DOI? What does « Open Access » mean?"
+    ]
+  },
+
+  "Identities & Exchanges": {
+    "type": "excerpt",
+    "title": "Brick Lane — between two worlds",
+    "content": "Nazneen had been in London for almost two years. She still did not speak English well. From her window on the third floor, she watched the streets of Brick Lane: the curry restaurants with their bright lights, the women in saris carrying shopping bags, the men with prayer beads going to the mosque. The smell of spices reminded her of the village in Bangladesh where she had grown up. But she had also learned to love this city — the cold morning air, the rhythm of the buses, the freedom of walking alone. She wondered: was she still Bangladeshi? Or had she become British? Or was she now something else — something in between, neither one nor the other? Identity, she thought, was not a place. It was a journey.",
+    "questions": [
+      "How long has Nazneen been in London? How well does she speak English?",
+      "What can she see from her window? Find three details.",
+      "What two places shape Nazneen's identity?",
+      "What is Nazneen's final reflection on identity?"
+    ]
+  },
+
+  "Public Space and Private Space": {
+    "type": "article",
+    "title": "Surveillance — the price of safety?",
+    "content": "Today, you are watched. In the UK alone, there are over 5 million CCTV cameras — that's one camera for every 13 people. Supporters argue that surveillance keeps cities safe: cameras help solve crimes, identify terrorists and reduce vandalism. But critics warn of a darker reality: a society where privacy disappears, where every step is recorded, where governments and corporations know more about us than our families. Edward Snowden, a former NSA contractor, revealed in 2013 that the US government was secretly collecting data on millions of citizens around the world. In China, AI-powered cameras now use facial recognition to give « social credit scores » to citizens. The question is no longer what is technically possible, but what is ethically acceptable. Where do we draw the line between public space and private life?",
+    "questions": [
+      "How many CCTV cameras are there in the UK? Calculate the ratio.",
+      "What are the two arguments — for and against — surveillance?",
+      "Who is Edward Snowden and what did he reveal?",
+      "What does China use facial recognition for?"
+    ]
+  },
+
+  "Art and Power": {
+    "type": "excerpt",
+    "title": "Picasso's Guernica",
+    "content": "On 26 April 1937, German planes bombed the small Basque town of Guernica, Spain, during the Spanish Civil War. Hundreds of civilians died. Three months later, Pablo Picasso completed a giant black-and-white painting in response: « Guernica » — 3.5 metres tall, 7.8 metres wide. It shows a screaming horse, a dying soldier, a mother holding her dead child. There is no explicit blood, no political slogan — just universal symbols of suffering. « Guernica » became the most powerful anti-war painting of the 20th century. When a Nazi officer asked Picasso, « Did you do this? » he replied: « No, you did. » Today, the original hangs in Madrid. A reproduction at the United Nations was famously covered up in 2003 — when Colin Powell announced the invasion of Iraq.",
+    "questions": [
+      "When and where did the Guernica bombing happen?",
+      "How big is Picasso's painting? Find three figures it shows.",
+      "Quote and explain Picasso's reply to the Nazi officer.",
+      "What happened in 2003 at the UN? What does this tell us about art and power?"
+    ]
+  },
+
+  "Citizenship and Virtual Worlds": {
+    "type": "article",
+    "title": "Who are we online?",
+    "content": "Every minute, 500 hours of video are uploaded to YouTube, 350,000 tweets are posted, and 16 million text messages are sent. Welcome to the digital age. Online, we are citizens of virtual worlds — Instagram, TikTok, the Metaverse. But this digital citizenship comes with responsibilities. Cyberbullying affects one teenager in three. Fake news spreads six times faster than truth. Hate speech, deepfakes and disinformation threaten democracy. So what should we do? First, think before you post: every word leaves a trace. Second, fact-check before you share: a single click can amplify a lie to millions. Third, be kind: behind every screen, there is a real human being. The internet is not a separate world — it is part of our reality. Being a good digital citizen is the new civic duty of the 21st century.",
+    "questions": [
+      "Find three figures from the first sentence about digital activity.",
+      "Quote two threats to democracy mentioned in the text.",
+      "What three rules does the text propose? Summarise each in your own words.",
+      "What is the « new civic duty » of the 21st century?"
+    ]
+  },
+
+  "Fictions and Realities": {
+    "type": "excerpt",
+    "title": "Big Brother is watching you",
+    "content": "It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him. […] The hallway smelt of boiled cabbage and old rag mats. At one end of it a coloured poster, too large for indoor display, had been tacked to the wall. It depicted simply an enormous face, more than a metre wide: the face of a man of about forty-five, with a heavy black moustache and ruggedly handsome features. […] On each landing, opposite the lift-shaft, the poster with the enormous face gazed from the wall. BIG BROTHER IS WATCHING YOU, the caption beneath it ran.",
+    "questions": [
+      "What detail in the very first sentence shows that something is wrong?",
+      "Describe the hallway. What atmosphere is created?",
+      "Who is on the poster? What does the caption say?",
+      "What kind of society is Winston living in? (Find two clues.)"
+    ]
+  },
+
+  "Scientific Innovation and Responsibility": {
+    "type": "article",
+    "title": "AI — opportunity or threat?",
+    "content": "Artificial intelligence has already changed the world. ChatGPT, launched in November 2022, reached 100 million users in two months — the fastest-growing app in history. AI now writes texts, paints pictures, codes programs, diagnoses diseases. The opportunities are enormous: better healthcare, faster research, accessible education for all. But the risks are real too. AI can produce « hallucinations » — invented facts presented as truth. It can amplify bias, replace millions of jobs, generate fake news at scale. In 2023, hundreds of AI researchers signed an open letter warning of « profound risks to humanity ». Some compare AI to nuclear power: a powerful technology that needs strict ethical regulation. Who decides how AI is used? How do we keep humans « in the loop »? These are the questions our generation must answer — together.",
+    "questions": [
+      "When was ChatGPT launched? How fast did it grow?",
+      "Quote three opportunities and three risks of AI.",
+      "What did hundreds of AI researchers do in 2023 and why?",
+      "What comparison does the text make? What ethical questions does it raise?"
+    ]
+  },
+
+  "Diversity and Inclusion": {
+    "type": "article",
+    "title": "Black Lives Matter — a global movement",
+    "content": "On 25 May 2020, in Minneapolis, USA, a Black man named George Floyd was killed by a white police officer who knelt on his neck for 9 minutes and 29 seconds. The video was shared millions of times. Within days, protests against police violence and systemic racism erupted in over 60 countries — from London to Sydney, from Paris to Cape Town. The Black Lives Matter movement, founded in 2013, became the largest civil rights movement of the 21st century. In the UK, statues of slave traders were torn down. In France, debates about colonial memory intensified. Companies released diversity statements; some were genuine, some were just « performative ». Three years later, has anything truly changed? The work of inclusion is long. As the saying goes: « Diversity is being invited to the party. Inclusion is being asked to dance. »",
+    "questions": [
+      "What happened on 25 May 2020? Find precise details.",
+      "How many countries had protests? Quote two cities.",
+      "What did the protests cause in the UK and in France?",
+      "Quote and explain the metaphor « invited to the party / asked to dance »."
+    ]
+  },
+
+  "Territory and Memory": {
+    "type": "article",
+    "title": "Madagascar 1947 — a forgotten massacre",
+    "content": "On 29 March 1947, an uprising began in eastern Madagascar against French colonial rule. The Malagasy demanded independence, justice and the right to vote. The French response was brutal: between 11,000 and 100,000 Malagasy were killed by the French army and its Senegalese troops between 1947 and 1949. The exact figures are still debated. For decades, this massacre was almost unknown in France — a « forgotten history », a « lieu de mémoire » erased from textbooks. In 2005, French President Jacques Chirac visited Antananarivo and called the events « unacceptable ». In 2017, Emmanuel Macron acknowledged « the responsibility » of France. Madagascar finally became independent on 26 June 1960. Today, every year, the 29th of March is a national day of remembrance. As historian Karthala Achille Mbembe wrote, « To decolonise is also to remember. »",
+    "questions": [
+      "When did the Malagasy uprising start? What did the Malagasy demand?",
+      "How many Malagasy were killed? Why is the figure « still debated »?",
+      "What did Presidents Chirac (2005) and Macron (2017) say?",
+      "Quote and explain Achille Mbembe's sentence."
+    ]
+  }
+}

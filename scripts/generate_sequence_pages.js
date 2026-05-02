@@ -27,9 +27,20 @@ const LEXIQUE_SEQUENCES = JSON.parse(fs.readFileSync(
   "utf-8"
 ));
 
+// ---- Documents supports authentiques (texte / dialogue / extrait) ---
+const DOCUMENTS_SUPPORTS = JSON.parse(fs.readFileSync(
+  path.join(__dirname, "..", "assets", "data", "documents-supports.json"),
+  "utf-8"
+));
+
 function getLexiqueFor(seqTitre) {
   const rows = LEXIQUE_SEQUENCES[seqTitre];
   return Array.isArray(rows) ? rows : null;
+}
+
+function getSupportFor(seqTitre) {
+  const s = DOCUMENTS_SUPPORTS[seqTitre];
+  return (s && typeof s === "object" && s.content) ? s : null;
 }
 
 function matchGrammarTemplate(langueRaw) {
@@ -234,6 +245,50 @@ function buildReperesCulturels(seq) {
     </p>`;
 }
 
+function renderDocumentSupport(seq) {
+  const sup = getSupportFor(seq.titre);
+  if (!sup) return ""; // section omise si pas de support
+
+  const TYPE_LABEL = {
+    text: "Document court",
+    dialogue: "Dialogue",
+    excerpt: "Extrait littéraire",
+    article: "Article / document informatif",
+  };
+  const typeLabel = TYPE_LABEL[sup.type] || "Document support";
+
+  const questions = (sup.questions || []).map((q, i) =>
+    `<li class="doc-support__q"><span class="doc-support__qnum">${i + 1}.</span> ${q}</li>`
+  ).join("");
+
+  return `
+    <section class="seq-section" id="document">
+      <h2 class="seq-section__title"><i class="ph ph-text-aa" aria-hidden="true"></i> Document support</h2>
+      <p class="seq-section__intro">
+        <strong>Document à étudier en classe</strong> — texte court à
+        lire en autonomie ou collectivement, suivi de questions de
+        compréhension. Le document mobilise le lexique de la séquence
+        et prépare aux faits de langue.
+      </p>
+
+      <article class="doc-support">
+        <header class="doc-support__head">
+          <span class="doc-support__type">${esc(typeLabel)}</span>
+          <h3 class="doc-support__title">${esc(sup.title)}</h3>
+        </header>
+        <div class="doc-support__content">${sup.content}</div>
+      </article>
+
+      <div class="doc-support__questions">
+        <h3 class="doc-support__qtitle">
+          <i class="ph ph-question" aria-hidden="true"></i>
+          Questions de compréhension
+        </h3>
+        <ol class="doc-support__qlist">${questions}</ol>
+      </div>
+    </section>`;
+}
+
 function renderTraceEcrite(seq) {
   return `
     <section class="seq-section" id="lecon">
@@ -426,6 +481,9 @@ function renderSequencePage(niveauKey, seq, prevNext) {
             <span class="seance-item__al">${esc(s.al)}</span>
           </div>
         </li>`).join("");
+
+  // Section DOCUMENT SUPPORT — texte authentique en anglais + questions
+  const sectionSupport = renderDocumentSupport(seq);
 
   // Section LEÇON / COURS — trace écrite enrichie et structurée
   const sectionLecon = renderTraceEcrite(seq);
@@ -622,6 +680,7 @@ function renderSequencePage(niveauKey, seq, prevNext) {
         <ol class="seq-toc__list">
           <li><a href="#presentation"><i class="ph ph-info seq-toc__icon"></i> Présentation</a></li>
           <li><a href="#plan"><i class="ph ph-list-checks seq-toc__icon"></i> Plan des séances</a></li>
+          <li><a href="#document"><i class="ph ph-text-aa seq-toc__icon"></i> Document support</a></li>
           <li><a href="#lecon"><i class="ph ph-book-open seq-toc__icon"></i> Cours / Leçon</a></li>
           <li><a href="#fiches"><i class="ph ph-file-text seq-toc__icon"></i> Fiches d'activité</a></li>
           <li><a href="#activite"><i class="ph ph-cursor-click seq-toc__icon"></i> Activités d'entraînement</a></li>
@@ -641,6 +700,8 @@ function renderSequencePage(niveauKey, seq, prevNext) {
         <ol class="seance-list">${seances}
         </ol>
       </section>
+
+      ${sectionSupport}
 
       ${sectionLecon}
 

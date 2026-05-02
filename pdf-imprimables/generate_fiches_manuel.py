@@ -888,6 +888,7 @@ import re
 PROGRESSION_PATH = os.path.join(ROOT, "assets", "data", "progression.json")
 GRAMMAR_PATH     = os.path.join(ROOT, "assets", "data", "grammar-templates.json")
 LEXIQUE_PATH     = os.path.join(ROOT, "assets", "data", "lexique-sequences.json")
+SUPPORTS_PATH    = os.path.join(ROOT, "assets", "data", "documents-supports.json")
 BASE_URL = "https://lyceefrancaisdetananarive.github.io/anglais"
 
 # Charge les templates grammaticaux (mots-clés → 3 exemples canoniques)
@@ -898,6 +899,10 @@ with open(GRAMMAR_PATH, "r", encoding="utf-8") as _f:
 with open(LEXIQUE_PATH, "r", encoding="utf-8") as _f:
     LEXIQUE_SEQUENCES = json.load(_f)
 
+# Documents supports authentiques (texte / dialogue / extrait)
+with open(SUPPORTS_PATH, "r", encoding="utf-8") as _f:
+    DOCUMENTS_SUPPORTS = json.load(_f)
+
 
 def get_lexique_for(seq_titre):
     """Retourne le lexique enrichi (en/ipa/fr) si défini pour le titre,
@@ -906,6 +911,15 @@ def get_lexique_for(seq_titre):
     if not rows or not isinstance(rows, list):
         return None
     return [tuple(r) for r in rows]
+
+
+def get_support_for(seq_titre):
+    """Retourne le document support authentique pour la séquence
+    (titre, contenu, questions) ou None si non défini."""
+    s = DOCUMENTS_SUPPORTS.get(seq_titre)
+    if not s or not isinstance(s, dict):
+        return None
+    return s
 
 
 def match_grammar_template(langue_raw):
@@ -1084,6 +1098,17 @@ def auto_fill_ctx(niveau_key, seq):
     tache_clean = strip_html(seq.get("tache", "Tâche finale à préciser"))
     theme_clean = strip_html(seq.get("theme", ""))
 
+    # Document support authentique en priorité (s'il existe pour cette séquence)
+    support = get_support_for(seq["titre"])
+    if support:
+        doc_titre = f"{support.get('type', 'text').capitalize()} — {support['title']}"
+        doc_text  = f"<i>{support['content']}</i>"
+        questions = support.get("questions") or autobuild_questions_specific(seq, theme_clean)
+    else:
+        doc_titre = f"Discover — {theme_clean[:50] or seq['titre'][:50]}"
+        doc_text  = autobuild_doc_text(seq, info, theme_clean)
+        questions = autobuild_questions_specific(seq, theme_clean)
+
     return {
         "filename": filename,
         "titre": seq["titre"],
@@ -1097,9 +1122,9 @@ def auto_fill_ctx(niveau_key, seq):
         "intro_lines": autobuild_intro_lines(seq, info["label"]),
         # Priorité au lexique enrichi (anglais authentique avec phonétique)
         "vocab": get_lexique_for(seq["titre"]) or autobuild_vocab(strip_html(seq.get("lexique", ""))),
-        "doc_titre": f"Discover — {theme_clean[:50] or seq['titre'][:50]}",
-        "doc_text": autobuild_doc_text(seq, info, theme_clean),
-        "questions": autobuild_questions_specific(seq, theme_clean),
+        "doc_titre": doc_titre,
+        "doc_text": doc_text,
+        "questions": questions,
         "grammar_titre": grammar["titre"],
         "grammar_intro": grammar["intro"],
         "grammar_examples": grammar["examples"],
