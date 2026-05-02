@@ -1,0 +1,534 @@
+/* ============================================================
+   generate_sequence_pages.js
+   Génère 1 page HTML par séquence à partir de progression-data.js.
+   Sortie : sequences/{niveauSlug}/{seqSlug}.html
+   ============================================================ */
+
+const fs = require("fs");
+const path = require("path");
+
+// ---- Charger les données ---------------------------------
+// progression-data.js définit window.PROGRESSION_ANNUELLE
+const window = {};
+const dataPath = path.join(__dirname, "..", "assets", "js", "progression-data.js");
+const dataCode = fs.readFileSync(dataPath, "utf-8");
+eval(dataCode);
+const PROG = window.PROGRESSION_ANNUELLE;
+
+// ---- Mapping niveau → dossier sequences ------------------
+const NIVEAU_TO_DIR = {
+  "6e": "6e",
+  "4e": "4e",
+  "4e-non-si": "4e-non-si",
+  "4e-lce": "4e-lce",
+  "3e": "3e",
+  "3e-non-si": "3e-non-si",
+  "1ere": "1ere",
+  "terminale": "terminale",
+};
+
+// ---- Mapping niveau → libellé classe + page niveau --------
+const NIVEAU_LABEL = {
+  "6e":         { court: "6ᵉ", complet: "6ᵉ — Cycle 3",
+                  pageHref: "../../niveaux/6e.html",       breadcrumb: "6ᵉ" },
+  "4e":         { court: "4ᵉ LV1", complet: "4ᵉ — Cycle 4 · LV1",
+                  pageHref: "../../niveaux/4e.html",       breadcrumb: "4ᵉ LVA" },
+  "4e-non-si":  { court: "4ᵉ NON SI", complet: "4ᵉ Section Internationale",
+                  pageHref: "../../niveaux/non-si.html",   breadcrumb: "Section Internationale" },
+  "4e-lce":     { court: "4ᵉ LCE", complet: "4ᵉ Langues et Cultures Européennes",
+                  pageHref: "../../niveaux/lce.html",      breadcrumb: "4ᵉ LCE" },
+  "3e":         { court: "3ᵉ LV1", complet: "3ᵉ — Cycle 4 · Préparation au DNB",
+                  pageHref: "../../niveaux/3e.html",       breadcrumb: "3ᵉ LVA" },
+  "3e-non-si":  { court: "3ᵉ NON SI", complet: "3ᵉ Section Internationale",
+                  pageHref: "../../niveaux/non-si.html",   breadcrumb: "Section Internationale" },
+  "1ere":       { court: "1ʳᵉ euro", complet: "1ʳᵉ — Section européenne · APPROF LING + DNL SVT",
+                  pageHref: "../../niveaux/1ere.html",     breadcrumb: "1ʳᵉ euro" },
+  "terminale":  { court: "Tᵉ LVA", complet: "Terminale — 8 axes culturels du Bac",
+                  pageHref: "../../niveaux/terminale.html", breadcrumb: "Terminale LVA" },
+};
+
+// ---- Mapping séquence → fiche PDF (par titre) -------------
+const PDF_BY_SEQUENCE_TITLE = {
+  // 6e
+  "Welcome to Big Ben Academy!":     "fiche_6e_welcome_big_ben.pdf",
+  // 4e LVA
+  "Stuck at Big Bay School":         "fiche_4e_stuck_at_big_bay_school.pdf",
+  // 4e NON SI
+  "The Giver — Lois Lowry (1993)":   "fiche_4e_non_si_the_giver.pdf",
+  // 4e LCE
+  "Britain & Europe":                "fiche_4e_lce_britain_europe.pdf",
+  // 3e LVA
+  "Street Art: The Voice of the Wall": "fiche_3e_street_art_pilote.pdf",
+  "The Secret of Jatbula Trail":     "fiche_3e_secret_jatbula_trail.pdf",
+  // 3e NON SI
+  "The Curious Incident of the Dog in the Night-Time": "fiche_3e_non_si_curious_incident.pdf",
+  // 1re euro
+  "Madagascar's Biodiversity: A Living Laboratory": "fiche_dnl_svt_1ere.pdf",
+  // Terminale
+  "Identities & Exchanges":          "fiche_terminale_identities_exchanges.pdf",
+};
+
+// ============================================================
+//   Helpers
+// ============================================================
+function slugify(str) {
+  return String(str)
+    .toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/['']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function esc(s) {
+  if (s == null) return "";
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+// Plan générique des séances en fonction des informations de séquence.
+// Les élèves voient un fil pédagogique cohérent ; l'enseignante reste libre
+// de l'adapter. Permet de respecter la structure « séquence → séances ».
+function buildPlanSeances(seq) {
+  const lex = seq.lexique || "lexique de la séquence";
+  const langue = seq.langue || "structures grammaticales clés";
+  const cult = seq.culturel || "repères culturels";
+  return [
+    { num: 1, titre: "Découverte (warm-up)",
+      objectif: `Entrer dans le thème — ${esc(seq.theme || seq.titre)}`,
+      al: "CO · IO" },
+    { num: 2, titre: "Lexique en contexte",
+      objectif: `S'approprier le vocabulaire : ${esc(lex)}`,
+      al: "CE · EOC" },
+    { num: 3, titre: "Compréhension de l'écrit / oral",
+      objectif: "Étudier un document support (texte, image, audio, vidéo)",
+      al: "CE / CO" },
+    { num: 4, titre: "Faits de langue",
+      objectif: `Manipuler en contexte : ${esc(langue)}`,
+      al: "EE · EOC" },
+    { num: 5, titre: "Repères culturels",
+      objectif: `Approfondir : ${esc(cult)}`,
+      al: "CE · IO" },
+    { num: 6, titre: "Préparation de la tâche finale",
+      objectif: "Mobiliser les acquis pour produire",
+      al: "EOC / EE" },
+    { num: 7, titre: "Tâche finale (production)",
+      objectif: esc(seq.tache || "Production évaluée"),
+      al: "EE / EOC" },
+    { num: 8, titre: "Bilan et remédiation",
+      objectif: "Auto-évaluation, retour collectif, remédiation",
+      al: "IO" },
+  ];
+}
+
+// ============================================================
+//   Template HTML d'une page séquence
+// ============================================================
+function renderSequencePage(niveauKey, seq, prevNext) {
+  const lvl = NIVEAU_LABEL[niveauKey];
+  const seqSlug = slugify(seq.titre);
+  const niveauSlug = NIVEAU_TO_DIR[niveauKey];
+  const fiche = PDF_BY_SEQUENCE_TITLE[seq.titre];
+  const quizUrl = seq.url ? seq.url.replace(/^\.\.\//, "../../") : null;
+  const ficheUrl = fiche ? `../../pdf-imprimables/${fiche}` : null;
+
+  const tags = [];
+  if (seq.cecrl)   tags.push(`<span class="seq-tag seq-tag--cecrl">${esc(seq.cecrl)}</span>`);
+  if (seq.periode) tags.push(`<span class="seq-tag">${esc(seq.periode)}</span>`);
+
+  const seances = buildPlanSeances(seq).map(s => `
+        <li class="seance-item">
+          <div class="seance-item__num">S${s.num}</div>
+          <div class="seance-item__body">
+            <div class="seance-item__title">${esc(s.titre)}</div>
+            <p class="seance-item__obj">${s.objectif}</p>
+            <span class="seance-item__al">${esc(s.al)}</span>
+          </div>
+        </li>`).join("");
+
+  // Section LEÇON / COURS — trace écrite, lexique, langue, culturel
+  const sectionLecon = `
+    <section class="seq-section" id="lecon">
+      <h2 class="seq-section__title"><span aria-hidden="true">📖</span> Cours / Leçon</h2>
+      <p class="seq-section__intro">
+        <strong>Supports de cours</strong> de la séquence : à étudier
+        avant la tâche finale, à conserver dans le cahier d'anglais.
+        Trace écrite construite collectivement en classe puis recopiée.
+      </p>
+
+      <div class="seq-lesson-grid">
+        <article class="seq-lesson-card">
+          <h3 class="seq-lesson-card__title">
+            <span aria-hidden="true">🔤</span> Lexique à mémoriser
+          </h3>
+          <p class="seq-lesson-card__body">${esc(seq.lexique || "—")}</p>
+          <p class="seq-lesson-card__hint">
+            <em>Le lexique illustré complet figure dans la fiche
+            d'activité (PDF) et est mobilisé dans l'activité d'entraînement.</em>
+          </p>
+        </article>
+
+        <article class="seq-lesson-card">
+          <h3 class="seq-lesson-card__title">
+            <span aria-hidden="true">📐</span> Faits de langue
+          </h3>
+          <p class="seq-lesson-card__body">${esc(seq.langue || "—")}</p>
+          <p class="seq-lesson-card__hint">
+            <em>Structures grammaticales et fonctionnelles à manipuler.
+            Tableaux récapitulatifs dans la fiche d'activité.</em>
+          </p>
+        </article>
+
+        <article class="seq-lesson-card">
+          <h3 class="seq-lesson-card__title">
+            <span aria-hidden="true">🌍</span> Repères culturels
+          </h3>
+          <p class="seq-lesson-card__body">${esc(seq.culturel || "—")}</p>
+          <p class="seq-lesson-card__hint">
+            <em>Connaissances civilisationnelles attendues (réalités
+            géographiques, historiques, littéraires, artistiques).</em>
+          </p>
+        </article>
+      </div>
+    </section>`;
+
+  // Section FICHES D'ACTIVITÉ
+  const sectionDocs = ficheUrl ? `
+    <section class="seq-section" id="fiches">
+      <h2 class="seq-section__title"><span aria-hidden="true">📄</span> Fiches d'activité</h2>
+      <p class="seq-section__intro">
+        <strong>Documents pédagogiques</strong> à imprimer ou projeter
+        en classe. Mise en page institutionnelle <strong>AEFE — Marque
+        État</strong> (logos AEFE et LFT, police Marianne, palette tricolore).
+      </p>
+      <div class="seq-doc-grid">
+        <article class="seq-doc-card">
+          <div class="seq-doc-card__icon" aria-hidden="true">📑</div>
+          <h3 class="seq-doc-card__title">Fiche élève imprimable</h3>
+          <p class="seq-doc-card__desc">
+            Document A4 conçu comme une page de manuel : couverture
+            éditoriale, lexique illustré, activités prêtes à l'emploi,
+            QR code vers l'activité d'entraînement en ligne.
+          </p>
+          <a href="${esc(ficheUrl)}" target="_blank" rel="noopener" class="btn btn--accent">
+            ⬇ Télécharger la fiche (PDF)
+          </a>
+        </article>
+      </div>
+    </section>` : `
+    <section class="seq-section" id="fiches">
+      <h2 class="seq-section__title"><span aria-hidden="true">📄</span> Fiches d'activité</h2>
+      <p class="seq-section__intro">
+        <em>La fiche d'activité imprimable de cette séquence est en
+        cours de préparation.</em> Toutes les fiches existantes sont
+        disponibles dans la <a href="../../pdf-imprimables/">bibliothèque PDF</a>.
+      </p>
+    </section>`;
+
+  // Section ACTIVITÉS D'ENTRAÎNEMENT (quiz interactif)
+  const sectionQuiz = quizUrl ? `
+    <section class="seq-section" id="activite">
+      <h2 class="seq-section__title"><span aria-hidden="true">💻</span> Activités d'entraînement</h2>
+      <p class="seq-section__intro">
+        Activité interactive en ligne, synchronisée avec la séquence.
+        À faire en classe ou en autonomie pour <strong>s'entraîner</strong>
+        et <strong>s'auto-évaluer</strong> avant la tâche finale.
+        Lien partageable, retour automatique par e-mail à l'élève
+        et à l'enseignante.
+      </p>
+      <div class="seq-quiz-card">
+        <div class="seq-quiz-card__head">
+          <h3 class="seq-quiz-card__title">${esc(seq.titre)}</h3>
+          <span class="seq-tag seq-tag--cecrl">${esc(seq.cecrl || "")}</span>
+        </div>
+        <div class="seq-quiz-card__actions">
+          <a href="${esc(quizUrl)}" class="btn btn--accent btn--lg">▶ Lancer l'activité</a>
+          <button type="button" class="btn btn--secondary btn--copy" data-share-url="${esc(quizUrl)}">
+            🔗 Copier le lien à partager
+          </button>
+        </div>
+        <p class="seq-quiz-card__notice">
+          🔒 Conforme RGPD : pas de cookies, pas de mot de passe,
+          pas d'IP collectée.
+        </p>
+      </div>
+    </section>` : `
+    <section class="seq-section" id="activite">
+      <h2 class="seq-section__title"><span aria-hidden="true">💻</span> Activités d'entraînement</h2>
+      <p class="seq-section__intro">
+        <em>L'activité interactive en ligne de cette séquence est en
+        cours de finalisation.</em>
+      </p>
+    </section>`;
+
+  // Navigation prev/next
+  const navPrev = prevNext.prev ? `
+        <a href="${esc(slugify(prevNext.prev.titre))}.html" class="seq-nav__prev">
+          <span class="seq-nav__arrow">←</span>
+          <span class="seq-nav__label">Séquence ${esc(prevNext.prev.n)}</span>
+          <span class="seq-nav__title">${esc(prevNext.prev.titre)}</span>
+        </a>` : `<div></div>`;
+
+  const navNext = prevNext.next ? `
+        <a href="${esc(slugify(prevNext.next.titre))}.html" class="seq-nav__next">
+          <span class="seq-nav__label">Séquence ${esc(prevNext.next.n)}</span>
+          <span class="seq-nav__title">${esc(prevNext.next.titre)}</span>
+          <span class="seq-nav__arrow">→</span>
+        </a>` : `<div></div>`;
+
+  return `<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${esc(seq.titre)} — ${esc(lvl.complet)} — LFT</title>
+  <meta name="description" content="Séquence pédagogique d'anglais : ${esc(seq.titre)} (${esc(lvl.complet)}, niveau ${esc(seq.cecrl)}). Plan des séances, fiche imprimable, activité en ligne, tâche finale." />
+  <meta name="theme-color" content="#000091" />
+  <link rel="icon" type="image/png" href="../../assets/img/logo-lft.png" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="preload" href="../../assets/fonts/Marianne-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/Marianne-Bold.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__top">
+      <div class="container site-header__top-inner">
+        <span>République française · AEFE · Établissement en gestion directe</span>
+        <a href="${esc(lvl.pageHref)}">Retour au niveau</a>
+      </div>
+    </div>
+    <div class="site-header__main">
+      <div class="container site-header__main-inner">
+        <a href="../../index.html" class="brand">
+          <img src="../../assets/img/logo-lft.png" alt="" />
+          <div class="brand-text">
+            <div class="line1">Lycée Français de Tananarive</div>
+            <div class="line2">${esc(seq.titre)}</div>
+            <div class="line3">${esc(lvl.court)} · ${esc(seq.cecrl || "")} · Mme FALIMANANA</div>
+          </div>
+        </a>
+        <nav class="nav-main" aria-label="Navigation principale">
+          <a href="../../index.html">Accueil</a>
+          <a href="${esc(lvl.pageHref)}">${esc(lvl.breadcrumb)}</a>
+          <a href="#" aria-current="page">Séquence ${esc(seq.n)}</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Fil d'Ariane -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="../../index.html">Accueil</a>
+        <span aria-hidden="true">›</span>
+        <a href="${esc(lvl.pageHref)}">${esc(lvl.breadcrumb)}</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Séquence ${esc(seq.n)} — ${esc(seq.titre)}</span>
+      </nav>
+    </div>
+
+    <!-- Hero de la séquence -->
+    <section class="seq-hero">
+      <div class="container">
+        <div class="seq-hero__meta">
+          <span class="seq-hero__num">Séquence ${esc(seq.n)}</span>
+          <span class="seq-hero__niveau">${esc(lvl.complet)}</span>
+        </div>
+        <h1 class="seq-hero__title">${esc(seq.titre)}</h1>
+        <p class="seq-hero__theme">${esc(seq.theme || "")}</p>
+        <div class="seq-hero__tags">${tags.join(" ")}</div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- Présentation -->
+      <section class="seq-section" id="presentation">
+        <h2 class="seq-section__title"><span aria-hidden="true">📝</span> Présentation de la séquence</h2>
+        <div class="seq-info-grid">
+          <div class="seq-info-card">
+            <span class="seq-info-card__label">Axe culturel</span>
+            <p class="seq-info-card__value">${esc(seq.axe || "—")}</p>
+          </div>
+          <div class="seq-info-card">
+            <span class="seq-info-card__label">Période</span>
+            <p class="seq-info-card__value">${esc(seq.periode || "—")}</p>
+          </div>
+          <div class="seq-info-card">
+            <span class="seq-info-card__label">Niveau CECRL</span>
+            <p class="seq-info-card__value">${esc(seq.cecrl || "—")}</p>
+          </div>
+          <div class="seq-info-card">
+            <span class="seq-info-card__label">Tâche finale</span>
+            <p class="seq-info-card__value">${esc(seq.tache || "—")}</p>
+          </div>
+        </div>
+
+        <div class="seq-detail-grid">
+          <div class="seq-detail-card">
+            <h3>Lexique</h3>
+            <p>${esc(seq.lexique || "—")}</p>
+          </div>
+          <div class="seq-detail-card">
+            <h3>Faits de langue</h3>
+            <p>${esc(seq.langue || "—")}</p>
+          </div>
+          <div class="seq-detail-card">
+            <h3>Repères culturels</h3>
+            <p>${esc(seq.culturel || "—")}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sommaire pédagogique -->
+      <nav class="seq-toc" aria-label="Sommaire de la séquence">
+        <h2 class="seq-toc__title">Au sommaire de cette séquence</h2>
+        <ol class="seq-toc__list">
+          <li><a href="#presentation"><span class="seq-toc__icon">📝</span> Présentation</a></li>
+          <li><a href="#plan"><span class="seq-toc__icon">📅</span> Plan des séances</a></li>
+          <li><a href="#lecon"><span class="seq-toc__icon">📖</span> Cours / Leçon</a></li>
+          <li><a href="#fiches"><span class="seq-toc__icon">📄</span> Fiches d'activité</a></li>
+          <li><a href="#activite"><span class="seq-toc__icon">💻</span> Activités d'entraînement</a></li>
+          <li><a href="#tache"><span class="seq-toc__icon">🎯</span> Tâche finale</a></li>
+          <li><a href="#evaluation"><span class="seq-toc__icon">📊</span> Évaluations</a></li>
+        </ol>
+      </nav>
+
+      <!-- Plan des séances -->
+      <section class="seq-section" id="plan">
+        <h2 class="seq-section__title"><span aria-hidden="true">📅</span> Plan des séances</h2>
+        <p class="seq-section__intro">
+          Déroulé pédagogique sur 6 à 8 séances de 55 minutes. Chaque
+          séance mobilise une ou deux <strong>activités langagières</strong>
+          dominantes (CO, CE, EOC, IO, EE).
+        </p>
+        <ol class="seance-list">${seances}
+        </ol>
+      </section>
+
+      ${sectionLecon}
+
+      ${sectionDocs}
+
+      ${sectionQuiz}
+
+      <!-- Tâche finale -->
+      <section class="seq-section" id="tache">
+        <h2 class="seq-section__title"><span aria-hidden="true">🎯</span> Tâche finale</h2>
+        <div class="seq-task-card">
+          <p class="seq-task-card__desc">${esc(seq.tache || "—")}</p>
+          <div class="seq-task-card__criteria">
+            <h4>Critères d'évaluation par compétences</h4>
+            <ul>
+              <li><strong>Recevabilité linguistique</strong> — correction grammaticale, prononciation, fluidité</li>
+              <li><strong>Cohérence de la production</strong> — structure, pertinence des idées, lien avec la tâche</li>
+              <li><strong>Richesse lexicale</strong> — mobilisation du lexique de la séquence</li>
+              <li><strong>Engagement / créativité</strong> — implication personnelle, originalité</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Évaluation -->
+      <section class="seq-section" id="evaluation">
+        <h2 class="seq-section__title"><span aria-hidden="true">📊</span> Évaluations</h2>
+        <div class="seq-eval-grid">
+          <article class="seq-eval-card">
+            <h3>📝 Évaluation diagnostique</h3>
+            <p>Distribuée en début de séquence pour situer les acquis initiaux. Format court (10 min).</p>
+          </article>
+          <article class="seq-eval-card">
+            <h3>📈 Évaluations formatives</h3>
+            <p>L'<a href="#activite">activité en ligne</a> ci-dessus sert de support d'auto-évaluation tout au long de la séquence.</p>
+          </article>
+          <article class="seq-eval-card">
+            <h3>🎯 Évaluation sommative</h3>
+            <p>La <a href="#tache">tâche finale</a> est l'évaluation sommative principale. Distribuée et notée par l'enseignante.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Navigation séquence précédente / suivante -->
+      <nav class="seq-nav" aria-label="Navigation entre séquences">${navPrev}${navNext}
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__bottom">
+        <span class="tricolore-bar" aria-hidden="true"></span>
+        <p>© 2026 Lycée Français de Tananarive · Mme Salamo FALIMANANA · <a href="mailto:salamo.falimanana@egd.mg" style="color: var(--lft-magenta-light);">salamo.falimanana@egd.mg</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // Bouton « Copier le lien »
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".btn--copy").forEach(btn => {
+      btn.addEventListener("click", async () => {
+        const path = btn.getAttribute("data-share-url");
+        const absUrl = new URL(path, window.location.href).toString();
+        const original = btn.innerHTML;
+        try {
+          await navigator.clipboard.writeText(absUrl);
+          btn.innerHTML = "✓ Lien copié !";
+          btn.classList.add("is-copied");
+        } catch (e) {
+          btn.innerHTML = "❌ Échec — copiez : " + absUrl;
+        }
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.classList.remove("is-copied");
+        }, 2200);
+      });
+    });
+  });
+  </script>
+  <script src="../../assets/js/analytics.js" defer></script>
+</body>
+</html>`;
+}
+
+// ============================================================
+//   Génération principale
+// ============================================================
+function main() {
+  const outRoot = path.join(__dirname, "..", "sequences");
+  if (!fs.existsSync(outRoot)) fs.mkdirSync(outRoot, { recursive: true });
+
+  let total = 0;
+  Object.entries(PROG).forEach(([niveauKey, niveauData]) => {
+    const dir = NIVEAU_TO_DIR[niveauKey];
+    if (!dir) return;
+
+    const niveauOutDir = path.join(outRoot, dir);
+    if (!fs.existsSync(niveauOutDir)) fs.mkdirSync(niveauOutDir, { recursive: true });
+
+    const seqs = niveauData.sequences;
+    seqs.forEach((seq, idx) => {
+      const html = renderSequencePage(niveauKey, seq, {
+        prev: idx > 0 ? seqs[idx - 1] : null,
+        next: idx < seqs.length - 1 ? seqs[idx + 1] : null,
+      });
+      const filename = slugify(seq.titre) + ".html";
+      const outPath = path.join(niveauOutDir, filename);
+      fs.writeFileSync(outPath, html, "utf-8");
+      total += 1;
+      console.log(`  ✓ ${path.relative(path.join(__dirname, ".."), outPath)}`);
+    });
+  });
+
+  console.log(`\n${total} pages séquence générées.`);
+}
+
+main();
