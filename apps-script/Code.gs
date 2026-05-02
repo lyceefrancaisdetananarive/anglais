@@ -19,11 +19,11 @@
 // E-mail de l'enseignante (destinataire principal de chaque résultat)
 const TEACHER_EMAIL = "salamo.falimanana@egd.mg";
 
-// === MODE DÉVELOPPEMENT ===================================================
-// Tant que le projet est en développement, l'admin (Max RAFALIARISON) reçoit
-// une COPIE (CC) de tous les mails (enseignante + élève) pour vérifier la
-// bonne réception et la mise en page. Mettre DEV_MODE = false en production.
-const DEV_MODE = true;
+// === MODE PRODUCTION =======================================================
+// Plateforme en production depuis 2026 — la copie (CC) admin est désactivée.
+// Pour réactiver le suivi technique : passer DEV_MODE à true et redéployer
+// (Apps Script > Déployer > Gérer les déploiements > Modifier la version).
+const DEV_MODE = false;
 const DEV_CC_EMAIL = "max.rafaliarison@egd.mg";
 // ===========================================================================
 
